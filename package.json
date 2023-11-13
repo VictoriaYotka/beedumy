@@ -2,6 +2,7 @@
   "name": "birsaplatform",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://VictoriaYotka.github.io/birsaplatform/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -13,6 +14,9 @@
     "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "sass": "^1.67.0"
   },
   "scripts": {
     "start": "react-scripts start",
