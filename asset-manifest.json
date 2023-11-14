@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/birsaplatform/static/css/main.f413c555.css",
+    "main.js": "/birsaplatform/static/js/main.43e3912e.js",
+    "static/js/787.b0d459c6.chunk.js": "/birsaplatform/static/js/787.b0d459c6.chunk.js",
+    "index.html": "/birsaplatform/index.html",
+    "main.f413c555.css.map": "/birsaplatform/static/css/main.f413c555.css.map",
+    "main.43e3912e.js.map": "/birsaplatform/static/js/main.43e3912e.js.map",
+    "787.b0d459c6.chunk.js.map": "/birsaplatform/static/js/787.b0d459c6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f413c555.css",
+    "static/js/main.43e3912e.js"
+  ]
+}
