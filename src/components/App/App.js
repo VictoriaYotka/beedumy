@@ -1,9 +1,11 @@
+import { Route, Routes } from "react-router";
 import About from "../../pages/About/About";
 import Categories from "../../pages/Categories/Categories";
 import Course from "../../pages/Course/Course";
 import Courses from "../../pages/Courses/Courses";
 import Faq from "../../pages/Faq/Faq";
 import Home from "../../pages/Home/Home";
+import NotFound from "../../pages/Not found/NotFound";
 import SharedLayout from "../../pages/SharedLayout/SharedLayout";
 import Teacher from "../../pages/Teacher/Teacher";
 import Teachers from "../../pages/Teachers/Teachers";
@@ -21,6 +23,7 @@ function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/teachers" element={<Teachers />} />
           <Route path="/teachers/:teacherId" element={<Teacher />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </>

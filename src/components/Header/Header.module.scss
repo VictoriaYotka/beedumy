@@ -1,0 +1,52 @@
+@import "../../scss";
+
+.topper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 48px;
+  background-color: $headerBgColor;
+  height: 50px;
+  color: $whiteColor;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.item:not(:last-child) {
+  border-right: 2px solid $whiteColor;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 12px;
+  fill: $whiteColor;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 24px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.button_icon {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
