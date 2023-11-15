@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header>
+    <header className={css.header}>
       <div className={css.topper}>
         <div className={css.topper_container}>
           <ul className={css.list}>
@@ -66,7 +66,7 @@ const Header = () => {
           {/* Search button */}
           <button className={css.search_button}>
             <div className={css.search_box}>
-              <i class="kipso-icon-magnifying-glass"></i>
+              <i className="kipso-icon-magnifying-glass"></i>
             </div>
           </button>
 

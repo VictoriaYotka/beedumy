@@ -1,0 +1,88 @@
+@import "../../scss";
+
+.hero_section {
+  color: $heroFontColor;
+  background-color: $heroBgColor;
+  padding-bottom: 80px;
+}
+
+.hero_container {
+  @extend .container;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.content {
+  position: relative;
+  flex-basis: 50%;
+  padding: 200px 16px 0 16px;
+  text-align: end;
+}
+
+.triangle_green {
+  position: absolute;
+  top: -68px;
+  right: 0;
+}
+
+.heading {
+  font-size: 80px;
+  margin-bottom: 16px;
+  //   line-height: 1;
+}
+
+.heading_colored {
+  color: $headerBgColor;
+}
+
+.subheading {
+  font-size: 24px;
+  margin-bottom: 20px;
+  max-width: 540px;
+  margin-left: auto;
+}
+
+.hero_button {
+  padding: 4px 32px;
+  border-radius: 32px;
+  background-image: linear-gradient(to right, $headerBgColor, #9499f1);
+  font-size: 32px;
+  color: $whiteColor;
+}
+
+.picture {
+  position: relative;
+  flex-basis: 50%;
+}
+
+.hero_image {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  z-index: 10;
+}
+
+.triangle_blue_big {
+  position: absolute;
+  top: 32px;
+  left: 48px;
+}
+
+.triangle_blue {
+  position: absolute;
+  bottom: -184px;
+  left: 0;
+}
+
+.triangle_green_small {
+  position: absolute;
+  bottom: -60px;
+  right: -28px;
+}
+
+.triangle_rose {
+  position: absolute;
+  top: -44px;
+  right: -160px;
+}
