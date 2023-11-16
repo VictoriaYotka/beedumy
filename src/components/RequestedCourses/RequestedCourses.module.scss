@@ -1,0 +1,105 @@
+@import "../../scss";
+
+.heading {
+  position: relative;
+  padding: 80px 0;
+  text-align: center;
+  background-color: $blueBgColor;
+  color: $whiteColor;
+  font-size: 48px;
+}
+
+.triangle {
+  position: absolute;
+  bottom: -98px;
+  right: 50%;
+  z-index: 10;
+  transform: translateX(50%);
+
+  background-color: $blueBgColor;
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  width: 300px;
+  height: 100px;
+}
+
+.courses {
+  padding: 200px 0 100px 0;
+}
+
+.list {
+  @extend .container;
+  @extend .flex_aligncenter;
+  gap: 48px;
+}
+
+.item {
+  text-align: end;
+  box-shadow: $shadow;
+  border-radius: 16px;
+}
+
+.img_thumb {
+  position: relative;
+  width: 400px;
+  height: 230px;
+  background-color: $lightGreyBgColor;
+  border-radius: 16px;
+  box-shadow: $shadow;
+}
+
+.image {
+  border-radius: 16px;
+}
+
+.notion {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  padding: 8px 16px;
+  color: $whiteColor;
+  font-size: 16px;
+  background-color: $fioletBgButtonColor;
+  border-radius: 24px;
+}
+
+.info_thumb {
+  padding: 32px 48px;
+}
+
+.preheader {
+  margin-bottom: 4px;
+  font-size: 24px;
+  color: $accentColor;
+}
+
+.header {
+  margin-bottom: 4px;
+  font-size: 32px;
+}
+
+.wrapper {
+  @extend .flex_aligncenter;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.descr {
+  font-size: 24px;
+  color: $secondaryFontColor;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 24px;
+  border-radius: 28px;
+  font-size: 20px;
+  color: #007733;
+  border: 1px solid $accentColor;
+}
+
+.glyph {
+  margin-left: 8px;
+  color: $accentColor;
+}
