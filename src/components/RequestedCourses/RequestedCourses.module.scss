@@ -1,6 +1,6 @@
 @import "../../scss";
 
-.heading {
+.heading_section {
   position: relative;
   padding: 80px 0;
   text-align: center;
@@ -22,7 +22,7 @@
   height: 100px;
 }
 
-.courses {
+.courses_section {
   padding: 200px 0 100px 0;
 }
 
@@ -90,7 +90,7 @@
   color: $secondaryFontColor;
 }
 
-.button {
+.course_button {
   display: inline-block;
   padding: 8px 24px;
   border-radius: 28px;
@@ -102,4 +102,23 @@
 .glyph {
   margin-left: 8px;
   color: $accentColor;
+}
+
+.learn_more_section {
+  padding: 100px 0;
+  text-align: center;
+  color: $whiteColor;
+  font-size: 48px;
+  background-color: $greenBgColor;
+}
+
+.learn_more_header {
+  margin-bottom: 48px;
+}
+.learn_more_button {
+  padding: 16px 44px;
+  font-size: 24px;
+  font-weight: $boldFont;
+  color: $whiteColor;
+  background-color: $footerBgColor;
 }
