@@ -1,0 +1,154 @@
+@import "../../scss";
+
+.section {
+  text-align: center;
+  background-color: $lightGreyBgColor;
+}
+
+.container {
+  @extend .container;
+  padding: 60px 0;
+}
+
+.heading {
+  font-size: 48px;
+  margin-bottom: 48px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.item {
+  padding: 40px 56px;
+  background-color: $whiteColor;
+  text-align: center;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+
+  &:hover {
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: $darkFontColor;
+  margin-top: 40px;
+
+  a {
+    color: inherit;
+    transition: all 0.4s ease;
+
+    &:hover {
+      color: $accentColor;
+    }
+  }
+}
+
+.icon {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background-color: $accentColor;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid $accentColor;
+    border-radius: 50%;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+
+  i {
+    font-size: 56px;
+    line-height: 112px;
+    color: #fff;
+  }
+
+  &:hover {
+    &:before {
+      left: 0;
+    }
+  }
+}
+
+.color_1 {
+  .icon {
+    background-color: #1888c9;
+
+    &:before {
+      border-color: #1888c9;
+    }
+  }
+}
+
+.color_2 {
+  .icon {
+    background-color: #7c4bc0;
+
+    &:before {
+      border-color: #7c4bc0;
+    }
+  }
+}
+
+.color_3 {
+  .icon {
+    background-color: #f16101;
+
+    &:before {
+      border-color: #f16101;
+    }
+  }
+}
+
+.color_4 {
+  .icon {
+    background-color: #2da397;
+
+    &:before {
+      border-color: #2da397;
+    }
+  }
+}
+
+.color_5 {
+  .icon {
+    background-color: #d23f3f;
+
+    &:before {
+      border-color: #d23f3f;
+    }
+  }
+}
+
+.color_6 {
+  .icon {
+    background-color: #33a9bb;
+
+    &:before {
+      border-color: #33a9bb;
+    }
+  }
+}
+
+.button {
+  padding: 16px 44px;
+  font-size: 16px;
+  color: $whiteColor;
+  background-color: $footerBgColor;
+}

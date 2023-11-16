@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://VictoriaYotka.github.io/birsaplatform/",
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
