@@ -26,10 +26,26 @@
 .item {
   @extend .flex_aligncenter;
   padding: 0 16px;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+  }
 }
 
-.item:not(:last-child) {
+.item_devider {
   border-right: 2px solid $whiteColor;
+  margin: 0 4px;
+}
+
+.contact_link {
+  @extend .flex_aligncenter;
+}
+
+.link_content {
+  transition: all 0.4s ease;
 }
 
 .icon {
@@ -37,6 +53,12 @@
   height: 24px;
   margin-left: 12px;
   fill: $whiteColor;
+
+  transition: all 0.4s ease;
+}
+
+.wrapper {
+  @extend .flex_aligncenter;
 }
 
 .socials {
@@ -45,14 +67,20 @@
   margin-right: 24px;
 }
 
-.wrapper {
-  @extend .flex_aligncenter;
+.social_link {
+  &:hover,
+  &:focus {
+    .icon {
+      scale: 120%;
+    }
+  }
 }
 
 .button_icon {
-  background-color: transparent;
-  border: none;
+  @extend .flex_aligncenter;
   padding: 0;
+  color: $whiteColor;
+  background-color: transparent;
 }
 
 // content
@@ -103,7 +131,8 @@
     transition: all 0.4s ease;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #fff;
 
     &:before {
@@ -121,6 +150,14 @@
 .sign_button {
   padding: 12px 24px;
   border-radius: 32px;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    box-shadow: $shadow;
+  }
 }
 .register_button {
   @extend .sign_button;
@@ -132,6 +169,33 @@
   @extend .sign_button;
   border: 1px solid $greenBgButtonBgColor;
   color: $secondaryFontColor;
+}
+
+.nav {
+  @extend .flex_aligncenter;
+  gap: 36px;
+
+  & a {
+    display: inline-block;
+
+    transition: all 0.4s ease;
+
+    &:hover,
+    &:focus {
+      scale: 110%;
+      color: $darkFontColor;
+    }
+  }
+
+  & [class="active"] {
+    color: $accentColor;
+    font-weight: $boldFont;
+
+    &:hover,
+    &:focus {
+      color: $accentColor;
+    }
+  }
 }
 
 .nav_list {

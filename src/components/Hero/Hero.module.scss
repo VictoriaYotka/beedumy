@@ -22,14 +22,13 @@
 
 .triangle_green {
   position: absolute;
-  top: -68px;
-  right: 0;
+  top: 40px;
+  right: 80px;
 }
 
 .heading {
   font-size: 80px;
   margin-bottom: 16px;
-  //   line-height: 1;
 }
 
 .heading_colored {
@@ -49,6 +48,14 @@
   background-image: linear-gradient(to right, $headerBgColor, #9499f1);
   font-size: 32px;
   color: $whiteColor;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    box-shadow: $shadow;
+  }
 }
 
 .picture {
@@ -83,6 +90,6 @@
 
 .triangle_rose {
   position: absolute;
-  top: -44px;
-  right: -160px;
+  top: 40px;
+  right: -100px;
 }

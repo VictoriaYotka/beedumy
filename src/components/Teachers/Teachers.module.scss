@@ -26,7 +26,8 @@
 
   transition: all 0.4s ease;
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: $shadow;
     .name {
       color: $accentColor;
@@ -84,7 +85,8 @@
 .social_link {
   display: inline-block;
   padding: 16px;
-  &:hover {
+  &:hover,
+  &:focus {
     .icon {
       fill: $accentColor;
       scale: 110%;
@@ -98,14 +100,24 @@
 
   transition: all 0.4s ease;
 
-  &:hover {
+  &:hover,
+  &:focus {
     fill: $accentColor;
   }
 }
 
 .button {
+  display: inline-block;
   padding: 20px 40px;
   background-color: $darkBgButtonColor;
   color: $whiteColor;
   font-weight: $boldFont;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    box-shadow: $shadow;
+  }
 }

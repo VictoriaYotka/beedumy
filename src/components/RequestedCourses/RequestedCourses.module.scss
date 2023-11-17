@@ -1,5 +1,6 @@
 @import "../../scss";
 
+// heading_section
 .heading_section {
   position: relative;
   padding: 80px 0;
@@ -22,6 +23,7 @@
   height: 100px;
 }
 
+// courses section
 .courses_section {
   padding: 200px 0 100px 0;
 }
@@ -36,6 +38,21 @@
   text-align: end;
   box-shadow: $shadow;
   border-radius: 16px;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadowDark;
+
+    .image,
+    .preheader,
+    .header,
+    .course_button {
+      scale: 110%;
+      transform-origin: right;
+    }
+  }
 }
 
 .img_thumb {
@@ -45,16 +62,20 @@
   background-color: $lightGreyBgColor;
   border-radius: 16px;
   box-shadow: $shadow;
+  overflow: hidden;
 }
 
 .image {
   border-radius: 16px;
+
+  transition: all 0.4s ease;
 }
 
 .notion {
   position: absolute;
   top: 16px;
   right: 16px;
+  z-index: 10;
 
   padding: 8px 16px;
   color: $whiteColor;
@@ -71,11 +92,15 @@
   margin-bottom: 4px;
   font-size: 24px;
   color: $accentColor;
+
+  transition: all 0.4s ease;
 }
 
 .header {
   margin-bottom: 4px;
   font-size: 32px;
+
+  transition: all 0.4s ease;
 }
 
 .wrapper {
@@ -97,13 +122,28 @@
   font-size: 20px;
   color: #007733;
   border: 1px solid $accentColor;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+    color: $darkFontColor;
+
+    .glyph {
+      color: $darkFontColor;
+    }
+  }
 }
 
 .glyph {
   margin-left: 8px;
   color: $accentColor;
+
+  transition: all 0.4s ease;
 }
 
+// learn more section
 .learn_more_section {
   padding: 100px 0;
   text-align: center;
@@ -117,9 +157,18 @@
 }
 
 .learn_more_button {
+  display: inline-block;
   padding: 16px 44px;
   font-size: 24px;
   font-weight: $boldFont;
   color: $whiteColor;
   background-color: $footerBgColor;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    box-shadow: $shadow;
+  }
 }
