@@ -1,0 +1,35 @@
+@import "../../scss";
+
+.section {
+  padding: 60px 0;
+}
+
+.container {
+  @extend .container;
+
+  text-align: center;
+}
+
+.heading {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.list {
+  @extend .flex_aligncenter;
+  justify-content: center;
+  gap: 248px;
+}
+
+.item {
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+  }
+}
+
+.image {
+  height: 60px;
+}

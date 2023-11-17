@@ -1,6 +1,7 @@
 @import "../../scss";
 
 .section {
+  @extend .section;
   padding: 100px 0;
 }
 

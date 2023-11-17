@@ -5,6 +5,8 @@ import RequestedCourses from "../../components/RequestedCourses/RequestedCourses
 import Teachers from "../../components/Teachers/Teachers";
 import MobileApp from "../../components/MobileApp/MobileApp";
 import Feedback from "../../components/Feedback/Feedback";
+import Articles from "../../components/Articles/Articles";
+import Partners from "../../components/Partners/Partners";
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
       <Teachers />
       <MobileApp />
       <Feedback />
+      <Articles />
+      <Partners />
     </>
   );
 };
