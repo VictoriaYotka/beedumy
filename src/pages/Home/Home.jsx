@@ -4,6 +4,7 @@ import Categories from "../../components/Categories/Categories";
 import RequestedCourses from "../../components/RequestedCourses/RequestedCourses";
 import Teachers from "../../components/Teachers/Teachers";
 import MobileApp from "../../components/MobileApp/MobileApp";
+import Feedback from "../../components/Feedback/Feedback";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <RequestedCourses />
       <Teachers />
       <MobileApp />
+      <Feedback />
     </>
   );
 };

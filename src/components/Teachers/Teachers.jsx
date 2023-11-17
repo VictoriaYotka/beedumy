@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import css from "./Teachers.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
-import hero_image from "../../assets/images/hero/image.png";
+import hero_image from "../../assets/images/home/hero/image.png";
 
 const Teachers = () => {
   return (

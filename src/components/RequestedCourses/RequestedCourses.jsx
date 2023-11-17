@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import css from "./RequestedCourses.module.scss";
-import hero_image from "../../assets/images/hero/image.png";
+import hero_image from "../../assets/images/home/hero/image.png";
 
 const RequestedCourses = () => {
   return (

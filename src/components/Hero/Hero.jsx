@@ -1,10 +1,10 @@
 import css from "./Hero.module.scss";
-import hero_image from "../../assets/images/hero/image.png";
-import triangle_blue_big from "../../assets/images/hero/triangle-blue-big.png";
-import triangle_blue from "../../assets/images/hero/triangle-blue.png";
-import triangle_green from "../../assets/images/hero/triangle-green.png";
-import triangle_green_small from "../../assets/images/hero/triangle-green-small.png";
-import triangle_rose from "../../assets/images/hero/triangle-rose.png";
+import hero_image from "../../assets/images/home/hero/image.png";
+import triangle_blue_big from "../../assets/images/home/hero/triangle-blue-big.png";
+import triangle_blue from "../../assets/images/home/hero/triangle-blue.png";
+import triangle_green from "../../assets/images/home/hero/triangle-green.png";
+import triangle_green_small from "../../assets/images/home/hero/triangle-green-small.png";
+import triangle_rose from "../../assets/images/home/hero/triangle-rose.png";
 
 const Hero = () => {
   return (
