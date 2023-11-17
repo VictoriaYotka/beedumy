@@ -1,0 +1,122 @@
+@import "../../scss";
+
+.section {
+  @extend .section;
+  background-color: $lightGreyBgColor;
+}
+
+.container {
+  @extend .container;
+  @extend .flex_aligncenter;
+}
+
+.info_wrapper {
+  flex-basis: 56%;
+  text-align: right;
+  padding: 80px 100px 80px 0;
+}
+
+.heading {
+  padding-bottom: 8px;
+  font-size: 48px;
+}
+
+.descr {
+  padding-bottom: 32px;
+  font-size: 24px;
+  color: $secondaryFontColor;
+  background-image: url("../../assets/images/home/line-stripe.png");
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: bottom;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 24px;
+  border-radius: 32px;
+  font-size: 28px;
+  font-weight: $boldFont;
+  color: $accentColor;
+  background-color: $whiteColor;
+  box-shadow: $shadow;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    box-shadow: $shadowDark;
+  }
+}
+
+.video_wrapper {
+  flex-basis: 44%;
+  text-align: right;
+  background-color: $darkFooterBgColor;
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  height: 510px;
+}
+
+.video_button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &:hover,
+  &:focus {
+    .video_popup {
+      scale: 110%;
+
+      &::before {
+        left: 0;
+      }
+    }
+  }
+}
+
+.video_popup {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+  background-color: $redBgButtonColor;
+  border-radius: 50%;
+
+  transition: all 0.4s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid $redBgButtonColor;
+    border-radius: 50%;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+}
+
+.video_icon {
+  font-style: normal;
+  font-size: 64px;
+  color: $whiteColor;
+}
+
+.video_descr {
+  padding: 24px 16px;
+  color: $whiteColor;
+  background-color: $footerBgColor;
+  font-size: 20px;
+  font-weight: $boldFont;
+}
