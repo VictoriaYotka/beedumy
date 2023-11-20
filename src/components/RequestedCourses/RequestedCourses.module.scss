@@ -50,7 +50,11 @@
     .header,
     .course_button {
       scale: 110%;
-      transform-origin: right;
+      // transform-origin: right;
+    }
+
+    .descr {
+      color: $darkFontColor;
     }
   }
 }
@@ -113,6 +117,8 @@
 .descr {
   font-size: 24px;
   color: $secondaryFontColor;
+
+  transition: all 0.4s ease;
 }
 
 .course_button {
@@ -129,6 +135,7 @@
   &:focus {
     background-color: $accentColor;
     color: $darkFontColor;
+    box-shadow: $shadow;
 
     .glyph {
       color: $darkFontColor;

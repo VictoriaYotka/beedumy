@@ -38,6 +38,14 @@
     .teacher_image {
       scale: 110%;
     }
+
+    .occupation {
+      color: $darkFontColor;
+      scale: 110%;
+    }
+    .descr {
+      color: $darkFontColor;
+    }
   }
 }
 
@@ -71,10 +79,14 @@
 
 .occupation {
   margin-bottom: 16px;
+
+  transition: all 0.4s ease;
 }
 
 .descr {
   margin-bottom: 16px;
+
+  transition: all 0.4s ease;
 }
 
 .socials {

@@ -1,13 +1,13 @@
 @import "../../scss";
 
 .section {
+  padding: 60px 0;
   text-align: center;
   background-color: $lightGreyBgColor;
 }
 
 .container {
   @extend .container;
-  padding: 60px 0;
 }
 
 .heading {
@@ -18,12 +18,12 @@
 .list {
   display: flex;
   justify-content: space-around;
-  gap: 16px;
+  gap: 8px;
   margin-bottom: 48px;
 }
 
 .item {
-  padding: 40px 56px;
+  padding: 40px 40px;
   background-color: $whiteColor;
   text-align: center;
 
@@ -32,6 +32,7 @@
   &:hover,
   &:focus {
     box-shadow: $shadow;
+    scale: 105%;
 
     .title {
       scale: 110%;

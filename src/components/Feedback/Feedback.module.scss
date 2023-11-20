@@ -48,6 +48,14 @@
       scale: 120%;
       box-shadow: $shadow;
     }
+
+    .name {
+      color: $accentColor;
+    }
+
+    .descr {
+      color: $darkFontColor;
+    }
   }
 }
 
@@ -108,8 +116,12 @@
 .name {
   font-weight: $boldFont;
   color: $darkFontColor;
+
+  transition: all 0.4s ease;
 }
 
 .descr {
   color: $secondaryFontColor;
+
+  transition: all 0.4s ease;
 }
