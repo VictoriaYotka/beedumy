@@ -7,6 +7,7 @@ import MobileApp from "../../components/MobileApp/MobileApp";
 import Feedback from "../../components/Feedback/Feedback";
 import Articles from "../../components/Articles/Articles";
 import Partners from "../../components/Partners/Partners";
+import Subscription from "../../components/Subscription/Subscription";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Feedback />
       <Articles />
       <Partners />
+      <Subscription />
     </>
   );
 };
