@@ -76,7 +76,8 @@
 
   transition: all 0.4s ease;
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: $shadow;
     background-color: $accentColor;
   }

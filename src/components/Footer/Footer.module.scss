@@ -1,0 +1,170 @@
+@import "../../scss";
+
+//   @extend .flex_aligncenter;
+
+.footer {
+  position: relative;
+  background-color: $footerBgColor;
+  color: $whiteColor;
+}
+
+.container {
+  @extend .container;
+}
+
+// topper
+.topper {
+  @extend .flex_aligncenter;
+  padding: 80px 0 80px 0;
+}
+
+.navigation_wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-basis: 65%;
+  gap: 32px;
+  padding: 0 16px;
+}
+
+.item {
+  text-align: right;
+  color: $paleWhiteColor;
+  font-size: 14px;
+  font-weight: $boldFont;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    color: $whiteColor;
+  }
+}
+
+.item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.socials {
+  @extend .flex_aligncenter;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.social_link {
+  display: inline-block;
+  padding: 8px;
+
+  &:hover,
+  &:focus {
+    .icon {
+      scale: 120%;
+      fill: $whiteColor;
+    }
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: $paleWhiteColor;
+
+  transition: all 0.4s ease;
+}
+
+.gallery_heading {
+  margin-bottom: 16px;
+  text-align: right;
+  color: $paleWhiteColor;
+  font-size: 14px;
+  font-weight: $boldFont;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    color: $whiteColor;
+  }
+}
+
+.gallery_list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 280px;
+}
+
+.gallery_item {
+  flex-basis: calc((100% - 16px * (3 - 1)) / (3));
+}
+
+.image {
+  width: 80px;
+  height: 80px;
+  border: 1px solid $accentColor;
+}
+
+.about_wrapper {
+  flex-basis: 35%;
+  text-align: right;
+  padding: 0 160px 0 16px;
+}
+
+.about_heading {
+  margin-bottom: 16px;
+  text-align: right;
+  color: $whiteColor;
+  font-size: 14px;
+  font-weight: $boldFont;
+}
+
+.about_descr {
+  margin-bottom: 24px;
+  color: $paleWhiteColor;
+}
+
+.button {
+  padding: 8px 0;
+  width: 100px;
+  text-align: center;
+  font-size: 14px;
+  color: $whiteColor;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    box-shadow: $shadow;
+  }
+}
+
+.follow_more_button {
+  @extend .button;
+  display: inline-block;
+  margin-right: 8px;
+  background-color: $greenBgButtonBgColor;
+}
+
+.connect_button {
+  @extend .button;
+  background-color: $accentColor;
+}
+
+.bottom {
+  padding: 24px 0;
+  text-align: center;
+  background-color: $darkFooterBgColor;
+}
+
+.copyright {
+  color: $paleWhiteColor;
+}
+
+.copyright_accent {
+  color: $accentColor;
+}
