@@ -20,6 +20,10 @@
   color: $whiteColor;
 }
 
+.heading {
+  @extend .heading;
+}
+
 .icon_wrapper {
   i {
     position: relative;

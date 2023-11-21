@@ -14,7 +14,7 @@ const Subscription = () => {
           />
         </form>
         <div className={css.heading_wrapper}>
-          <h2>
+          <h2 className={css.heading}>
             سجل الآن لتصلك <br />
             آخر المستجدات والعروض
           </h2>

@@ -8,12 +8,12 @@ import Footer from "../../components/Footer/Footer";
 const SharedLayout = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <main>
         <Suspense fallback={<Loading />}>
           <Outlet />
         </Suspense>
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );

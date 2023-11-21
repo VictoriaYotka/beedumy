@@ -55,3 +55,13 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
+
+// slick
+.slick-prev:before,
+.slick-next:before {
+  color: $darkBgButtonColor;
+}
+
+.slick-list {
+  padding: 10px 0;
+}

@@ -2,7 +2,6 @@
 
 .section {
   @extend .section;
-  padding: 60px 0 0 0;
   background-color: $peachBgColor;
 }
 
@@ -13,31 +12,32 @@
 }
 
 .heading {
-  font-size: 48px;
+  @extend .heading;
   color: $whiteColor;
 }
 
-.list {
-  @extend .flex_aligncenter;
-  justify-content: space-around;
-  gap: 24px;
+.list_wrapper {
+  position: relative;
+  top: 80px;
 }
 
 .item {
-  position: relative;
-  top: 80px;
-
-  padding: 20px 32px 40px 32px;
-  width: 320px;
+  margin: 0 8px;
+  padding: 12px 16px 20px 16px;
+  max-width: 320px;
   background-color: $darkFooterBgColor;
   text-align: right;
   color: $whiteColor;
 
   transition: all 0.4s ease;
 
+  @include md {
+    padding: 20px 32px 40px 32px;
+  }
+
   &:hover,
   &:focus {
-    scale: 110%;
+    scale: 105%;
 
     box-shadow: $shadow;
 
@@ -67,7 +67,7 @@
   position: relative;
 
   justify-content: center;
-  margin: 0 0 100px auto;
+  margin: 0 0 40px auto;
   padding: 12px;
   width: 70px;
   height: 70px;
@@ -77,6 +77,13 @@
   border-radius: 50%;
 
   transition: all 0.4s ease;
+
+  @include sm {
+    margin: 0 0 60px auto;
+  }
+  @include md {
+    margin: 0 0 100px auto;
+  }
 
   &::before {
     content: "";

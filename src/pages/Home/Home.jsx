@@ -12,15 +12,15 @@ import Subscription from "../../components/Subscription/Subscription";
 const Home = () => {
   return (
     <>
-      <Hero />
-      <Categories />
-      <RequestedCourses />
-      <Teachers />
-      <MobileApp />
-      <Feedback />
+      {/* <Hero />
+      <Categories /> */}
+      {/* <RequestedCourses /> */}
+      {/* <Teachers /> */}
+      {/* <MobileApp /> */}
+      {/* <Feedback /> */}
       <Articles />
       <Partners />
-      <Subscription />
+      {/* <Subscription /> */}
     </>
   );
 };

@@ -11,7 +11,7 @@
 }
 
 .heading {
-  font-size: 48px;
+  @extend .heading;
   margin-bottom: 20px;
 }
 

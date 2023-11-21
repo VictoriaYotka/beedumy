@@ -5,9 +5,16 @@
 }
 // topper
 .topper {
-  padding: 16px 0;
   background-color: $headerBgColor;
   color: $whiteColor;
+
+  @include md {
+    padding: 8px 0;
+  }
+
+  .include lg {
+    padding: 16px 0;
+  }
 }
 
 .topper_container {
@@ -15,7 +22,15 @@
   @extend .flex_aligncenter;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 16px;
+
+  @include md {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  @include lg {
+    gap: 16px;
+  }
 }
 
 .list {
@@ -85,7 +100,13 @@
 
 // content
 .content {
-  padding: 20px 0;
+  @include md {
+    padding: 8px 0;
+  }
+
+  @include lg {
+    padding: 20px 0;
+  }
 }
 
 .content_container {
