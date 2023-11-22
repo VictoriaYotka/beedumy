@@ -1,7 +1,5 @@
 @import "../../scss";
 
-//   @extend .flex_aligncenter;
-
 .footer {
   position: relative;
   background-color: $footerBgColor;
@@ -14,36 +12,83 @@
 
 // topper
 .topper {
+  @extend .section;
   @extend .flex_aligncenter;
-  padding: 80px 0 80px 0;
+  flex-direction: column-reverse;
+  gap: 16px;
+  // padding: 80px 0 80px 0;
 }
 
 .navigation_wrapper {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
-  flex-basis: 65%;
-  gap: 32px;
+  flex-direction: column;
+
+  gap: 8px;
   padding: 0 16px;
+
+  @include md {
+    flex-basis: 65%;
+    align-items: baseline;
+    gap: 32px;
+  }
+}
+
+.show_more {
+  display: flex;
+  color: $paleWhiteColor;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    color: $whiteColor;
+    scale: 110%;
+
+    .icon {
+      fill: $whiteColor;
+      scale: 110%;
+    }
+  }
+}
+
+.list {
+  @extend .flex_aligncenter;
+  justify-content: space-between;
+  gap: 12px;
+
+  @include sm {
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  @include md {
+    flex-direction: column;
+    gap: 24px;
+  }
 }
 
 .item {
   text-align: right;
   color: $paleWhiteColor;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: $boldFont;
 
   transition: all 0.4s ease;
+
+  @include sm {
+    font-size: 12px;
+  }
+  @include md {
+    font-size: 14px;
+  }
 
   &:hover,
   &:focus {
     scale: 110%;
     color: $whiteColor;
   }
-}
-
-.item:not(:last-child) {
-  margin-bottom: 24px;
 }
 
 .socials {
@@ -66,21 +111,33 @@
 }
 
 .icon {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   fill: $paleWhiteColor;
 
   transition: all 0.4s ease;
+
+  @include md {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .gallery_heading {
-  margin-bottom: 16px;
   text-align: right;
   color: $paleWhiteColor;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: $boldFont;
 
   transition: all 0.4s ease;
+
+  @include sm {
+    font-size: 12px;
+  }
+  @include md {
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
 
   &:hover,
   &:focus {
@@ -90,12 +147,16 @@
 }
 
 .gallery_list {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   max-width: 280px;
+
+  @include md {
+    display: flex;
+  }
 }
 
 .gallery_item {
@@ -109,23 +170,50 @@
 }
 
 .about_wrapper {
-  flex-basis: 35%;
-  text-align: right;
-  padding: 0 160px 0 16px;
+  text-align: center;
+  padding: 8px;
+  max-width: 320px;
+
+  @include md {
+    text-align: right;
+    flex-basis: 35%;
+    padding: 0 160px 0 16px;
+  }
 }
 
 .about_heading {
-  margin-bottom: 16px;
-  text-align: right;
+  margin-bottom: 4px;
+  text-align: center;
   color: $whiteColor;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: $boldFont;
+
+  @include sm {
+    font-size: 12px;
+  }
+
+  @include md {
+    margin-bottom: 16px;
+    text-align: right;
+    font-size: 14px;
+  }
 }
 
 .about_descr {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
+  text-align: right;
+  font-size: 10px;
   color: $paleWhiteColor;
   font-weight: $boldFont;
+
+  @include sm {
+    font-size: 12px;
+  }
+
+  @include md {
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
 }
 
 .button {

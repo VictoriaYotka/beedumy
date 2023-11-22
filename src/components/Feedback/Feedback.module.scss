@@ -6,7 +6,7 @@
 
 .container {
   @extend .container;
-  align-items: center;
+  text-align: center;
 }
 
 .heading {
@@ -24,8 +24,7 @@
 
 .item {
   margin: 0 8px;
-  padding: 12px;
-  max-width: 300px;
+  padding: 12px 24px;
   text-align: center;
   border: 2px solid $lightGreyBgColor;
   box-shadow: $shadow;

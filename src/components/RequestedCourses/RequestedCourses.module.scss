@@ -57,9 +57,14 @@
   }
 }
 
+.item_wrapper {
+  margin: 0 8px;
+  text-align: center;
+}
+
 .item {
   max-width: 360px;
-  margin: 0 8px;
+  margin: 0 auto;
   text-align: end;
   box-shadow: $shadow;
   border-radius: 16px;

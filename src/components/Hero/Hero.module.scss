@@ -3,31 +3,77 @@
 .hero_section {
   color: $heroFontColor;
   background-color: $heroBgColor;
-  padding-bottom: 80px;
+  padding-bottom: 20px;
+  overflow: hidden;
+
+  @include md {
+    padding-bottom: 80px;
+  }
 }
 
 .hero_container {
   @extend .container;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  min-width: 320px;
+
+  @include md {
+    flex-direction: row;
+  }
 }
 
 .content {
   position: relative;
-  flex-basis: 50%;
-  padding: 200px 16px 0 16px;
+
+  padding: 40px 12px 0 12px;
   text-align: end;
+
+  @include sm {
+    padding: 80px 16px 0 16px;
+  }
+
+  @include md {
+    flex-basis: 50%;
+    padding: 120px 48px 0 16px;
+  }
+
+  @include lg {
+    padding: 160px 40px 0 16px;
+  }
+
+  @include xl {
+    padding: 200px 100px 0 16px;
+  }
 }
 
 .triangle_green {
+  display: none;
   position: absolute;
-  top: 40px;
-  right: 80px;
+  top: -60px;
+  right: 5%;
+
+  @include sm {
+    display: block;
+  }
+
+  @include md {
+    top: 0;
+    right: 0;
+  }
+
+  @include lg {
+    right: 50px;
+  }
+
+  @include xl {
+    right: 160px;
+    top: 40px;
+  }
 }
 
 .heading {
-  font-size: 80px;
+  @extend .heading;
   margin-bottom: 16px;
 }
 
@@ -36,10 +82,22 @@
 }
 
 .subheading {
-  font-size: 24px;
+  font-size: 12px;
   margin-bottom: 20px;
   max-width: 540px;
   margin-left: auto;
+
+  @include sm {
+    font-size: 16px;
+  }
+
+  @include md {
+    font-size: 20px;
+  }
+
+  @include lg {
+    font-size: 24px;
+  }
 }
 
 .hero_button {
@@ -60,36 +118,114 @@
 
 .picture {
   position: relative;
-  flex-basis: 50%;
+  min-width: 320px;
+  min-height: 320px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include md {
+    flex-basis: 50%;
+  }
 }
 
 .hero_image {
   position: absolute;
-  top: 32px;
-  left: 0;
+  top: 0;
+  left: -20px;
   z-index: 10;
+
+  @include md {
+    height: 364px;
+  }
 }
 
 .triangle_blue_big {
   position: absolute;
-  top: 32px;
-  left: 48px;
+  top: 0;
+  left: 28px;
+
+  @include md {
+    height: 364px;
+  }
 }
 
 .triangle_blue {
   position: absolute;
-  bottom: -184px;
-  left: 0;
+  bottom: -80px;
+  left: -30px;
+
+  @include sm {
+    bottom: -100px;
+  }
+
+  @include md {
+    left: -35px;
+    bottom: -80px;
+  }
+
+  @media screen and (min-width: 872px) {
+    left: -60px;
+  }
+
+  @include lg {
+    left: -20px;
+    bottom: -60px;
+  }
+
+  @include xl {
+    left: -55px;
+    bottom: -40px;
+  }
 }
 
 .triangle_green_small {
   position: absolute;
-  bottom: -60px;
-  right: -28px;
+  top: 0;
+  left: 0;
+
+  @include sm_plus {
+    top: 0;
+    left: -40px;
+  }
+
+  @include md {
+    top: 90%;
+    left: 80%;
+  }
+
+  @include lg {
+    top: 70%;
+    left: 60%;
+  }
+
+  @include xl {
+    top: 70%;
+    left: 42%;
+  }
 }
 
 .triangle_rose {
   position: absolute;
-  top: 40px;
-  right: -100px;
+  top: 20px;
+  right: -50px;
+
+  @include sm {
+    right: -100px;
+  }
+
+  @include sm_plus {
+    right: -130px;
+  }
+
+  @include md {
+    right: -60px;
+  }
+
+  @include lg {
+    right: 0;
+  }
+
+  @include xl {
+    right: 100px;
+  }
 }

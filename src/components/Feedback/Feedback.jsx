@@ -6,7 +6,7 @@ import Slider from "react-slick";
 const Feedback = () => {
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 3,
@@ -14,7 +14,7 @@ const Feedback = () => {
     pauseOnHover: true,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1025,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 2,
@@ -22,7 +22,7 @@ const Feedback = () => {
         },
       },
       {
-        breakpoint: 922,
+        breakpoint: 923,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
@@ -30,7 +30,7 @@ const Feedback = () => {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 769,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -38,7 +38,7 @@ const Feedback = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 481,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -54,6 +54,22 @@ const Feedback = () => {
           عبر مواقع التواصل الاجتماعي
         </h2>
         <Slider {...settings}>
+          <div>
+            <div className={css.item}>
+              <div className={css.icon_wrapper}>
+                <svg className={css.icon}>
+                  <use href={icons + "#quotes"}></use>
+                </svg>
+              </div>
+              <p className={css.content}>
+                التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب
+                وجهد
+              </p>
+              <img src={hero_image} alt="" className={css.image} />
+              <p className={css.name}>إلهام بن عبيد</p>
+              <p className={css.descr}>تلميذة</p>
+            </div>
+          </div>
           <div>
             <div className={css.item}>
               <div className={css.icon_wrapper}>

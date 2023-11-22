@@ -14,7 +14,7 @@ const RequestedCourses = () => {
     pauseOnHover: true,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 769,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -22,7 +22,7 @@ const RequestedCourses = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 481,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -45,74 +45,80 @@ const RequestedCourses = () => {
         <div className="container">
           <Slider {...settings}>
             <div>
-              <div className={css.item}>
-                <div className={css.img_thumb}>
-                  <p className={css.notion}>notion notion</p>
-                  <img
-                    src={hero_image}
-                    alt="course preview"
-                    className={css.image}
-                  />
-                </div>
-                <div className={css.info_thumb}>
-                  <h4 className={css.preheader}>Preheader</h4>
-                  <h3 className={css.header}>Header</h3>
-                  <div className={css.wrapper}>
-                    <div className={css.rating}>stars</div>
-                    <p className={css.descr}>Some description</p>
+              <div className={css.item_wrapper}>
+                <div className={css.item}>
+                  <div className={css.img_thumb}>
+                    <p className={css.notion}>notion notion</p>
+                    <img
+                      src={hero_image}
+                      alt="course preview"
+                      className={css.image}
+                    />
                   </div>
-                  <Link className={css.course_button}>
-                    Go to course <span className={css.glyph}> &#9664;</span>
-                    {/* opposite side: &#9654; */}
-                  </Link>
+                  <div className={css.info_thumb}>
+                    <h4 className={css.preheader}>Preheader</h4>
+                    <h3 className={css.header}>Header</h3>
+                    <div className={css.wrapper}>
+                      <div className={css.rating}>stars</div>
+                      <p className={css.descr}>Some description</p>
+                    </div>
+                    <Link className={css.course_button}>
+                      Go to course <span className={css.glyph}> &#9664;</span>
+                      {/* opposite side: &#9654; */}
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
             <div>
-              <div className={css.item}>
-                <div className={css.img_thumb}>
-                  <p className={css.notion}>notion button</p>
-                  <img
-                    src={hero_image}
-                    alt="course preview"
-                    className={css.image}
-                  />
-                </div>
-                <div className={css.info_thumb}>
-                  <h4 className={css.preheader}>Preheader</h4>
-                  <h3 className={css.header}>Header</h3>
-                  <div className={css.wrapper}>
-                    <div className={css.rating}>stars</div>
-                    <p className={css.descr}>Some description</p>
+              <div className={css.item_wrapper}>
+                <div className={css.item}>
+                  <div className={css.img_thumb}>
+                    <p className={css.notion}>notion button</p>
+                    <img
+                      src={hero_image}
+                      alt="course preview"
+                      className={css.image}
+                    />
                   </div>
-                  <Link className={css.course_button}>
-                    Go to course <span className={css.glyph}> &#9664;</span>
-                    {/* opposite side: &#9654; */}
-                  </Link>
+                  <div className={css.info_thumb}>
+                    <h4 className={css.preheader}>Preheader</h4>
+                    <h3 className={css.header}>Header</h3>
+                    <div className={css.wrapper}>
+                      <div className={css.rating}>stars</div>
+                      <p className={css.descr}>Some description</p>
+                    </div>
+                    <Link className={css.course_button}>
+                      Go to course <span className={css.glyph}> &#9664;</span>
+                      {/* opposite side: &#9654; */}
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
             <div>
-              <div className={css.item}>
-                <div className={css.img_thumb}>
-                  <p className={css.notion}>notion button</p>
-                  <img
-                    src={hero_image}
-                    alt="course preview"
-                    className={css.image}
-                  />
-                </div>
-                <div className={css.info_thumb}>
-                  <h4 className={css.preheader}>Preheader</h4>
-                  <h3 className={css.header}>Header</h3>
-                  <div className={css.wrapper}>
-                    <div className={css.rating}>stars</div>
-                    <p className={css.descr}>Some description</p>
+              <div className={css.item_wrapper}>
+                <div className={css.item}>
+                  <div className={css.img_thumb}>
+                    <p className={css.notion}>notion button</p>
+                    <img
+                      src={hero_image}
+                      alt="course preview"
+                      className={css.image}
+                    />
                   </div>
-                  <Link className={css.course_button}>
-                    Go to course <span className={css.glyph}> &#9664;</span>
-                    {/* opposite side: &#9654; */}
-                  </Link>
+                  <div className={css.info_thumb}>
+                    <h4 className={css.preheader}>Preheader</h4>
+                    <h3 className={css.header}>Header</h3>
+                    <div className={css.wrapper}>
+                      <div className={css.rating}>stars</div>
+                      <p className={css.descr}>Some description</p>
+                    </div>
+                    <Link className={css.course_button}>
+                      Go to course <span className={css.glyph}> &#9664;</span>
+                      {/* opposite side: &#9654; */}
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

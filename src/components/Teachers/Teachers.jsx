@@ -15,7 +15,7 @@ const Teachers = () => {
     pauseOnHover: true,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 769,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -23,7 +23,7 @@ const Teachers = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 481,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

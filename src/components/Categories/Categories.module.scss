@@ -17,12 +17,15 @@
 
 .item {
   margin: 0 8px;
-  padding: 40px 40px;
+  padding: 20px 20px;
   background-color: $whiteColor;
   text-align: center;
 
   transition: all 0.4s ease;
 
+  @include md {
+    padding: 40px 40px;
+  }
   &:hover,
   &:focus {
     box-shadow: $shadow;
@@ -58,8 +61,8 @@
 }
 
 .icon {
-  width: 112px;
-  height: 112px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -67,23 +70,36 @@
 
   transition: all 0.4s ease;
 
+  @include md {
+    width: 112px;
+    height: 112px;
+  }
+
   &:before {
     content: "";
     position: absolute;
     top: 0;
-    left: -10px;
+    left: -8px;
     width: 100%;
     height: 100%;
     border: 2px solid $accentColor;
     border-radius: 50%;
 
     transition: all 0.4s ease;
+    @include md {
+      left: -10px;
+    }
   }
 
   i {
-    font-size: 56px;
-    line-height: 112px;
+    font-size: 48px;
+    line-height: 80px;
     color: #fff;
+
+    @include md {
+      font-size: 56px;
+      line-height: 112px;
+    }
   }
 }
 

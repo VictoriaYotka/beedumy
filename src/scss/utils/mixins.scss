@@ -4,6 +4,12 @@
   }
 }
 
+@mixin sm_plus {
+  @media screen and (min-width: 540px) {
+    @content;
+  }
+}
+
 @mixin md {
   @media screen and (min-width: 768px) {
     @content;

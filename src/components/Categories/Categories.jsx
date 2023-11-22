@@ -13,7 +13,7 @@ const Categories = () => {
     pauseOnHover: true,
     responsive: [
       {
-        breakpoint: 1280,
+        breakpoint: 1281,
         settings: {
           slidesToShow: 5,
           slidesToScroll: 3,
@@ -22,7 +22,7 @@ const Categories = () => {
         },
       },
       {
-        breakpoint: 992,
+        breakpoint: 923,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 2,
@@ -30,7 +30,7 @@ const Categories = () => {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 769,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
@@ -38,16 +38,9 @@ const Categories = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 481,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 320,
-        settings: {
-          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
