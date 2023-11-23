@@ -60,7 +60,7 @@ const Categories = () => {
               <Link href="#">
                 <div className={css.color_1}>
                   <div className={css.icon}>
-                    <i class="kipso-icon-desktop"></i>
+                    <i className="kipso-icon-desktop"></i>
                   </div>
                   <h3 className={css.title}>دورات في الإعلامية</h3>
                 </div>
@@ -133,73 +133,6 @@ const Categories = () => {
             </div>
           </div>
         </Slider>
-        {/* <ul className={css.list}>
-          <li className={css.item}>
-            <div className={css.color_1}>
-              <div className={css.icon}>
-                <i class="kipso-icon-desktop"></i>
-              </div>
-              <h3 className={css.title}>
-                <Link href="#">دورات في الإعلامية</Link>
-              </h3>
-            </div>
-          </li>
-
-          <li className={css.item}>
-            <div className={css.color_2}>
-              <div className={css.icon}>
-                <i className="kipso-icon-web-programming"></i>
-              </div>
-              <h3 className={css.title}>
-                <Link href="#">دورات في البرمجة</Link>
-              </h3>
-            </div>
-          </li>
-
-          <li className={css.item}>
-            <div className={css.color_3}>
-              <div className={css.icon}>
-                <i className="kipso-icon-music-player"></i>
-              </div>
-              <h3 className={css.title}>
-                <Link href="#">دورات في Autodesk</Link>
-              </h3>
-            </div>
-          </li>
-
-          <li className={css.item}>
-            <div className={css.color_4}>
-              <div className={css.icon}>
-                <i className="kipso-icon-camera"></i>
-              </div>
-              <h3 className={css.title}>
-                <Link href="#">دورات في اللغات</Link>
-              </h3>
-            </div>
-          </li>
-
-          <li className={css.item}>
-            <div className={css.color_5}>
-              <div className={css.icon}>
-                <i className="kipso-icon-targeting"></i>
-              </div>
-              <h3 className={css.title}>
-                <Link href="#">المنهج الليبيي</Link>
-              </h3>
-            </div>
-          </li>
-
-          <li className={css.item}>
-            <div className={css.color_6}>
-              <div className={css.icon}>
-                <i className="kipso-icon-health"></i>
-              </div>
-              <h3 className={css.title}>
-                <Link href="#">المنهج التونسي</Link>
-              </h3>
-            </div>
-          </li>
-        </ul> */}
         <button className={css.button}>تصفح جميع المحاور</button>
       </div>
     </section>

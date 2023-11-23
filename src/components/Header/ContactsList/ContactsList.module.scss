@@ -1,0 +1,75 @@
+@import "../../../scss";
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include sm {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  @include md {
+    gap: 16px;
+  }
+  @include lg {
+    justify-content: space-between;
+  }
+}
+
+.item {
+  @extend .flex_aligncenter;
+
+  color: $whiteColor;
+  font-size: 14px;
+
+  transition: all 0.4s ease;
+
+  @include md {
+    padding: 0 16px;
+    font-size: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    color: $accentColor;
+
+    @include lg {
+      color: $whiteColor;
+    }
+  }
+}
+
+.item_devider {
+  display: none;
+  border-right: 2px solid $whiteColor;
+  margin: 0 4px;
+
+  @include sm {
+    display: block;
+  }
+}
+
+.contact_link {
+  @extend .flex_aligncenter;
+}
+
+.link_content {
+  transition: all 0.4s ease;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  fill: $whiteColor;
+
+  transition: all 0.4s ease;
+
+  @include md {
+    margin-left: 12px;
+  }
+}

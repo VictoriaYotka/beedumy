@@ -16,7 +16,11 @@
   @extend .flex_aligncenter;
   flex-direction: column-reverse;
   gap: 16px;
-  // padding: 80px 0 80px 0;
+
+  @include lg {
+    flex-direction: row;
+    padding: 28px 0;
+  }
 }
 
 .navigation_wrapper {
@@ -29,15 +33,20 @@
   padding: 0 16px;
 
   @include md {
+  }
+
+  @include lg {
+    position: relative;
+
+    flex-direction: column-reverse;
     flex-basis: 65%;
-    align-items: baseline;
-    gap: 32px;
   }
 }
 
-.show_more {
+.show_more_button {
   display: flex;
   color: $paleWhiteColor;
+  font-weight: $boldFont;
 
   transition: all 0.4s ease;
 
@@ -53,10 +62,19 @@
   }
 }
 
+.lists_wrapper {
+  @include md {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}
+
 .list {
   @extend .flex_aligncenter;
   justify-content: space-between;
   gap: 12px;
+  margin-bottom: 12px;
 
   @include sm {
     justify-content: space-around;
@@ -65,7 +83,9 @@
 
   @include md {
     flex-direction: column;
+    justify-content: center;
     gap: 24px;
+    margin-bottom: 0;
   }
 }
 
@@ -73,12 +93,12 @@
   text-align: right;
   color: $paleWhiteColor;
   font-size: 10px;
-  font-weight: $boldFont;
 
   transition: all 0.4s ease;
 
   @include sm {
     font-size: 12px;
+    font-weight: $boldFont;
   }
   @include md {
     font-size: 14px;
@@ -95,6 +115,12 @@
   @extend .flex_aligncenter;
   justify-content: space-between;
   gap: 8px;
+
+  @include lg {
+    position: absolute;
+    bottom: -8px;
+    left: 100px;
+  }
 }
 
 .social_link {
@@ -124,15 +150,16 @@
 }
 
 .gallery_heading {
+  display: inline-block;
   text-align: right;
   color: $paleWhiteColor;
   font-size: 10px;
-  font-weight: $boldFont;
 
   transition: all 0.4s ease;
 
   @include sm {
     font-size: 12px;
+    font-weight: $boldFont;
   }
   @include md {
     margin-bottom: 16px;
@@ -176,8 +203,11 @@
 
   @include md {
     text-align: right;
+  }
+
+  @include lg {
     flex-basis: 35%;
-    padding: 0 160px 0 16px;
+    padding: 0 40px 0 16px;
   }
 }
 
@@ -245,9 +275,30 @@
 }
 
 .bottom {
-  padding: 24px 0;
+  padding: 8px 0;
   text-align: center;
   background-color: $darkFooterBgColor;
+  font-size: 12px;
+
+  @include sm {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  @include sm {
+    padding: 12px 0;
+    font-size: 14px;
+  }
+
+  @include md {
+    padding: 16px 0;
+    font-size: 16px;
+  }
+
+  @include lg {
+    padding: 24px 0;
+  }
 }
 
 .copyright {

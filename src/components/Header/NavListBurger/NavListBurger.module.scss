@@ -1,0 +1,35 @@
+@import "../../../scss";
+
+.nav_list {
+  @extend .flex_aligncenter;
+  flex-direction: column;
+  gap: 36px;
+  margin-bottom: 80px;
+  color: $secondaryFontColor;
+
+  @include sm {
+    font-size: 20px;
+  }
+
+  & a {
+    display: inline-block;
+
+    transition: all 0.4s ease;
+
+    &:hover,
+    &:focus {
+      scale: 110%;
+      color: $accentColor;
+    }
+  }
+
+  & [class="active"] {
+    color: $accentColor;
+    font-weight: $boldFont;
+
+    &:hover,
+    &:focus {
+      color: $accentColor;
+    }
+  }
+}

@@ -6,10 +6,10 @@ import { useEffect, useState } from "react";
 
 const Footer = () => {
   const [showMore, setshowMore] = useState(
-    window.innerWidth >= 768 ? true : false
+    document.body.offsetWidth >= 767 ? true : false
   );
   const [showMoreButton, setshowMoreButton] = useState(
-    window.innerWidth >= 768 ? false : true
+    document.body.offsetWidth >= 767 ? false : true
   );
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -19,14 +19,13 @@ const Footer = () => {
 
   useEffect(() => {
     const handleWindowResize = () => {
-      setWindowWidth(window.innerWidth);
+      setWindowWidth(document.body.offsetWidth);
 
-      if (windowWidth >= 768) {
+      if (windowWidth >= 767) {
         setshowMore(true);
         setshowMoreButton(false);
       }
-
-      if (windowWidth < 768) {
+      if (windowWidth < 767) {
         setshowMore(false);
         setshowMoreButton(true);
       }
@@ -44,9 +43,58 @@ const Footer = () => {
       <div className={css.container}>
         <div className={css.topper}>
           <div className={css.navigation_wrapper}>
-            {/* Show more for mobile */}
+            <ul className={css.socials}>
+              <li>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className={css.social_link}
+                >
+                  <svg className={css.icon}>
+                    <use href={icons + "#facebook"}></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className={css.social_link}
+                >
+                  <svg className={css.icon}>
+                    <use href={icons + "#google-plus"}></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className={css.social_link}
+                >
+                  <svg className={css.icon}>
+                    <use href={icons + "#linkedin"}></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className={css.social_link}
+                >
+                  <svg className={css.icon}>
+                    <use href={icons + "#twitter"}></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
             {showMoreButton && (
-              <button onClick={toggleShowMore} className={css.show_more}>
+              <button onClick={toggleShowMore} className={css.show_more_button}>
                 أظهر المزيد{" "}
                 <svg className={css.icon}>
                   <use href={icons + "#chevron-down"}></use>
@@ -55,100 +103,80 @@ const Footer = () => {
             )}
             {showMore && (
               <>
-                <ul className={css.list}>
-                  <li className={css.item}>
-                    <NavLink> تصفح المحتوى</NavLink>
-                  </li>
-                  <li className={css.item}>
-                    <NavLink>الشروط والأحكام </NavLink>
-                  </li>
-                  <li className={css.item}>
-                    <NavLink>سياسة الخصوصية</NavLink>
-                  </li>
-                </ul>
+                <div className={css.lists_wrapper}>
+                  <ul className={css.list}>
+                    <li className={css.item}>
+                      <NavLink> تصفح المحتوى</NavLink>
+                    </li>
+                    <li className={css.item}>
+                      <NavLink>الشروط والأحكام </NavLink>
+                    </li>
+                    <li className={css.item}>
+                      <NavLink>سياسة الخصوصية</NavLink>
+                    </li>
+                  </ul>
 
-                <ul className={css.list}>
-                  <li className={css.item}>
-                    <NavLink>مساعدة</NavLink>
-                  </li>
-                  <li className={css.item}>
-                    <NavLink>تواصل معنا</NavLink>
-                  </li>
-                  <li className={css.item}>
-                    <NavLink>سجل مجـــــانا</NavLink>
-                  </li>
-                </ul>
-                <NavLink className={css.gallery_heading}>باقة الصور</NavLink>
-                <ul className={css.gallery_list}>
-                  <li className={css.gallery_item}>
-                    <img src={hero_image} alt="gallery" className={css.image} />
-                  </li>
-                  <li className={css.gallery_item}>
-                    <img src={hero_image} alt="gallery" className={css.image} />
-                  </li>
-                  <li className={css.gallery_item}>
-                    <img src={hero_image} alt="gallery" className={css.image} />
-                  </li>
-                  <li className={css.gallery_item}>
-                    <img src={hero_image} alt="gallery" className={css.image} />
-                  </li>
-                  <li className={css.gallery_item}>
-                    <img src={hero_image} alt="gallery" className={css.image} />
-                  </li>
-                  <li className={css.gallery_item}>
-                    <img src={hero_image} alt="gallery" className={css.image} />
-                  </li>
-                </ul>
-                <ul className={css.socials}>
-                  <li>
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className={css.social_link}
-                    >
-                      <svg className={css.icon}>
-                        <use href={icons + "#facebook"}></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className={css.social_link}
-                    >
-                      <svg className={css.icon}>
-                        <use href={icons + "#google-plus"}></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className={css.social_link}
-                    >
-                      <svg className={css.icon}>
-                        <use href={icons + "#linkedin"}></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className={css.social_link}
-                    >
-                      <svg className={css.icon}>
-                        <use href={icons + "#twitter"}></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
+                  <ul className={css.list}>
+                    <li className={css.item}>
+                      <NavLink>مساعدة</NavLink>
+                    </li>
+                    <li className={css.item}>
+                      <NavLink>تواصل معنا</NavLink>
+                    </li>
+                    <li className={css.item}>
+                      <NavLink>سجل مجـــــانا</NavLink>
+                    </li>
+                  </ul>
+                  <div>
+                    <NavLink className={css.gallery_heading}>
+                      باقة الصور
+                    </NavLink>
+                    <ul className={css.gallery_list}>
+                      <li className={css.gallery_item}>
+                        <img
+                          src={hero_image}
+                          alt="gallery"
+                          className={css.image}
+                        />
+                      </li>
+                      <li className={css.gallery_item}>
+                        <img
+                          src={hero_image}
+                          alt="gallery"
+                          className={css.image}
+                        />
+                      </li>
+                      <li className={css.gallery_item}>
+                        <img
+                          src={hero_image}
+                          alt="gallery"
+                          className={css.image}
+                        />
+                      </li>
+                      <li className={css.gallery_item}>
+                        <img
+                          src={hero_image}
+                          alt="gallery"
+                          className={css.image}
+                        />
+                      </li>
+                      <li className={css.gallery_item}>
+                        <img
+                          src={hero_image}
+                          alt="gallery"
+                          className={css.image}
+                        />
+                      </li>
+                      <li className={css.gallery_item}>
+                        <img
+                          src={hero_image}
+                          alt="gallery"
+                          className={css.image}
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </>
             )}
           </div>
@@ -167,10 +195,9 @@ const Footer = () => {
         </div>
       </div>
       <div className={css.bottom}>
-        <p className={css.copyright}>
-          <span className={css.copyright_accent}>www.birsaplatform.com</span>{" "}
-          ©جميع الحقوق محفوظة{" "}
-        </p>
+        <p className={css.copyright}></p>
+        <p className={css.copyright_accent}>www.birsaplatform.com</p>
+        ©جميع الحقوق محفوظة
       </div>
     </footer>
   );

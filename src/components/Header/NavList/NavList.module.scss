@@ -1,0 +1,37 @@
+@import "../../../scss";
+
+.nav_list {
+  @extend .flex_aligncenter;
+  gap: 36px;
+  color: $secondaryFontColor;
+
+  @include md {
+    margin: 0 36px 0 auto;
+  }
+
+  @include lg {
+    margin: 0;
+  }
+
+  & a {
+    display: inline-block;
+
+    transition: all 0.4s ease;
+
+    &:hover,
+    &:focus {
+      scale: 110%;
+      color: $darkFontColor;
+    }
+  }
+
+  & [class="active"] {
+    color: $accentColor;
+    font-weight: $boldFont;
+
+    &:hover,
+    &:focus {
+      color: $accentColor;
+    }
+  }
+}

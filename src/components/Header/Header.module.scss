@@ -1,9 +1,26 @@
 @import "../../scss";
 
 .header {
+  @extend .container;
+  @extend .flex_aligncenter;
   box-shadow: $shadow;
+  margin-bottom: 8px;
+  padding: 8px 16px;
+
+  display: flex;
+  justify-content: space-between;
+
+  @include sm {
+    padding: 8px 24px;
+  }
+
+  @include lg {
+    display: block;
+    padding: 0;
+    max-width: 100%;
+  }
 }
-// topper
+
 .topper {
   background-color: $headerBgColor;
   color: $whiteColor;
@@ -29,83 +46,18 @@
   }
 
   @include lg {
+    justify-content: space-between;
     gap: 16px;
   }
-}
-
-.list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.item {
-  @extend .flex_aligncenter;
-  padding: 0 16px;
-
-  transition: all 0.4s ease;
-
-  &:hover,
-  &:focus {
-    scale: 110%;
-  }
-}
-
-.item_devider {
-  border-right: 2px solid $whiteColor;
-  margin: 0 4px;
-}
-
-.contact_link {
-  @extend .flex_aligncenter;
-}
-
-.link_content {
-  transition: all 0.4s ease;
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-  margin-left: 12px;
-  fill: $whiteColor;
-
-  transition: all 0.4s ease;
 }
 
 .wrapper {
   @extend .flex_aligncenter;
 }
 
-.socials {
-  @extend .flex_aligncenter;
-  gap: 12px;
-  margin-right: 24px;
-}
-
-.social_link {
-  &:hover,
-  &:focus {
-    .icon {
-      scale: 120%;
-    }
-  }
-}
-
-.button_icon {
-  @extend .flex_aligncenter;
-  padding: 0;
-  color: $whiteColor;
-  background-color: transparent;
-}
-
-// content
 .content {
   @include md {
     padding: 8px 0;
-  }
-
-  @include lg {
-    padding: 20px 0;
   }
 }
 
@@ -115,112 +67,7 @@
   gap: 48px;
 }
 
-.search_box {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 15px;
-}
-
-.search_button {
-  position: relative;
-
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $greenBgButtonBgColor;
-  font-size: 18px;
-  transition: all 0.4s ease;
-
-  color: #fff;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -5px;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 1px solid $greenBgButtonBgColor;
-    transition: all 0.4s ease;
-  }
-
-  &:hover,
-  &:focus {
-    color: #fff;
-
-    &:before {
-      left: 0;
-    }
-  }
-}
-
-.sign_list {
-  @extend .flex_aligncenter;
-  gap: 36px;
-  margin-right: auto;
-}
-
-.sign_button {
-  padding: 12px 24px;
-  border-radius: 32px;
-
-  transition: all 0.4s ease;
-
-  &:hover,
-  &:focus {
-    scale: 110%;
-    box-shadow: $shadow;
-  }
-}
-.register_button {
-  @extend .sign_button;
-  background-color: $redBgButtonColor;
-  color: $whiteColor;
-}
-
-.login_button {
-  @extend .sign_button;
-  border: 1px solid $greenBgButtonBgColor;
-  color: $secondaryFontColor;
-}
-
 .nav {
   @extend .flex_aligncenter;
   gap: 36px;
-
-  & a {
-    display: inline-block;
-
-    transition: all 0.4s ease;
-
-    &:hover,
-    &:focus {
-      scale: 110%;
-      color: $darkFontColor;
-    }
-  }
-
-  & [class="active"] {
-    color: $accentColor;
-    font-weight: $boldFont;
-
-    &:hover,
-    &:focus {
-      color: $accentColor;
-    }
-  }
-}
-
-.nav_list {
-  @extend .flex_aligncenter;
-  gap: 36px;
-  color: $secondaryFontColor;
 }
