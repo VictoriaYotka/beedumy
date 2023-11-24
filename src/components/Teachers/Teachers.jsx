@@ -44,6 +44,7 @@ const Teachers = () => {
                     <img
                       src={hero_image}
                       alt=""
+                      loading="lazy"
                       className={css.teacher_image}
                     />
                     <h4 className={css.name}>Teacher's name</h4>
@@ -114,6 +115,7 @@ const Teachers = () => {
                     <img
                       src={hero_image}
                       alt=""
+                      loading="lazy"
                       className={css.teacher_image}
                     />
                     <h4 className={css.name}>Teacher's name</h4>
@@ -184,6 +186,7 @@ const Teachers = () => {
                     <img
                       src={hero_image}
                       alt=""
+                      loading="lazy"
                       className={css.teacher_image}
                     />
                     <h4 className={css.name}>Teacher's name</h4>

@@ -64,7 +64,12 @@ const Feedback = () => {
                 التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب
                 وجهد
               </p>
-              <img src={hero_image} alt="" className={css.image} />
+              <img
+                src={hero_image}
+                alt=""
+                loading="lazy"
+                className={css.image}
+              />
               <p className={css.name}>إلهام بن عبيد</p>
               <p className={css.descr}>تلميذة</p>
             </div>
@@ -80,7 +85,12 @@ const Feedback = () => {
                 التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب
                 وجهد
               </p>
-              <img src={hero_image} alt="" className={css.image} />
+              <img
+                src={hero_image}
+                alt=""
+                loading="lazy"
+                className={css.image}
+              />
               <p className={css.name}>إلهام بن عبيد</p>
               <p className={css.descr}>تلميذة</p>
             </div>
@@ -96,7 +106,12 @@ const Feedback = () => {
                 التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب
                 وجهد
               </p>
-              <img src={hero_image} alt="" className={css.image} />
+              <img
+                src={hero_image}
+                alt=""
+                loading="lazy"
+                className={css.image}
+              />
               <p className={css.name}>إلهام بن عبيد</p>
               <p className={css.descr}>تلميذة</p>
             </div>
@@ -112,7 +127,12 @@ const Feedback = () => {
                 التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب
                 وجهد
               </p>
-              <img src={hero_image} alt="" className={css.image} />
+              <img
+                src={hero_image}
+                alt=""
+                loading="lazy"
+                className={css.image}
+              />
               <p className={css.name}>إلهام بن عبيد</p>
               <p className={css.descr}>تلميذة</p>
             </div>
@@ -128,7 +148,12 @@ const Feedback = () => {
                 التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب
                 وجهد
               </p>
-              <img src={hero_image} alt="" className={css.image} />
+              <img
+                src={hero_image}
+                alt=""
+                loading="lazy"
+                className={css.image}
+              />
               <p className={css.name}>إلهام بن عبيد</p>
               <p className={css.descr}>تلميذة</p>
             </div>

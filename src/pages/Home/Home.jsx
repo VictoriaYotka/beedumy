@@ -1,13 +1,18 @@
-import React from "react";
+import { lazy } from "react";
 import Hero from "../../components/Hero/Hero";
 import Categories from "../../components/Categories/Categories";
-import RequestedCourses from "../../components/RequestedCourses/RequestedCourses";
-import Teachers from "../../components/Teachers/Teachers";
-import MobileApp from "../../components/MobileApp/MobileApp";
-import Feedback from "../../components/Feedback/Feedback";
-import Articles from "../../components/Articles/Articles";
-import Partners from "../../components/Partners/Partners";
-import Subscription from "../../components/Subscription/Subscription";
+
+const RequestedCourses = lazy(() =>
+  import("../../components/RequestedCourses/RequestedCourses")
+);
+const Teachers = lazy(() => import("../../components/Teachers/Teachers"));
+const MobileApp = lazy(() => import("../../components/MobileApp/MobileApp"));
+const Feedback = lazy(() => import("../../components/Feedback/Feedback"));
+const Articles = lazy(() => import("../../components/Articles/Articles"));
+const Partners = lazy(() => import("../../components/Partners/Partners"));
+const Subscription = lazy(() =>
+  import("../../components/Subscription/Subscription")
+);
 
 const Home = () => {
   return (

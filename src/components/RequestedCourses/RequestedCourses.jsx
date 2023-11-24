@@ -51,6 +51,7 @@ const RequestedCourses = () => {
                     <img
                       src={hero_image}
                       alt="course preview"
+                      loading="lazy"
                       className={css.image}
                     />
                   </div>
@@ -77,6 +78,7 @@ const RequestedCourses = () => {
                     <img
                       src={hero_image}
                       alt="course preview"
+                      loading="lazy"
                       className={css.image}
                     />
                   </div>
@@ -103,6 +105,7 @@ const RequestedCourses = () => {
                     <img
                       src={hero_image}
                       alt="course preview"
+                      loading="lazy"
                       className={css.image}
                     />
                   </div>

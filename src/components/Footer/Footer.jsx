@@ -136,6 +136,7 @@ const Footer = () => {
                         <img
                           src={hero_image}
                           alt="gallery"
+                          loading="lazy"
                           className={css.image}
                         />
                       </li>
@@ -143,6 +144,7 @@ const Footer = () => {
                         <img
                           src={hero_image}
                           alt="gallery"
+                          loading="lazy"
                           className={css.image}
                         />
                       </li>
@@ -150,6 +152,7 @@ const Footer = () => {
                         <img
                           src={hero_image}
                           alt="gallery"
+                          loading="lazy"
                           className={css.image}
                         />
                       </li>
@@ -157,6 +160,7 @@ const Footer = () => {
                         <img
                           src={hero_image}
                           alt="gallery"
+                          loading="lazy"
                           className={css.image}
                         />
                       </li>
@@ -164,6 +168,7 @@ const Footer = () => {
                         <img
                           src={hero_image}
                           alt="gallery"
+                          loading="lazy"
                           className={css.image}
                         />
                       </li>
@@ -171,6 +176,7 @@ const Footer = () => {
                         <img
                           src={hero_image}
                           alt="gallery"
+                          loading="lazy"
                           className={css.image}
                         />
                       </li>

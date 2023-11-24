@@ -1,14 +1,16 @@
+import { lazy } from "react";
 import { Route, Routes } from "react-router";
-import About from "../../pages/About/About";
-import Categories from "../../pages/Categories/Categories";
-import Course from "../../pages/Course/Course";
-import Courses from "../../pages/Courses/Courses";
-import Faq from "../../pages/Faq/Faq";
-import Home from "../../pages/Home/Home";
-import NotFound from "../../pages/Not found/NotFound";
 import SharedLayout from "../../pages/SharedLayout/SharedLayout";
-import Teacher from "../../pages/Teacher/Teacher";
-import Teachers from "../../pages/Teachers/Teachers";
+
+const About = lazy(() => import("../../pages/About/About"));
+const Categories = lazy(() => import("../../pages/Categories/Categories"));
+const Course = lazy(() => import("../../pages/Course/Course"));
+const Courses = lazy(() => import("../../pages/Courses/Courses"));
+const Faq = lazy(() => import("../../pages/Faq/Faq"));
+const Home = lazy(() => import("../../pages/Home/Home"));
+const NotFound = lazy(() => import("../../pages/Not found/NotFound"));
+const Teacher = lazy(() => import("../../pages/Teacher/Teacher"));
+const Teachers = lazy(() => import("../../pages/Teachers/Teachers"));
 
 function App() {
   return (

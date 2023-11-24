@@ -15,7 +15,12 @@ const Partners = () => {
               rel="noopener noreferrer nofollow"
               className={css.link}
             >
-              <img src={acces_canada} alt="" className={css.image} />
+              <img
+                src={acces_canada}
+                alt=""
+                loading="lazy"
+                className={css.image}
+              />
             </a>
           </li>
           <li className={css.item}>
@@ -25,7 +30,12 @@ const Partners = () => {
               rel="noopener noreferrer nofollow"
               className={css.link}
             >
-              <img src={british_counsil} alt="" className={css.image} />
+              <img
+                src={british_counsil}
+                alt=""
+                loading="lazy"
+                className={css.image}
+              />
             </a>
           </li>
         </ul>
