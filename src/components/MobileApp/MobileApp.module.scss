@@ -38,12 +38,20 @@
 
 .descr {
   padding-bottom: 32px;
-  font-size: 24px;
+  font-size: 14px;
   color: $secondaryFontColor;
   background-image: url("../../assets/images/home/line_stripe.png");
   background-repeat: no-repeat;
   background-position-x: left;
   background-position-y: bottom;
+
+  @include md {
+    font-size: 16px;
+  }
+
+  @include lg {
+    font-size: 20px;
+  }
 }
 
 .button {

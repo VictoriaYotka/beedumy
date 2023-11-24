@@ -35,8 +35,7 @@ const RequestedCourses = () => {
       <section className={css.heading_section}>
         <div className="container">
           <h2 className={css.heading}>
-            المواد التعليميّة و الدّورات <br />
-            المرتقبة و الأكثر طلبا
+            المواد التعليميّة و الدّورات المرتقبة و الأكثر طلبا
           </h2>
         </div>
         <div className={css.triangle}></div>
@@ -128,8 +127,7 @@ const RequestedCourses = () => {
       <section className={css.learn_more_section}>
         <div className="container">
           <h2 className={css.learn_more_heading}>
-            نوفّر تجربة تعليميّة تفاعليّة <br />
-            ونفتح آفاقا معرفيّة جديدة
+            نوفّر تجربة تعليميّة تفاعليّة ونفتح آفاقا معرفيّة جديدة
           </h2>
           <Link className={css.learn_more_button}>تعرّف أكثر</Link>
         </div>

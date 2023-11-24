@@ -18,7 +18,7 @@ const Home = () => {
       <Teachers />
       <MobileApp />
       <Feedback />
-      {/* <Articles /> */}
+      <Articles />
       <Partners />
       <Subscription />
     </>

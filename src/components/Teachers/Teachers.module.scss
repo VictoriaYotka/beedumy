@@ -11,19 +11,7 @@
 
 .heading {
   @extend .heading;
-  margin-bottom: 12px;
-
-  @include sm {
-    margin-bottom: 16px;
-  }
-
-  @include md {
-    margin-bottom: 24px;
-  }
-
-  @include xl {
-    margin-bottom: 32px;
-  }
+  margin-bottom: 8px;
 }
 
 .item_thumb {

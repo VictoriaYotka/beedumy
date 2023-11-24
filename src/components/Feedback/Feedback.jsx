@@ -50,8 +50,7 @@ const Feedback = () => {
     <section className={css.section}>
       <div className={css.container}>
         <h2 className={css.heading}>
-          شهادات تلامذتنا <br />
-          عبر مواقع التواصل الاجتماعي
+          شهادات تلامذتنا عبر مواقع التواصل الاجتماعي
         </h2>
         <Slider {...settings}>
           <div>

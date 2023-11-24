@@ -6,10 +6,7 @@ const MobileApp = () => {
     <section className={css.section}>
       <div className={css.container}>
         <div className={css.info_wrapper}>
-          <h2 className={css.heading}>
-            تطبيق منصة بيرسا <br />
-            التعليمية
-          </h2>
+          <h2 className={css.heading}>تطبيق منصة بيرسا التعليمية</h2>
           <p className={css.descr}>
             نحاول أن نسهل عملية التعليم عبر تطبيق بيرسا للأجهزةالمحمولة. قم
             بتنزيل تطبيق بيرسا المناسب لهاتفك الذكي أو جهــــــــازك اللوحي،

@@ -8,11 +8,20 @@
 
 body {
   margin: 0;
+  margin-top: 54px;
   font-family: $font-family;
   font-weight: $regularFont;
   color: $darkFontColor;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @include md {
+    margin-top: 58px;
+  }
+
+  @include lg {
+    margin: 0;
+  }
 }
 
 /* RESET */
@@ -64,4 +73,12 @@ button {
 
 .slick-list {
   padding: 10px 0;
+}
+
+.slick-next {
+  right: -16px;
+}
+
+.slick-prev {
+  left: -16px;
 }

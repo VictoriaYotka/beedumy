@@ -116,6 +116,12 @@
   justify-content: space-between;
   gap: 8px;
 
+  @include md {
+    position: absolute;
+    bottom: 60px;
+    left: 180px;
+  }
+
   @include lg {
     position: absolute;
     bottom: -8px;

@@ -4,7 +4,7 @@ import css from "./Articles.module.scss";
 const Articles = () => {
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -31,10 +31,7 @@ const Articles = () => {
   return (
     <section className={css.section}>
       <div className={css.container}>
-        <h2 className={css.heading}>
-          مقالات وتوجيهات <br />
-          تربوية ومهنية
-        </h2>
+        <h2 className={css.heading}>مقالات وتوجيهات تربوية ومهنية</h2>
         <div className={css.list_wrapper}>
           <Slider {...settings}>
             <div className={css.item_wrapper}>

@@ -14,10 +14,7 @@ const Subscription = () => {
           />
         </form>
         <div className={css.heading_wrapper}>
-          <h2 className={css.heading}>
-            سجل الآن لتصلك <br />
-            آخر المستجدات والعروض
-          </h2>
+          <h2 className={css.heading}>سجل الآن لتصلك آخر المستجدات والعروض</h2>
           <div className={css.icon_wrapper}>
             <i className="kipso-icon-email"></i>
           </div>

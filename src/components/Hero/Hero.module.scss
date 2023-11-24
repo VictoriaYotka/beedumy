@@ -25,8 +25,9 @@
 
 .content {
   position: relative;
+  z-index: 20;
 
-  padding: 40px 12px 0 12px;
+  padding: 24px 12px 0 12px;
   text-align: end;
 
   @include sm {
@@ -74,7 +75,11 @@
 
 .heading {
   @extend .heading;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+
+  @include sm {
+    margin-bottom: 16px;
+  }
 }
 
 .heading_colored {
@@ -83,11 +88,12 @@
 
 .subheading {
   font-size: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   max-width: 540px;
   margin-left: auto;
 
   @include sm {
+    margin-bottom: 20px;
     font-size: 16px;
   }
 

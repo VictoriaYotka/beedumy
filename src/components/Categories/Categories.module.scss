@@ -1,7 +1,7 @@
 @import "../../scss";
 
 .section {
-  padding: 60px 0;
+  @extend .section;
   text-align: center;
   background-color: $lightGreyBgColor;
 }
@@ -12,19 +12,27 @@
 
 .heading {
   @extend .heading;
-  margin-bottom: 48px;
+  margin-bottom: 8px;
+
+  @include md {
+    margin-bottom: 12px;
+  }
 }
 
 .item {
   margin: 0 8px;
-  padding: 20px 20px;
+  padding: 16px 0;
   background-color: $whiteColor;
   text-align: center;
 
   transition: all 0.4s ease;
 
   @include md {
-    padding: 40px 40px;
+    padding: 20px 0;
+  }
+
+  @include lg {
+    padding: 32px 0;
   }
   &:hover,
   &:focus {
@@ -51,12 +59,20 @@
   font-size: 18px;
   font-weight: 600;
   color: $darkFontColor;
-  margin-top: 40px;
+  margin-top: 12px;
 
   transition: all 0.4s ease;
 
   a {
     color: inherit;
+  }
+
+  @include md {
+    margin-top: 20px;
+  }
+
+  @include lg {
+    margin-top: 40px;
   }
 }
 

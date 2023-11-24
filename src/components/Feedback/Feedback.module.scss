@@ -2,6 +2,11 @@
 
 .section {
   @extend .section;
+  padding-bottom: 24px;
+
+  @include sm {
+    padding-bottom: 28px;
+  }
 }
 
 .container {

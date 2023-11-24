@@ -1,19 +1,25 @@
 .heading {
+  text-align: center;
   font-size: 20px;
+  max-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
 
   @include sm {
-    font-size: 24px;
+    max-width: 400px;
+    font-size: 22px;
   }
 
   @include md {
-    font-size: 32px;
+    // max-width: 600px;
+    font-size: 24px;
   }
 
   @include lg {
-    font-size: 40px;
+    font-size: 28px;
   }
 
   @include xl {
-    font-size: 48px;
+    font-size: 30px;
   }
 }

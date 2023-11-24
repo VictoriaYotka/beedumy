@@ -7,7 +7,7 @@ import Slider from "react-slick";
 const Teachers = () => {
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -34,10 +34,7 @@ const Teachers = () => {
   return (
     <section className={css.section}>
       <div className={css.container}>
-        <h2 className={css.heading}>
-          تعرّف على نخبة من <br />
-          الأساتذة والمختصّين
-        </h2>
+        <h2 className={css.heading}>تعرّف على نخبة من الأساتذة والمختصّين</h2>
         <Slider {...settings}>
           <div>
             <div className={css.item_thumb}>

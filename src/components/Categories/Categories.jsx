@@ -50,9 +50,7 @@ const Categories = () => {
   return (
     <section className={css.section}>
       <div className={css.container}>
-        <h2 className={css.heading}>
-          هنا تبدأ رحلتك <br /> من العِلم إلى العَمل
-        </h2>
+        <h2 className={css.heading}>هنا تبدأ رحلتك من العِلم إلى العَمل</h2>
 
         <Slider {...settings}>
           <div>
