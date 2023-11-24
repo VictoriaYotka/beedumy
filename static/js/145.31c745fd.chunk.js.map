@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/145.31c745fd.chunk.js","mappings":"gKAEA,MAIA,EAJYA,KACHC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,O","sources":["pages/Faq/Faq.jsx"],"sourcesContent":["import React from \"react\";\r\n\r\nconst Faq = () => {\r\n  return <div>Faq</div>;\r\n};\r\n\r\nexport default Faq;\r\n"],"names":["Faq","_jsx","children"],"sourceRoot":""}
