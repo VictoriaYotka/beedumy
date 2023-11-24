@@ -22,13 +22,22 @@ const Header = () => {
 
   const location = useLocation();
 
-  const toggleMenu = () => setIsOpenBurgerMenu(!isOpenBurgerMenu);
+  const toggleBodyScroll = () => {
+    document.body.style.overflowY =
+      document.body.style.overflowY === "hidden" ? "visible" : "hidden";
+  };
+
+  const toggleMenu = () => {
+    setIsOpenBurgerMenu(!isOpenBurgerMenu);
+    toggleBodyScroll();
+  };
 
   const updateMedia = () => {
     setIsMediumScreen(document.body.offsetWidth >= 768);
     setIsLargeScreen(document.body.offsetWidth >= 992);
     if (isLargeScreen) {
       setIsOpenBurgerMenu(false);
+      toggleBodyScroll();
     }
   };
 
@@ -39,6 +48,7 @@ const Header = () => {
     const target = e.key === "Escape";
     if (backdrop || target) {
       setIsOpenBurgerMenu(false);
+      toggleBodyScroll();
     }
   };
 
