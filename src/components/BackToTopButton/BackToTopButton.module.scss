@@ -1,0 +1,57 @@
+@import "../../scss";
+
+.scroll_button {
+  position: fixed;
+  bottom: 16px;
+  right: 24px;
+  z-index: 10;
+  //   transform: translateX(-50%) translateY(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  background-color: $darkFooterBgColor;
+  border-radius: 50%;
+
+  transition: all 0.4s ease;
+
+  @include sm {
+    bottom: 32px;
+  }
+  @include md {
+    width: 60px;
+    height: 60px;
+  }
+
+  i {
+    font-size: 22px;
+    color: $whiteColor;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid $darkFooterBgColor;
+
+    transition: all 0.4s ease;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    background-color: $accentColor;
+
+    &:before {
+      left: 0;
+      border-color: $accentColor;
+    }
+  }
+}
