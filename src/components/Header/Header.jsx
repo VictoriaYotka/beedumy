@@ -22,14 +22,16 @@ const Header = () => {
 
   const location = useLocation();
 
-  const toggleBodyScroll = () => {
-    document.body.style.overflowY =
-      document.body.style.overflowY === "hidden" ? "visible" : "hidden";
+  const toggleBodyScroll = (bodyScrollStyle) => {
+    // document.body.style.overflowY =
+    //   document.body.style.overflowY === "hidden" ? "visible" : "hidden";
+    document.body.style.overflowY = bodyScrollStyle;
   };
 
   const toggleMenu = () => {
     setIsOpenBurgerMenu(!isOpenBurgerMenu);
-    toggleBodyScroll();
+    isOpenBurgerMenu ? toggleBodyScroll("visible") : toggleBodyScroll("hidden");
+    // toggleBodyScroll();
   };
 
   const updateMedia = () => {
@@ -37,7 +39,7 @@ const Header = () => {
     setIsLargeScreen(document.body.offsetWidth >= 992);
     if (isLargeScreen) {
       setIsOpenBurgerMenu(false);
-      toggleBodyScroll();
+      toggleBodyScroll("visible");
     }
   };
 
@@ -48,7 +50,7 @@ const Header = () => {
     const target = e.key === "Escape";
     if (backdrop || target) {
       setIsOpenBurgerMenu(false);
-      toggleBodyScroll();
+      toggleBodyScroll("visible");
     }
   };
 
