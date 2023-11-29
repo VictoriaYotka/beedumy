@@ -65,6 +65,11 @@ button {
   cursor: pointer;
 }
 
+input {
+  border: 1px solid $secondaryFontColor;
+  outline: none;
+}
+
 // slick
 .slick-prev:before,
 .slick-next:before {
