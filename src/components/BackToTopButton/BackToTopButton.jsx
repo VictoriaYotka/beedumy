@@ -28,16 +28,9 @@ const BackToTopButton = () => {
       onClick={scrollToTop}
       style={{ display: visible ? "inline" : "none" }}
     >
-      <i class="kipso-icon-top-arrow"></i>
+      <i className="kipso-icon-top-arrow"></i>
     </button>
 
-    // <a
-    //   href="#"
-    //   data-target="html"
-    //   class="scroll-to-target site-footer__scroll-top"
-    // >
-    //   <i class="kipso-icon-top-arrow"></i>
-    // </a>
   );
 };
 

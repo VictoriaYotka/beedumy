@@ -72,6 +72,7 @@
 .content_container {
   @extend .container;
   @extend .flex_aligncenter;
+  position: relative;
   gap: 48px;
 }
 

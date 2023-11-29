@@ -13,11 +13,13 @@
 
 .item {
   @extend .flex_aligncenter;
-  padding: 0 16px;
   color: $whiteColor;
 
   transition: all 0.4s ease;
 
+  @include lg {
+    padding: 0 16px;
+  }
   &:hover,
   &:focus {
     scale: 110%;

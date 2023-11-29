@@ -1,17 +1,27 @@
 @import "../../../scss";
 
+.form {
+  &:hover,
+  &:focus {
+    .input {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
 .search_button {
   position: relative;
-
   width: 44px;
   height: 44px;
+  margin-left: auto;
   border-radius: 50%;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: $greenBgButtonBgColor;
-  color: #fff;
+  color: $whiteColor;
   font-size: 18px;
 
   transition: all 0.4s ease;
@@ -30,8 +40,6 @@
 
   &:hover,
   &:focus {
-    color: #fff;
-
     &:before {
       left: 0;
     }
@@ -45,4 +53,57 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   right: 15px;
+}
+
+.input {
+  position: absolute;
+  background-color: $footerBgColor;
+  top: 16px;
+  left: 16px;
+  right: 70px;
+  height: 44px;
+  opacity: 0;
+  visibility: hidden;
+
+  padding: 4px 8px;
+  border: 1px solid $greenBgButtonBgColor;
+  border-radius: 8px;
+  outline: none;
+  color: $whiteColor;
+
+  transition: all 0.4s ease;
+
+  @include sm {
+    right: 92px;
+  }
+
+  @include md {
+    left: unset;
+    width: 400px;
+  }
+
+  @include lg {
+    top: 0;
+    left: 80px;
+    right: unset;
+    background-color: $whiteColor;
+    border: 1px solid $darkBgButtonColor;
+    color: $darkBgButtonColor;
+  }
+
+  &:focus {
+    opacity: 1;
+    visibility: visible;
+    border: 1px solid $greenBgButtonBgColor;
+  }
+
+  &:not(:focus) {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.input_visible {
+  opacity: 1;
+  visibility: visible;
 }

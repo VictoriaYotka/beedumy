@@ -23,15 +23,12 @@ const Header = () => {
   const location = useLocation();
 
   const toggleBodyScroll = (bodyScrollStyle) => {
-    // document.body.style.overflowY =
-    //   document.body.style.overflowY === "hidden" ? "visible" : "hidden";
     document.body.style.overflowY = bodyScrollStyle;
   };
 
   const toggleMenu = () => {
     setIsOpenBurgerMenu(!isOpenBurgerMenu);
     isOpenBurgerMenu ? toggleBodyScroll("visible") : toggleBodyScroll("hidden");
-    // toggleBodyScroll();
   };
 
   const updateMedia = () => {
@@ -46,8 +43,11 @@ const Header = () => {
   const handlerClicks = (e) => {
     const backdrop =
       e.target.closest("#burger_menu") === null &&
-      e.target.closest("#navigation") === null;
+      e.target.closest("#navigation") === null &&
+      e.target.closest("#search_form") === null &&
+      e.type === "click";
     const target = e.key === "Escape";
+
     if (backdrop || target) {
       setIsOpenBurgerMenu(false);
       toggleBodyScroll("visible");
