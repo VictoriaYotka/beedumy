@@ -1,4 +1,4 @@
-@import "../../../scss";
+@import "../../../../scss";
 
 .list {
   display: flex;
@@ -45,6 +45,7 @@
 
 .item_devider {
   display: none;
+  height: 16px;
   border-right: 2px solid $whiteColor;
   margin: 0 4px;
 

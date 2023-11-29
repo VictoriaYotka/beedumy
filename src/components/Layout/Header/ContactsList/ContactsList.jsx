@@ -1,5 +1,5 @@
 import css from "./ContactsList.module.scss";
-import icons from "../../../assets/images/icons/icons.svg";
+import icons from "../../../../assets/images/icons/icons.svg";
 
 const ContactsList = () => {
   return (

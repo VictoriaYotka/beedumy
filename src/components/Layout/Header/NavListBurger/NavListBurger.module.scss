@@ -1,16 +1,14 @@
-@import "../../../scss";
+@import "../../../../scss";
 
 .nav_list {
   @extend .flex_aligncenter;
+  flex-direction: column;
   gap: 36px;
+  margin-bottom: 80px;
   color: $secondaryFontColor;
 
-  @include md {
-    margin: 0 36px 0 auto;
-  }
-
-  @include lg {
-    margin: 0;
+  @include sm {
+    font-size: 20px;
   }
 
   & a {
@@ -21,7 +19,7 @@
     &:hover,
     &:focus {
       scale: 110%;
-      color: $darkFontColor;
+      color: $accentColor;
     }
   }
 

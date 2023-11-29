@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import css from "./RequestedCourses.module.scss";
 import hero_image from "../../assets/images/home/hero/image.png";
 import Slider from "react-slick";
+import CourseCard from "../CourseCard/CourseCard";
 
 const RequestedCourses = () => {
   const settings = {
@@ -45,83 +46,44 @@ const RequestedCourses = () => {
           <Slider {...settings}>
             <div>
               <div className={css.item_wrapper}>
-                <div className={css.item}>
-                  <div className={css.img_thumb}>
-                    <p className={css.notion}>notion notion</p>
-                    <img
-                      src={hero_image}
-                      alt="course preview"
-                      loading="lazy"
-                      className={css.image}
-                    />
-                  </div>
-                  <div className={css.info_thumb}>
-                    <h4 className={css.preheader}>Preheader</h4>
-                    <h3 className={css.header}>Header</h3>
-                    <div className={css.wrapper}>
-                      <div className={css.rating}>stars</div>
-                      <p className={css.descr}>Some description</p>
-                    </div>
-                    <Link className={css.course_button}>
-                      Go to course <span className={css.glyph}> &#9664;</span>
-                      {/* opposite side: &#9654; */}
-                    </Link>
-                  </div>
-                </div>
+                <CourseCard
+                  notion="notion"
+                  img={hero_image}
+                  imgAlt="about image"
+                  preheader="Preheader"
+                  header="Header"
+                  rating="stars"
+                  descr="Some description here"
+                  id="123"
+                />
               </div>
             </div>
             <div>
               <div className={css.item_wrapper}>
-                <div className={css.item}>
-                  <div className={css.img_thumb}>
-                    <p className={css.notion}>notion button</p>
-                    <img
-                      src={hero_image}
-                      alt="course preview"
-                      loading="lazy"
-                      className={css.image}
-                    />
-                  </div>
-                  <div className={css.info_thumb}>
-                    <h4 className={css.preheader}>Preheader</h4>
-                    <h3 className={css.header}>Header</h3>
-                    <div className={css.wrapper}>
-                      <div className={css.rating}>stars</div>
-                      <p className={css.descr}>Some description</p>
-                    </div>
-                    <Link className={css.course_button}>
-                      Go to course <span className={css.glyph}> &#9664;</span>
-                      {/* opposite side: &#9654; */}
-                    </Link>
-                  </div>
-                </div>
+                <CourseCard
+                  notion="notion"
+                  img={hero_image}
+                  imgAlt="about image"
+                  preheader="Preheader"
+                  header="Header"
+                  rating="stars"
+                  descr="Some description here"
+                  id="123"
+                />
               </div>
             </div>
             <div>
               <div className={css.item_wrapper}>
-                <div className={css.item}>
-                  <div className={css.img_thumb}>
-                    <p className={css.notion}>notion button</p>
-                    <img
-                      src={hero_image}
-                      alt="course preview"
-                      loading="lazy"
-                      className={css.image}
-                    />
-                  </div>
-                  <div className={css.info_thumb}>
-                    <h4 className={css.preheader}>Preheader</h4>
-                    <h3 className={css.header}>Header</h3>
-                    <div className={css.wrapper}>
-                      <div className={css.rating}>stars</div>
-                      <p className={css.descr}>Some description</p>
-                    </div>
-                    <Link className={css.course_button}>
-                      Go to course <span className={css.glyph}> &#9664;</span>
-                      {/* opposite side: &#9654; */}
-                    </Link>
-                  </div>
-                </div>
+                <CourseCard
+                  notion="notion"
+                  img={hero_image}
+                  imgAlt="about image"
+                  preheader="Preheader"
+                  header="Header"
+                  rating="stars"
+                  descr="Some description here"
+                  id="123"
+                />
               </div>
             </div>
           </Slider>

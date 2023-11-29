@@ -1,5 +1,5 @@
 import css from "./BurgerMenu.module.scss";
-import icons from "../../../assets/images/icons/icons.svg";
+import icons from "../../../../assets/images/icons/icons.svg";
 import ContactsList from "../ContactsList/ContactsList";
 import SocialsList from "../SocialsList/SocialsList";
 import UsefulLinksList from "../UsefulLinksList/UsefulLinksList";

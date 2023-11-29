@@ -1,5 +1,5 @@
 import css from "./UsefulLinksList.module.scss";
-import icons from "../../../assets/images/icons/icons.svg";
+import icons from "../../../../assets/images/icons/icons.svg";
 
 const UsefulLinksList = () => {
   return (
