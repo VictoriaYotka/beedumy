@@ -131,7 +131,9 @@ const Categories = () => {
             </div>
           </div>
         </Slider>
-        <button className={css.button}>تصفح جميع المحاور</button>
+        <Link to="/categories" className={css.button}>
+          تصفح جميع المحاور
+        </Link>
       </div>
     </section>
   );
