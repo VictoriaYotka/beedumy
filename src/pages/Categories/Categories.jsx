@@ -1,13 +1,16 @@
 import React from "react";
-import CoursesFilter from "../../components/CoursesFilter/CoursesFilter";
+import CoursesFilter from "../../components/CoursesFilterInCategories/CoursesFilterInCategories";
 import StartLearningTrip from "../../components/StartLearningTrip/StartLearningTrip";
 import FAQ from "../../components/FAQ/FAQ";
+import CoursesListInCategories from "../../components/CoursesListInCategories/CoursesListInCategories";
 
 const Categories = () => {
   return (
     <>
       <CoursesFilter />
-      {/* courses list with CourseCard */}
+      <CoursesListInCategories heading="المنهج التونسي" />
+      <CoursesListInCategories heading="المنهج الليبي" />
+      {/* المنهج التونسي */}
       <StartLearningTrip />
       <FAQ />
     </>

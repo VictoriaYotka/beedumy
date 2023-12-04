@@ -1,8 +1,8 @@
-import css from "./CoursesFilter.module.scss";
+import css from "./CoursesFilterInCategories.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
 import { useEffect, useState } from "react";
 
-const CoursesFilter = () => {
+const CoursesFilterInCategories = () => {
   const [isMediumScreen, setIsMediumScreen] = useState(
     document.body.offsetWidth >= 768
   );
@@ -232,4 +232,4 @@ const CoursesFilter = () => {
   );
 };
 
-export default CoursesFilter;
+export default CoursesFilterInCategories;

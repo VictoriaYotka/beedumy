@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import css from "./RequestedCourses.module.scss";
 import hero_image from "../../assets/images/home/hero/image.png";
 import Slider from "react-slick";
-import CourseCard from "../CourseCard/CourseCard";
+import CourseCardInCategories from "../CourseCardInCategories/CourseCardInCategories";
 
 const RequestedCourses = () => {
   const settings = {
@@ -44,47 +44,43 @@ const RequestedCourses = () => {
       <section className={css.courses_section}>
         <div className="container">
           <Slider {...settings}>
-            <div>
-              <div className={css.item_wrapper}>
-                <CourseCard
-                  notion="notion"
-                  img={hero_image}
-                  imgAlt="about image"
-                  preheader="Preheader"
-                  header="Header"
-                  rating="stars"
-                  descr="Some description here"
-                  id="123"
-                />
-              </div>
+            <div className={css.item_wrapper}>
+              <CourseCardInCategories
+                notion="notion"
+                img={hero_image}
+                imgAlt="about image"
+                preheader="Preheader"
+                header="Header"
+                rating="stars"
+                descr="Some description here"
+                id="123"
+              />
             </div>
-            <div>
-              <div className={css.item_wrapper}>
-                <CourseCard
-                  notion="notion"
-                  img={hero_image}
-                  imgAlt="about image"
-                  preheader="Preheader"
-                  header="Header"
-                  rating="stars"
-                  descr="Some description here"
-                  id="123"
-                />
-              </div>
+
+            <div className={css.item_wrapper}>
+              <CourseCardInCategories
+                notion="notion"
+                img={hero_image}
+                imgAlt="about image"
+                preheader="Preheader"
+                header="Header"
+                rating="stars"
+                descr="Some description here"
+                id="123"
+              />
             </div>
-            <div>
-              <div className={css.item_wrapper}>
-                <CourseCard
-                  notion="notion"
-                  img={hero_image}
-                  imgAlt="about image"
-                  preheader="Preheader"
-                  header="Header"
-                  rating="stars"
-                  descr="Some description here"
-                  id="123"
-                />
-              </div>
+
+            <div className={css.item_wrapper}>
+              <CourseCardInCategories
+                notion="notion"
+                img={hero_image}
+                imgAlt="about image"
+                preheader="Preheader"
+                header="Header"
+                rating="stars"
+                descr="Some description here"
+                id="123"
+              />
             </div>
           </Slider>
         </div>

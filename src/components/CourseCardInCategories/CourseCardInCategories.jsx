@@ -1,7 +1,7 @@
-import css from "./CourseCard.module.scss";
+import css from "./CourseCardInCategories.module.scss";
 import { Link } from "react-router-dom";
 
-const CourseCard = ({
+const CourseCardInCategories = ({
   notion,
   img,
   imgAlt,
@@ -33,4 +33,4 @@ const CourseCard = ({
   );
 };
 
-export default CourseCard;
+export default CourseCardInCategories;
