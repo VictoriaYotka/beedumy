@@ -32,11 +32,6 @@
   }
 }
 
-.list {
-  @extend .flex_aligncenter;
-  justify-content: flex-end;
-}
-
 .item_wrapper {
   margin: 0 8px;
   text-align: center;

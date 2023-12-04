@@ -7,11 +7,13 @@ const CoursesListInCategories = ({ heading }) => {
   const settings = {
     dots: true,
     infinite: true,
+    // infinite: children.length > 3,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
     swipeToSlide: true,
     pauseOnHover: true,
+    rtl: true,
     responsive: [
       {
         breakpoint: 769,
@@ -49,6 +51,20 @@ const CoursesListInCategories = ({ heading }) => {
               id="123"
             />
           </div>
+
+          <div className={css.item_wrapper}>
+            <CourseCardInCategories
+              notion="notion"
+              img={hero_image}
+              imgAlt="about image"
+              preheader="Preheader"
+              header="Header"
+              rating="stars"
+              descr="Some description here"
+              id="123"
+            />
+          </div>
+
           <div className={css.item_wrapper}>
             <CourseCardInCategories
               notion="notion"

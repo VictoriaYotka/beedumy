@@ -8,11 +8,13 @@ const RequestedCourses = () => {
   const settings = {
     dots: true,
     infinite: true,
+    // infinite: children.length > 3,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
     swipeToSlide: true,
     pauseOnHover: true,
+    rtl: true,
     responsive: [
       {
         breakpoint: 769,
