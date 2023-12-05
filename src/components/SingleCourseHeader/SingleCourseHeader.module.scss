@@ -1,0 +1,22 @@
+@import "../../scss";
+
+.section {
+  @extend .section;
+  background-color: $purpleCategoryAccent;
+}
+
+.container {
+  @extend .container;
+  text-align: center;
+}
+
+.heading {
+  @extend .heading;
+  margin-bottom: 12px;
+  font-weight: $boldFont;
+  color: $whiteColor;
+}
+
+.subheading {
+  color: $whiteColor;
+}

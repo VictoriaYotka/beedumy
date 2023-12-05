@@ -1,0 +1,9 @@
+@import "../../scss";
+
+.section {
+  @extend .section;
+}
+
+.container {
+  @extend .container;
+}

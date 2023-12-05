@@ -50,7 +50,9 @@ const CourseCardInCourses = ({
             </div>
             <p className={css.descr}> {description}</p>
           </div>
-          <Link className={css.button}>See Preview</Link>
+          <Link to="/courses/course" className={css.button}>
+            See Preview
+          </Link>
         </div>
       </li>
     </>
