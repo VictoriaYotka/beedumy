@@ -92,7 +92,9 @@ const RequestedCourses = () => {
           <h2 className={css.learn_more_heading}>
             نوفّر تجربة تعليميّة تفاعليّة ونفتح آفاقا معرفيّة جديدة
           </h2>
-          <Link className={css.learn_more_button}>تعرّف أكثر</Link>
+          <Link to="/courses" className={css.learn_more_button}>
+            تعرّف أكثر
+          </Link>
         </div>
       </section>
     </>

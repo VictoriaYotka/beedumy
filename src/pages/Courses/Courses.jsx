@@ -1,5 +1,11 @@
+import CourseListInCourses from "../../components/CourseListInCourses/CourseListInCourses";
+
 const Courses = () => {
-  return <></>;
+  return (
+    <>
+      <CourseListInCourses />
+    </>
+  );
 };
 
 export default Courses;
