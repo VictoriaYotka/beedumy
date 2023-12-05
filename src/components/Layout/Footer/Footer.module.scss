@@ -45,6 +45,7 @@
 
 .show_more_button {
   display: flex;
+  gap: 4px;
   color: $paleWhiteColor;
   font-weight: $boldFont;
 
@@ -153,6 +154,12 @@
     width: 24px;
     height: 24px;
   }
+}
+
+.show_more_icon {
+  @extend .icon;
+  stroke: $paleWhiteColor;
+  fill: none;
 }
 
 .gallery_heading {

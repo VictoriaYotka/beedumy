@@ -121,60 +121,60 @@
 
 .color_1 {
   .icon {
-    background-color: #1888c9;
+    background-color: $blueCategoryAccent;
 
     &:before {
-      border-color: #1888c9;
+      border-color: $blueCategoryAccent;
     }
   }
 }
 
 .color_2 {
   .icon {
-    background-color: #7c4bc0;
+    background-color: $purpleCategoryAccent;
 
     &:before {
-      border-color: #7c4bc0;
+      border-color: $purpleCategoryAccent;
     }
   }
 }
 
 .color_3 {
   .icon {
-    background-color: #f16101;
+    background-color: $orangeCategoryAccent;
 
     &:before {
-      border-color: #f16101;
+      border-color: $orangeCategoryAccent;
     }
   }
 }
 
 .color_4 {
   .icon {
-    background-color: #2da397;
+    background-color: $greenCategoryAccent;
 
     &:before {
-      border-color: #2da397;
+      border-color: $greenCategoryAccent;
     }
   }
 }
 
 .color_5 {
   .icon {
-    background-color: #d23f3f;
+    background-color: $redCategoryAccent;
 
     &:before {
-      border-color: #d23f3f;
+      border-color: $redCategoryAccent;
     }
   }
 }
 
 .color_6 {
   .icon {
-    background-color: #33a9bb;
+    background-color: $mintCategoryAccent;
 
     &:before {
-      border-color: #33a9bb;
+      border-color: $mintCategoryAccent;
     }
   }
 }

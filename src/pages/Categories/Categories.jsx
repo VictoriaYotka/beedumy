@@ -10,7 +10,6 @@ const Categories = () => {
       <CoursesFilter />
       <CoursesListInCategories heading="المنهج التونسي" />
       <CoursesListInCategories heading="المنهج الليبي" />
-      {/* المنهج التونسي */}
       <StartLearningTrip />
       <FAQ />
     </>

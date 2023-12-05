@@ -95,8 +95,8 @@ const Footer = () => {
             </ul>
             {showMoreButton && (
               <button onClick={toggleShowMore} className={css.show_more_button}>
-                أظهر المزيد{" "}
-                <svg className={css.icon}>
+                <span>أظهر المزيد</span>
+                <svg className={css.show_more_icon}>
                   <use href={icons + "#chevron-down"}></use>
                 </svg>
               </button>
