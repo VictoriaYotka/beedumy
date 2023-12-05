@@ -15,13 +15,17 @@ const MobileApp = () => {
           </p>
           <NavLink className={css.button}>حمّل التطبيق الآن</NavLink>
         </div>
-        <div className={css.video_wrapper}>
-          <div className={css.video}>
-            <div className={css.video_button}>
-              <a href="#" className={css.video_popup}>
-                <i className={css.video_icon}>&#9654;</i>
-              </a>
-            </div>
+        <div className={css.video_group_wrapper}>
+          <div className={css.video_wrapper}>
+            <iframe
+              className={css.video}
+              title="mobile app video demonstration"
+              src="https://www.youtube.com/embed/JfJYHfrOGgQ"
+              frameborder="0"
+              gesture="media"
+              allow="encrypted-media"
+              allowfullscreen
+            ></iframe>
           </div>
           <p className={css.video_descr}>
             تطبيقنا متوفر على الهاتف و الأجهزة الوحية
