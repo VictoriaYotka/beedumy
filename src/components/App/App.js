@@ -28,7 +28,7 @@ function App() {
           <Route path="/courses/:courseId" element={<SingleCourse />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/news" element={<News />} />
-          <Route path="/news:newsId" element={<SingleNews />} />
+          <Route path="/news/:newsId" element={<SingleNews />} />
           <Route path="/teachers" element={<Teachers />} />
           <Route path="/teachers/:teacherId" element={<SingleTeacher />} />
           <Route path="/about" element={<About />} />

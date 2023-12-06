@@ -37,7 +37,9 @@ const NewsCard = ({ title, content, img, meta1, meta2, meta3 }) => {
         </ul>
         <h2 className={css.title}>{title}</h2>
         <p className={css.content}>{content}</p>
-        <Link className={css.button}>اقرأ المقال كاملا</Link>
+        <Link to="/news/news" className={css.button}>
+          اقرأ المقال كاملا
+        </Link>
       </div>
     </li>
   );

@@ -44,7 +44,7 @@
 }
 
 .show_more_button {
-  display: flex;
+  @extend .flex_aligncenter;
   gap: 4px;
   color: $paleWhiteColor;
   font-weight: $boldFont;
@@ -57,7 +57,7 @@
     scale: 110%;
 
     .icon {
-      fill: $whiteColor;
+      stroke: $whiteColor;
       scale: 110%;
     }
   }

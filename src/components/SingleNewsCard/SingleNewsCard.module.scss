@@ -1,64 +1,38 @@
 @import "../../scss";
 
 .item {
-  max-width: 340px;
+  padding: 12px;
+  text-align: right;
   box-shadow: $shadow;
 
-  transition: all 0.4s ease;
-
-  @include lg {
-    max-width: 300px;
-  }
-
-  @include xl {
-    max-width: 340px;
-  }
-
-  &:hover,
-  &:focus {
-    scale: 105%;
-    box-shadow: $shadowDark;
-    .title {
-      color: $accentColor;
-    }
-
-    .content {
-      color: $darkFontColor;
-    }
-
-    .image {
-      scale: 105%;
-    }
+  @include md {
+    padding: 24px;
   }
 }
 
 .image_wrapper {
-  max-height: 300px;
+  margin-bottom: 12px;
+
   overflow: hidden;
   border: 1px solid $lightGreyBgColor;
+
+  @include md {
+    margin-bottom: 24px;
+  }
 }
 
 .image {
+  margin: auto;
   object-fit: contain;
-
-  transition: all 0.4s ease;
 }
 
 .content_wrapper {
-  padding: 24px;
-  text-align: center;
-  height: 280px;
-
-  @include md {
-    padding: 32px;
-    height: 348px;
-  }
 }
 
 .meta_list {
   @extend .flex_aligncenter;
   justify-content: center;
-  gap: 20px;
+  gap: 32px;
   margin-bottom: 16px;
 
   @include md {
@@ -161,60 +135,117 @@
 }
 
 .title {
+  @extend .heading;
+  max-width: unset;
   color: $darkFontColor;
   margin-bottom: 16px;
-  font-size: 14px;
-
-  @include sm {
-    font-size: 16px;
-  }
 
   @include md {
     margin-bottom: 24px;
-    font-size: 18px;
   }
-
-  transition: all 0.4s ease;
 }
 
 .content {
-  margin-bottom: 16px;
-  max-height: 50px;
-  font-size: 12px;
+  margin-bottom: 24px;
+  font-size: 14px;
   overflow: hidden;
 
   transition: all 0.4s ease;
 
   @include sm {
-    max-height: 60px;
-    font-size: 14px;
+    margin-bottom: 28px;
+    font-size: 16px;
   }
 
   @include md {
-    margin-bottom: 24px;
-    max-height: 70px;
-    font-size: 16px;
+    margin-bottom: 40px;
+    font-size: 18px;
   }
 
   color: $secondaryFontColor;
 }
 
-.button {
-  display: inline-block;
-  margin-top: auto;
-  color: $accentColor;
-  font-weight: $boldFont;
-  transition: all 0.4s ease;
+.additional {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 4px;
 
-  font-size: 14px;
+  @include md {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+.keywords_wrapper {
+  @extend .flex_aligncenter;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  @include md {
+    margin-left: auto;
+  }
+}
+
+.keywords_header {
+  margin-left: 32px;
+  color: $secondaryFontColor;
+  font-size: 12px;
+  font-weight: $boldFont;
 
   @include sm {
+    font-size: 14px;
+  }
+
+  @include md {
     font-size: 16px;
   }
+}
+
+.keywords_list {
+  @extend .flex_aligncenter;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.keywords_item {
+  padding: 4px 8px;
+  background-color: $accentColor;
+  color: $whiteColor;
+  font-weight: $boldFont;
+}
+
+.socials {
+  @extend .flex_aligncenter;
+  justify-content: center;
+}
+
+.social_link {
+  display: inline-block;
+  padding: 16px;
+  &:hover,
+  &:focus {
+    .icon {
+      fill: $accentColor;
+      scale: 110%;
+    }
+  }
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: $secondaryFontColor;
+
+  transition: all 0.4s ease;
 
   &:hover,
   &:focus {
-    scale: 110%;
-    color: $darkFontColor;
+    fill: $accentColor;
   }
 }
