@@ -1,0 +1,106 @@
+@import "../../scss";
+
+.item_thumb {
+  padding: 100px 0 0 0;
+  margin: 0 8px;
+}
+
+.item {
+  margin: 0 auto;
+  max-width: 270px;
+  border: 2px solid $lightGreyBgColor;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadow;
+    scale: 104%;
+    .name {
+      color: $accentColor;
+      scale: 110%;
+    }
+
+    .teacher_image {
+      scale: 101%;
+    }
+
+    .occupation {
+      color: $darkFontColor;
+      scale: 110%;
+    }
+    .descr {
+      color: $darkFontColor;
+    }
+  }
+}
+
+.teacher_thumb {
+  position: relative;
+  text-align: center;
+
+  padding: 120px 24px 20px 24px;
+  color: $secondaryFontColor;
+}
+
+.teacher_image {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid $accentColor;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+
+  transition: all 0.4s ease;
+}
+
+.name {
+  font-size: 16px;
+  color: $darkFontColor;
+
+  transition: all 0.4s ease;
+}
+
+.occupation {
+  margin-bottom: 16px;
+
+  transition: all 0.4s ease;
+}
+
+.descr {
+  margin-bottom: 16px;
+
+  transition: all 0.4s ease;
+}
+
+.socials {
+  @extend .flex_aligncenter;
+  background-color: $lightGreyBgColor;
+  justify-content: center;
+}
+
+.social_link {
+  display: inline-block;
+  padding: 16px;
+  &:hover,
+  &:focus {
+    .icon {
+      fill: $accentColor;
+      scale: 110%;
+    }
+  }
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: $secondaryFontColor;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+  }
+}
