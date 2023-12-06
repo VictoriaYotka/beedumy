@@ -1,7 +1,7 @@
 import React from "react";
 
-const Teacher = () => {
+const SingleTeacher = () => {
   return <div>Teacher</div>;
 };
 
-export default Teacher;
+export default SingleTeacher;

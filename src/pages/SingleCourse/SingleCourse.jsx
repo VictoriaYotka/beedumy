@@ -1,12 +1,12 @@
-import css from "./Course.module.scss";
-import SingleCourseHeader from "../../components/SingleCourseHeader/SingleCourseHeader";
+import css from "./SingleCourse.module.scss";
 import SingleCourseCard from "../../components/SingleCourseCard/SingleCourseCard";
 import SingleCourseAdditionalInfo from "../../components/SingleCourseAdditionalInfo/SingleCourseAdditionalInfo";
+import SingleCourseHeader from "../../components/SingleCourseHeader/SingleCourseHeader";
 
-const Course = () => {
+const SingleCourse = () => {
   return (
     <>
-      <SingleCourseHeader heading="heading" level="level" />
+      <SingleCourseHeader heading="heading" subheading="level" />
       <section className={css.section}>
         <div className={css.container}>
           <SingleCourseAdditionalInfo fullPrice="34" discountedPrice="18" />
@@ -21,4 +21,4 @@ const Course = () => {
   );
 };
 
-export default Course;
+export default SingleCourse;

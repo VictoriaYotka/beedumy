@@ -1,0 +1,59 @@
+@import "../../scss";
+
+.section {
+  @extend .section;
+  background-color: #184d9c;
+}
+
+.container {
+  @extend .container;
+  text-align: center;
+}
+
+.heading {
+  @extend .heading;
+  margin-bottom: 12px;
+  font-weight: $boldFont;
+  color: $whiteColor;
+}
+
+.list {
+  @extend .flex_aligncenter;
+  justify-content: center;
+  gap: 16px;
+  color: $whiteColor;
+}
+
+.item {
+  font-size: 12px;
+  transition: all 0.4s ease;
+
+  @include sm {
+    font-size: 14px;
+  }
+
+  @include md {
+    font-size: 18px;
+  }
+
+  &:not(:last-child) {
+    position: relative;
+
+    padding-right: 12px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: 0;
+      height: 20px;
+      width: 1px;
+      background-color: $whiteColor;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+  }
+}

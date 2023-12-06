@@ -1,0 +1,204 @@
+@import "../../scss";
+
+.item {
+  max-width: 340px;
+  box-shadow: $shadow;
+
+  transition: all 0.4s ease;
+
+  @include lg {
+    max-width: 300px;
+  }
+
+  @include xl {
+    max-width: 340px;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 105%;
+    box-shadow: $shadowDark;
+    .title {
+      color: $accentColor;
+    }
+  }
+}
+
+.image_wrapper {
+  max-height: 300px;
+  overflow: hidden;
+  border: 1px solid $lightGreyBgColor;
+}
+
+.image {
+  object-fit: contain;
+}
+
+.content_wrapper {
+  padding: 24px;
+  text-align: center;
+  height: 280px;
+
+  @include md {
+    padding: 32px;
+    height: 348px;
+  }
+}
+
+.meta_list {
+  @extend .flex_aligncenter;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 16px;
+
+  @include md {
+    margin-bottom: 24px;
+  }
+}
+
+.meta_item {
+  &:hover,
+  &:focus {
+    .meta_icon_wrapper {
+      scale: 110%;
+      background-color: $accentColor;
+      &::before {
+        left: 0;
+        border-color: $accentColor;
+      }
+    }
+
+    .meta_icon {
+      fill: $whiteColor;
+    }
+
+    .meta_info {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.meta_icon_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $lightGreyBgColor;
+
+  transition: all 0.4s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid $lightGreyBgColor;
+
+    transition: all 0.4s ease;
+  }
+}
+
+.meta_icon {
+  width: 20px;
+  height: 20px;
+  fill: $secondaryFontColor;
+
+  transition: all 0.4s ease;
+}
+
+.meta_info {
+  opacity: 0;
+  visibility: hidden;
+
+  position: absolute;
+  top: -56px;
+  right: 50%;
+  transform: translateX(50%);
+
+  min-width: 120px;
+
+  display: inline-block;
+  padding: 12px;
+  background-color: $whiteColor;
+  color: $secondaryFontColor;
+  box-shadow: $shadow;
+  font-size: 12px;
+
+  transition: all 0.4s ease;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    right: 50%;
+    transform: translateX(50%);
+
+    background-color: $whiteColor;
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+    width: 20px;
+    height: 8px;
+    box-shadow: $shadow;
+
+    transition: all 0.4s ease;
+  }
+}
+
+.title {
+  color: $darkFontColor;
+  margin-bottom: 16px;
+  font-size: 14px;
+
+  @include sm {
+    font-size: 16px;
+  }
+
+  @include md {
+    margin-bottom: 24px;
+    font-size: 18px;
+  }
+
+  transition: all 0.4s ease;
+}
+
+.content {
+  margin-bottom: 16px;
+  font-size: 12px;
+  overflow: hidden;
+
+  @include sm {
+    font-size: 14px;
+  }
+
+  @include md {
+    margin-bottom: 24px;
+    font-size: 16px;
+  }
+
+  color: $secondaryFontColor;
+}
+
+.button {
+  display: inline-block;
+  color: $accentColor;
+  font-weight: $boldFont;
+  transition: all 0.4s ease;
+
+  font-size: 14px;
+
+  @include sm {
+    font-size: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    color: $darkFontColor;
+  }
+}
