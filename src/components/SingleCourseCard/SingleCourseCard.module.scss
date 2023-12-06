@@ -2,11 +2,16 @@
 
 .card {
   max-width: 768px;
+  width: 100%;
 }
 
 .info {
   @extend .flex_aligncenter;
   margin-bottom: 12px;
+
+  @include sm {
+    padding: 0 12px;
+  }
 }
 
 .curriculum {

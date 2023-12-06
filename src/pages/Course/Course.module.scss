@@ -6,4 +6,13 @@
 
 .container {
   @extend .container;
+  @extend .flex_aligncenter;
+  flex-direction: column-reverse;
+  gap: 16px;
+
+  @include md {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+  }
 }
