@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/275.41cdc445.chunk.js","mappings":"gKAEA,MAIA,EAJgBA,KACPC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,W","sources":["pages/Teacher/Teacher.jsx"],"sourcesContent":["import React from \"react\";\r\n\r\nconst Teacher = () => {\r\n  return <div>Teacher</div>;\r\n};\r\n\r\nexport default Teacher;\r\n"],"names":["Teacher","_jsx","children"],"sourceRoot":""}

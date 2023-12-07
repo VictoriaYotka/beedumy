@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkbirsaplatform=self.webpackChunkbirsaplatform||[]).push([[908],{1908:(s,r,a)=>{a.r(r),a.d(r,{default:()=>l});a(2791);var e=a(184);const l=()=>(0,e.jsx)("div",{children:"Course"})}}]);
-//# sourceMappingURL=908.92a4521e.chunk.js.map
