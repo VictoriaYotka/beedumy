@@ -11,7 +11,7 @@ const SingleCourseAdditionalInfo = ({
   return (
     <div className={css.wrapper}>
       <div className={css.price_container}>
-        <h6 className={css.price_heading}>ثمن المحتوى</h6>
+        <h5 className={css.price_heading}>ثمن المحتوى</h5>
         <p className={css.price_value}>
           <span className={css.discounted_price}>
             د.ل
