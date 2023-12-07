@@ -1,16 +1,19 @@
 @import "../../scss";
 
-.item {
+// news card
+.news_card {
   padding: 12px;
   text-align: right;
-  box-shadow: $shadow;
+  border: 1px solid $lightGreyBgColor;
+  margin-bottom: 12px;
 
   @include md {
     padding: 24px;
+    margin-bottom: 24px;
   }
 }
 
-.image_wrapper {
+.news_image_wrapper {
   margin-bottom: 12px;
 
   overflow: hidden;
@@ -21,12 +24,9 @@
   }
 }
 
-.image {
+.news_image {
   margin: auto;
   object-fit: contain;
-}
-
-.content_wrapper {
 }
 
 .meta_list {
@@ -112,6 +112,7 @@
   padding: 12px;
   background-color: $whiteColor;
   color: $secondaryFontColor;
+  text-align: center;
   box-shadow: $shadow;
   font-size: 12px;
 
@@ -247,5 +248,142 @@
   &:hover,
   &:focus {
     fill: $accentColor;
+  }
+}
+
+// author card
+
+.autor_card {
+  @extend .flex_aligncenter;
+  flex-direction: column;
+  text-align: right;
+  border: 1px solid $lightGreyBgColor;
+  margin-bottom: 24px;
+
+  @include sm {
+    flex-direction: row-reverse;
+  }
+}
+
+.autor_image_wrapper {
+  width: 100%;
+  margin-bottom: 12px;
+  padding-top: 8px;
+  text-align: center;
+
+  @include sm {
+    flex-basis: 20%;
+    border-left: 1px solid $lightGreyBgColor;
+    margin-bottom: 0;
+  }
+}
+
+.image_container {
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 8px auto;
+  border: 1px solid $lightGreyBgColor;
+  width: 100px;
+
+  @include md {
+    width: 120px;
+  }
+
+  @include lg {
+    margin: 16px 24px 0 24px;
+  }
+}
+
+.author_name {
+  margin-bottom: 8px;
+}
+
+.author_socials {
+  @extend .flex_aligncenter;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid $lightGreyBgColor;
+
+  @include sm {
+    width: 100%;
+  }
+}
+.author_socials_item {
+  text-align: center;
+  flex-basis: 25%;
+
+  transition: all 0.4s ease;
+
+  &:not(:last-child) {
+    border-right: 1px solid $lightGreyBgColor;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 120%;
+    .icon {
+      fill: $accentColor;
+    }
+  }
+}
+
+.author_social_link {
+  display: inline-block;
+  margin: 0 auto;
+
+  padding: 8px;
+}
+
+.author_icon {
+  width: 16px;
+  height: 16px;
+  fill: $secondaryFontColor;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+  }
+}
+
+.autor_content_wrapper {
+  flex-basis: 100%;
+  padding: 4px 12px;
+
+  @include sm {
+    flex-basis: 60%;
+  }
+
+  @include md {
+    padding: 8px 24px;
+  }
+}
+
+.autor_descr {
+  margin-bottom: 8px;
+  text-align: right;
+  color: $secondaryFontColor;
+
+  @include md {
+    margin-bottom: 16px;
+  }
+}
+
+.autor_button {
+  display: inline-block;
+  padding: 4px 8px;
+  border: 1px solid $secondaryFontColor;
+  border-radius: 16px;
+  font-weight: $boldFont;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    color: $accentColor;
+    border-color: $accentColor;
   }
 }

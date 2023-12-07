@@ -4,6 +4,7 @@ import SingleNewsCard from "../../components/SingleNewsCard/SingleNewsCard";
 import SingleNewsAdditionalInfo from "../../components/SingleNewsAdditionalInfo/SingleNewsAdditionalInfo";
 import SingleNewsSearch from "../../components/SingleNewsSearch/SingleNewsSearch";
 import { useEffect, useState } from "react";
+import SingleNewsComment from "../../components/SingleNewsComment/SingleNewsComment";
 
 const SingleNews = () => {
   const [isMediumScreen, setIsMediumScreen] = useState(
@@ -32,7 +33,10 @@ const SingleNews = () => {
             {isMediumScreen && <SingleNewsSearch />}
             <SingleNewsAdditionalInfo />
           </div>
-          <SingleNewsCard />
+          <div>
+            <SingleNewsCard />
+            <SingleNewsComment />
+          </div>
         </div>
       </section>
     </>

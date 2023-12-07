@@ -6,13 +6,25 @@
   justify-content: space-between;
   gap: 12px;
   min-width: 300px;
+
+  @include md {
+    min-width: 240px;
+  }
+
+  @include lg {
+    min-width: 300px;
+  }
 }
 
 .container {
   width: 100%;
-  padding: 32px;
+  padding: 16px;
   background-color: $lightGreyBgColor;
   text-align: right;
+
+  @include lg {
+    padding: 32px;
+  }
 }
 
 .heading {
@@ -24,17 +36,35 @@
 
 // articles
 .articles_item {
-  @extend .flex_aligncenter;
-  justify-content: flex-end;
-  gap: 12px;
   padding: 20px 0;
+
   &:not(:last-child) {
     border-bottom: 2px solid $whiteColor;
   }
+
+  &:hover,
+  &:focus {
+    .articles_title {
+      scale: 120%;
+    }
+
+    .articles_image_wrapper,
+    .articles_image {
+      scale: 105%;
+    }
+  }
+}
+
+.articles_link {
+  @extend .flex_aligncenter;
+  justify-content: flex-end;
+  gap: 12px;
 }
 
 .articles_title {
   font-size: 16px;
+
+  transition: all 0.4s ease;
 }
 
 .articles_image_wrapper {
@@ -42,10 +72,14 @@
   height: 80px;
   background-color: $darkBgButtonColor;
   overflow: hidden;
+
+  transition: all 0.4s ease;
 }
 
 .articles_image {
   width: 80px;
+
+  transition: all 0.4s ease;
 }
 
 // keywords
@@ -86,6 +120,7 @@
 .topics_item {
   text-align: right;
   color: $secondaryFontColor;
+  font-size: 14px;
   font-weight: $boldFont;
 
   &:not(:last-child) {
@@ -98,6 +133,7 @@
   &:focus {
     color: $darkFontColor;
     scale: 105%;
+    transform-origin: right;
   }
 
   a {
