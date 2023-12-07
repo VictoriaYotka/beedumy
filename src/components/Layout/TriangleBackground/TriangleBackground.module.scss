@@ -1,0 +1,51 @@
+@import "../../../scss";
+
+// import triangle_blue from "../../../assets/images/home/hero/triangle-blue.png";
+// import triangle_green from "../../../assets/images/home/hero/triangle-green.png";
+// import triangle_green_small from "../../../assets/images/home/hero/triangle-green-small.png";
+// import triangle_rose from "../../../assets/images/home/hero/triangle-rose.png";
+
+.section {
+  @extend .section;
+  background: url("../../../assets/images/home/hero/triangle-blue.png") 0% 0%
+      no-repeat,
+    url("../../../assets/images/home/hero/triangle-green.png") 90% 20% no-repeat,
+    url("../../../assets/images/home/hero/triangle-green-small.png") 40% 70%
+      no-repeat,
+    url("../../../assets/images/home/hero/triangle-rose.png") 95% 95% no-repeat,
+    $lightGreyBgColor;
+
+  background-size: auto, auto, auto, auto;
+
+  @include sm {
+    background: url("../../../assets/images/home/hero/triangle-blue-big.png")
+        center center no-repeat,
+      url("../../../assets/images/home/hero/triangle-blue.png") 10% 10%
+        no-repeat,
+      url("../../../assets/images/home/hero/triangle-green.png") 85% 10%
+        no-repeat,
+      url("../../../assets/images/home/hero/triangle-green-small.png") 5% 50%
+        no-repeat,
+      url("../../../assets/images/home/hero/triangle-rose.png") 95% 95%
+        no-repeat,
+      $lightGreyBgColor;
+
+    background-size: 240px, auto, auto, auto, auto;
+  }
+
+  @include md {
+    background: url("../../../assets/images/home/hero/triangle-blue-big.png")
+        50% 30% no-repeat,
+      url("../../../assets/images/home/hero/triangle-blue.png") 25% 10%
+        no-repeat,
+      url("../../../assets/images/home/hero/triangle-green.png") 75% 30%
+        no-repeat,
+      url("../../../assets/images/home/hero/triangle-green-small.png") 25% 90%
+        no-repeat,
+      url("../../../assets/images/home/hero/triangle-rose.png") 75% 80%
+        no-repeat,
+      $lightGreyBgColor;
+
+    background-size: 240px, auto, auto, auto, auto;
+  }
+}

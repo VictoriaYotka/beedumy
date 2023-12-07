@@ -1,0 +1,38 @@
+@import "../../scss";
+
+.container {
+  @extend .container;
+  height: 50vh;
+
+  @include md {
+    height: 40vh;
+  }
+}
+
+.descr {
+  margin: 10% 0 12px 0;
+  font-size: 18px;
+  font-weight: $boldFont;
+
+  @include md {
+    font-size: 24px;
+  }
+}
+
+.button {
+  display: inline-block;
+  margin-bottom: 32px;
+  padding: 8px 16px;
+  color: $whiteColor;
+  background-color: $accentColor;
+  font-size: 16px;
+  font-weight: $boldFont;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    box-shadow: $shadow;
+  }
+}
