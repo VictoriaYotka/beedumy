@@ -70,6 +70,10 @@ input {
   outline: none;
 }
 
+iframe {
+  border: 0px;
+}
+
 // slick
 .slick-prev:before,
 .slick-next:before {

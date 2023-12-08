@@ -28,10 +28,9 @@ const SingleCourseCard = ({
           className={css.video}
           title={`${title} course video`}
           src="https://www.youtube.com/embed/JfJYHfrOGgQ"
-          frameborder="0"
           gesture="media"
-          allow="encrypted-media"
-          allowfullscreen
+          allow="autoplay; encrypted-media"
+          allowFullScreen
         ></iframe>
 
         <button className={css.favorite_button}>
