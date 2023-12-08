@@ -59,18 +59,19 @@
 }
 
 .link_content {
+  direction: ltr;
   transition: all 0.4s ease;
 }
 
 .icon {
   width: 24px;
   height: 24px;
-  margin-left: 8px;
+  margin-inline-end: 8px;
   fill: $whiteColor;
 
   transition: all 0.4s ease;
 
   @include md {
-    margin-left: 12px;
+    margin-inline-end: 12px;
   }
 }

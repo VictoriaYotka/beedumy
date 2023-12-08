@@ -10,21 +10,6 @@ const Hero = () => {
   return (
     <section className={css.hero_section}>
       <div className={css.hero_container}>
-        <div className={css.content}>
-          <img
-            src={triangle_green}
-            alt="decor"
-            className={css.triangle_green}
-          />
-          <h1 className={css.heading}>
-            <span className={css.heading_colored}>منصة بيرسا </span>التعليمية
-          </h1>
-          <p className={css.subheading}>
-            نقدم محتوى تعليمي يشرح المناهج الدراسية بشكل مبسّط وسلس إضافة إلى
-            دورات في اختصاصات متعددة نفتح لك بها آفاقا جديدة
-          </p>
-          <button className={css.hero_button}>ابدأ رحلة التعلم الآن</button>
-        </div>
         <div className={css.picture}>
           <img src={hero_image} alt="decor" className={css.hero_image} />
           <img
@@ -39,6 +24,21 @@ const Hero = () => {
             className={css.triangle_green_small}
           />
           <img src={triangle_rose} alt="decor" className={css.triangle_rose} />
+        </div>
+        <div className={css.content}>
+          <img
+            src={triangle_green}
+            alt="decor"
+            className={css.triangle_green}
+          />
+          <h1 className={css.heading}>
+            <span className={css.heading_colored}>منصة بيرسا </span>التعليمية
+          </h1>
+          <p className={css.subheading}>
+            نقدم محتوى تعليمي يشرح المناهج الدراسية بشكل مبسّط وسلس إضافة إلى
+            دورات في اختصاصات متعددة نفتح لك بها آفاقا جديدة
+          </p>
+          <button className={css.hero_button}>ابدأ رحلة التعلم الآن</button>
         </div>
       </div>
     </section>

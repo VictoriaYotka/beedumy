@@ -54,7 +54,7 @@ const RequestedCourses = () => {
                 preheader="Preheader"
                 header="Header"
                 rating="stars"
-                descr="Some description here"
+                descr="Some description"
                 id="123"
               />
             </div>
@@ -67,7 +67,7 @@ const RequestedCourses = () => {
                 preheader="Preheader"
                 header="Header"
                 rating="stars"
-                descr="Some description here"
+                descr="Some description"
                 id="123"
               />
             </div>
@@ -80,7 +80,7 @@ const RequestedCourses = () => {
                 preheader="Preheader"
                 header="Header"
                 rating="stars"
-                descr="Some description here"
+                descr="Some description"
                 id="123"
               />
             </div>

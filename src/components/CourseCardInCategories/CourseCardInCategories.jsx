@@ -21,11 +21,11 @@ const CourseCardInCategories = ({
         <h4 className={css.preheader}>{preheader}</h4>
         <h3 className={css.header}>{header}</h3>
         <div className={css.wrapper}>
-          <div className={css.rating}>{rating}</div>
           <p className={css.descr}>{descr}</p>
+          <div className={css.rating}>{rating}</div>
         </div>
         <Link to={id} className={css.course_button}>
-          Go to course <span className={css.glyph}> &#9664;</span>
+          <span className={css.glyph}> &#9664;</span> <span>Go to course</span>
           {/* opposite side: &#9654; */}
         </Link>
       </div>

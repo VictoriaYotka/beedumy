@@ -11,7 +11,11 @@ const SearchButton = () => {
   };
 
   return (
-    <form className={css.form} onSubmit={handleSearchFormSubmit}>
+    <form
+      id="search_form"
+      className={css.form}
+      onSubmit={handleSearchFormSubmit}
+    >
       <button className={css.search_button}>
         <div className={css.search_box}>
           <i className="kipso-icon-magnifying-glass"></i>

@@ -61,6 +61,7 @@
 
 .wrapper {
   @extend .flex_aligncenter;
+  gap: 16px;
 }
 
 .content {

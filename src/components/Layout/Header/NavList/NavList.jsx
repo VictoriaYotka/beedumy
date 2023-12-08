@@ -1,10 +1,9 @@
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import css from "./NavList.module.scss";
-import { useEffect } from "react";
 
 const NavList = ({ isLargeScreen }) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <ul className={css.nav_list}>

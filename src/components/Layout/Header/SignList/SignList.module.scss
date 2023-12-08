@@ -7,7 +7,7 @@
   margin-bottom: 40px;
 
   @include lg {
-    margin-right: auto;
+    margin-inline-start: auto;
     margin-bottom: 0;
   }
 }

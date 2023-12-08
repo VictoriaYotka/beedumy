@@ -1,0 +1,75 @@
+@import "../../../../scss";
+
+.wrapper {
+  position: relative;
+}
+
+.button {
+  @extend .flex_aligncenter;
+  gap: 4px;
+  padding: 0;
+  color: $whiteColor;
+  background-color: transparent;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke: $whiteColor;
+  fill: none;
+
+  transition: all 0.4s ease;
+}
+
+.list {
+  position: absolute;
+  top: 100%;
+  [dir="rtl"] & {
+    right: 0;
+    left: unset;
+  }
+  [dir="ltr"] & {
+    right: unset;
+    left: 0;
+  }
+
+  visibility: hidden;
+  opacity: 0;
+
+  padding: 8px;
+  background-color: $greenBgButtonBgColor;
+  color: $whiteColor;
+
+  transition: all 0.4s ease;
+
+  @include lg {
+    background-color: $headerBgColor;
+  }
+}
+
+.item {
+  padding: 4px 12px 4px 32px;
+  cursor: pointer;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+  }
+}
+
+.dropdown {
+  visibility: visible;
+  opacity: 1;
+  z-index: 100;
+
+  transition: all 0.4s ease;
+}

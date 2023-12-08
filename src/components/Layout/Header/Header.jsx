@@ -1,7 +1,6 @@
 import css from "./Header.module.scss";
 import ContactsList from "./ContactsList/ContactsList";
 import SocialsList from "./SocialsList/SocialsList";
-import UsefulLinksList from "./UsefulLinksList/UsefulLinksList";
 import SearchButton from "./SearchButton/SearchButton";
 import SignList from "./SignList/SignList";
 import NavList from "./NavList/NavList";
@@ -10,6 +9,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import BurgerMenu from "./BurgerMenu/BurgerMenu";
+import LanguageSwitcher from "./LanguageSwitcher/LanguageSwitcher";
 
 const Header = () => {
   const [isMediumScreen, setIsMediumScreen] = useState(
@@ -45,6 +45,7 @@ const Header = () => {
       e.target.closest("#burger_menu") === null &&
       e.target.closest("#navigation") === null &&
       e.target.closest("#search_form") === null &&
+      e.target.closest("#language_switcher") === null &&
       e.type === "click";
     const target = e.key === "Escape";
 
@@ -78,22 +79,22 @@ const Header = () => {
         <>
           <div className={css.topper}>
             <div className={css.topper_container}>
-              <ContactsList />
               <div className={css.wrapper}>
+                <LanguageSwitcher />
                 <SocialsList />
-                <UsefulLinksList />
               </div>
+              <ContactsList />
             </div>
           </div>
 
           <div className={css.content}>
             <div className={css.content_container}>
-              <SearchButton />
-              <SignList />
               <nav className={css.nav}>
-                <NavList />
                 <Logo />
+                <NavList />
               </nav>
+              <SignList />
+              <SearchButton />
             </div>
           </div>
         </>
@@ -101,17 +102,17 @@ const Header = () => {
 
       {!isLargeScreen && (
         <>
-          <BurgerMenu
-            toggleMenu={toggleMenu}
-            isOpenBurgerMenu={isOpenBurgerMenu}
-            isLargeScreen={isLargeScreen}
-          />
+          <Logo />
           {isMediumScreen && (
             <>
               <NavList />
             </>
           )}
-          <Logo />
+          <BurgerMenu
+            toggleMenu={toggleMenu}
+            isOpenBurgerMenu={isOpenBurgerMenu}
+            isLargeScreen={isLargeScreen}
+          />
         </>
       )}
     </header>

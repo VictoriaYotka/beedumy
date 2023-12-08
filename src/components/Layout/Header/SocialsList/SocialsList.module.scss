@@ -1,5 +1,20 @@
 @import "../../../../scss";
 
+.title {
+  display: none;
+  color: $whiteColor;
+
+  transition: all 0.4s ease;
+
+  @include lg {
+    display: block;
+  }
+}
+
+.item {
+  @extend .flex_aligncenter;
+}
+
 .socials {
   @extend .flex_aligncenter;
   justify-content: center;
@@ -8,7 +23,7 @@
 
   @include lg {
     gap: 12px;
-    margin: 0 24px 0 0;
+    margin: 0;
   }
 }
 

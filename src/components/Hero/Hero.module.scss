@@ -15,7 +15,7 @@
   @extend .container;
   display: flex;
   justify-content: space-between;
-  flex-direction: column-reverse;
+  flex-direction: column;
   min-width: 320px;
 
   @include md {
@@ -28,7 +28,7 @@
   z-index: 20;
 
   padding: 24px 12px 0 12px;
-  text-align: end;
+  text-align: start;
 
   @include sm {
     padding: 80px 16px 0 16px;
@@ -45,6 +45,10 @@
 
   @include xl {
     padding: 200px 100px 0 16px;
+  }
+
+  [dir="ltr"] & {
+    padding-left: 0;
   }
 }
 
@@ -75,6 +79,7 @@
 
 .heading {
   @extend .heading;
+  text-align: start;
   margin-bottom: 8px;
 
   @include sm {
@@ -135,6 +140,16 @@
 
   @include md {
     flex-basis: 50%;
+
+    [dir="ltr"] & {
+      right: -5%;
+    }
+  }
+
+  @include lg {
+    [dir="ltr"] & {
+      right: -9%;
+    }
   }
 }
 

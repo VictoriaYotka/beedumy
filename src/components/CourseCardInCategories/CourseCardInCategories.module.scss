@@ -3,7 +3,7 @@
 .item {
   max-width: 360px;
   margin: 0 auto;
-  text-align: end;
+  text-align: start;
   box-shadow: $shadow;
   border-radius: 16px;
 
@@ -44,7 +44,14 @@
 .notion {
   position: absolute;
   top: 16px;
-  right: 16px;
+  [dir="rtl"] & {
+    right: 16px;
+    left: unset;
+  }
+  [dir="ltr"] & {
+    right: unset;
+    left: 16px;
+  }
   z-index: 10;
 
   padding: 8px 16px;
@@ -96,7 +103,7 @@
 
 .wrapper {
   @extend .flex_aligncenter;
-  justify-content: flex-end;
+  // justify-content: flex-end;
   gap: 16px;
   margin-bottom: 16px;
 
@@ -152,7 +159,7 @@
 }
 
 .glyph {
-  margin-left: 8px;
+  margin-inline-end: 8px;
   color: $accentColor;
 
   transition: all 0.4s ease;
