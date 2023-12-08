@@ -6,6 +6,22 @@ import Backend from "i18next-http-backend";
 
 import LanguageDetector from "i18next-browser-languagedetector";
 
+import translationEN from "./locales/en/translation.json";
+import translationFR from "./locales/fr/translation.json";
+import translationAR from "./locales/ar/translation.json";
+
+const resources = {
+  en: {
+    translation: translationEN,
+  },
+  fr: {
+    translation: translationFR,
+  },
+  ar: {
+    translation: translationAR,
+  },
+};
+
 i18n
 
   // if you want your translations to be loaded from a professional CDN
@@ -23,15 +39,9 @@ i18n
   // init i18next
 
   .init({
+    resources,
+    // lng: "en",
     fallbackLng: "ar",
-
-    defaultNS: "common",
-
-    backend: {
-      loadPath: "./locales/{{lng}}/translation.json",
-      // D:\projects\birsaplatform\src\locales\ar\translation.json
-    },
-
     debug: true,
 
     interpolation: {
