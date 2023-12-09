@@ -9,28 +9,32 @@
   @extend .container;
   @extend .flex_aligncenter;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column-reverse;
   gap: 16px;
 
   @include md {
+    flex-direction: row;
     gap: 0;
   }
 }
 
 .info_wrapper {
-  text-align: right;
+  text-align: start;
 
   @include sm {
-    flex-basis: 80%;
+    max-width: 480px;
   }
 
   @include md {
     flex-basis: 56%;
-    padding: 32px 60px 32px 0;
+    max-width: unset;
+    padding: 32px 0;
+    padding-inline-start: 60px;
   }
 
   @include lg {
-    padding: 40px 100px 40px 0;
+    padding: 40px 0;
+    padding-inline-start: 100px;
   }
 }
 
@@ -42,11 +46,20 @@
 .descr {
   padding-bottom: 32px;
   font-size: 14px;
+  text-align: start;
   color: $secondaryFontColor;
-  background-image: url("../../assets/images/home/line_stripe.png");
+
   background-repeat: no-repeat;
-  background-position-x: left;
   background-position-y: bottom;
+
+  [dir="rtl"] & {
+    background-image: url("../../assets/images/home/line_stripe_rtl.png");
+    background-position-x: left;
+  }
+  [dir="ltr"] & {
+    background-image: url("../../assets/images/home/line_stripe_ltr.png");
+    background-position-x: right;
+  }
 
   @include md {
     font-size: 16px;
@@ -59,15 +72,20 @@
 
 .button {
   display: inline-block;
-  padding: 8px 24px;
+  padding: 8px 12px;
   border-radius: 32px;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: $boldFont;
   color: $accentColor;
   background-color: $whiteColor;
   box-shadow: $shadow;
 
   transition: all 0.4s ease;
+
+  @include md {
+    padding: 8px 24px;
+    font-size: 28px;
+  }
 
   &:hover,
   &:focus {

@@ -10,6 +10,7 @@ const Articles = () => {
     slidesToScroll: 3,
     swipeToSlide: true,
     pauseOnHover: true,
+    rtl: true,
     responsive: [
       {
         breakpoint: 993,

@@ -2,12 +2,11 @@
 
 .section {
   @extend .section;
+  background-color: $aquamarineBgColor;
 
   @include xl {
     padding: 60px 0;
   }
-
-  background-color: $aquamarineBgColor;
 }
 
 .container {
@@ -15,20 +14,13 @@
   @extend .flex_aligncenter;
 
   justify-content: center;
-  flex-direction: column-reverse;
-  text-align: right;
+  flex-direction: column;
+  text-align: start;
   gap: 32px;
 
   @include md {
     flex-direction: row;
   }
-
-  // @include lg {
-  //   gap: 24px;
-  // }
-  // @include xl {
-  //   gap: 32px;
-  // }
 }
 
 .heading_wrapper {
@@ -111,7 +103,7 @@
 .input {
   max-width: 240px;
   padding: 16px;
-  text-align: right;
+  text-align: start;
   border: none;
   outline: none;
   font-size: 16px;

@@ -1,4 +1,5 @@
 import css from "./CourseCardInCategories.module.scss";
+import icons from "../../assets/images/icons/icons.svg";
 import { Link } from "react-router-dom";
 
 const CourseCardInCategories = ({
@@ -25,7 +26,13 @@ const CourseCardInCategories = ({
           <div className={css.rating}>{rating}</div>
         </div>
         <Link to={id} className={css.course_button}>
-          <span className={css.glyph}> &#9664;</span> <span>Go to course</span>
+          {/* <span className={css.glyph}>
+            {document.html?.dir === "rtl" ? `${ &#9664; }` : `${ &#9654; }` }
+          </span> */}
+          <svg className={css.icon}>
+            <use href={`${icons}#play`}></use>
+          </svg>
+          <span>Go to course</span>
           {/* opposite side: &#9654; */}
         </Link>
       </div>

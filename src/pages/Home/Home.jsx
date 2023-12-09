@@ -17,13 +17,13 @@ const Subscription = lazy(() =>
 const Home = () => {
   return (
     <>
-      <Hero />
-      <Categories />
-      <RequestedCourses />
-      <Teachers />
-      <MobileApp />
-      <Feedback />
-      <Articles />
+      {/* <Hero /> */}
+      {/* <Categories /> */}
+      {/* <RequestedCourses /> */}
+      {/* <Teachers /> */}
+      {/* <MobileApp /> */}
+      {/* <Feedback /> */}
+      {/* <Articles /> */}
       <Partners />
       <Subscription />
     </>

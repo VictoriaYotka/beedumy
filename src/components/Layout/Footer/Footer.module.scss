@@ -14,11 +14,12 @@
 .topper {
   @extend .section;
   @extend .flex_aligncenter;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 16px;
 
   @include lg {
     flex-direction: row;
+    justify-content: center;
     padding: 28px 0;
   }
 }
@@ -27,13 +28,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: column;
+  flex-direction: column-reverse;
 
   gap: 8px;
   padding: 0 16px;
-
-  @include md {
-  }
 
   @include lg {
     position: relative;
@@ -46,6 +44,7 @@
 .show_more_button {
   @extend .flex_aligncenter;
   gap: 4px;
+  margin: 0 auto 8px auto;
   color: $paleWhiteColor;
   font-weight: $boldFont;
 
@@ -91,7 +90,7 @@
 }
 
 .item {
-  text-align: right;
+  text-align: start;
   color: $paleWhiteColor;
   font-size: 10px;
 
@@ -120,13 +119,28 @@
   @include md {
     position: absolute;
     bottom: 60px;
-    left: 180px;
+
+    [dir="ltr"] & {
+      right: 180px;
+      left: unset;
+    }
+    [dir="rtl"] & {
+      left: 180px;
+      right: unset;
+    }
   }
 
   @include lg {
     position: absolute;
     bottom: -8px;
-    left: 100px;
+    [dir="ltr"] & {
+      right: 100px;
+      left: unset;
+    }
+    [dir="rtl"] & {
+      left: 100px;
+      right: unset;
+    }
   }
 }
 
@@ -164,7 +178,8 @@
 
 .gallery_heading {
   display: inline-block;
-  text-align: right;
+  text-align: start;
+  margin-bottom: 8px;
   color: $paleWhiteColor;
   font-size: 10px;
 
@@ -215,7 +230,7 @@
   max-width: 320px;
 
   @include md {
-    text-align: right;
+    text-align: start;
   }
 
   @include lg {
@@ -237,14 +252,14 @@
 
   @include md {
     margin-bottom: 16px;
-    text-align: right;
+    text-align: start;
     font-size: 14px;
   }
 }
 
 .about_descr {
   margin-bottom: 12px;
-  text-align: right;
+  text-align: start;
   font-size: 10px;
   color: $paleWhiteColor;
   font-weight: $boldFont;
@@ -278,7 +293,7 @@
 .follow_more_button {
   @extend .button;
   display: inline-block;
-  margin-right: 8px;
+  margin-inline-end: 8px;
   background-color: $greenBgButtonBgColor;
 }
 

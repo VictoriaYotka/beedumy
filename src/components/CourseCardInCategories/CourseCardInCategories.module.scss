@@ -103,7 +103,6 @@
 
 .wrapper {
   @extend .flex_aligncenter;
-  // justify-content: flex-end;
   gap: 16px;
   margin-bottom: 16px;
 
@@ -130,8 +129,10 @@
 }
 
 .course_button {
-  display: inline-block;
-  padding: 8px 24px;
+  @extend .flex_aligncenter;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
   border-radius: 28px;
   font-size: 16px;
   color: #007733;
@@ -152,15 +153,23 @@
     color: $darkFontColor;
     box-shadow: $shadow;
 
-    .glyph {
-      color: $darkFontColor;
+    .icon {
+      fill: $darkFontColor;
     }
   }
 }
 
-.glyph {
-  margin-inline-end: 8px;
-  color: $accentColor;
+.icon {
+  [dir="rtl"] & {
+    scale: (-1 1);
+  }
+  [dir="ltr"] & {
+    scale: 1;
+  }
+
+  width: 20px;
+  height: 20px;
+  fill: $accentColor;
 
   transition: all 0.4s ease;
 }

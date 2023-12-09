@@ -60,7 +60,7 @@
   padding: 12px 16px 20px 16px;
   max-width: 280px;
   background-color: $darkFooterBgColor;
-  text-align: right;
+  text-align: start;
   color: $whiteColor;
 
   transition: all 0.4s ease;
@@ -105,7 +105,8 @@
   position: relative;
 
   justify-content: center;
-  margin: 0 0 40px auto;
+  margin-bottom: 40px;
+  margin-inline-end: auto;
   padding: 12px;
   width: 70px;
   height: 70px;
@@ -117,10 +118,10 @@
   transition: all 0.4s ease;
 
   @include sm {
-    margin: 0 0 60px auto;
+    margin-bottom: 60px;
   }
   @include md {
-    margin: 0 0 100px auto;
+    margin-bottom: 100px;
   }
 
   &::before {

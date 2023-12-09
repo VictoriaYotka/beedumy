@@ -1,6 +1,7 @@
-import { lazy } from "react";
+import { lazy, useEffect } from "react";
 import { Route, Routes } from "react-router";
 import SharedLayout from "../../pages/SharedLayout/SharedLayout";
+import { useTranslation } from "react-i18next";
 
 const About = lazy(() => import("../../pages/About/About"));
 const Categories = lazy(() => import("../../pages/Categories/Categories"));
@@ -19,6 +20,14 @@ const News = lazy(() => import("../../pages/News/News"));
 const SingleNews = lazy(() => import("../../pages/SingleNews/SingleNews"));
 
 function App() {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    const dir = i18n.dir();
+    document.documentElement.dir = dir;
+    document.documentElement.lang = i18n.language;
+  }, [i18n]);
+
   return (
     <>
       <Routes>

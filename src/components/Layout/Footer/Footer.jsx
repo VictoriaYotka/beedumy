@@ -42,6 +42,17 @@ const Footer = () => {
     <footer className={css.footer}>
       <div className={css.container}>
         <div className={css.topper}>
+          <div className={css.about_wrapper}>
+            <h5 className={css.about_heading}>عن منصة بيرسا التعليمية</h5>
+
+            <p className={css.about_descr}>
+              نوفّر مواد تعليمية لدعم التلاميذ من جميع الفئـات العمرية. باإضافة
+              إلى دورات في اخـتصاصات منعــددة
+            </p>
+
+            <NavLink className={css.follow_more_button}>تواصل معنا</NavLink>
+            <button className={css.connect_button}>تعرّف أكثر</button>
+          </div>
           <div className={css.navigation_wrapper}>
             <ul className={css.socials}>
               <li>
@@ -93,110 +104,104 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-            {showMoreButton && (
-              <button onClick={toggleShowMore} className={css.show_more_button}>
-                <span>أظهر المزيد</span>
-                <svg className={css.show_more_icon}>
-                  <use href={icons + "#chevron-down"}></use>
-                </svg>
-              </button>
-            )}
-            {showMore && (
-              <>
-                <div className={css.lists_wrapper}>
-                  <ul className={css.list}>
-                    <li className={css.item}>
-                      <NavLink> تصفح المحتوى</NavLink>
-                    </li>
-                    <li className={css.item}>
-                      <NavLink>الشروط والأحكام </NavLink>
-                    </li>
-                    <li className={css.item}>
-                      <NavLink>سياسة الخصوصية</NavLink>
-                    </li>
-                  </ul>
 
-                  <ul className={css.list}>
-                    <li className={css.item}>
-                      <NavLink>مساعدة</NavLink>
-                    </li>
-                    <li className={css.item}>
-                      <NavLink>تواصل معنا</NavLink>
-                    </li>
-                    <li className={css.item}>
-                      <NavLink>سجل مجـــــانا</NavLink>
-                    </li>
-                  </ul>
-                  <div>
-                    <NavLink className={css.gallery_heading}>
-                      باقة الصور
-                    </NavLink>
-                    <ul className={css.gallery_list}>
-                      <li className={css.gallery_item}>
-                        <img
-                          src={hero_image}
-                          alt="gallery"
-                          loading="lazy"
-                          className={css.image}
-                        />
+            <>
+              <div className={css.lists_wrapper}>
+                {showMoreButton && (
+                  <button
+                    onClick={toggleShowMore}
+                    className={css.show_more_button}
+                  >
+                    <span>أظهر المزيد</span>
+                    <svg className={css.show_more_icon}>
+                      <use href={icons + "#chevron-down"}></use>
+                    </svg>
+                  </button>
+                )}
+                {showMore && (
+                  <>
+                    <div>
+                      <NavLink className={css.gallery_heading}>
+                        باقة الصور
+                      </NavLink>
+                      <ul className={css.gallery_list}>
+                        <li className={css.gallery_item}>
+                          <img
+                            src={hero_image}
+                            alt="gallery"
+                            loading="lazy"
+                            className={css.image}
+                          />
+                        </li>
+                        <li className={css.gallery_item}>
+                          <img
+                            src={hero_image}
+                            alt="gallery"
+                            loading="lazy"
+                            className={css.image}
+                          />
+                        </li>
+                        <li className={css.gallery_item}>
+                          <img
+                            src={hero_image}
+                            alt="gallery"
+                            loading="lazy"
+                            className={css.image}
+                          />
+                        </li>
+                        <li className={css.gallery_item}>
+                          <img
+                            src={hero_image}
+                            alt="gallery"
+                            loading="lazy"
+                            className={css.image}
+                          />
+                        </li>
+                        <li className={css.gallery_item}>
+                          <img
+                            src={hero_image}
+                            alt="gallery"
+                            loading="lazy"
+                            className={css.image}
+                          />
+                        </li>
+                        <li className={css.gallery_item}>
+                          <img
+                            src={hero_image}
+                            alt="gallery"
+                            loading="lazy"
+                            className={css.image}
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                    <ul className={css.list}>
+                      <li className={css.item}>
+                        <NavLink> تصفح المحتوى</NavLink>
                       </li>
-                      <li className={css.gallery_item}>
-                        <img
-                          src={hero_image}
-                          alt="gallery"
-                          loading="lazy"
-                          className={css.image}
-                        />
+                      <li className={css.item}>
+                        <NavLink>الشروط والأحكام </NavLink>
                       </li>
-                      <li className={css.gallery_item}>
-                        <img
-                          src={hero_image}
-                          alt="gallery"
-                          loading="lazy"
-                          className={css.image}
-                        />
-                      </li>
-                      <li className={css.gallery_item}>
-                        <img
-                          src={hero_image}
-                          alt="gallery"
-                          loading="lazy"
-                          className={css.image}
-                        />
-                      </li>
-                      <li className={css.gallery_item}>
-                        <img
-                          src={hero_image}
-                          alt="gallery"
-                          loading="lazy"
-                          className={css.image}
-                        />
-                      </li>
-                      <li className={css.gallery_item}>
-                        <img
-                          src={hero_image}
-                          alt="gallery"
-                          loading="lazy"
-                          className={css.image}
-                        />
+                      <li className={css.item}>
+                        <NavLink>سياسة الخصوصية</NavLink>
                       </li>
                     </ul>
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
 
-          <div className={css.about_wrapper}>
-            <h5 className={css.about_heading}>عن منصة بيرسا التعليمية</h5>
-
-            <p className={css.about_descr}>
-              نوفّر مواد تعليمية لدعم التلاميذ من جميع الفئـات العمرية. باإضافة
-              إلى دورات في اخـتصاصات منعــددة
-            </p>
-
-            <NavLink className={css.follow_more_button}>تواصل معنا</NavLink>
-            <button className={css.connect_button}>تعرّف أكثر</button>
+                    <ul className={css.list}>
+                      <li className={css.item}>
+                        <NavLink>مساعدة</NavLink>
+                      </li>
+                      <li className={css.item}>
+                        <NavLink>تواصل معنا</NavLink>
+                      </li>
+                      <li className={css.item}>
+                        <NavLink>سجل مجـــــانا</NavLink>
+                      </li>
+                    </ul>
+                  </>
+                )}
+              </div>
+            </>
           </div>
         </div>
       </div>

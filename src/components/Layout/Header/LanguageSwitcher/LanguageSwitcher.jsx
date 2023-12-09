@@ -41,6 +41,7 @@ const LanguageSwitcher = () => {
   useEffect(() => {
     const dir = i18n.dir(currentLanguage.short);
     document.documentElement.dir = dir;
+    document.documentElement.lang = i18n.language;
   }, [i18n, currentLanguage]);
 
   const changeLanguage = (lang) => {
