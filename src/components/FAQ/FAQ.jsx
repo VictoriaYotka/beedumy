@@ -7,6 +7,9 @@ const FAQ = () => {
         <h2 className={css.heading}>الأسئلة المتكررة</h2>
         <ul className={css.list}>
           <li className={css.item}>
+            <div className={css.icon_1}>
+              <span>?</span>
+            </div>
             <div className={css.wrapper}>
               <h3 className={css.item_heading}>
                 كيفية الإشتراك في أحد العروض؟
@@ -17,11 +20,11 @@ const FAQ = () => {
                 مقرنا أو الدفع في : البنك /البريد / البطاقة البنكية.
               </p>
             </div>
-            <div className={css.icon_1}>
-              <span>?</span>
-            </div>
           </li>
           <li className={css.item}>
+            <div className={css.icon_2}>
+              <span>?</span>
+            </div>
             <div className={css.wrapper}>
               <h3 className={css.item_heading}>ماهي العروض المتوفّرة الآن ؟</h3>
               <p className={css.descr}>
@@ -30,11 +33,11 @@ const FAQ = () => {
                 المتوفّرة في صفحة العروض.
               </p>
             </div>
-            <div className={css.icon_2}>
-              <span>?</span>
-            </div>
           </li>
           <li className={css.item}>
+            <div className={css.icon_3}>
+              <span>?</span>
+            </div>
             <div className={css.wrapper}>
               <h3 className={css.item_heading}>ماهي منصة بيرسا التعليمية؟</h3>
               <p className={css.descr}>
@@ -43,11 +46,11 @@ const FAQ = () => {
                 وفعالة
               </p>
             </div>
-            <div className={css.icon_3}>
-              <span>?</span>
-            </div>
           </li>
           <li className={css.item}>
+            <div className={css.icon_4}>
+              <span>?</span>
+            </div>
             <div className={css.wrapper}>
               <h3 className={css.item_heading}>كيفية التسجيل في المنصّة ؟</h3>
               <p className={css.descr}>
@@ -55,9 +58,6 @@ const FAQ = () => {
                 ثمّ اضغط على "سجل الآن". أضِف بياناتك الخاصة مع كتابة رقم الهاتف
                 الخاص بك ثم اضغط على "دخول" وابدأ رحلتك نحو النجاح.
               </p>
-            </div>
-            <div className={css.icon_4}>
-              <span>?</span>
             </div>
           </li>
         </ul>

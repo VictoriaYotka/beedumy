@@ -6,13 +6,13 @@
 
 .container {
   @extend .container;
-  text-align: right;
+  text-align: start;
 }
 
 .list_heading {
   font-size: 16px;
   margin-bottom: 8px;
-  text-align: right;
+  text-align: start;
 
   @include sm {
     font-size: 18px;

@@ -43,9 +43,10 @@
 .list {
   @extend .flex_aligncenter;
   flex-direction: column;
+  gap: 8px;
 
   @include md {
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: center;
     gap: 24px;
   }
@@ -55,21 +56,25 @@
   position: relative;
 
   &:nth-child(even) {
-    margin-left: 40%;
-
-    @include sm {
-      margin-left: 60%;
-    }
+    left: 40px;
 
     @include md {
-      margin-left: unset;
+      left: unset;
+    }
+  }
+
+  &:nth-child(odd) {
+    left: -40px;
+
+    @include md {
+      left: unset;
     }
   }
 }
 
 .item:nth-child(2) {
   @include md {
-    top: 25px;
+    top: 10px;
   }
 }
 
@@ -81,7 +86,7 @@
 
 .item:nth-child(4) {
   @include md {
-    top: 10px;
+    top: 25px;
   }
 }
 
@@ -89,6 +94,7 @@
   position: relative;
   border-radius: 50%;
   overflow: hidden;
+  margin: 0 auto;
   box-shadow: $shadow;
   text-align: center;
   z-index: 10;
@@ -119,8 +125,19 @@
 .count {
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-40%);
+  left: 0;
+
+  [dir="rtl"] & {
+    right: 0;
+    left: unset;
+    transform: translateX(-70%);
+  }
+  [dir="ltr"] & {
+    left: 0;
+    right: unset;
+    transform: translateX(70%);
+  }
+
   width: 40px;
   height: 40px;
 
@@ -132,16 +149,34 @@
   font-weight: $boldFont;
 
   @include sm {
-    left: 70%;
-    transform: translateX(-70%);
+    [dir="rtl"] & {
+      right: 0;
+      left: unset;
+      transform: translateX(-30%);
+    }
+    [dir="ltr"] & {
+      left: 0;
+      right: unset;
+      transform: translateX(30%);
+    }
   }
 
   @include md {
-    left: 80%;
+    [dir="rtl"] & {
+      transform: translateX(-15%);
+    }
+    [dir="ltr"] & {
+      transform: translateX(15%);
+    }
   }
 
   @include lg {
-    transform: translateX(-80%);
+    [dir="rtl"] & {
+      transform: translateX(-25%);
+    }
+    [dir="ltr"] & {
+      transform: translateX(25%);
+    }
   }
 }
 

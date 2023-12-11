@@ -105,16 +105,102 @@ const CoursesFilterInCategories = () => {
       <section className={css.filter_section}>
         <div className={css.filter_container}>
           <ul className={css.list}>
+            {/* classification */}
+            <li className={`${css.item} ${css.empty_item}`}>
+              <p className={css.item_inner}>
+                <svg className={css.icon}>
+                  <use href={icons + "#filter"}></use>
+                </svg>
+                <span>تصنيف</span>
+              </p>
+            </li>
+            {/* favorite */}
+            <li id="item_favorite" className={css.item}>
+              <p
+                className={css.item_inner}
+                onClick={() => handleShow("favorite_list")}
+              >
+                <svg className={css.icon}>
+                  <use href={icons + "#star"}></use>
+                </svg>
+                <span>التقييمات</span>
+              </p>
+              {(isFavoriteList || isMediumScreen) && (
+                <ul className={css.subcategories_list}>
+                  <li className={css.subcategories_item}>
+                    <p className={css.subcategories_heading}>الأعلى تقييما</p>
+                  </li>
+                  <li className={css.subcategories_item}>
+                    <p className={css.subcategories_heading}>الأعلى مبيع</p>
+                  </li>
+                </ul>
+              )}
+            </li>
+            {/* Curricula */}
+            <li id="item_curricula" className={css.item}>
+              <p
+                className={css.item_inner}
+                onClick={() => handleShow("curricula_list")}
+              >
+                <svg className={css.icon}>
+                  <use href={icons + "#clock"}></use>
+                </svg>
+                <span>المناهج</span>
+              </p>
+
+              {(isCurriculaList || isMediumScreen) && (
+                <ul className={css.subcategories_list}>
+                  <li className={css.subcategories_item}>
+                    <p className={css.subcategories_heading}>المنهج التونسي</p>
+                  </li>
+                  <li className={css.subcategories_item}>
+                    <p className={css.subcategories_heading}>المنهج الليبي</p>
+                  </li>
+                  <li className={css.subcategories_item}>
+                    <p className={css.subcategories_heading}>
+                      الدورات التكوينية
+                    </p>
+                  </li>
+                </ul>
+              )}
+            </li>
+            {/* Content type */}
+            <li id="item_type" className={css.item}>
+              <p
+                className={css.item_inner}
+                onClick={() => handleShow("type_list")}
+              >
+                <svg className={css.icon}>
+                  <use href={icons + "#play"}></use>
+                </svg>
+                <span>نوع المحتوى</span>
+              </p>
+              {(isTypeList || isMediumScreen) && (
+                <ul className={css.subcategories_list}>
+                  <li className={css.subcategories_item}>
+                    <p className={css.subcategories_heading}>
+                      المحتويات المتوفرة
+                    </p>
+                  </li>
+                  <li className={css.subcategories_item}>
+                    <p className={css.subcategories_heading}>
+                      المحتويات المرتقبة
+                    </p>
+                  </li>
+                </ul>
+              )}
+            </li>
+
             {/* publishing date */}
             <li id="item_date" className={css.item}>
               <p
-                className={css.item_heading}
+                className={css.item_inner}
                 onClick={() => handleShow("date_list")}
               >
-                تاريخ نشر المحتوى
                 <svg className={css.icon}>
                   <use href={icons + "#calendar"}></use>
                 </svg>
+                <span>تاريخ نشر المحتوى</span>
               </p>
 
               {(isDateList || isMediumScreen) && (
@@ -136,94 +222,6 @@ const CoursesFilterInCategories = () => {
                   </li>
                 </ul>
               )}
-            </li>
-
-            {/* Content type */}
-            <li id="item_type" className={css.item}>
-              <p
-                className={css.item_heading}
-                onClick={() => handleShow("type_list")}
-              >
-                نوع المحتوى
-                <svg className={css.icon}>
-                  <use href={icons + "#play"}></use>
-                </svg>
-              </p>
-              {(isTypeList || isMediumScreen) && (
-                <ul className={css.subcategories_list}>
-                  <li className={css.subcategories_item}>
-                    <p className={css.subcategories_heading}>
-                      المحتويات المتوفرة
-                    </p>
-                  </li>
-                  <li className={css.subcategories_item}>
-                    <p className={css.subcategories_heading}>
-                      المحتويات المرتقبة
-                    </p>
-                  </li>
-                </ul>
-              )}
-            </li>
-
-            {/* Curricula */}
-            <li id="item_curricula" className={css.item}>
-              <p
-                className={css.item_heading}
-                onClick={() => handleShow("curricula_list")}
-              >
-                المناهج
-                <svg className={css.icon}>
-                  <use href={icons + "#clock"}></use>
-                </svg>
-              </p>
-              {(isCurriculaList || isMediumScreen) && (
-                <ul className={css.subcategories_list}>
-                  <li className={css.subcategories_item}>
-                    <p className={css.subcategories_heading}>المنهج التونسي</p>
-                  </li>
-                  <li className={css.subcategories_item}>
-                    <p className={css.subcategories_heading}>المنهج الليبي</p>
-                  </li>
-                  <li className={css.subcategories_item}>
-                    <p className={css.subcategories_heading}>
-                      الدورات التكوينية
-                    </p>
-                  </li>
-                </ul>
-              )}
-            </li>
-
-            {/* favorite */}
-            <li id="item_favorite" className={css.item}>
-              <p
-                className={css.item_heading}
-                onClick={() => handleShow("favorite_list")}
-              >
-                التقييمات
-                <svg className={css.icon}>
-                  <use href={icons + "#star"}></use>
-                </svg>
-              </p>
-              {(isFavoriteList || isMediumScreen) && (
-                <ul className={css.subcategories_list}>
-                  <li className={css.subcategories_item}>
-                    <p className={css.subcategories_heading}>الأعلى تقييما</p>
-                  </li>
-                  <li className={css.subcategories_item}>
-                    <p className={css.subcategories_heading}>الأعلى مبيع</p>
-                  </li>
-                </ul>
-              )}
-            </li>
-
-            {/* classification */}
-            <li className={`${css.item} ${css.empty_item}`}>
-              <p className={css.item_heading}>
-                تصنيف
-                <svg className={css.icon}>
-                  <use href={icons + "#filter"}></use>
-                </svg>
-              </p>
             </li>
           </ul>
         </div>

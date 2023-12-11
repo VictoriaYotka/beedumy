@@ -18,35 +18,35 @@ const StartLearningTrip = () => {
         <ul className={css.list}>
           {/* paper img */}
           <li className={css.item}>
+            <p className={css.count_accent}>1</p>
             <div className={css.thumb}>
               <span className={css.img_descr}>أسجل</span>
               <img src={papers} alt="أسجل" className={css.img} />
             </div>
-            <p className={css.count_accent}>1</p>
           </li>
           {/* search img */}
           <li className={css.item}>
+            <p className={css.count}>2</p>
             <div className={css.thumb}>
               <span className={css.img_descr}>أبحث</span>
               <img src={search} alt="أبحث" className={css.img} />
             </div>
-            <p className={css.count}>2</p>
           </li>
           {/* cloud img */}
           <li className={css.item}>
+            <p className={css.count_accent}>3</p>
             <div className={css.thumb}>
               <span className={css.img_descr}>أشتري</span>
               <img src={cloud} alt="أشتري" className={css.img} />
             </div>
-            <p className={css.count_accent}>3</p>
           </li>
           {/* headphones img */}
           <li className={css.item}>
+            <p className={css.count}>4</p>
             <div className={css.thumb}>
               <span className={css.img_descr}>أتعلّم</span>
               <img src={headphones} alt="أتعلّم" className={css.img} />
             </div>
-            <p className={css.count}>4</p>
           </li>
         </ul>
       </div>

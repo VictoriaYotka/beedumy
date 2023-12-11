@@ -30,7 +30,7 @@
 .item {
   @extend .flex_aligncenter;
   gap: 16px;
-  text-align: right;
+  text-align: start;
 
   &:nth-child(odd) {
     flex-direction: row-reverse;
@@ -38,7 +38,7 @@
 
     @include md {
       flex-direction: row;
-      gap: 24px;
+      // gap: 24px;
     }
   }
 
@@ -50,7 +50,7 @@
   @include md {
     padding: 8px;
     flex-basis: 50%;
-    gap: 24px;
+    gap: 8px;
   }
 
   @include lg {
@@ -93,7 +93,7 @@
 
 .icon {
   @include md {
-    margin-right: 30px;
+    margin-inline-end: 30px;
   }
 
   span {
