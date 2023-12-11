@@ -14,8 +14,6 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 24px;
-  margin-right: auto;
-  margin-left: auto;
 
   @include md {
     gap: 12px;

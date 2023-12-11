@@ -9,34 +9,34 @@ const CoursesFilterInCourses = ({ curriculum = "curriculum" }) => {
         <ul className={css.list}>
           <li className={css.item}>
             <h4 className={css.item_heading}>
-              <svg className={css.icon}>
-                <use href={icons + "#chevron-down"}></use>
-              </svg>
               <span>الإبتدائية</span>
+              <svg className={css.icon}>
+                <use href={icons + "#chevron-down"}></use>
+              </svg>
             </h4>
           </li>
           <li className={css.item}>
             <h4 className={css.item_heading}>
-              <svg className={css.icon}>
-                <use href={icons + "#chevron-down"}></use>
-              </svg>
               <span>الإعدادية</span>
+              <svg className={css.icon}>
+                <use href={icons + "#chevron-down"}></use>
+              </svg>
             </h4>
           </li>
           <li className={css.item}>
             <h4 className={css.item_heading}>
-              <svg className={css.icon}>
-                <use href={icons + "#chevron-down"}></use>
-              </svg>
               <span>الثانوية</span>
+              <svg className={css.icon}>
+                <use href={icons + "#chevron-down"}></use>
+              </svg>
             </h4>
           </li>
           <li className={css.item}>
             <h4 className={css.item_heading}>
+              <span>الباكالوريا</span>
               <svg className={css.icon}>
                 <use href={icons + "#chevron-down"}></use>
               </svg>
-              <span>الباكالوريا</span>
             </h4>
           </li>
         </ul>

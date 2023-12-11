@@ -2,8 +2,7 @@
 
 .item {
   max-width: 320px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 
   transition: all 0.4s ease;
 
@@ -71,6 +70,15 @@
   left: 50px;
   top: -13.5px;
 
+  [dir="ltr"] & {
+    right: 50px;
+    left: unset;
+  }
+  [dir="rtl"] & {
+    left: 50px;
+    right: unset;
+  }
+
   display: inline-block;
   vertical-align: middle;
   font-size: 10px;
@@ -92,7 +100,7 @@
 
 .admin_wrapper {
   @extend .flex_aligncenter;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 12px;
   font-size: 14px;
   color: $secondaryFontColor;
@@ -109,7 +117,7 @@
 }
 
 .title {
-  text-align: end;
+  text-align: start;
   font-size: 24px;
   font-weight: $boldFont;
   margin-bottom: 4px;

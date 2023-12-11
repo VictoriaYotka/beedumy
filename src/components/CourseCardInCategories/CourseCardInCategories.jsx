@@ -26,14 +26,10 @@ const CourseCardInCategories = ({
           <div className={css.rating}>{rating}</div>
         </div>
         <Link to={id} className={css.course_button}>
-          {/* <span className={css.glyph}>
-            {document.html?.dir === "rtl" ? `${ &#9664; }` : `${ &#9654; }` }
-          </span> */}
           <svg className={css.icon}>
             <use href={`${icons}#play`}></use>
           </svg>
           <span>Go to course</span>
-          {/* opposite side: &#9654; */}
         </Link>
       </div>
     </div>

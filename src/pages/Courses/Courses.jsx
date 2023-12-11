@@ -4,7 +4,7 @@ import CoursesFilterInCourses from "../../components/CoursesFilterInCourses/Cour
 const Courses = () => {
   return (
     <>
-      <CoursesFilterInCourses />
+      {/* <CoursesFilterInCourses /> */}
       <CourseListInCourses />
     </>
   );

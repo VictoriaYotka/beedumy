@@ -28,27 +28,27 @@ const CourseCardInCourses = ({
         <div className={css.wrapper}>
           <Link className={css.category}>{category}</Link>
           <div className={css.admin_wrapper}>
-            <Link className={css.admin}>by {admin}</Link>
             <img className={css.admin_image} src={admin_image} alt={admin} />
+            <Link className={css.admin}>by {admin}</Link>
           </div>
           <h2 className={css.title}>
             <Link>{title}</Link>
           </h2>
 
           <div className={css.meta}>
-            <div className={css.hours_wrapper}>
-              <span>{hours}</span>
-              <svg className={css.meta_icon}>
-                <use href={icons + "#clock"}></use>
-              </svg>
-            </div>
+            <p className={css.descr}> {description}</p>
             <div className={css.downloaded_wrapper}>
-              <span className={css.downloaded}>{downloaded}</span>
               <svg className={css.meta_icon}>
                 <use href={icons + "#downloaded"}></use>
               </svg>
+              <span className={css.downloaded}>{downloaded}</span>
             </div>
-            <p className={css.descr}> {description}</p>
+            <div className={css.hours_wrapper}>
+              <svg className={css.meta_icon}>
+                <use href={icons + "#clock"}></use>
+              </svg>
+              <span>{hours}</span>
+            </div>
           </div>
           <Link to="/courses/course" className={css.button}>
             See Preview
