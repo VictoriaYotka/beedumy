@@ -9,29 +9,26 @@ const SingleNewsAdditionalInfo = () => {
         <ul className={css.articles_list}>
           <li className={css.articles_item}>
             <Link className={css.articles_link}>
-              <h6 className={css.articles_title}>title</h6>
-
               <div className={css.articles_image_wrapper}>
                 <img className={css.articles_image} src="" alt="" />
               </div>
+              <h6 className={css.articles_title}>title</h6>
             </Link>
           </li>
           <li className={css.articles_item}>
             <Link className={css.articles_link}>
-              <h6 className={css.articles_title}>title</h6>
-
               <div className={css.articles_image_wrapper}>
                 <img className={css.articles_image} src="" alt="" />
               </div>
+              <h6 className={css.articles_title}>title</h6>
             </Link>
           </li>
           <li className={css.articles_item}>
             <Link className={css.articles_link}>
-              <h6 className={css.articles_title}>title</h6>
-
               <div className={css.articles_image_wrapper}>
                 <img className={css.articles_image} src="" alt="" />
               </div>
+              <h6 className={css.articles_title}>title</h6>
             </Link>
           </li>
         </ul>

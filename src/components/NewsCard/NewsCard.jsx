@@ -13,9 +13,9 @@ const NewsCard = ({ title, content, img, meta1, meta2, meta3 }) => {
           <li className={css.meta_item}>
             <div className={css.meta_icon_wrapper}>
               <svg className={css.meta_icon}>
-                <use href={icons + "#calendar"}></use>
+                <use href={icons + "#user"}></use>
               </svg>
-              <p className={css.meta_info}>{meta1}</p>
+              <p className={css.meta_info}>{meta3}</p>
             </div>
           </li>
           <li className={css.meta_item}>
@@ -26,12 +26,13 @@ const NewsCard = ({ title, content, img, meta1, meta2, meta3 }) => {
               <p className={css.meta_info}>{meta2}</p>
             </div>
           </li>
+
           <li className={css.meta_item}>
             <div className={css.meta_icon_wrapper}>
               <svg className={css.meta_icon}>
-                <use href={icons + "#user"}></use>
+                <use href={icons + "#calendar"}></use>
               </svg>
-              <p className={css.meta_info}>{meta3}</p>
+              <p className={css.meta_info}>{meta1}</p>
             </div>
           </li>
         </ul>

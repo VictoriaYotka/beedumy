@@ -9,11 +9,6 @@ const SingleNewsSearch = () => {
   return (
     <div className={css.container}>
       <form className={css.form} onSubmit={handleSearchFormSubmit}>
-        <button className={css.search_button}>
-          <div className={css.search_box}>
-            <i className="kipso-icon-magnifying-glass"></i>
-          </div>
-        </button>
         <input
           id="singlenews_search_input"
           type="text"
@@ -21,6 +16,11 @@ const SingleNewsSearch = () => {
           placeholder="أبحث عن محتوى"
           className={css.input}
         />
+        <button className={css.search_button}>
+          <div className={css.search_box}>
+            <i className="kipso-icon-magnifying-glass"></i>
+          </div>
+        </button>
       </form>
     </div>
   );

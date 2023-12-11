@@ -12,7 +12,6 @@ const SingleCourseCard = ({
   return (
     <div className={css.card}>
       <div className={css.info}>
-        <p className={css.curriculum}>{curriculum}</p>
         <div className={css.wrapper}>
           <div className={css.admin_wrapper}>
             <Link className={css.admin}>{admin}</Link>
@@ -21,6 +20,7 @@ const SingleCourseCard = ({
           <h2 className={css.title}>{title}</h2>
           <div className={css.stars}> Stars</div>
         </div>
+        <p className={css.curriculum}>{curriculum}</p>
       </div>
 
       <div className={css.video_wrapper}>

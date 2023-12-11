@@ -1,13 +1,13 @@
 @import "../../scss";
 
 .comments_wrapper {
-  text-align: right;
+  text-align: start;
   margin-bottom: 24px;
 }
 
 .header {
   position: relative;
-  text-align: right;
+  text-align: start;
   margin-bottom: 8px;
   font-size: 18px;
 
@@ -24,7 +24,14 @@
     content: "";
     position: absolute;
     bottom: 0;
-    right: 0;
+    [dir="ltr"] & {
+      left: 0;
+      right: unset;
+    }
+    [dir="rtl"] & {
+      right: 0;
+      left: unset;
+    }
     height: 2px;
     width: 24px;
     background-color: $secondaryFontColor;
@@ -33,7 +40,7 @@
 
 .comments_subheader {
   @extend .flex_aligncenter;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 4px;
   margin-bottom: 12px;
   color: $secondaryFontColor;
@@ -53,21 +60,23 @@
 .comments_card {
   display: flex;
   align-items: flex-start;
-  flex-direction: row-reverse;
   padding: 12px;
-  text-align: right;
+  gap: 12px;
+  text-align: start;
   background-color: $lightGreyBgColor;
   font-size: 14px;
 
   &:not(:last-child) {
     margin-bottom: 12px;
 
-    @include md {
-      font-size: 18px;
-    }
     @include lg {
       margin-bottom: 24px;
     }
+  }
+
+  @include md {
+    gap: 24px;
+    font-size: 16px;
   }
 }
 
@@ -85,26 +94,21 @@
 
 .comments_content_wrapper {
   flex-basis: 100%;
-  padding: 4px 12px;
-
-  @include sm {
-    flex-basis: 60%;
-  }
+  // padding: 4px 12px;
 
   @include md {
-    padding: 8px 24px;
+    // padding: 8px 24px;
   }
 }
 
 .comments_descr {
   margin-bottom: 4px;
-  text-align: right;
+  text-align: start;
   color: $secondaryFontColor;
 }
 
 .comments_additional_wrapper {
   @extend .flex_aligncenter;
-  flex-direction: row-reverse;
   gap: 12px;
 }
 
@@ -125,7 +129,7 @@
 }
 
 .add_wrapper {
-  text-align: right;
+  text-align: start;
 }
 
 .input_group {
@@ -147,7 +151,7 @@
   background-color: $lightGreyBgColor;
   border: none;
   outline: none;
-  text-align: right;
+  text-align: start;
 
   @include sm {
     width: 50%;
@@ -166,7 +170,7 @@
   background-color: $lightGreyBgColor;
   border: none;
   outline: none;
-  text-align: right;
+  text-align: start;
   resize: vertical;
 
   @include sm {

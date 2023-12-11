@@ -40,12 +40,12 @@
 }
 
 .wrapper {
-  margin-left: auto;
+  margin-inline-end: auto;
 }
 
 .admin_wrapper {
   @extend .flex_aligncenter;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 12px;
   font-size: 14px;
   color: $secondaryFontColor;
@@ -62,14 +62,14 @@
 }
 
 .title {
-  text-align: end;
+  text-align: start;
   font-size: 24px;
   font-weight: $boldFont;
   margin-bottom: 4px;
 }
 
 .stars {
-  text-align: right;
+  text-align: start;
 }
 
 .video_wrapper {

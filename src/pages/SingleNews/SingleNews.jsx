@@ -30,12 +30,12 @@ const SingleNews = () => {
       <section className={css.section}>
         <div className={css.container}>
           <div>
-            {isMediumScreen && <SingleNewsSearch />}
-            <SingleNewsAdditionalInfo />
-          </div>
-          <div>
             <SingleNewsCard />
             <SingleNewsComment />
+          </div>
+          <div>
+            {isMediumScreen && <SingleNewsSearch />}
+            <SingleNewsAdditionalInfo />
           </div>
         </div>
       </section>

@@ -8,11 +8,11 @@ const SingleNewsComment = () => {
       <div className={css.comments_wrapper}>
         <h3 className={css.header}>نقاشات</h3>
         <div className={css.comments_subheader}>
-          <p>تعليقات إلى اللآن</p>
-          <p>3</p>
           <svg className={css.icon}>
             <use href={icons + "#chat"}></use>
           </svg>
+          <p>3</p>
+          <p>تعليقات إلى اللآن</p>
         </div>
         <ul className={css.comments_list}>
           <li className={css.comments_card}>
@@ -25,8 +25,8 @@ const SingleNewsComment = () => {
                 كاتب تربوي شغل اخر مهمة مسيرا للمصالح المادية والمالية بالتعلي
               </p>
               <div className={css.comments_additional_wrapper}>
-                <p className={css.comments_date}>date</p>
                 <button className={css.comments_answer_button}>إجابة</button>
+                <p className={css.comments_date}>date</p>
               </div>
             </div>
           </li>
@@ -40,8 +40,8 @@ const SingleNewsComment = () => {
                 كاتب تربوي شغل اخر مهمة مسيرا للمصالح المادية والمالية بالتعلي
               </p>
               <div className={css.comments_additional_wrapper}>
-                <p className={css.comments_date}>date</p>
                 <button className={css.comments_answer_button}>إجابة</button>
+                <p className={css.comments_date}>date</p>
               </div>
             </div>
           </li>
@@ -55,8 +55,8 @@ const SingleNewsComment = () => {
                 كاتب تربوي شغل اخر مهمة مسيرا للمصالح المادية والمالية بالتعلي
               </p>
               <div className={css.comments_additional_wrapper}>
-                <p className={css.comments_date}>date</p>
                 <button className={css.comments_answer_button}>إجابة</button>
+                <p className={css.comments_date}>date</p>
               </div>
             </div>
           </li>

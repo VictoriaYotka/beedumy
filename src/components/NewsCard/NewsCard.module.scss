@@ -45,6 +45,9 @@
 }
 
 .content_wrapper {
+  @extend .flex_aligncenter;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 24px;
   text-align: center;
   height: 280px;
@@ -162,7 +165,6 @@
 
 .title {
   color: $darkFontColor;
-  margin-bottom: 16px;
   font-size: 14px;
 
   @include sm {
@@ -170,7 +172,6 @@
   }
 
   @include md {
-    margin-bottom: 24px;
     font-size: 18px;
   }
 
@@ -178,7 +179,7 @@
 }
 
 .content {
-  margin-bottom: 16px;
+  display: block;
   max-height: 50px;
   font-size: 12px;
   overflow: hidden;
@@ -191,7 +192,6 @@
   }
 
   @include md {
-    margin-bottom: 24px;
     max-height: 70px;
     font-size: 16px;
   }
@@ -201,7 +201,6 @@
 
 .button {
   display: inline-block;
-  margin-top: auto;
   color: $accentColor;
   font-weight: $boldFont;
   transition: all 0.4s ease;

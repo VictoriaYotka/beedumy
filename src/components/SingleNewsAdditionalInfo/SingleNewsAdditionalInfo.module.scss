@@ -20,7 +20,7 @@
   width: 100%;
   padding: 16px;
   background-color: $lightGreyBgColor;
-  text-align: right;
+  text-align: start;
 
   @include lg {
     padding: 32px;
@@ -29,7 +29,7 @@
 
 .heading {
   margin-bottom: 4px;
-  text-align: right;
+  text-align: start;
   color: $secondaryFontColor;
   font-size: 14px;
 }
@@ -57,7 +57,7 @@
 
 .articles_link {
   @extend .flex_aligncenter;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 12px;
 }
 
@@ -85,7 +85,7 @@
 // keywords
 .keywords_list {
   @extend .flex_aligncenter;
-  justify-content: flex-end;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 12px;
@@ -118,7 +118,7 @@
 }
 
 .topics_item {
-  text-align: right;
+  text-align: start;
   color: $secondaryFontColor;
   font-size: 14px;
   font-weight: $boldFont;

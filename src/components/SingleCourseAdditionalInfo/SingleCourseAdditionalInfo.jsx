@@ -13,11 +13,14 @@ const SingleCourseAdditionalInfo = ({
       <div className={css.price_container}>
         <h5 className={css.price_heading}>ثمن المحتوى</h5>
         <p className={css.price_value}>
-          <span className={css.discounted_price}>
+          <span className={css.full_price}>
+            {fullPrice}
             د.ل
-            {discountedPrice}
           </span>
-          <span className={css.full_price}>د.ل{fullPrice}</span>
+          <span className={css.discounted_price}>
+            {discountedPrice}
+            د.ل
+          </span>
         </p>
         <Link className={css.price_button}>شراء المحتوى</Link>
       </div>
@@ -62,37 +65,38 @@ const SingleCourseAdditionalInfo = ({
           </li>
         </ul>
       </div>
+
       <div className={css.related_container}>
         <h5 className={css.related_heading}>محتويات ذات صلة</h5>
         <ul className={css.related_list}>
           <li className={css.related_item}>
+            <div className={css.related_image_wrapper}>
+              <img className={css.related_image} src="" alt="" />
+            </div>
             <div className={css.related_info_wrapper}>
               <p className={css.admin}>admin</p>
               <h6 className={css.title}>title</h6>
               <div className={css.stars}> Stars</div>
-            </div>
-            <div className={css.related_image_wrapper}>
-              <img className={css.related_image} src="" alt="" />
             </div>
           </li>
           <li className={css.related_item}>
+            <div className={css.related_image_wrapper}>
+              <img className={css.related_image} src="" alt="" />
+            </div>
             <div className={css.related_info_wrapper}>
               <p className={css.admin}>admin</p>
               <h6 className={css.title}>title</h6>
               <div className={css.stars}> Stars</div>
-            </div>
-            <div className={css.related_image_wrapper}>
-              <img className={css.related_image} src="" alt="" />
             </div>
           </li>
           <li className={css.related_item}>
+            <div className={css.related_image_wrapper}>
+              <img className={css.related_image} src="" alt="" />
+            </div>
             <div className={css.related_info_wrapper}>
               <p className={css.admin}>admin</p>
               <h6 className={css.title}>title</h6>
               <div className={css.stars}> Stars</div>
-            </div>
-            <div className={css.related_image_wrapper}>
-              <img className={css.related_image} src="" alt="" />
             </div>
           </li>
         </ul>

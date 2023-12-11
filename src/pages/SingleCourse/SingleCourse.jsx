@@ -9,12 +9,12 @@ const SingleCourse = () => {
       <SingleCourseHeader heading="heading" subheading="level" />
       <section className={css.section}>
         <div className={css.container}>
-          <SingleCourseAdditionalInfo fullPrice="34" discountedPrice="18" />
           <SingleCourseCard
             curriculum="curriculum"
             admin="Name Surname"
             title="Course title"
           />
+          <SingleCourseAdditionalInfo fullPrice="34" discountedPrice="18" />
         </div>
       </section>
     </>

@@ -39,13 +39,20 @@
   &:not(:last-child) {
     position: relative;
 
-    padding-right: 12px;
+    padding-inline-end: 12px;
 
     &:after {
       content: "";
       position: absolute;
       top: 2px;
-      right: 0;
+      [dir="ltr"] & {
+        right: 0;
+        left: unset;
+      }
+      [dir="rtl"] & {
+        left: 0;
+        right: unset;
+      }
       height: 20px;
       width: 1px;
       background-color: $whiteColor;

@@ -67,7 +67,7 @@
 
 .details_item {
   @extend .flex_aligncenter;
-  flex-direction: row-reverse;
+  flex-direction: row;
   padding: 24px;
   gap: 16px;
   border: 2px solid $lightGreyBgColor;
@@ -174,7 +174,7 @@
   width: 100%;
   padding: 32px;
   border: 2px solid $lightGreyBgColor;
-  text-align: right;
+  text-align: start;
 }
 
 .related_heading {
@@ -185,7 +185,7 @@
 
 .related_item {
   @extend .flex_aligncenter;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 12px;
   padding: 20px 0;
   &:not(:last-child) {

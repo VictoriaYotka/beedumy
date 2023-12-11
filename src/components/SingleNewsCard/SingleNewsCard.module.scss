@@ -3,7 +3,7 @@
 // news card
 .news_card {
   padding: 12px;
-  text-align: right;
+  text-align: start;
   border: 1px solid $lightGreyBgColor;
   margin-bottom: 12px;
 
@@ -138,6 +138,7 @@
 .title {
   @extend .heading;
   max-width: unset;
+  text-align: start;
   color: $darkFontColor;
   margin-bottom: 16px;
 
@@ -169,13 +170,13 @@
 .additional {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
   gap: 4px;
 
   @include md {
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     gap: 12px;
@@ -184,17 +185,16 @@
 
 .keywords_wrapper {
   @extend .flex_aligncenter;
-  flex-direction: row-reverse;
   flex-wrap: wrap;
   gap: 12px;
 
   @include md {
-    margin-left: auto;
+    margin-inline-end: auto;
   }
 }
 
 .keywords_header {
-  margin-left: 32px;
+  margin-inline-end: 32px;
   color: $secondaryFontColor;
   font-size: 12px;
   font-weight: $boldFont;
@@ -256,12 +256,14 @@
 .autor_card {
   @extend .flex_aligncenter;
   flex-direction: column;
-  text-align: right;
+  text-align: start;
   border: 1px solid $lightGreyBgColor;
   margin-bottom: 24px;
+  padding-bottom: 12px;
 
   @include sm {
-    flex-direction: row-reverse;
+    flex-direction: row;
+    padding-bottom: 0;
   }
 }
 
@@ -273,7 +275,7 @@
 
   @include sm {
     flex-basis: 20%;
-    border-left: 1px solid $lightGreyBgColor;
+    border-inline-end: 1px solid $lightGreyBgColor;
     margin-bottom: 0;
   }
 }
@@ -309,6 +311,7 @@
     width: 100%;
   }
 }
+
 .author_socials_item {
   text-align: center;
   flex-basis: 25%;
@@ -363,7 +366,7 @@
 
 .autor_descr {
   margin-bottom: 8px;
-  text-align: right;
+  text-align: start;
   color: $secondaryFontColor;
 
   @include md {
