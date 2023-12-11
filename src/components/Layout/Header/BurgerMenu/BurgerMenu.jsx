@@ -23,8 +23,8 @@ const BurgerMenu = ({ toggleMenu, isOpenBurgerMenu }) => {
       {isOpenBurgerMenu && (
         <div className={css.burger_content}>
           <div className={css.wrapper}>
-            <LanguageSwitcher />
             <SearchButton />
+            <LanguageSwitcher />
           </div>
 
           <nav>

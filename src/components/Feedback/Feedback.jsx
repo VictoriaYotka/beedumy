@@ -54,7 +54,6 @@ const Feedback = () => {
           شهادات تلامذتنا عبر مواقع التواصل الاجتماعي
         </h2>
         <Slider {...settings}>
-          <div>
             <div className={css.item}>
               <div className={css.icon_wrapper}>
                 <svg className={css.icon}>
@@ -74,8 +73,7 @@ const Feedback = () => {
               <p className={css.name}>إلهام بن عبيد</p>
               <p className={css.descr}>تلميذة</p>
             </div>
-          </div>
-          <div>
+
             <div className={css.item}>
               <div className={css.icon_wrapper}>
                 <svg className={css.icon}>
@@ -95,8 +93,7 @@ const Feedback = () => {
               <p className={css.name}>إلهام بن عبيد</p>
               <p className={css.descr}>تلميذة</p>
             </div>
-          </div>
-          <div>
+
             <div className={css.item}>
               <div className={css.icon_wrapper}>
                 <svg className={css.icon}>
@@ -116,8 +113,7 @@ const Feedback = () => {
               <p className={css.name}>إلهام بن عبيد</p>
               <p className={css.descr}>تلميذة</p>
             </div>
-          </div>
-          <div>
+
             <div className={css.item}>
               <div className={css.icon_wrapper}>
                 <svg className={css.icon}>
@@ -137,8 +133,7 @@ const Feedback = () => {
               <p className={css.name}>إلهام بن عبيد</p>
               <p className={css.descr}>تلميذة</p>
             </div>
-          </div>
-          <div>
+
             <div className={css.item}>
               <div className={css.icon_wrapper}>
                 <svg className={css.icon}>
@@ -158,7 +153,6 @@ const Feedback = () => {
               <p className={css.name}>إلهام بن عبيد</p>
               <p className={css.descr}>تلميذة</p>
             </div>
-          </div>
         </Slider>
       </div>
     </section>

@@ -2,6 +2,11 @@
 
 .wrapper {
   position: relative;
+
+  @include lg {
+    padding-inline-end: 8px;
+    border-inline-end: 2px solid $whiteColor;
+  }
 }
 
 .button {
@@ -32,18 +37,19 @@
   position: absolute;
   top: 100%;
   [dir="rtl"] & {
-    right: 0;
-    left: unset;
+    left: 0;
+    right: unset;
   }
   [dir="ltr"] & {
-    right: unset;
-    left: 0;
+    left: unset;
+    right: 0;
   }
 
   visibility: hidden;
   opacity: 0;
 
-  padding: 8px;
+  padding: 8px 0;
+  text-align: start;
   background-color: $greenBgButtonBgColor;
   color: $whiteColor;
 
@@ -55,7 +61,9 @@
 }
 
 .item {
-  padding: 4px 12px 4px 32px;
+  padding: 4px 0;
+  padding-inline-start: 12px;
+  padding-inline-end: 24px;
   cursor: pointer;
 
   transition: all 0.4s ease;

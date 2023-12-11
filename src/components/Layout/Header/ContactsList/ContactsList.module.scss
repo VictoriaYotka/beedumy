@@ -8,11 +8,9 @@
 
   @include sm {
     flex-direction: row;
-    gap: 8px;
   }
 
   @include md {
-    gap: 16px;
   }
   @include lg {
     justify-content: space-between;
@@ -27,9 +25,18 @@
 
   transition: all 0.4s ease;
 
+  @include sm {
+    padding: 0 8px;
+  }
   @include md {
     padding: 0 16px;
     font-size: 16px;
+  }
+
+  &:not(:last-child) {
+    @include sm {
+      border-inline-end: 2px solid $whiteColor;
+    }
   }
 
   &:hover,
@@ -40,17 +47,6 @@
     @include lg {
       color: $whiteColor;
     }
-  }
-}
-
-.item_devider {
-  display: none;
-  height: 16px;
-  border-right: 2px solid $whiteColor;
-  margin: 0 4px;
-
-  @include sm {
-    display: block;
   }
 }
 

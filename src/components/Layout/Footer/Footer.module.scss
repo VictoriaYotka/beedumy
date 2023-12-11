@@ -50,6 +50,10 @@
 
   transition: all 0.4s ease;
 
+  @include md {
+    display: none;
+  }
+
   &:hover,
   &:focus {
     color: $whiteColor;

@@ -40,6 +40,8 @@
 
 .heading {
   @extend .heading;
+  margin-inline-start: 0;
+  text-align: start;
   padding-bottom: 8px;
 }
 

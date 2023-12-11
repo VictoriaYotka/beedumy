@@ -19,12 +19,12 @@
 
   @include sm {
     background: url("../../../assets/images/home/hero/triangle-blue-big.png")
-        center center no-repeat,
-      url("../../../assets/images/home/hero/triangle-blue.png") 10% 10%
+        10% 20% no-repeat,
+      url("../../../assets/images/home/hero/triangle-blue.png") 40% 95%
         no-repeat,
       url("../../../assets/images/home/hero/triangle-green.png") 85% 10%
         no-repeat,
-      url("../../../assets/images/home/hero/triangle-green-small.png") 5% 50%
+      url("../../../assets/images/home/hero/triangle-green-small.png") 65% 50%
         no-repeat,
       url("../../../assets/images/home/hero/triangle-rose.png") 95% 95%
         no-repeat,
@@ -35,10 +35,9 @@
 
   @include md {
     background: url("../../../assets/images/home/hero/triangle-blue-big.png")
-        50% 30% no-repeat,
-      url("../../../assets/images/home/hero/triangle-blue.png") 25% 10%
-        no-repeat,
-      url("../../../assets/images/home/hero/triangle-green.png") 75% 30%
+        120% 100% no-repeat,
+      url("../../../assets/images/home/hero/triangle-blue.png") 5% 10% no-repeat,
+      url("../../../assets/images/home/hero/triangle-green.png") 90% 25%
         no-repeat,
       url("../../../assets/images/home/hero/triangle-green-small.png") 25% 90%
         no-repeat,

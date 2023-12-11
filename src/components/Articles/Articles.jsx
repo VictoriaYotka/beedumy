@@ -35,38 +35,44 @@ const Articles = () => {
         <h2 className={css.heading}>مقالات وتوجيهات تربوية ومهنية</h2>
         <div className={css.list_wrapper}>
           <Slider {...settings}>
-            <div className={css.item_wrapper}>
-              <div className={css.item}>
-                <div className={css.date_wrapper}>
-                  <p className={css.date}>06 أوت</p>
-                </div>
-                <p className={css.name}>كُتب بواسطة آدم . 12 تعليق</p>
-                <p className={css.content}>
-                  أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل
-                </p>
+            <div className={css.item}>
+              <div className={css.date_wrapper}>
+                <p className={css.date}>06 أوت</p>
               </div>
+              <p className={css.name}>كُتب بواسطة آدم . 12 تعليق</p>
+              <p className={css.content}>
+                أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل
+              </p>
             </div>
-            <div className={css.item_wrapper}>
-              <div className={css.item}>
-                <div className={css.date_wrapper}>
-                  <p className={css.date}>06 أوت</p>
-                </div>
-                <p className={css.name}>كُتب بواسطة آدم . 12 تعليق</p>
-                <p className={css.content}>
-                  أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل
-                </p>
+
+            <div className={css.item}>
+              <div className={css.date_wrapper}>
+                <p className={css.date}>06 أوت</p>
               </div>
+              <p className={css.name}>كُتب بواسطة آدم . 12 تعليق</p>
+              <p className={css.content}>
+                أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل
+              </p>
             </div>
-            <div className={css.item_wrapper}>
-              <div className={css.item}>
-                <div className={css.date_wrapper}>
-                  <p className={css.date}>06 أوت</p>
-                </div>
-                <p className={css.name}>كُتب بواسطة آدم . 12 تعليق</p>
-                <p className={css.content}>
-                  أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل
-                </p>
+
+            <div className={css.item}>
+              <div className={css.date_wrapper}>
+                <p className={css.date}>06 أوت</p>
               </div>
+              <p className={css.name}>كُتب بواسطة آدم . 12 تعليق</p>
+              <p className={css.content}>
+                أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل
+              </p>
+            </div>
+
+            <div className={css.item}>
+              <div className={css.date_wrapper}>
+                <p className={css.date}>06 أوت</p>
+              </div>
+              <p className={css.name}>كُتب بواسطة آدم . 12 تعليق</p>
+              <p className={css.content}>
+                أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل
+              </p>
             </div>
           </Slider>
         </div>

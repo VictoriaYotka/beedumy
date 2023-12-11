@@ -46,44 +46,60 @@ const RequestedCourses = () => {
       <section className={css.courses_section}>
         <div className="container">
           <Slider {...settings}>
-            <div className={css.item_wrapper}>
-              <CourseCardInCategories
-                notion="notion"
-                img={hero_image}
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description"
-                id="123"
-              />
-            </div>
+            <CourseCardInCategories
+              notion="notion"
+              img={hero_image}
+              imgAlt="about image"
+              preheader="Preheader"
+              header="Header"
+              rating="stars"
+              descr="Some description"
+              id="123"
+            />
 
-            <div className={css.item_wrapper}>
-              <CourseCardInCategories
-                notion="notion"
-                img={hero_image}
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description"
-                id="123"
-              />
-            </div>
+            <CourseCardInCategories
+              notion="notion"
+              img={hero_image}
+              imgAlt="about image"
+              preheader="Preheader"
+              header="Header"
+              rating="stars"
+              descr="Some description"
+              id="123"
+            />
 
-            <div className={css.item_wrapper}>
-              <CourseCardInCategories
-                notion="notion"
-                img={hero_image}
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description"
-                id="123"
-              />
-            </div>
+            <CourseCardInCategories
+              notion="notion"
+              img={hero_image}
+              imgAlt="about image"
+              preheader="Preheader"
+              header="Header"
+              rating="stars"
+              descr="Some description"
+              id="123"
+            />
+
+            <CourseCardInCategories
+              notion="notion"
+              img={hero_image}
+              imgAlt="about image"
+              preheader="Preheader"
+              header="Header"
+              rating="stars"
+              descr="Some description"
+              id="123"
+            />
+
+            <CourseCardInCategories
+              notion="notion"
+              img={hero_image}
+              imgAlt="about image"
+              preheader="Preheader"
+              header="Header"
+              rating="stars"
+              descr="Some description"
+              id="123"
+            />
           </Slider>
         </div>
       </section>

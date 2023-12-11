@@ -12,7 +12,6 @@ const ContactsList = () => {
           <p className={css.link_content}>(+216) 70 253 734</p>
         </a>
       </li>
-      <li className={css.item_devider}></li>
       <li className={css.item}>
         <a href="mailto:contact@birsaplatform.com" className={css.contact_link}>
           <svg className={css.icon}>

@@ -41,6 +41,10 @@ const Teachers = () => {
           <TeacherCard />
 
           <TeacherCard />
+
+          <TeacherCard />
+
+          <TeacherCard />
         </Slider>
         <Link className={css.button}>نظرة على بقية المختصّين</Link>
       </div>

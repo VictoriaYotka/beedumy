@@ -6,12 +6,11 @@ import { useEffect, useState } from "react";
 
 const Footer = () => {
   const [showMore, setshowMore] = useState(
-    document.body.offsetWidth >= 767 ? true : false
+    document.body.offsetWidth >= 768 ? true : false
   );
   const [showMoreButton, setshowMoreButton] = useState(
-    document.body.offsetWidth >= 767 ? false : true
+    document.body.offsetWidth >= 768 ? false : true
   );
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const toggleShowMore = () => {
     setshowMore(!showMore);
@@ -19,13 +18,11 @@ const Footer = () => {
 
   useEffect(() => {
     const handleWindowResize = () => {
-      setWindowWidth(document.body.offsetWidth);
-
-      if (windowWidth >= 767) {
+      if (document.body.offsetWidth >= 768) {
         setshowMore(true);
         setshowMoreButton(false);
       }
-      if (windowWidth < 767) {
+      if (document.body.offsetWidth < 768) {
         setshowMore(false);
         setshowMoreButton(true);
       }

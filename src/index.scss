@@ -75,19 +75,16 @@ iframe {
 }
 
 // slick
+.slick-list {
+  padding: 10px 0;
+  margin: 0 -16px;
+}
+
+.slick-slide > div {
+  padding: 0 16px;
+}
+
 .slick-prev:before,
 .slick-next:before {
   color: $darkBgButtonColor;
-}
-
-.slick-list {
-  padding: 10px 0;
-}
-
-.slick-next {
-  right: -16px;
-}
-
-.slick-prev {
-  left: -16px;
 }
