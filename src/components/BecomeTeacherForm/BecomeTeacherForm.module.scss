@@ -8,6 +8,7 @@
 .form {
   margin: 0 auto;
   max-width: 520px;
+  text-align: center;
 
   @include lg {
     max-width: 720px;

@@ -1,22 +1,5 @@
 @import "../../scss";
 
-.section {
-  @extend .section;
-  background-color: #184d9c;
-}
-
-.container {
-  @extend .container;
-  text-align: center;
-}
-
-.heading {
-  @extend .heading;
-  margin-bottom: 12px;
-  font-weight: $boldFont;
-  color: $whiteColor;
-}
-
 .list {
   @extend .flex_aligncenter;
   justify-content: center;

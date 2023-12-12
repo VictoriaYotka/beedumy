@@ -1,10 +1,11 @@
 import css from "./SingleNews.module.scss";
-import NewsHeader from "../../components/NewsHeader/NewsHeader";
 import SingleNewsCard from "../../components/SingleNewsCard/SingleNewsCard";
 import SingleNewsAdditionalInfo from "../../components/SingleNewsAdditionalInfo/SingleNewsAdditionalInfo";
 import SingleNewsSearch from "../../components/SingleNewsSearch/SingleNewsSearch";
 import { useEffect, useState } from "react";
 import SingleNewsComment from "../../components/SingleNewsComment/SingleNewsComment";
+import SimplePageHeader from "../../components/SimplePageHeader/SimplePageHeader";
+import NewsHeaderList from "../../components/NewsHeaderList/NewsHeaderList";
 
 const SingleNews = () => {
   const [isMediumScreen, setIsMediumScreen] = useState(
@@ -25,7 +26,9 @@ const SingleNews = () => {
 
   return (
     <>
-      <NewsHeader />
+      <SimplePageHeader heading="مقالاتنا" background="#184d9c">
+        <NewsHeaderList />
+      </SimplePageHeader>
       {!isMediumScreen && <SingleNewsSearch />}
       <section className={css.section}>
         <div className={css.container}>

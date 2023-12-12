@@ -1,11 +1,13 @@
-import React from "react";
-import NewsHeader from "../../components/NewsHeader/NewsHeader";
 import NewsList from "../../components/NewsList/NewsList";
+import SimplePageHeader from "../../components/SimplePageHeader/SimplePageHeader";
+import NewsHeaderList from "../../components/NewsHeaderList/NewsHeaderList";
 
 const News = () => {
   return (
     <>
-      <NewsHeader />
+      <SimplePageHeader heading="مقالاتنا" background="#5e5ed6">
+        <NewsHeaderList />
+      </SimplePageHeader>
       <NewsList />
     </>
   );
