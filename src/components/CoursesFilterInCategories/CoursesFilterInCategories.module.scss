@@ -161,9 +161,6 @@
   }
 }
 
-.item {
-}
-
 .empty_item {
   display: none;
 
@@ -222,7 +219,4 @@
   @include md {
     margin-bottom: 8px;
   }
-}
-
-.subcategories_heading {
 }

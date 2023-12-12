@@ -22,7 +22,9 @@ const SingleCourseAdditionalInfo = ({
             د.ل
           </span>
         </p>
-        <Link className={css.price_button}>شراء المحتوى</Link>
+        <Link to="/courses/courseId/buy" className={css.price_button}>
+          شراء المحتوى
+        </Link>
       </div>
 
       <div className={css.details_container}>

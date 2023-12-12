@@ -106,7 +106,7 @@ const CoursesFilterInCategories = () => {
         <div className={css.filter_container}>
           <ul className={css.list}>
             {/* classification */}
-            <li className={`${css.item} ${css.empty_item}`}>
+            <li className={css.empty_item}>
               <p className={css.item_inner}>
                 <svg className={css.icon}>
                   <use href={icons + "#filter"}></use>
@@ -115,11 +115,8 @@ const CoursesFilterInCategories = () => {
               </p>
             </li>
             {/* favorite */}
-            <li id="item_favorite" className={css.item}>
-              <p
-                className={css.item_inner}
-                onClick={() => handleShow("favorite_list")}
-              >
+            <li onClick={() => handleShow("favorite_list")}>
+              <p className={css.item_inner}>
                 <svg className={css.icon}>
                   <use href={icons + "#star"}></use>
                 </svg>
@@ -137,11 +134,8 @@ const CoursesFilterInCategories = () => {
               )}
             </li>
             {/* Curricula */}
-            <li id="item_curricula" className={css.item}>
-              <p
-                className={css.item_inner}
-                onClick={() => handleShow("curricula_list")}
-              >
+            <li onClick={() => handleShow("curricula_list")}>
+              <p className={css.item_inner}>
                 <svg className={css.icon}>
                   <use href={icons + "#clock"}></use>
                 </svg>
@@ -165,11 +159,8 @@ const CoursesFilterInCategories = () => {
               )}
             </li>
             {/* Content type */}
-            <li id="item_type" className={css.item}>
-              <p
-                className={css.item_inner}
-                onClick={() => handleShow("type_list")}
-              >
+            <li onClick={() => handleShow("type_list")}>
+              <p className={css.item_inner}>
                 <svg className={css.icon}>
                   <use href={icons + "#play"}></use>
                 </svg>
@@ -192,11 +183,8 @@ const CoursesFilterInCategories = () => {
             </li>
 
             {/* publishing date */}
-            <li id="item_date" className={css.item}>
-              <p
-                className={css.item_inner}
-                onClick={() => handleShow("date_list")}
-              >
+            <li onClick={() => handleShow("date_list")}>
+              <p className={css.item_inner}>
                 <svg className={css.icon}>
                   <use href={icons + "#calendar"}></use>
                 </svg>

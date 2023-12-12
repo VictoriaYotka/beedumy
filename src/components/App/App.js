@@ -9,6 +9,7 @@ const SingleCourse = lazy(() =>
   import("../../pages/SingleCourse/SingleCourse")
 );
 const Courses = lazy(() => import("../../pages/Courses/Courses"));
+const BuyCourse = lazy(() => import("../../pages/BuyCourse/BuyCourse"));
 const Faq = lazy(() => import("../../pages/Faq/Faq"));
 const Home = lazy(() => import("../../pages/Home/Home"));
 const NotFound = lazy(() => import("../../pages/Not found/NotFound"));
@@ -38,6 +39,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/courses/:courseId" element={<SingleCourse />} />
+          <Route path="/courses/:courseId/buy" element={<BuyCourse />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/news" element={<News />} />
           <Route path="/news/:newsId" element={<SingleNews />} />
