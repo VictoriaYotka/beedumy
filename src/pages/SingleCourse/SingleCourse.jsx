@@ -1,12 +1,12 @@
 import css from "./SingleCourse.module.scss";
 import SingleCourseCard from "../../components/SingleCourseCard/SingleCourseCard";
 import SingleCourseAdditionalInfo from "../../components/SingleCourseAdditionalInfo/SingleCourseAdditionalInfo";
-import SingleCourseHeader from "../../components/SingleCourseHeader/SingleCourseHeader";
+import SimplePageHeader from "../../components/SimplePageHeader/SimplePageHeader";
 
 const SingleCourse = () => {
   return (
     <>
-      <SingleCourseHeader heading="heading" subheading="level" />
+      <SimplePageHeader heading="heading" subheading="level" />
       <section className={css.section}>
         <div className={css.container}>
           <SingleCourseCard
