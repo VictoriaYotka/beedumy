@@ -2,15 +2,13 @@
 
 .container {
   @extend .container;
-  height: 50vh;
-
-  @include md {
-    height: 40vh;
-  }
+  padding: 12px 0;
+  text-align: center;
 }
 
 .descr {
-  margin: 10% 0 12px 0;
+  margin-bottom: 16px;
+  text-align: center;
   font-size: 18px;
   font-weight: $boldFont;
 
@@ -21,10 +19,11 @@
 
 .button {
   display: inline-block;
-  margin-bottom: 32px;
+
   padding: 8px 16px;
   color: $whiteColor;
   background-color: $accentColor;
+  text-align: center;
   font-size: 16px;
   font-weight: $boldFont;
 

@@ -11,9 +11,11 @@ const SharedLayout = () => {
     <>
       <Header />
       <main>
-        <Suspense fallback={<Loading />}>
-          <Outlet />
-        </Suspense>
+        <div className="main_wrapper">
+          <Suspense fallback={<Loading />}>
+            <Outlet />
+          </Suspense>
+        </div>
         <Footer />
         <BackToTopButton />
       </main>

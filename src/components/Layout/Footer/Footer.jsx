@@ -109,8 +109,14 @@ const Footer = () => {
                     onClick={toggleShowMore}
                     className={css.show_more_button}
                   >
-                    <span>أظهر المزيد</span>
-                    <svg className={css.show_more_icon}>
+                    <span>{showMore ? `Hide` : `Show more`}</span>
+                    <svg
+                      className={
+                        showMore
+                          ? `${css.hide_more_icon}`
+                          : `${css.show_more_icon}`
+                      }
+                    >
                       <use href={icons + "#chevron-down"}></use>
                     </svg>
                   </button>
@@ -203,9 +209,8 @@ const Footer = () => {
         </div>
       </div>
       <div className={css.bottom}>
-        <p className={css.copyright}></p>
+        <p className={css.copyright}>©جميع الحقوق محفوظة</p>
         <p className={css.copyright_accent}>www.birsaplatform.com</p>
-        ©جميع الحقوق محفوظة
       </div>
     </footer>
   );

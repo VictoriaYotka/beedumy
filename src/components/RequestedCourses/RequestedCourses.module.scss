@@ -30,37 +30,19 @@
     width: 300px;
     height: 70px;
   }
-
-  @include xl {
-    bottom: -98px;
-    height: 100px;
-  }
 }
 
 // courses section
 .courses_section {
-  padding: 44px 0 24px 0;
+  padding: 44px 0 40px 0;
 
   @include sm {
-    padding: 60px 0 24px 0;
+    padding: 60px 0 40px 0;
   }
 
   @include md {
-    padding: 80px 0 24px 0;
+    padding: 80px 0 40px 0;
   }
-
-  @include lg {
-    padding: 80px 0 32px 0;
-  }
-
-  @include xl {
-    padding: 120px 0 40px 0;
-  }
-}
-
-.item_wrapper {
-  margin: 0 8px;
-  text-align: center;
 }
 
 // learn more section

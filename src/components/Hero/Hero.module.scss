@@ -93,10 +93,9 @@
 }
 
 .subheading {
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 12px;
   max-width: 540px;
-  margin-left: auto;
 
   @include sm {
     margin-bottom: 20px;
@@ -116,12 +115,12 @@
   padding: 4px 32px;
   border-radius: 32px;
   background-image: linear-gradient(to right, $headerBgColor, #9499f1);
-  font-size: 24px;
+  font-size: 20px;
   color: $whiteColor;
 
   transition: all 0.4s ease;
 
-  @include sm {
+  @include md {
     font-size: 32px;
   }
 

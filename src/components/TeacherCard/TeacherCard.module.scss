@@ -2,12 +2,9 @@
 
 .item_thumb {
   padding: 100px 0 0 0;
-  // margin: 0 8px;
 }
 
 .item {
-  // margin: 0 auto;
-  // max-width: 270px;
   border: 2px solid $lightGreyBgColor;
 
   transition: all 0.4s ease;
@@ -64,14 +61,12 @@
 }
 
 .occupation {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 
   transition: all 0.4s ease;
 }
 
 .descr {
-  margin-bottom: 16px;
-
   transition: all 0.4s ease;
 }
 

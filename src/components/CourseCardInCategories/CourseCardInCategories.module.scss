@@ -4,14 +4,14 @@
   max-width: 360px;
   margin: 0 auto;
   text-align: start;
-  box-shadow: $shadow;
+  border: 2px solid $lightGreyBgColor;
   border-radius: 16px;
 
   transition: all 0.4s ease;
 
   &:hover,
   &:focus {
-    box-shadow: $shadowDark;
+    box-shadow: $shadow;
 
     .image,
     .preheader,
@@ -31,7 +31,7 @@
   width: 100%;
   background-color: $lightGreyBgColor;
   border-radius: 16px;
-  box-shadow: $shadow;
+  border: 2px solid $lightGreyBgColor;
   overflow: hidden;
 }
 
@@ -75,13 +75,13 @@
 }
 
 .preheader {
-  font-size: 14px;
+  font-size: 16px;
   color: $accentColor;
 
   transition: all 0.4s ease;
 
   @include md {
-    font-size: 16px;
+    font-size: 18px;
   }
   @include lg {
     font-size: 20px;
@@ -89,12 +89,12 @@
 }
 
 .header {
-  font-size: 18px;
+  font-size: 20px;
 
   transition: all 0.4s ease;
 
   @include md {
-    font-size: 20px;
+    font-size: 22px;
   }
   @include lg {
     font-size: 24px;
@@ -115,13 +115,13 @@
 }
 
 .descr {
-  font-size: 14px;
+  font-size: 16px;
   color: $secondaryFontColor;
 
   transition: all 0.4s ease;
 
   @include md {
-    font-size: 16px;
+    font-size: 18px;
   }
   @include lg {
     font-size: 20px;
@@ -141,7 +141,7 @@
   transition: all 0.4s ease;
 
   @include md {
-    font-size: 16px;
+    font-size: 18px;
   }
   @include lg {
     font-size: 20px;

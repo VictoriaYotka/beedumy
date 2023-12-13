@@ -8,7 +8,7 @@ const Feedback = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 3,
     swipeToSlide: true,
     pauseOnHover: true,
@@ -54,105 +54,76 @@ const Feedback = () => {
           شهادات تلامذتنا عبر مواقع التواصل الاجتماعي
         </h2>
         <Slider {...settings}>
-            <div className={css.item}>
-              <div className={css.icon_wrapper}>
-                <svg className={css.icon}>
-                  <use href={icons + "#quotes"}></use>
-                </svg>
-              </div>
-              <p className={css.content}>
-                التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب
-                وجهد
-              </p>
-              <img
-                src={hero_image}
-                alt=""
-                loading="lazy"
-                className={css.image}
-              />
-              <p className={css.name}>إلهام بن عبيد</p>
-              <p className={css.descr}>تلميذة</p>
+          <div className={css.item}>
+            <div className={css.icon_wrapper}>
+              <svg className={css.icon}>
+                <use href={icons + "#quotes"}></use>
+              </svg>
             </div>
+            <p className={css.content}>
+              التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد
+            </p>
+            <img src={hero_image} alt="" loading="lazy" className={css.image} />
+            <p className={css.name}>إلهام بن عبيد</p>
+            <p className={css.descr}>تلميذة</p>
+          </div>
 
-            <div className={css.item}>
-              <div className={css.icon_wrapper}>
-                <svg className={css.icon}>
-                  <use href={icons + "#quotes"}></use>
-                </svg>
-              </div>
-              <p className={css.content}>
-                التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب
-                وجهد
-              </p>
-              <img
-                src={hero_image}
-                alt=""
-                loading="lazy"
-                className={css.image}
-              />
-              <p className={css.name}>إلهام بن عبيد</p>
-              <p className={css.descr}>تلميذة</p>
+          <div className={css.item}>
+            <div className={css.icon_wrapper}>
+              <svg className={css.icon}>
+                <use href={icons + "#quotes"}></use>
+              </svg>
             </div>
+            <p className={css.content}>
+              التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد
+              التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد
+            </p>
+            <img src={hero_image} alt="" loading="lazy" className={css.image} />
+            <p className={css.name}>إلهام بن عبيد</p>
+            <p className={css.descr}>تلميذة</p>
+          </div>
 
-            <div className={css.item}>
-              <div className={css.icon_wrapper}>
-                <svg className={css.icon}>
-                  <use href={icons + "#quotes"}></use>
-                </svg>
-              </div>
-              <p className={css.content}>
-                التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب
-                وجهد
-              </p>
-              <img
-                src={hero_image}
-                alt=""
-                loading="lazy"
-                className={css.image}
-              />
-              <p className={css.name}>إلهام بن عبيد</p>
-              <p className={css.descr}>تلميذة</p>
+          <div className={css.item}>
+            <div className={css.icon_wrapper}>
+              <svg className={css.icon}>
+                <use href={icons + "#quotes"}></use>
+              </svg>
             </div>
+            <p className={css.content}>
+              التمارين التفاعلية Vraiment حاجة مزيان
+            </p>
+            <img src={hero_image} alt="" loading="lazy" className={css.image} />
+            <p className={css.name}>إلهام بن عبيد</p>
+            <p className={css.descr}>تلميذة</p>
+          </div>
 
-            <div className={css.item}>
-              <div className={css.icon_wrapper}>
-                <svg className={css.icon}>
-                  <use href={icons + "#quotes"}></use>
-                </svg>
-              </div>
-              <p className={css.content}>
-                التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب
-                وجهد
-              </p>
-              <img
-                src={hero_image}
-                alt=""
-                loading="lazy"
-                className={css.image}
-              />
-              <p className={css.name}>إلهام بن عبيد</p>
-              <p className={css.descr}>تلميذة</p>
+          <div className={css.item}>
+            <div className={css.icon_wrapper}>
+              <svg className={css.icon}>
+                <use href={icons + "#quotes"}></use>
+              </svg>
             </div>
+            <p className={css.content}>
+              التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد
+            </p>
+            <img src={hero_image} alt="" loading="lazy" className={css.image} />
+            <p className={css.name}>إلهام بن عبيد</p>
+            <p className={css.descr}>تلميذة</p>
+          </div>
 
-            <div className={css.item}>
-              <div className={css.icon_wrapper}>
-                <svg className={css.icon}>
-                  <use href={icons + "#quotes"}></use>
-                </svg>
-              </div>
-              <p className={css.content}>
-                التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب
-                وجهد
-              </p>
-              <img
-                src={hero_image}
-                alt=""
-                loading="lazy"
-                className={css.image}
-              />
-              <p className={css.name}>إلهام بن عبيد</p>
-              <p className={css.descr}>تلميذة</p>
+          <div className={css.item}>
+            <div className={css.icon_wrapper}>
+              <svg className={css.icon}>
+                <use href={icons + "#quotes"}></use>
+              </svg>
             </div>
+            <p className={css.content}>
+              التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد
+            </p>
+            <img src={hero_image} alt="" loading="lazy" className={css.image} />
+            <p className={css.name}>إلهام بن عبيد</p>
+            <p className={css.descr}>تلميذة</p>
+          </div>
         </Slider>
       </div>
     </section>

@@ -19,7 +19,7 @@
   @extend .flex_aligncenter;
   justify-content: center;
   gap: 32px;
-  margin: auto 0 12px 0;
+  margin-bottom: 16px;
 
   @include lg {
     gap: 12px;

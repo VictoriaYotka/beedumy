@@ -8,20 +8,35 @@
 
 body {
   margin: 0;
-  margin-top: 54px;
+
   font-family: $font-family;
   font-weight: $regularFont;
   color: $darkFontColor;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 54px;
 
   @include md {
-    margin-top: 58px;
+    padding-top: 58px;
   }
 
   @include lg {
-    margin: 0;
+    padding-top: 0;
+    min-height: calc(100vh - 115px);
   }
+}
+
+.main_wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 /* RESET */
@@ -75,16 +90,40 @@ iframe {
 }
 
 // slick
+.slick-slider {
+  width: 90% !important;
+  margin: 0 auto;
+}
+
 .slick-list {
   padding: 10px 0;
-  margin: 0 -16px;
+  margin: 0 -4px;
+
+  @include sm {
+    margin: 0 -8px;
+  }
 }
 
 .slick-slide > div {
-  padding: 0 16px;
+  padding: 0 4px;
+
+  @include sm {
+    padding: 0 8px;
+  }
+}
+
+.slick-next,
+.slick-prev {
+  width: 24px;
+  height: 24px;
 }
 
 .slick-prev:before,
 .slick-next:before {
   color: $darkBgButtonColor;
+  font-size: 24px;
+}
+
+.slick-dots li button:before {
+  font-size: 8px;
 }

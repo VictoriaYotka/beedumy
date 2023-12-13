@@ -2,10 +2,14 @@
 
 .section {
   @extend .section;
-  padding-bottom: 24px;
+  padding-bottom: 40px;
 
   @include sm {
-    padding-bottom: 28px;
+    padding-bottom: 44px;
+  }
+
+  @include md {
+    padding-bottom: 48px;
   }
 }
 
@@ -28,11 +32,9 @@
 }
 
 .item {
-  // margin: 0 8px;
   padding: 12px 24px;
   text-align: center;
   border: 2px solid $lightGreyBgColor;
-  box-shadow: $shadow;
 
   transition: all 0.4s ease;
 
@@ -44,17 +46,10 @@
     padding: 24px;
   }
 
-  @include lg {
-    padding: 32px;
-  }
-  @include xl {
-    padding: 40px;
-  }
-
   &:hover,
   &:focus {
     scale: 104%;
-    box-shadow: $shadowDark;
+    box-shadow: $shadow;
 
     .icon_wrapper {
       scale: 110%;
@@ -85,7 +80,7 @@
   position: relative;
 
   justify-content: center;
-  margin: 0 auto 24px auto;
+  margin: 0 auto 12px auto;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -121,12 +116,8 @@
   border-bottom: 2px solid $lightGreyBgColor;
 
   @include sm {
-    margin-bottom: 16px;
-    padding-bottom: 32px;
-  }
-  @include md {
-    margin-bottom: 20px;
-    padding-bottom: 40px;
+    margin-bottom: 12px;
+    padding-bottom: 20px;
   }
 }
 
@@ -138,13 +129,6 @@
   border: 1px solid $accentColor;
 
   transition: all 0.4s ease;
-
-  @include sm {
-    margin: 0 auto 16px auto;
-  }
-  @include md {
-    margin: 0 auto 20px auto;
-  }
 }
 
 .name {

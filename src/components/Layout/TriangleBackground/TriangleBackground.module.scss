@@ -1,12 +1,9 @@
 @import "../../../scss";
 
-// import triangle_blue from "../../../assets/images/home/hero/triangle-blue.png";
-// import triangle_green from "../../../assets/images/home/hero/triangle-green.png";
-// import triangle_green_small from "../../../assets/images/home/hero/triangle-green-small.png";
-// import triangle_rose from "../../../assets/images/home/hero/triangle-rose.png";
-
 .section {
   @extend .section;
+  flex-grow: 1;
+
   background: url("../../../assets/images/home/hero/triangle-blue.png") 0% 0%
       no-repeat,
     url("../../../assets/images/home/hero/triangle-green.png") 90% 20% no-repeat,

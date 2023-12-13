@@ -28,7 +28,7 @@ const Header = () => {
 
   const toggleMenu = () => {
     setIsOpenBurgerMenu(!isOpenBurgerMenu);
-    isOpenBurgerMenu ? toggleBodyScroll("visible") : toggleBodyScroll("hidden");
+    isOpenBurgerMenu ? toggleBodyScroll("visible") : toggleBodyScroll("clip");
   };
 
   const updateMedia = () => {

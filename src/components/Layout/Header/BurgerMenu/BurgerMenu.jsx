@@ -27,7 +27,7 @@ const BurgerMenu = ({ toggleMenu, isOpenBurgerMenu }) => {
             <LanguageSwitcher />
           </div>
 
-          <nav>
+          <nav className={css.nav}>
             <NavListBurger />
           </nav>
           <SignList />

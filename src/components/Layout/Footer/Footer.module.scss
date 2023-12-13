@@ -2,6 +2,7 @@
 
 .footer {
   position: relative;
+  margin-top: auto;
   background-color: $footerBgColor;
   color: $whiteColor;
 }
@@ -46,6 +47,7 @@
   gap: 4px;
   margin: 0 auto 8px auto;
   color: $paleWhiteColor;
+  font-size: 10px;
   font-weight: $boldFont;
 
   transition: all 0.4s ease;
@@ -178,6 +180,11 @@
   @extend .icon;
   stroke: $paleWhiteColor;
   fill: none;
+}
+
+.hide_more_icon {
+  @extend .show_more_icon;
+  transform: scale(1, -1);
 }
 
 .gallery_heading {
@@ -315,7 +322,7 @@
   @include sm {
     display: flex;
     justify-content: center;
-    gap: 4px;
+    gap: 6px;
   }
 
   @include sm {

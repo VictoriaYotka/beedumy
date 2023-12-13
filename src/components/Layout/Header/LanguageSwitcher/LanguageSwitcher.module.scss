@@ -24,13 +24,18 @@
   }
 }
 
-.icon {
+.show_more_icon {
   width: 24px;
   height: 24px;
   stroke: $whiteColor;
   fill: none;
 
   transition: all 0.4s ease;
+}
+
+.hide_more_icon {
+  @extend .show_more_icon;
+  transform: scale(1, -1);
 }
 
 .list {

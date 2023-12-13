@@ -4,10 +4,9 @@
   position: absolute;
   z-index: 100;
   top: 54px;
-  // bottom: 0;
-  height: 90vh;
   left: 0;
-  right: 0;
+  width: 100vw;
+  height: calc(100vh - 58px);
 
   display: flex;
   flex-direction: column;
@@ -28,6 +27,10 @@
   @extend .flex_aligncenter;
   justify-content: space-between;
   margin-bottom: 24px;
+}
+
+.nav {
+  margin-bottom: auto;
 }
 
 .icon {

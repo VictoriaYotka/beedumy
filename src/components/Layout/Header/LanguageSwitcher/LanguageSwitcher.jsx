@@ -53,13 +53,18 @@ const LanguageSwitcher = () => {
   const languageList = languages.filter(
     (lang) => lang.short !== currentLanguage.short
   );
+
   return (
     <div className={css.wrapper} id="language_switcher">
       <button onClick={() => setIsOpened(!isOpened)} className={css.button}>
         <p onClick={() => changeLanguage(currentLanguage)}>
-          {currentLanguage.language}
+          {currentLanguage.language || currentLanguage}
         </p>
-        <svg className={css.icon}>
+        <svg
+          className={
+            isOpened ? `${css.hide_more_icon}` : `${css.show_more_icon}`
+          }
+        >
           <use href={`${icons}#chevron-down`}></use>
         </svg>
       </button>
