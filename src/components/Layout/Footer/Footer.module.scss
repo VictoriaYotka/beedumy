@@ -254,34 +254,28 @@
   margin-bottom: 4px;
   text-align: center;
   color: $whiteColor;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: $boldFont;
 
-  @include sm {
-    font-size: 12px;
-  }
-
   @include md {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     text-align: start;
-    font-size: 14px;
   }
 }
 
 .about_descr {
   margin-bottom: 12px;
   text-align: start;
-  font-size: 10px;
+  font-size: 12px;
   color: $paleWhiteColor;
   font-weight: $boldFont;
 
   @include sm {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   @include md {
     margin-bottom: 24px;
-    font-size: 14px;
   }
 }
 

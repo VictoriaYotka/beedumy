@@ -47,7 +47,9 @@ const Footer = () => {
               إلى دورات في اخـتصاصات منعــددة
             </p>
 
-            <NavLink className={css.follow_more_button}>تواصل معنا</NavLink>
+            <NavLink to="/contact" className={css.follow_more_button}>
+              تواصل معنا
+            </NavLink>
             <button className={css.connect_button}>تعرّف أكثر</button>
           </div>
           <div className={css.navigation_wrapper}>

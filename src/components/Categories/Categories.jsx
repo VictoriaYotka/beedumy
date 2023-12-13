@@ -6,9 +6,11 @@ const Categories = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 3,
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
     swipeToSlide: true,
     pauseOnHover: true,
     rtl: true,
@@ -17,7 +19,7 @@ const Categories = () => {
         breakpoint: 1281,
         settings: {
           slidesToShow: 5,
-          slidesToScroll: 3,
+          slidesToScroll: 2,
           infinite: true,
           dots: true,
         },
@@ -34,7 +36,7 @@ const Categories = () => {
         breakpoint: 769,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
         },
       },

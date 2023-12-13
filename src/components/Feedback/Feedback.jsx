@@ -9,7 +9,7 @@ const Feedback = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 3,
+    slidesToScroll: 2,
     swipeToSlide: true,
     pauseOnHover: true,
     rtl: true,
@@ -26,7 +26,7 @@ const Feedback = () => {
         breakpoint: 923,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
         },
       },
@@ -34,7 +34,7 @@ const Feedback = () => {
         breakpoint: 769,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
         },
       },

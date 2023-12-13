@@ -7,7 +7,7 @@ const Articles = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 2,
     swipeToSlide: true,
     pauseOnHover: true,
     rtl: true,
@@ -16,7 +16,7 @@ const Articles = () => {
         breakpoint: 993,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
         },
       },

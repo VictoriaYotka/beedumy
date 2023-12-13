@@ -22,6 +22,7 @@ const SingleNews = lazy(() => import("../../pages/SingleNews/SingleNews"));
 const BecomeTeacher = lazy(() =>
   import("../../pages/BecomeTeacher/BecomeTeacher")
 );
+const Contact = lazy(() => import("../../pages/Contact/Contact"));
 
 function App() {
   const { i18n } = useTranslation();
@@ -46,6 +47,7 @@ function App() {
           <Route path="/teachers" element={<Teachers />} />
           <Route path="/teachers/:teacherId" element={<SingleTeacher />} />
           <Route path="/becometeacher" element={<BecomeTeacher />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="*" element={<NotFound />} />

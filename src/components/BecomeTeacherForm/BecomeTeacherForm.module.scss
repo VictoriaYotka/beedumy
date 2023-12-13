@@ -32,7 +32,6 @@
 
 .input_inner_wrapper {
   @extend .input_wrapper;
-  // display: flex;
   flex-basis: 50%;
 }
 
@@ -71,6 +70,11 @@
   outline: none;
   background-color: $whiteColor;
   box-shadow: $shadow;
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadowDark;
+  }
 }
 
 .descr {
@@ -89,6 +93,8 @@
   background-color: #00adef;
   font-size: 16px;
   font-weight: $boldFont;
+
+  transition: all 0.4s ease;
 
   &:hover,
   &:focus {
