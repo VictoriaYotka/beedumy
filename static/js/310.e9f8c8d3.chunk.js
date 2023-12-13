@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkbirsaplatform=self.webpackChunkbirsaplatform||[]).push([[310],{3021:(s,r,e)=>{e.d(r,{Z:()=>c});const n="TriangleBackground_section__3f7Rg";var a=e(184);const c=s=>{let{children:r}=s;return(0,a.jsx)("section",{className:n,children:r})}},7310:(s,r,e)=>{e.r(r),e.d(r,{default:()=>t});e(2791);var n=e(3021),a=e(184);const c=()=>(0,a.jsx)(n.Z,{children:(0,a.jsx)("form",{})}),t=()=>(0,a.jsx)(a.Fragment,{children:(0,a.jsx)(c,{})})}}]);
-//# sourceMappingURL=310.e9f8c8d3.chunk.js.map
