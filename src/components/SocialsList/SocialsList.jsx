@@ -1,11 +1,9 @@
 import css from "./SocialsList.module.scss";
-import icons from "../../../../assets/images/icons/icons.svg";
+import icons from "../../assets/images/icons/icons.svg";
 
 const SocialsList = () => {
   return (
     <>
-      <p className={css.title}>تواصل معنا :</p>
-
       <ul className={css.socials}>
         <li>
           <a

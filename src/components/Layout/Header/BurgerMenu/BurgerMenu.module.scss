@@ -23,7 +23,7 @@
   }
 }
 
-.wrapper {
+.topper_wrapper {
   @extend .flex_aligncenter;
   justify-content: space-between;
   margin-bottom: 24px;
@@ -31,6 +31,12 @@
 
 .nav {
   margin-bottom: auto;
+}
+
+.bottom_wrapper {
+  @extend .flex_aligncenter;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .icon {

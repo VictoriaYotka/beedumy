@@ -1,6 +1,6 @@
 import css from "./Header.module.scss";
 import ContactsList from "./ContactsList/ContactsList";
-import SocialsList from "./SocialsList/SocialsList";
+import SocialsList from "../../SocialsList/SocialsList";
 import SearchButton from "./SearchButton/SearchButton";
 import SignList from "./SignList/SignList";
 import NavList from "./NavList/NavList";
@@ -81,6 +81,7 @@ const Header = () => {
             <div className={css.topper_container}>
               <div className={css.wrapper}>
                 <LanguageSwitcher />
+                <p className={css.socials_title}>تواصل معنا :</p>
                 <SocialsList />
               </div>
               <ContactsList />

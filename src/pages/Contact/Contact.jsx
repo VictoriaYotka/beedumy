@@ -1,11 +1,15 @@
 import React from "react";
 import SimplePageHeader from "../../components/SimplePageHeader/SimplePageHeader";
+import SocialsList from "../../components/SocialsList/SocialsList";
+import ContactOptions from "../../components/ContactOptions/ContactOptions";
 
 const Contact = () => {
   return (
     <>
-      <div>Contact us page</div>
-      <SimplePageHeader></SimplePageHeader>
+      <SimplePageHeader heading="تواصل معنا" background="#9ab3f5">
+        <SocialsList />
+      </SimplePageHeader>
+      <ContactOptions />
     </>
   );
 };

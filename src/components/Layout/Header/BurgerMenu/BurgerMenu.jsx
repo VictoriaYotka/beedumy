@@ -1,7 +1,7 @@
 import css from "./BurgerMenu.module.scss";
 import icons from "../../../../assets/images/icons/icons.svg";
 import ContactsList from "../ContactsList/ContactsList";
-import SocialsList from "../SocialsList/SocialsList";
+import SocialsList from "../../../SocialsList/SocialsList";
 import SearchButton from "../SearchButton/SearchButton";
 import SignList from "../SignList/SignList";
 import NavListBurger from "../NavListBurger/NavListBurger";
@@ -22,7 +22,7 @@ const BurgerMenu = ({ toggleMenu, isOpenBurgerMenu }) => {
 
       {isOpenBurgerMenu && (
         <div className={css.burger_content}>
-          <div className={css.wrapper}>
+          <div className={css.topper_wrapper}>
             <SearchButton />
             <LanguageSwitcher />
           </div>
@@ -32,8 +32,10 @@ const BurgerMenu = ({ toggleMenu, isOpenBurgerMenu }) => {
           </nav>
           <SignList />
 
-          <SocialsList />
-          <ContactsList />
+          <div className={css.bottom_wrapper}>
+            <SocialsList />
+            <ContactsList />
+          </div>
         </div>
       )}
     </>
