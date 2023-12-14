@@ -38,18 +38,18 @@ function App() {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/courses/:courseId" element={<SingleCourse />} />
-          <Route path="/courses/:courseId/buy" element={<BuyCourse />} />
-          <Route path="/categories" element={<Categories />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/news/:newsId" element={<SingleNews />} />
-          <Route path="/teachers" element={<Teachers />} />
-          <Route path="/teachers/:teacherId" element={<SingleTeacher />} />
-          <Route path="/becometeacher" element={<BecomeTeacher />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/faq" element={<Faq />} />
+          <Route path="courses" element={<Courses />} />
+          <Route path="courses/:courseId" element={<SingleCourse />} />
+          <Route path="courses/:courseId/buy" element={<BuyCourse />} />
+          <Route path="categories" element={<Categories />} />
+          <Route path="news" element={<News />} />
+          <Route path="news/:newsId" element={<SingleNews />} />
+          <Route path="teachers" element={<Teachers />} />
+          <Route path="teachers/:teacherId" element={<SingleTeacher />} />
+          <Route path="becometeacher" element={<BecomeTeacher />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="about" element={<About />} />
+          <Route path="faq" element={<Faq />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

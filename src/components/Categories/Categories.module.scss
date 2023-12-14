@@ -13,6 +13,7 @@
 .heading {
   @extend .heading;
   margin-bottom: 8px;
+  max-width: unset;
 
   @include md {
     margin-bottom: 12px;

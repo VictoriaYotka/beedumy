@@ -119,6 +119,14 @@ iframe {
   height: 24px;
 }
 
+.slick-arrow {
+  margin: 0 -6px;
+
+  @include sm {
+    margin: 0 -12px;
+  }
+}
+
 .slick-prev:before,
 .slick-next:before {
   color: $darkBgButtonColor;

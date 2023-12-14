@@ -18,9 +18,15 @@
   flex-direction: column;
   gap: 16px;
 
+  @include md {
+    flex-direction: row;
+    justify-content: center;
+  }
+
   @include lg {
     flex-direction: row;
     justify-content: center;
+    gap: 16px;
     padding: 28px 0;
   }
 }
@@ -30,41 +36,19 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: column-reverse;
-
   gap: 8px;
   padding: 0 16px;
+
+  @include md {
+    padding: 0;
+  }
 
   @include lg {
     position: relative;
 
     flex-direction: column-reverse;
     flex-basis: 65%;
-  }
-}
-
-.show_more_button {
-  @extend .flex_aligncenter;
-  gap: 4px;
-  margin: 0 auto 8px auto;
-  color: $paleWhiteColor;
-  font-size: 10px;
-  font-weight: $boldFont;
-
-  transition: all 0.4s ease;
-
-  @include md {
-    display: none;
-  }
-
-  &:hover,
-  &:focus {
-    color: $whiteColor;
-    scale: 110%;
-
-    .icon {
-      stroke: $whiteColor;
-      scale: 110%;
-    }
+    padding: 0 16px;
   }
 }
 
@@ -72,6 +56,10 @@
   @include md {
     display: flex;
     justify-content: space-between;
+    gap: 16px;
+  }
+
+  @include lg {
     gap: 40px;
   }
 }
@@ -90,8 +78,12 @@
   @include md {
     flex-direction: column;
     justify-content: center;
-    gap: 24px;
+    gap: 4px;
     margin-bottom: 0;
+  }
+
+  @include lg {
+    gap: 24px;
   }
 }
 
@@ -127,11 +119,11 @@
     bottom: 60px;
 
     [dir="ltr"] & {
-      right: 180px;
+      right: 80px;
       left: unset;
     }
     [dir="rtl"] & {
-      left: 180px;
+      left: 80px;
       right: unset;
     }
   }
@@ -176,6 +168,32 @@
   }
 }
 
+.show_more_button {
+  @extend .flex_aligncenter;
+  gap: 4px;
+  margin: 0 auto 8px auto;
+  color: $paleWhiteColor;
+  font-size: 10px;
+  font-weight: $boldFont;
+
+  transition: all 0.4s ease;
+
+  @include md {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $whiteColor;
+    scale: 110%;
+
+    .icon {
+      stroke: $whiteColor;
+      scale: 110%;
+    }
+  }
+}
+
 .show_more_icon {
   @extend .icon;
   stroke: $paleWhiteColor;
@@ -216,23 +234,28 @@
   display: none;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  max-width: 280px;
+  justify-content: center;
+  gap: 4px;
+  width: 190px;
 
   @include md {
     display: flex;
   }
-}
 
-.gallery_item {
-  flex-basis: calc((100% - 16px * (3 - 1)) / (3));
+  @include lg {
+    width: 280px;
+  }
 }
 
 .image {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border: 1px solid $accentColor;
+
+  @include lg {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .about_wrapper {
@@ -241,11 +264,12 @@
   max-width: 320px;
 
   @include md {
+    flex-basis: 35%;
+    padding: 0;
     text-align: start;
   }
 
   @include lg {
-    flex-basis: 35%;
     padding: 0 40px 0 16px;
   }
 }

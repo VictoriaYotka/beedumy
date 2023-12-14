@@ -7,7 +7,7 @@
   overflow: hidden;
 
   @include md {
-    padding-bottom: 80px;
+    padding-bottom: 54px;
   }
 }
 
@@ -32,34 +32,45 @@
 
   @include sm {
     padding: 80px 16px 0 16px;
+    margin: 0 auto;
+  }
+
+  @include sm_plus {
+    padding: 20px 16px 0 16px;
+    max-width: 500px;
   }
 
   @include md {
     flex-basis: 50%;
-    padding: 120px 48px 0 16px;
+    padding: 100px 48px 0 16px;
   }
 
   @include lg {
-    padding: 160px 40px 0 16px;
+    padding: 120px 40px 0 16px;
   }
 
   @include xl {
-    padding: 200px 100px 0 16px;
+    padding: 120px 100px 0 16px;
   }
 
-  [dir="ltr"] & {
-    padding-left: 0;
-  }
+  // [dir="ltr"] & {
+  //   padding-left: 0;
+  // }
 }
 
 .triangle_green {
   display: none;
   position: absolute;
   top: -60px;
-  right: 5%;
+  right: 0;
 
   @include sm {
     display: block;
+  }
+
+  @include sm_plus {
+    top: -77px;
+    right: 19%;
   }
 
   @include md {
@@ -73,7 +84,6 @@
 
   @include xl {
     right: 160px;
-    top: 40px;
   }
 }
 
@@ -95,9 +105,10 @@
 .subheading {
   font-size: 14px;
   margin-bottom: 12px;
-  max-width: 540px;
+  max-width: 400px;
 
   @include sm {
+    max-width: 540px;
     margin-bottom: 20px;
     font-size: 16px;
   }
@@ -121,7 +132,7 @@
   transition: all 0.4s ease;
 
   @include md {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   &:hover,
@@ -135,11 +146,13 @@
   position: relative;
   min-width: 320px;
   min-height: 320px;
-  margin-right: auto;
-  margin-left: auto;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
 
   @include md {
     flex-basis: 50%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
 
     [dir="ltr"] & {
       right: -5%;
@@ -157,7 +170,7 @@
   position: absolute;
   top: 0;
   left: -20px;
-  z-index: 10;
+  z-index: 30;
 
   @include md {
     height: 364px;
@@ -183,23 +196,19 @@
     bottom: -100px;
   }
 
+  @include sm_plus {
+    left: -70px;
+    bottom: -44px;
+  }
+
   @include md {
-    left: -35px;
+    left: -64px;
     bottom: -80px;
   }
 
-  @media screen and (min-width: 872px) {
-    left: -60px;
-  }
-
   @include lg {
-    left: -20px;
-    bottom: -60px;
-  }
-
-  @include xl {
-    left: -55px;
-    bottom: -40px;
+    left: -70px;
+    bottom: -50px;
   }
 }
 
@@ -219,13 +228,14 @@
   }
 
   @include lg {
-    top: 70%;
+    top: unset;
+    bottom: -16px;
     left: 60%;
   }
 
   @include xl {
-    top: 70%;
-    left: 42%;
+    bottom: -16px;
+    left: 48%;
   }
 }
 
@@ -235,6 +245,7 @@
   right: -50px;
 
   @include sm {
+    top: 0;
     right: -100px;
   }
 
@@ -247,10 +258,11 @@
   }
 
   @include lg {
-    right: 0;
+    right: 20px;
   }
 
   @include xl {
-    right: 100px;
+    top: 30px;
+    right: 70px;
   }
 }

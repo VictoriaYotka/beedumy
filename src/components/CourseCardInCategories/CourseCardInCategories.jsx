@@ -27,7 +27,7 @@ const CourseCardInCategories = ({
         </div>
         <Link to="/courses/course" className={css.course_button}>
           <svg className={css.icon}>
-            <use href={`${icons}#play`}></use>
+            <use href={icons + "#play"}></use>
           </svg>
           <span>Go to course</span>
         </Link>

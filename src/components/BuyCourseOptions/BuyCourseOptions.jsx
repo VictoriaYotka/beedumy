@@ -51,7 +51,6 @@ const BuyCourseOptions = () => {
         <div className={css.list_wrapper}>
           <ul className={css.list}>
             {/* card */}
-            {/* <div className={card ? `${css.active}` : `${css.item}`}></div> */}
             <li
               className={card ? `${css.active}` : `${css.item}`}
               onClick={() => handleShow("card")}

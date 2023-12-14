@@ -6,7 +6,6 @@
 
 .container {
   @extend .container;
-  text-align: start;
 }
 
 .list_heading {
@@ -34,5 +33,4 @@
 
 .item_wrapper {
   margin: 0 8px;
-  text-align: center;
 }

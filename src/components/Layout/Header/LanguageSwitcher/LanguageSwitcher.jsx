@@ -51,7 +51,10 @@ const LanguageSwitcher = () => {
   };
 
   const languageList = languages.filter(
-    (lang) => lang.short !== currentLanguage.short
+    (lang) =>
+      lang.short !== currentLanguage.short &&
+      lang.language !== i18n.language &&
+      lang.language !== currentLanguage
   );
 
   return (

@@ -39,7 +39,6 @@ const CoursesListInCategories = ({ heading }) => {
         <h3 className={css.list_heading}>{heading}</h3>
 
         <Slider {...settings}>
-          {/* <div className={css.item_wrapper}> */}
           <CourseCardInCategories
             notion="notion"
             img={hero_image}
@@ -61,9 +60,7 @@ const CoursesListInCategories = ({ heading }) => {
             descr="Some description here"
             id="123"
           />
-          {/* </div> */}
 
-          {/* <div className={css.item_wrapper}> */}
           <CourseCardInCategories
             notion="notion"
             img={hero_image}
@@ -74,9 +71,7 @@ const CoursesListInCategories = ({ heading }) => {
             descr="Some description here"
             id="123"
           />
-          {/* </div> */}
 
-          {/* <div className={css.item_wrapper}> */}
           <CourseCardInCategories
             notion="notion"
             img={hero_image}
@@ -87,7 +82,6 @@ const CoursesListInCategories = ({ heading }) => {
             descr="Some description here"
             id="123"
           />
-          {/* </div> */}
 
           <CourseCardInCategories
             notion="notion"
