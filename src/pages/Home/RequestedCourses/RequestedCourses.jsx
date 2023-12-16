@@ -35,15 +35,7 @@ const RequestedCourses = () => {
   };
   return (
     <>
-      <section className={css.heading_section}>
-        <div className="container">
-          <h2 className={css.heading}>
-            المواد التعليميّة و الدّورات المرتقبة و الأكثر طلبا
-          </h2>
-        </div>
-        <div className={css.triangle}></div>
-      </section>
-      <section className={css.courses_section}>
+      <section className={css.section}>
         <div className="container">
           <Slider {...settings}>
             <CourseCardInCategories
@@ -101,16 +93,6 @@ const RequestedCourses = () => {
               id="123"
             />
           </Slider>
-        </div>
-      </section>
-      <section className={css.learn_more_section}>
-        <div className="container">
-          <h2 className={css.learn_more_heading}>
-            نوفّر تجربة تعليميّة تفاعليّة ونفتح آفاقا معرفيّة جديدة
-          </h2>
-          <Link to="/courses" className={css.learn_more_button}>
-            تعرّف أكثر
-          </Link>
         </div>
       </section>
     </>

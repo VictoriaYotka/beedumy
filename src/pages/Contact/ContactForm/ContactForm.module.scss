@@ -1,0 +1,58 @@
+@import "../../../scss";
+
+.container {
+  @extend .container;
+  text-align: center;
+  margin-bottom: 12px;
+
+  @include md {
+    margin-bottom: 24px;
+  }
+}
+
+.heading {
+  @extend .heading;
+  margin-bottom: 12px;
+  font-weight: $boldFont;
+}
+
+.form {
+  text-align: center;
+}
+
+.wrapper {
+  @extend .flex_aligncenter;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto 12px auto;
+
+  @include sm {
+    flex-direction: row;
+  }
+}
+
+.input,
+.textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 16px;
+  background-color: $lightGreyBgColor;
+  border: none;
+  outline: none;
+  text-align: start;
+}
+
+.textarea {
+  margin-bottom: 12px;
+  resize: vertical;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+  padding: 16px 24px;
+  color: $whiteColor;
+  background-color: $accentColor;
+  font-weight: $boldFont;
+}

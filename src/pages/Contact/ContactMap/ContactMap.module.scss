@@ -1,0 +1,31 @@
+@import "../../../scss";
+
+.container {
+  @extend .container;
+  text-align: center;
+}
+
+.map_wrapper {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+#embed-map-display {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+#embed-map-display img.text-marker {
+  max-width: none !important;
+  background: none !important;
+}
+img {
+  max-width: none;
+}

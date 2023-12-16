@@ -1,6 +1,8 @@
 import { lazy } from "react";
 import Hero from "./Hero/Hero";
 import Categories from "./Categories/Categories";
+import RequestedCoursesHeader from "./RequestedCoursesHeader/RequestedCoursesHeader";
+import LearnMore from "./LearnMore/LearnMore";
 
 const RequestedCourses = lazy(() =>
   import("./RequestedCourses/RequestedCourses")
@@ -17,7 +19,9 @@ const Home = () => {
     <>
       <Hero />
       <Categories />
+      <RequestedCoursesHeader />
       <RequestedCourses />
+      <LearnMore />
       <Teachers />
       <MobileApp />
       <Feedback />

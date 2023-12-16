@@ -3,16 +3,17 @@ import icons from "../../../assets/images/icons/icons.svg";
 import { useEffect, useState } from "react";
 
 const CoursesFilterInCategories = () => {
-  const [isMediumScreen, setIsMediumScreen] = useState(
-    document.body.offsetWidth >= 768
+  const [isDateList, setIsDateList] = useState(
+    document.body.offsetWidth >= 768 ? true : false
   );
-  const [isDateList, setIsDateList] = useState(isMediumScreen ? true : false);
-  const [isTypeList, setIsTypeList] = useState(isMediumScreen ? true : false);
+  const [isTypeList, setIsTypeList] = useState(
+    document.body.offsetWidth >= 768 ? true : false
+  );
   const [isCurriculaList, setIsCurriculaList] = useState(
-    isMediumScreen ? true : false
+    document.body.offsetWidth >= 768 ? true : false
   );
   const [isFavoriteList, setIsFavoriteList] = useState(
-    isMediumScreen ? true : false
+    document.body.offsetWidth >= 768 ? true : false
   );
 
   const handleSubmit = (e) => {
@@ -53,23 +54,22 @@ const CoursesFilterInCategories = () => {
     }
   };
 
-  const updateMedia = () => {
-    setIsMediumScreen(document.body.offsetWidth >= 768);
-    if (isMediumScreen) {
-      setIsDateList(true);
-      setIsTypeList(true);
-      setIsCurriculaList(true);
-      setIsFavoriteList(true);
-    }
-    if (!isMediumScreen) {
-      setIsDateList(false);
-      setIsTypeList(false);
-      setIsCurriculaList(false);
-      setIsFavoriteList(false);
-    }
-  };
-
   useEffect(() => {
+    const updateMedia = () => {
+      if (document.body.offsetWidth >= 768) {
+        setIsDateList(true);
+        setIsTypeList(true);
+        setIsCurriculaList(true);
+        setIsFavoriteList(true);
+      }
+      if (document.body.offsetWidth < 768) {
+        setIsDateList(false);
+        setIsTypeList(false);
+        setIsCurriculaList(false);
+        setIsFavoriteList(false);
+      }
+    };
+
     window.addEventListener("resize", updateMedia);
 
     return () => {
@@ -122,7 +122,7 @@ const CoursesFilterInCategories = () => {
                 </svg>
                 <span>التقييمات</span>
               </p>
-              {(isFavoriteList || isMediumScreen) && (
+              {(isFavoriteList || document.body.offsetWidth >= 768) && (
                 <ul className={css.subcategories_list}>
                   <li className={css.subcategories_item}>
                     <p className={css.subcategories_heading}>الأعلى تقييما</p>
@@ -142,7 +142,7 @@ const CoursesFilterInCategories = () => {
                 <span>المناهج</span>
               </p>
 
-              {(isCurriculaList || isMediumScreen) && (
+              {(isCurriculaList || document.body.offsetWidth >= 768) && (
                 <ul className={css.subcategories_list}>
                   <li className={css.subcategories_item}>
                     <p className={css.subcategories_heading}>المنهج التونسي</p>
@@ -166,7 +166,7 @@ const CoursesFilterInCategories = () => {
                 </svg>
                 <span>نوع المحتوى</span>
               </p>
-              {(isTypeList || isMediumScreen) && (
+              {(isTypeList || document.body.offsetWidth >= 768) && (
                 <ul className={css.subcategories_list}>
                   <li className={css.subcategories_item}>
                     <p className={css.subcategories_heading}>
@@ -191,7 +191,7 @@ const CoursesFilterInCategories = () => {
                 <span>تاريخ نشر المحتوى</span>
               </p>
 
-              {(isDateList || isMediumScreen) && (
+              {(isDateList || document.body.offsetWidth >= 768) && (
                 <ul className={css.subcategories_list}>
                   <li className={css.subcategories_item}>
                     <p className={css.subcategories_heading}>منذ ساعة</p>

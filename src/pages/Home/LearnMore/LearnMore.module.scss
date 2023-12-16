@@ -1,0 +1,46 @@
+@import "../../../scss";
+
+.lsection {
+  @extend .section;
+  text-align: center;
+  color: $whiteColor;
+  background-color: $greenBgColor;
+}
+
+.heading {
+  @extend .heading;
+  margin-bottom: 12px;
+
+  @include sm {
+    margin-bottom: 16px;
+  }
+  @include md {
+    margin-bottom: 24px;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: $boldFont;
+  color: $whiteColor;
+  background-color: $footerBgColor;
+
+  transition: all 0.4s ease;
+
+  @include md {
+    font-size: 20px;
+    padding: 12px 36px;
+  }
+  @include lg {
+    font-size: 24px;
+    padding: 16px 44px;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    box-shadow: $shadow;
+  }
+}
