@@ -1,0 +1,392 @@
+@import "../../../scss";
+
+// news card
+.news_card {
+  padding: 12px;
+  text-align: start;
+  border: 1px solid $lightGreyBgColor;
+  margin-bottom: 12px;
+
+  @include md {
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+.news_image_wrapper {
+  margin-bottom: 12px;
+
+  overflow: hidden;
+  border: 1px solid $lightGreyBgColor;
+
+  @include md {
+    margin-bottom: 24px;
+  }
+}
+
+.news_image {
+  margin: auto;
+  object-fit: contain;
+}
+
+.meta_list {
+  @extend .flex_aligncenter;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 16px;
+
+  @include md {
+    margin-bottom: 24px;
+  }
+}
+
+.meta_item {
+  &:hover,
+  &:focus {
+    .meta_icon_wrapper {
+      scale: 110%;
+      background-color: $accentColor;
+      &::before {
+        left: 0;
+        border-color: $accentColor;
+      }
+    }
+
+    .meta_icon {
+      fill: $whiteColor;
+    }
+
+    .meta_info {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.meta_icon_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $lightGreyBgColor;
+
+  transition: all 0.4s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid $lightGreyBgColor;
+
+    transition: all 0.4s ease;
+  }
+}
+
+.meta_icon {
+  width: 20px;
+  height: 20px;
+  fill: $secondaryFontColor;
+
+  transition: all 0.4s ease;
+}
+
+.meta_info {
+  opacity: 0;
+  visibility: hidden;
+
+  position: absolute;
+  top: -56px;
+  right: 50%;
+  transform: translateX(50%);
+
+  min-width: 120px;
+
+  display: inline-block;
+  padding: 12px;
+  background-color: $whiteColor;
+  color: $secondaryFontColor;
+  text-align: center;
+  box-shadow: $shadow;
+  font-size: 12px;
+
+  transition: all 0.4s ease;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    right: 50%;
+    transform: translateX(50%);
+
+    background-color: $whiteColor;
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+    width: 20px;
+    height: 8px;
+    box-shadow: $shadow;
+
+    transition: all 0.4s ease;
+  }
+}
+
+.title {
+  @extend .heading;
+  max-width: unset;
+  text-align: start;
+  color: $darkFontColor;
+  margin-bottom: 16px;
+
+  @include md {
+    margin-bottom: 24px;
+  }
+}
+
+.content {
+  margin-bottom: 24px;
+  font-size: 14px;
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+
+  @include sm {
+    margin-bottom: 28px;
+    font-size: 16px;
+  }
+
+  @include md {
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+
+  color: $secondaryFontColor;
+}
+
+.additional {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
+
+  @include md {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+.keywords_wrapper {
+  @extend .flex_aligncenter;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  @include md {
+    margin-inline-end: auto;
+  }
+}
+
+.keywords_header {
+  margin-inline-end: 32px;
+  color: $secondaryFontColor;
+  font-size: 12px;
+  font-weight: $boldFont;
+
+  @include sm {
+    font-size: 14px;
+  }
+
+  @include md {
+    font-size: 16px;
+  }
+}
+
+.keywords_list {
+  @extend .flex_aligncenter;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.keywords_item {
+  padding: 4px 8px;
+  background-color: $accentColor;
+  color: $whiteColor;
+  font-weight: $boldFont;
+}
+
+.socials {
+  @extend .flex_aligncenter;
+  justify-content: center;
+}
+
+.social_link {
+  display: inline-block;
+  padding: 16px;
+  &:hover,
+  &:focus {
+    .icon {
+      fill: $accentColor;
+      scale: 110%;
+    }
+  }
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: $secondaryFontColor;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+  }
+}
+
+// author card
+
+.autor_card {
+  @extend .flex_aligncenter;
+  flex-direction: column;
+  text-align: start;
+  border: 1px solid $lightGreyBgColor;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+
+  @include sm {
+    flex-direction: row;
+    padding-bottom: 0;
+  }
+}
+
+.autor_image_wrapper {
+  width: 100%;
+  margin-bottom: 12px;
+  padding-top: 8px;
+  text-align: center;
+
+  @include sm {
+    flex-basis: 20%;
+    border-inline-end: 1px solid $lightGreyBgColor;
+    margin-bottom: 0;
+  }
+}
+
+.image_container {
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 8px auto;
+  border: 1px solid $lightGreyBgColor;
+  width: 100px;
+
+  @include md {
+    width: 120px;
+  }
+
+  @include lg {
+    margin: 16px 24px 0 24px;
+  }
+}
+
+.author_name {
+  margin-bottom: 8px;
+}
+
+.author_socials {
+  @extend .flex_aligncenter;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid $lightGreyBgColor;
+
+  @include sm {
+    width: 100%;
+  }
+}
+
+.author_socials_item {
+  text-align: center;
+  flex-basis: 25%;
+
+  transition: all 0.4s ease;
+
+  &:not(:last-child) {
+    border-right: 1px solid $lightGreyBgColor;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 120%;
+    .icon {
+      fill: $accentColor;
+    }
+  }
+}
+
+.author_social_link {
+  display: inline-block;
+  margin: 0 auto;
+
+  padding: 8px;
+}
+
+.author_icon {
+  width: 16px;
+  height: 16px;
+  fill: $secondaryFontColor;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+  }
+}
+
+.autor_content_wrapper {
+  flex-basis: 100%;
+  padding: 4px 12px;
+
+  @include sm {
+    flex-basis: 60%;
+  }
+
+  @include md {
+    padding: 8px 24px;
+  }
+}
+
+.autor_descr {
+  margin-bottom: 8px;
+  text-align: start;
+  color: $secondaryFontColor;
+
+  @include md {
+    margin-bottom: 16px;
+  }
+}
+
+.autor_button {
+  display: inline-block;
+  padding: 4px 8px;
+  border: 1px solid $secondaryFontColor;
+  border-radius: 16px;
+  font-weight: $boldFont;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    color: $accentColor;
+    border-color: $accentColor;
+  }
+}

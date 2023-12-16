@@ -1,9 +1,9 @@
 import css from "./SingleNews.module.scss";
-import SingleNewsCard from "../../components/SingleNewsCard/SingleNewsCard";
-import SingleNewsAdditionalInfo from "../../components/SingleNewsAdditionalInfo/SingleNewsAdditionalInfo";
-import SingleNewsSearch from "../../components/SingleNewsSearch/SingleNewsSearch";
+import SingleNewsCard from "./SingleNewsCard/SingleNewsCard";
+import SingleNewsAdditionalInfo from "./SingleNewsAdditionalInfo/SingleNewsAdditionalInfo";
+import SingleNewsSearch from "./SingleNewsSearch/SingleNewsSearch";
 import { useEffect, useState } from "react";
-import SingleNewsComment from "../../components/SingleNewsComment/SingleNewsComment";
+import SingleNewsComment from "./SingleNewsComment/SingleNewsComment";
 import SimplePageHeader from "../../components/SimplePageHeader/SimplePageHeader";
 import NewsHeaderList from "../../components/NewsHeaderList/NewsHeaderList";
 

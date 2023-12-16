@@ -1,0 +1,203 @@
+@import "../../../scss";
+
+.comments_wrapper {
+  text-align: start;
+  margin-bottom: 24px;
+}
+
+.header {
+  position: relative;
+  text-align: start;
+  margin-bottom: 8px;
+  font-size: 18px;
+
+  @include md {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+
+  @include lg {
+    font-size: 24px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    [dir="ltr"] & {
+      left: 0;
+      right: unset;
+    }
+    [dir="rtl"] & {
+      right: 0;
+      left: unset;
+    }
+    height: 2px;
+    width: 24px;
+    background-color: $secondaryFontColor;
+  }
+}
+
+.comments_subheader {
+  @extend .flex_aligncenter;
+  justify-content: flex-start;
+  gap: 4px;
+  margin-bottom: 12px;
+  color: $secondaryFontColor;
+
+  @include md {
+    margin-bottom: 24px;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  stroke: $secondaryFontColor;
+  fill: none;
+}
+
+.comments_card {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px;
+  gap: 12px;
+  text-align: start;
+  background-color: $lightGreyBgColor;
+  font-size: 14px;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+
+    @include lg {
+      margin-bottom: 24px;
+    }
+  }
+
+  @include md {
+    gap: 24px;
+    font-size: 16px;
+  }
+}
+
+.comments_image_wrapper {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid $whiteColor;
+  width: 80px;
+  text-align: center;
+}
+
+.comments_name {
+  margin-bottom: 8px;
+}
+
+.comments_content_wrapper {
+  flex-basis: 100%;
+  // padding: 4px 12px;
+
+  @include md {
+    // padding: 8px 24px;
+  }
+}
+
+.comments_descr {
+  margin-bottom: 4px;
+  text-align: start;
+  color: $secondaryFontColor;
+}
+
+.comments_additional_wrapper {
+  @extend .flex_aligncenter;
+  gap: 12px;
+}
+
+.comments_date {
+  color: $secondaryFontColor;
+}
+
+.comments_answer_button {
+  font-size: 18px;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    color: $accentColor;
+  }
+}
+
+.add_wrapper {
+  text-align: start;
+}
+
+.input_group {
+  @extend .flex_aligncenter;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+
+  @include sm {
+    flex-direction: row-reverse;
+  }
+}
+
+.input {
+  min-width: 300px;
+  max-width: 420px;
+  display: inline-block;
+  padding: 12px;
+  background-color: $lightGreyBgColor;
+  border: none;
+  outline: none;
+  text-align: start;
+
+  @include sm {
+    width: 50%;
+    min-width: unset;
+    max-width: unset;
+    padding: 16px;
+  }
+}
+
+.textarea {
+  display: block;
+  min-width: 300px;
+  max-width: 420px;
+  margin: 0 auto 12px auto;
+  padding: 12px;
+  background-color: $lightGreyBgColor;
+  border: none;
+  outline: none;
+  text-align: start;
+  resize: vertical;
+
+  @include sm {
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+    padding: 16px;
+  }
+}
+
+.form_button {
+  display: block;
+  margin: 0 auto 0 auto;
+  padding: 12px 24px;
+  color: $whiteColor;
+  background-color: $accentColor;
+  font-size: 18px;
+
+  transition: all 0.4s ease;
+
+  @include sm {
+    margin: 0 0 0 auto;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    box-shadow: $shadow;
+  }
+}

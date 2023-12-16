@@ -1,0 +1,268 @@
+@import "../../../scss";
+
+.hero_section {
+  color: $heroFontColor;
+  background-color: $heroBgColor;
+  padding-bottom: 20px;
+  overflow: hidden;
+
+  @include md {
+    padding-bottom: 54px;
+  }
+}
+
+.hero_container {
+  @extend .container;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-width: 320px;
+
+  @include md {
+    flex-direction: row;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 20;
+
+  padding: 24px 12px 0 12px;
+  text-align: start;
+
+  @include sm {
+    padding: 80px 16px 0 16px;
+    margin: 0 auto;
+  }
+
+  @include sm_plus {
+    padding: 20px 16px 0 16px;
+    max-width: 500px;
+  }
+
+  @include md {
+    flex-basis: 50%;
+    padding: 100px 48px 0 16px;
+  }
+
+  @include lg {
+    padding: 120px 40px 0 16px;
+  }
+
+  @include xl {
+    padding: 120px 100px 0 16px;
+  }
+
+  // [dir="ltr"] & {
+  //   padding-left: 0;
+  // }
+}
+
+.triangle_green {
+  display: none;
+  position: absolute;
+  top: -60px;
+  right: 0;
+
+  @include sm {
+    display: block;
+  }
+
+  @include sm_plus {
+    top: -77px;
+    right: 19%;
+  }
+
+  @include md {
+    top: 0;
+    right: 0;
+  }
+
+  @include lg {
+    right: 50px;
+  }
+
+  @include xl {
+    right: 160px;
+  }
+}
+
+.heading {
+  @extend .heading;
+  margin-inline-start: 0;
+  text-align: start;
+  margin-bottom: 8px;
+
+  @include sm {
+    margin-bottom: 16px;
+  }
+}
+
+.heading_colored {
+  color: $headerBgColor;
+}
+
+.subheading {
+  font-size: 14px;
+  margin-bottom: 12px;
+  max-width: 400px;
+
+  @include sm {
+    max-width: 540px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  @include md {
+    font-size: 20px;
+  }
+
+  @include lg {
+    font-size: 24px;
+  }
+}
+
+.hero_button {
+  padding: 4px 32px;
+  border-radius: 32px;
+  background-image: linear-gradient(to right, $headerBgColor, #9499f1);
+  font-size: 20px;
+  color: $whiteColor;
+
+  transition: all 0.4s ease;
+
+  @include md {
+    font-size: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    box-shadow: $shadow;
+  }
+}
+
+.picture {
+  position: relative;
+  min-width: 320px;
+  min-height: 320px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+
+  @include md {
+    flex-basis: 50%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+
+    [dir="ltr"] & {
+      right: -5%;
+    }
+  }
+
+  @include lg {
+    [dir="ltr"] & {
+      right: -9%;
+    }
+  }
+}
+
+.hero_image {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  z-index: 30;
+
+  @include md {
+    height: 364px;
+  }
+}
+
+.triangle_blue_big {
+  position: absolute;
+  top: 0;
+  left: 28px;
+
+  @include md {
+    height: 364px;
+  }
+}
+
+.triangle_blue {
+  position: absolute;
+  bottom: -80px;
+  left: -30px;
+
+  @include sm {
+    bottom: -100px;
+  }
+
+  @include sm_plus {
+    left: -70px;
+    bottom: -44px;
+  }
+
+  @include md {
+    left: -64px;
+    bottom: -80px;
+  }
+
+  @include lg {
+    left: -70px;
+    bottom: -50px;
+  }
+}
+
+.triangle_green_small {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include sm_plus {
+    top: 0;
+    left: -40px;
+  }
+
+  @include md {
+    top: 90%;
+    left: 80%;
+  }
+
+  @include lg {
+    top: unset;
+    bottom: -16px;
+    left: 60%;
+  }
+
+  @include xl {
+    bottom: -16px;
+    left: 48%;
+  }
+}
+
+.triangle_rose {
+  position: absolute;
+  top: 20px;
+  right: -50px;
+
+  @include sm {
+    top: 0;
+    right: -100px;
+  }
+
+  @include sm_plus {
+    right: -130px;
+  }
+
+  @include md {
+    right: -60px;
+  }
+
+  @include lg {
+    right: 20px;
+  }
+
+  @include xl {
+    top: 30px;
+    right: 70px;
+  }
+}

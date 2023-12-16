@@ -1,0 +1,52 @@
+@import "../../../scss";
+
+.section {
+  padding: 100px 0 20px 0;
+
+  @include sm {
+    padding: 120px 0 20px 0;
+  }
+
+  @include md {
+    padding: 156px 0 24px 0;
+  }
+
+  @include lg {
+    padding: 100px 0 32px 0;
+  }
+
+  @include xl {
+    padding: 180px 0 60px 0;
+  }
+}
+
+.container {
+  @extend .container;
+
+  text-align: center;
+}
+
+.heading {
+  @extend .heading;
+  margin-bottom: 20px;
+}
+
+.list {
+  @extend .flex_aligncenter;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 16px;
+}
+
+.item {
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+  }
+}
+
+.image {
+  max-height: 60px;
+}

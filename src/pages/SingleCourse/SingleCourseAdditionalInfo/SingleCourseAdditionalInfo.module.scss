@@ -1,0 +1,214 @@
+@import "../../../scss";
+
+.wrapper {
+  @extend .flex_aligncenter;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 300px;
+
+  @include md {
+    margin-top: 32px;
+  }
+}
+
+// price container
+.price_container {
+  width: 100%;
+  padding: 20px;
+  background-color: $lightGreyBgColor;
+}
+
+.price_heading {
+  margin-bottom: 4px;
+  color: $secondaryFontColor;
+}
+
+.price_value {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-weight: $boldFont;
+}
+
+.discounted_price {
+  font-size: 20px;
+}
+
+.full_price {
+  text-decoration: line-through;
+  text-decoration-color: $accentColor;
+  text-decoration-thickness: 1.5px;
+  font-size: 16px;
+}
+
+.price_button {
+  display: inline-block;
+  padding: 8px 16px;
+  color: $whiteColor;
+  font-weight: $boldFont;
+  background-color: $purpleCategoryAccent;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    box-shadow: $shadow;
+  }
+}
+
+// details container
+.details_container {
+  width: 100%;
+}
+
+.details_item {
+  @extend .flex_aligncenter;
+  flex-direction: row;
+  padding: 24px;
+  gap: 16px;
+  border: 2px solid $lightGreyBgColor;
+  border-bottom: none;
+
+  &:last-child {
+    border-bottom: 2px solid $lightGreyBgColor;
+  }
+
+  &:hover,
+  &:focus {
+    .details_icon_wrapper {
+      scale: 110%;
+      &::before {
+        left: 0;
+      }
+    }
+
+    .condition {
+      scale: 110%;
+      color: $darkFontColor;
+    }
+
+    .info {
+      scale: 110%;
+    }
+  }
+}
+
+.details_icon_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  transition: all 0.4s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    transition: all 0.4s ease;
+  }
+}
+
+.details_icon_wrapper_1 {
+  @extend .details_icon_wrapper;
+  background-color: $blueCategoryAccent;
+  &:before {
+    border: 1px solid $blueCategoryAccent;
+  }
+}
+
+.details_icon_wrapper_2 {
+  @extend .details_icon_wrapper;
+  background-color: $purpleCategoryAccent;
+  &:before {
+    border: 1px solid $purpleCategoryAccent;
+  }
+}
+
+.details_icon_wrapper_3 {
+  @extend .details_icon_wrapper;
+  background-color: $redCategoryAccent;
+  &:before {
+    border: 1px solid $redCategoryAccent;
+  }
+}
+
+.details_icon_wrapper_4 {
+  @extend .details_icon_wrapper;
+  background-color: $greenCategoryAccent;
+  &:before {
+    border: 1px solid $greenCategoryAccent;
+  }
+}
+
+.details_icon {
+  width: 16px;
+  height: 16px;
+  fill: $whiteColor;
+}
+
+.condition {
+  color: $secondaryFontColor;
+
+  transition: all 0.4s ease;
+}
+
+.info {
+  transition: all 0.4s ease;
+}
+
+// related container
+.related_container {
+  width: 100%;
+  padding: 32px;
+  border: 2px solid $lightGreyBgColor;
+  text-align: start;
+}
+
+.related_heading {
+}
+
+.related_list {
+}
+
+.related_item {
+  @extend .flex_aligncenter;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 20px 0;
+  &:not(:last-child) {
+    border-bottom: 2px solid $lightGreyBgColor;
+  }
+}
+
+.admin {
+  color: $secondaryFontColor;
+  font-size: 14px;
+}
+
+.title {
+  font-size: 16px;
+}
+
+.related_image_wrapper {
+  width: 80px;
+  height: 80px;
+  background-color: $darkBgButtonColor;
+  overflow: hidden;
+}
+
+.related_image {
+  width: 80px;
+}

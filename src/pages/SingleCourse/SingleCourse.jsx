@@ -1,6 +1,6 @@
 import css from "./SingleCourse.module.scss";
-import SingleCourseCard from "../../components/SingleCourseCard/SingleCourseCard";
-import SingleCourseAdditionalInfo from "../../components/SingleCourseAdditionalInfo/SingleCourseAdditionalInfo";
+import SingleCourseCard from "./SingleCourseCard/SingleCourseCard";
+import SingleCourseAdditionalInfo from "./SingleCourseAdditionalInfo/SingleCourseAdditionalInfo";
 import SimplePageHeader from "../../components/SimplePageHeader/SimplePageHeader";
 
 const SingleCourse = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import BuyCourseOptions from "../../components/BuyCourseOptions/BuyCourseOptions";
+import BuyCourseOptions from "./BuyCourseOptions/BuyCourseOptions";
 import TriangleBackground from "../../components/Layout/TriangleBackground/TriangleBackground";
 import SimplePageHeader from "../../components/SimplePageHeader/SimplePageHeader";
 

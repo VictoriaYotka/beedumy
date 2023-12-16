@@ -1,0 +1,118 @@
+@import "../../../scss";
+
+.container {
+  margin-top: 24px;
+  @extend .container;
+  min-height: 50vh;
+}
+.payment_container {
+  @include md {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.topper {
+  @extend .flex_aligncenter;
+  gap: 4px;
+}
+
+.topper_option {
+  width: 100%;
+  padding: 12px;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  background: $whiteColor;
+  border-bottom: 2px solid $headerBgColor;
+
+  @include sm {
+    width: unset;
+    padding: 12px 16px;
+  }
+}
+
+.list_wrapper {
+  padding: 12px;
+  border-radius: 16px;
+  // border-start-start-radius: 0;
+  // border-start-end-radius: 0;
+  background: $whiteColor;
+  box-shadow: $shadow;
+
+  // @include sm {
+  //   border-start-end-radius: 16px;
+  // }
+}
+
+.list {
+  @extend .flex_aligncenter;
+  justify-content: space-around;
+}
+
+.item {
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+
+    .payment_name {
+      color: rgb(70, 63, 178);
+    }
+  }
+}
+
+.active {
+  @extend .item;
+
+  scale: 110%;
+
+  .payment_name {
+    color: rgb(70, 63, 178);
+  }
+}
+
+.icon_wrapper {
+  @extend .flex_aligncenter;
+  justify-content: center;
+  padding: 8px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+
+  transition: all 0.4s ease;
+
+  @include sm {
+    width: 32px;
+    height: 32px;
+  }
+
+  @include md {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.payment_name {
+  color: rgb(139, 126, 357);
+  font-size: 14px;
+  font-weight: $boldFont;
+
+  transition: all 0.4s ease;
+
+  @include md {
+    font-size: 16px;
+  }
+}
+
+.descr {
+  margin-top: 8px;
+  padding: 8px;
+  border-top: 2px solid $headerBgColor;
+
+  @include md {
+    margin-top: 24px;
+  }
+}

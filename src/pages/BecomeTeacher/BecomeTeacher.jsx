@@ -1,5 +1,5 @@
 import React from "react";
-import BecomeTeacherForm from "../../components/BecomeTeacherForm/BecomeTeacherForm";
+import BecomeTeacherForm from "./BecomeTeacherForm/BecomeTeacherForm";
 import SimplePageHeader from "../../components/SimplePageHeader/SimplePageHeader";
 
 const BecomeTeacher = () => {

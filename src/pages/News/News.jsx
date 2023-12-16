@@ -1,4 +1,4 @@
-import NewsList from "../../components/NewsList/NewsList";
+import NewsList from "./NewsList/NewsList";
 import SimplePageHeader from "../../components/SimplePageHeader/SimplePageHeader";
 import NewsHeaderList from "../../components/NewsHeaderList/NewsHeaderList";
 

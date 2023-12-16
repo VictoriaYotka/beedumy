@@ -1,11 +1,11 @@
-import CourseListInCourses from "../../components/CourseListInCourses/CourseListInCourses";
-import CoursesFilterInCourses from "../../components/CoursesFilterInCourses/CoursesFilterInCourses";
+import CoursesListInCourses from "./CoursesListInCourses/CoursesListInCourses";
+import CoursesFilterInCourses from "./CoursesFilterInCourses/CoursesFilterInCourses";
 
 const Courses = () => {
   return (
     <>
       <CoursesFilterInCourses />
-      <CourseListInCourses />
+      <CoursesListInCourses />
     </>
   );
 };

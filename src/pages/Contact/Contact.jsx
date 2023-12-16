@@ -1,7 +1,7 @@
 import React from "react";
 import SimplePageHeader from "../../components/SimplePageHeader/SimplePageHeader";
 import SocialsList from "../../components/SocialsList/SocialsList";
-import ContactOptions from "../../components/ContactOptions/ContactOptions";
+import ContactOptions from "./ContactOptions/ContactOptions";
 
 const Contact = () => {
   return (
