@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import css from "./Categories.module.scss";
+import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const Categories = () => {
   const settings = {
@@ -51,82 +52,84 @@ const Categories = () => {
   };
 
   return (
-    <section className={css.section}>
-      <div className={css.container}>
-        <h2 className={css.heading}>هنا تبدأ رحلتك من العِلم إلى العَمل</h2>
+    <SectionAnimationWrapper>
+      <section className={css.section}>
+        <div className={css.container}>
+          <h2 className={css.heading}>هنا تبدأ رحلتك من العِلم إلى العَمل</h2>
 
-        <Slider {...settings}>
-          <div className={css.item}>
-            <Link href="#">
-              <div className={css.color_1}>
-                <div className={css.icon}>
-                  <i className="kipso-icon-desktop"></i>
+          <Slider {...settings}>
+            <div className={css.item}>
+              <Link href="#">
+                <div className={css.color_1}>
+                  <div className={css.icon}>
+                    <i className="kipso-icon-desktop"></i>
+                  </div>
+                  <h3 className={css.title}>دورات في الإعلامية</h3>
                 </div>
-                <h3 className={css.title}>دورات في الإعلامية</h3>
-              </div>
-            </Link>
-          </div>
+              </Link>
+            </div>
 
-          <div className={css.item}>
-            <Link href="#">
-              <div className={css.color_2}>
-                <div className={css.icon}>
-                  <i className="kipso-icon-web-programming"></i>
+            <div className={css.item}>
+              <Link href="#">
+                <div className={css.color_2}>
+                  <div className={css.icon}>
+                    <i className="kipso-icon-web-programming"></i>
+                  </div>
+                  <h3 className={css.title}>دورات في البرمجة</h3>
                 </div>
-                <h3 className={css.title}>دورات في البرمجة</h3>
-              </div>
-            </Link>
-          </div>
+              </Link>
+            </div>
 
-          <div className={css.item}>
-            <Link href="#">
-              <div className={css.color_3}>
-                <div className={css.icon}>
-                  <i className="kipso-icon-music-player"></i>
+            <div className={css.item}>
+              <Link href="#">
+                <div className={css.color_3}>
+                  <div className={css.icon}>
+                    <i className="kipso-icon-music-player"></i>
+                  </div>
+                  <h3 className={css.title}>دورات في Autodesk</h3>
                 </div>
-                <h3 className={css.title}>دورات في Autodesk</h3>
-              </div>
-            </Link>
-          </div>
+              </Link>
+            </div>
 
-          <div className={css.item}>
-            <Link href="#">
-              <div className={css.color_4}>
-                <div className={css.icon}>
-                  <i className="kipso-icon-camera"></i>
+            <div className={css.item}>
+              <Link href="#">
+                <div className={css.color_4}>
+                  <div className={css.icon}>
+                    <i className="kipso-icon-camera"></i>
+                  </div>
+                  <h3 className={css.title}>دورات في اللغات</h3>
                 </div>
-                <h3 className={css.title}>دورات في اللغات</h3>
-              </div>
-            </Link>
-          </div>
+              </Link>
+            </div>
 
-          <div className={css.item}>
-            <Link href="#">
-              <div className={css.color_5}>
-                <div className={css.icon}>
-                  <i className="kipso-icon-targeting"></i>
+            <div className={css.item}>
+              <Link href="#">
+                <div className={css.color_5}>
+                  <div className={css.icon}>
+                    <i className="kipso-icon-targeting"></i>
+                  </div>
+                  <h3 className={css.title}>المنهج الليبيي</h3>
                 </div>
-                <h3 className={css.title}>المنهج الليبيي</h3>
-              </div>
-            </Link>
-          </div>
+              </Link>
+            </div>
 
-          <div className={css.item}>
-            <Link href="#">
-              <div className={css.color_6}>
-                <div className={css.icon}>
-                  <i className="kipso-icon-health"></i>
+            <div className={css.item}>
+              <Link href="#">
+                <div className={css.color_6}>
+                  <div className={css.icon}>
+                    <i className="kipso-icon-health"></i>
+                  </div>
+                  <h3 className={css.title}>المنهج التونسي</h3>
                 </div>
-                <h3 className={css.title}>المنهج التونسي</h3>
-              </div>
-            </Link>
-          </div>
-        </Slider>
-        <Link to="/categories" className={css.button}>
-          تصفح جميع المحاور
-        </Link>
-      </div>
-    </section>
+              </Link>
+            </div>
+          </Slider>
+          <Link to="/categories" className={css.button}>
+            تصفح جميع المحاور
+          </Link>
+        </div>
+      </section>
+    </SectionAnimationWrapper>
   );
 };
 

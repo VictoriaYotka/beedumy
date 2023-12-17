@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import css from "./Teachers.module.scss";
 import Slider from "react-slick";
 import TeacherCard from "../../../components/TeacherCard/TeacherCard";
+import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const Teachers = () => {
   const settings = {
@@ -32,23 +33,25 @@ const Teachers = () => {
     ],
   };
   return (
-    <section className={css.section}>
-      <div className={css.container}>
-        <h2 className={css.heading}>تعرّف على نخبة من الأساتذة والمختصّين</h2>
-        <Slider {...settings}>
-          <TeacherCard />
+    <SectionAnimationWrapper>
+      <section className={css.section}>
+        <div className={css.container}>
+          <h2 className={css.heading}>تعرّف على نخبة من الأساتذة والمختصّين</h2>
+          <Slider {...settings}>
+            <TeacherCard />
 
-          <TeacherCard />
+            <TeacherCard />
 
-          <TeacherCard />
+            <TeacherCard />
 
-          <TeacherCard />
+            <TeacherCard />
 
-          <TeacherCard />
-        </Slider>
-        <Link className={css.button}>نظرة على بقية المختصّين</Link>
-      </div>
-    </section>
+            <TeacherCard />
+          </Slider>
+          <Link className={css.button}>نظرة على بقية المختصّين</Link>
+        </div>
+      </section>
+    </SectionAnimationWrapper>
   );
 };
 

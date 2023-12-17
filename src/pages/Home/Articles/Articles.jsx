@@ -1,5 +1,6 @@
 import Slider from "react-slick";
 import css from "./Articles.module.scss";
+import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const Articles = () => {
   const settings = {
@@ -30,54 +31,56 @@ const Articles = () => {
     ],
   };
   return (
-    <section className={css.section}>
-      <div className={css.container}>
-        <h2 className={css.heading}>مقالات وتوجيهات تربوية ومهنية</h2>
-        <div className={css.list_wrapper}>
-          <Slider {...settings}>
-            <div className={css.item}>
-              <div className={css.date_wrapper}>
-                <p className={css.date}>06 أوت</p>
+    <SectionAnimationWrapper>
+      <section className={css.section}>
+        <div className={css.container}>
+          <h2 className={css.heading}>مقالات وتوجيهات تربوية ومهنية</h2>
+          <div className={css.list_wrapper}>
+            <Slider {...settings}>
+              <div className={css.item}>
+                <div className={css.date_wrapper}>
+                  <p className={css.date}>06 أوت</p>
+                </div>
+                <p className={css.name}>كُتب بواسطة آدم . 12 تعليق</p>
+                <p className={css.content}>
+                  أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل
+                </p>
               </div>
-              <p className={css.name}>كُتب بواسطة آدم . 12 تعليق</p>
-              <p className={css.content}>
-                أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل
-              </p>
-            </div>
 
-            <div className={css.item}>
-              <div className={css.date_wrapper}>
-                <p className={css.date}>06 أوت</p>
+              <div className={css.item}>
+                <div className={css.date_wrapper}>
+                  <p className={css.date}>06 أوت</p>
+                </div>
+                <p className={css.name}>كُتب بواسطة آدم . 12 تعليق</p>
+                <p className={css.content}>
+                  أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل
+                </p>
               </div>
-              <p className={css.name}>كُتب بواسطة آدم . 12 تعليق</p>
-              <p className={css.content}>
-                أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل
-              </p>
-            </div>
 
-            <div className={css.item}>
-              <div className={css.date_wrapper}>
-                <p className={css.date}>06 أوت</p>
+              <div className={css.item}>
+                <div className={css.date_wrapper}>
+                  <p className={css.date}>06 أوت</p>
+                </div>
+                <p className={css.name}>كُتب بواسطة آدم . 12 تعليق</p>
+                <p className={css.content}>
+                  أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل
+                </p>
               </div>
-              <p className={css.name}>كُتب بواسطة آدم . 12 تعليق</p>
-              <p className={css.content}>
-                أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل
-              </p>
-            </div>
 
-            <div className={css.item}>
-              <div className={css.date_wrapper}>
-                <p className={css.date}>06 أوت</p>
+              <div className={css.item}>
+                <div className={css.date_wrapper}>
+                  <p className={css.date}>06 أوت</p>
+                </div>
+                <p className={css.name}>كُتب بواسطة آدم . 12 تعليق</p>
+                <p className={css.content}>
+                  أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل
+                </p>
               </div>
-              <p className={css.name}>كُتب بواسطة آدم . 12 تعليق</p>
-              <p className={css.content}>
-                أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل
-              </p>
-            </div>
-          </Slider>
+            </Slider>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </SectionAnimationWrapper>
   );
 };
 

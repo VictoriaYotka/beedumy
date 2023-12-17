@@ -3,6 +3,7 @@ import css from "./CourseCardInCourses.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
 import hero_image from "../../assets/images/home/hero/image.png";
 import triangle_green_small from "../../assets/images/home/hero/triangle-green-small.png";
+import SectionAnimationWrapper from "../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const CourseCardInCourses = ({
   course_image = hero_image,
@@ -15,8 +16,8 @@ const CourseCardInCourses = ({
   description,
 }) => {
   return (
-    <>
-      <li className={css.item}>
+    <li className={css.item}>
+      <SectionAnimationWrapper>
         <div className={css.img_thumb}>
           <img className={css.image} src={course_image} alt={title} />
           <button className={css.favorite_button}>
@@ -54,8 +55,8 @@ const CourseCardInCourses = ({
             See Preview
           </Link>
         </div>
-      </li>
-    </>
+      </SectionAnimationWrapper>
+    </li>
   );
 };
 

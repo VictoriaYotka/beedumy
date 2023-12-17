@@ -2,6 +2,7 @@ import css from "./CoursesListInCategories.module.scss";
 import CourseCardInCategories from "../../../components/CourseCardInCategories/CourseCardInCategories";
 import Slider from "react-slick";
 import hero_image from "../../../assets/images/home/hero/image.png";
+import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const CoursesListInCategories = ({ heading }) => {
   const settings = {
@@ -36,64 +37,68 @@ const CoursesListInCategories = ({ heading }) => {
   return (
     <section className={css.section}>
       <div className={css.container}>
-        <h3 className={css.list_heading}>{heading}</h3>
+        <SectionAnimationWrapper>
+          <h3 className={css.list_heading}>{heading}</h3>
+        </SectionAnimationWrapper>
 
-        <Slider {...settings}>
-          <CourseCardInCategories
-            notion="notion"
-            img={hero_image}
-            imgAlt="about image"
-            preheader="Preheader"
-            header="Header"
-            rating="stars"
-            descr="Some description here"
-            id="123"
-          />
+        <SectionAnimationWrapper>
+          <Slider {...settings}>
+            <CourseCardInCategories
+              notion="notion"
+              img={hero_image}
+              imgAlt="about image"
+              preheader="Preheader"
+              header="Header"
+              rating="stars"
+              descr="Some description here"
+              id="123"
+            />
 
-          <CourseCardInCategories
-            notion="notion"
-            img={hero_image}
-            imgAlt="about image"
-            preheader="Preheader"
-            header="Header"
-            rating="stars"
-            descr="Some description here"
-            id="123"
-          />
+            <CourseCardInCategories
+              notion="notion"
+              img={hero_image}
+              imgAlt="about image"
+              preheader="Preheader"
+              header="Header"
+              rating="stars"
+              descr="Some description here"
+              id="123"
+            />
 
-          <CourseCardInCategories
-            notion="notion"
-            img={hero_image}
-            imgAlt="about image"
-            preheader="Preheader"
-            header="Header"
-            rating="stars"
-            descr="Some description here"
-            id="123"
-          />
+            <CourseCardInCategories
+              notion="notion"
+              img={hero_image}
+              imgAlt="about image"
+              preheader="Preheader"
+              header="Header"
+              rating="stars"
+              descr="Some description here"
+              id="123"
+            />
 
-          <CourseCardInCategories
-            notion="notion"
-            img={hero_image}
-            imgAlt="about image"
-            preheader="Preheader"
-            header="Header"
-            rating="stars"
-            descr="Some description here"
-            id="123"
-          />
+            <CourseCardInCategories
+              notion="notion"
+              img={hero_image}
+              imgAlt="about image"
+              preheader="Preheader"
+              header="Header"
+              rating="stars"
+              descr="Some description here"
+              id="123"
+            />
 
-          <CourseCardInCategories
-            notion="notion"
-            img={hero_image}
-            imgAlt="about image"
-            preheader="Preheader"
-            header="Header"
-            rating="stars"
-            descr="Some description here"
-            id="123"
-          />
-        </Slider>
+            <CourseCardInCategories
+              notion="notion"
+              img={hero_image}
+              imgAlt="about image"
+              preheader="Preheader"
+              header="Header"
+              rating="stars"
+              descr="Some description here"
+              id="123"
+            />
+          </Slider>
+        </SectionAnimationWrapper>
       </div>
     </section>
   );

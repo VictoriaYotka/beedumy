@@ -3,6 +3,7 @@ import css from "./RequestedCourses.module.scss";
 import hero_image from "../../../assets/images/home/hero/image.png";
 import Slider from "react-slick";
 import CourseCardInCategories from "../../../components/CourseCardInCategories/CourseCardInCategories";
+import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const RequestedCourses = () => {
   const settings = {
@@ -34,7 +35,7 @@ const RequestedCourses = () => {
     ],
   };
   return (
-    <>
+    <SectionAnimationWrapper>
       <section className={css.section}>
         <div className="container">
           <Slider {...settings}>
@@ -95,7 +96,7 @@ const RequestedCourses = () => {
           </Slider>
         </div>
       </section>
-    </>
+    </SectionAnimationWrapper>
   );
 };
 
