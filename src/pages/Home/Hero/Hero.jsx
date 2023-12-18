@@ -1,11 +1,11 @@
 import css from "./Hero.module.scss";
 import { animated, useSpring } from "@react-spring/web";
-import hero_image from "../../../assets/images/home/hero/image.png";
-import triangle_blue_big from "../../../assets/images/home/hero/triangle-blue-big.png";
-import triangle_blue from "../../../assets/images/home/hero/triangle-blue.png";
-import triangle_green from "../../../assets/images/home/hero/triangle-green.png";
-import triangle_green_small from "../../../assets/images/home/hero/triangle-green-small.png";
-import triangle_rose from "../../../assets/images/home/hero/triangle-rose.png";
+import hero_image from "../../../assets/images/home/hero/image.webp";
+import triangle_blue_big from "../../../assets/images/home/hero/triangle-blue-big.webp";
+import triangle_blue from "../../../assets/images/home/hero/triangle-blue.webp";
+import triangle_green from "../../../assets/images/home/hero/triangle-green.webp";
+import triangle_green_small from "../../../assets/images/home/hero/triangle-green-small.webp";
+import triangle_rose from "../../../assets/images/home/hero/triangle-rose.webp";
 
 const Hero = () => {
   const sectionStyles = useSpring({
@@ -138,30 +138,35 @@ const Hero = () => {
           <animated.img
             src={hero_image}
             alt="decor"
+            loading="lazy"
             className={css.hero_image}
             style={heroImageStyles}
           />
           <animated.img
             src={triangle_blue_big}
             alt="decor"
+            loading="lazy"
             className={css.triangle_blue_big}
             style={triangleBlueBigStyles}
           />
           <animated.img
             src={triangle_blue}
             alt="decor"
+            loading="lazy"
             className={css.triangle_blue}
             style={triangleBlueStyles}
           />
           <animated.img
             src={triangle_green_small}
             alt="decor"
+            loading="lazy"
             className={css.triangle_green_small}
             style={triangleGreenSmallStyles}
           />
           <animated.img
             src={triangle_rose}
             alt="decor"
+            loading="lazy"
             className={css.triangle_rose}
             style={triangleRoseStyles}
           />
@@ -170,6 +175,7 @@ const Hero = () => {
           <animated.img
             src={triangle_green}
             alt="decor"
+            loading="lazy"
             className={css.triangle_green}
             style={triangleGreenStyles}
           />

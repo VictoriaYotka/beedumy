@@ -1,8 +1,8 @@
 import css from "./StartLearningTrip.module.scss";
-import headphones from "../../../assets/images/categories/headphones.jpg";
-import cloud from "../../../assets/images/categories/cloud.jpg";
-import papers from "../../../assets/images/categories/papers.jpg";
-import search from "../../../assets/images/categories/search.jpg";
+import headphones from "../../../assets/images/categories/headphones.webp";
+import cloud from "../../../assets/images/categories/cloud.webp";
+import papers from "../../../assets/images/categories/papers.webp";
+import search from "../../../assets/images/categories/search.webp";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const StartLearningTrip = () => {

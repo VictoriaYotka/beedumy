@@ -1,7 +1,7 @@
 import css from "./CoursesListInCategories.module.scss";
 import CourseCardInCategories from "../../../components/CourseCardInCategories/CourseCardInCategories";
 import Slider from "react-slick";
-import hero_image from "../../../assets/images/home/hero/image.png";
+import hero_image from "../../../assets/images/home/hero/image.webp";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const CoursesListInCategories = ({ heading }) => {

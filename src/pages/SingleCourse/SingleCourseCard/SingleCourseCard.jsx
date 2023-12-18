@@ -1,6 +1,6 @@
 import css from "./SingleCourseCard.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
-import triangle_green_small from "../../../assets/images/home/hero/triangle-green-small.png";
+import triangle_green_small from "../../../assets/images/home/hero/triangle-green-small.webp";
 import { Link } from "react-router-dom";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import css from "./RequestedCourses.module.scss";
-import hero_image from "../../../assets/images/home/hero/image.png";
+import hero_image from "../../../assets/images/home/hero/image.webp";
 import Slider from "react-slick";
 import CourseCardInCategories from "../../../components/CourseCardInCategories/CourseCardInCategories";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";

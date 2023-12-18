@@ -1,6 +1,6 @@
 import css from "./Partners.module.scss";
-import acces_canada from "../../../assets/images/home/acces_canada.png";
-import british_counsil from "../../../assets/images/home/british_counsil.png";
+import acces_canada from "../../../assets/images/home/acces_canada.webp";
+import british_counsil from "../../../assets/images/home/british_counsil.webp";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const Partners = () => {

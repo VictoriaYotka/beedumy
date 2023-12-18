@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import css from "./CourseCardInCourses.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
-import hero_image from "../../assets/images/home/hero/image.png";
-import triangle_green_small from "../../assets/images/home/hero/triangle-green-small.png";
+import hero_image from "../../assets/images/home/hero/image.webp";
+import triangle_green_small from "../../assets/images/home/hero/triangle-green-small.webp";
 import SectionAnimationWrapper from "../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const CourseCardInCourses = ({

@@ -1,5 +1,5 @@
 import css from "./Feedback.module.scss";
-import hero_image from "../../../assets/images/home/hero/image.png";
+import hero_image from "../../../assets/images/home/hero/image.webp";
 import icons from "../../../assets/images/icons/icons.svg";
 import Slider from "react-slick";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";

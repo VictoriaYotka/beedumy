@@ -55,11 +55,11 @@
   background-position-y: bottom;
 
   [dir="rtl"] & {
-    background-image: url("../../../assets/images/home/line_stripe_rtl.png");
+    background-image: url("../../../assets/images/home/line_stripe_rtl.webp");
     background-position-x: left;
   }
   [dir="ltr"] & {
-    background-image: url("../../../assets/images/home/line_stripe_ltr.png");
+    background-image: url("../../../assets/images/home/line_stripe_ltr.webp");
     background-position-x: right;
   }
 

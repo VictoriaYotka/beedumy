@@ -1,6 +1,6 @@
 import css from "./TeacherCard.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
-import hero_image from "../../assets/images/home/hero/image.png";
+import hero_image from "../../assets/images/home/hero/image.webp";
 import { Link } from "react-router-dom";
 
 const TeacherCard = () => {

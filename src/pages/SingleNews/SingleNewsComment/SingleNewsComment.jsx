@@ -1,6 +1,6 @@
 import css from "./SingleNewsComment.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
-import hero_image from "../../../assets/images/home/hero/image.png";
+import hero_image from "../../../assets/images/home/hero/image.webp";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const SingleNewsComment = () => {

@@ -1,6 +1,6 @@
 import css from "./Footer.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
-import hero_image from "../../../assets/images/home/hero/image.png";
+import hero_image from "../../../assets/images/home/hero/image.webp";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import SectionAnimationWrapper from "../../SectionAnimationWrapper/SectionAnimationWrapper";

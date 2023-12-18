@@ -1,6 +1,6 @@
 import NewsCard from "../NewsCard/NewsCard";
 import css from "./NewsList.module.scss";
-import hero_image from "../../../assets/images/home/hero/image.png";
+import hero_image from "../../../assets/images/home/hero/image.webp";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const NewsList = () => {
