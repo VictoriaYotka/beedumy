@@ -33,10 +33,12 @@ const Teachers = () => {
     ],
   };
   return (
-    <SectionAnimationWrapper>
-      <section className={css.section}>
-        <div className={css.container}>
+    <section className={css.section}>
+      <div className={css.container}>
+        <SectionAnimationWrapper>
           <h2 className={css.heading}>تعرّف على نخبة من الأساتذة والمختصّين</h2>
+        </SectionAnimationWrapper>
+        <SectionAnimationWrapper>
           <Slider {...settings}>
             <TeacherCard />
 
@@ -48,10 +50,10 @@ const Teachers = () => {
 
             <TeacherCard />
           </Slider>
-          <Link className={css.button}>نظرة على بقية المختصّين</Link>
-        </div>
-      </section>
-    </SectionAnimationWrapper>
+        </SectionAnimationWrapper>
+        <Link className={css.button}>نظرة على بقية المختصّين</Link>
+      </div>
+    </section>
   );
 };
 

@@ -49,12 +49,14 @@ const Feedback = () => {
     ],
   };
   return (
-    <SectionAnimationWrapper>
-      <section className={css.section}>
-        <div className={css.container}>
+    <section className={css.section}>
+      <div className={css.container}>
+        <SectionAnimationWrapper>
           <h2 className={css.heading}>
             شهادات تلامذتنا عبر مواقع التواصل الاجتماعي
           </h2>
+        </SectionAnimationWrapper>
+        <SectionAnimationWrapper>
           <Slider {...settings}>
             <div className={css.item}>
               <div className={css.icon_wrapper}>
@@ -156,9 +158,9 @@ const Feedback = () => {
               <p className={css.descr}>تلميذة</p>
             </div>
           </Slider>
-        </div>
-      </section>
-    </SectionAnimationWrapper>
+        </SectionAnimationWrapper>
+      </div>
+    </section>
   );
 };
 

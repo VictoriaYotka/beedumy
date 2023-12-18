@@ -1,44 +1,22 @@
-import { animated, useSpring } from "@react-spring/web";
-import { useEffect, useRef, useState } from "react";
+import { useInView, animated } from "@react-spring/web";
 
-const SimpleAnimationWrapper = ({ children }) => {
-  const triggerRef = useRef();
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const top = triggerRef.current.offsetTop;
-      const bottom = top + triggerRef.current.offsetHeight;
-      const isElementVisible =
-        window.scrollY + window.innerHeight > top && window.scrollY < bottom;
-
-      setIsVisible(isElementVisible);
-    };
-
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const styles = useSpring({
-    width: "100%",
-    opacity: isVisible ? 1 : 0,
-    transform: isVisible ? "translateY(0)" : "translateY(40px)",
-    config: {
-      duration: 500,
-      easing: (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t),
-    },
-  });
+const SectionAnimationWrapper = ({ children }) => {
+  const [ref, inView] = useInView();
 
   return (
-    <animated.div style={styles} ref={triggerRef}>
+    <animated.div
+      ref={ref}
+      style={{
+        width: "100%",
+        scale: inView ? 1 : 0.9,
+        opacity: inView ? 1 : 0,
+        transform: inView ? "translateY(0)" : "translateY(40px)",
+        transition: "0.4s ease-in-out",
+      }}
+    >
       {children}
     </animated.div>
   );
 };
 
-export default SimpleAnimationWrapper;
+export default SectionAnimationWrapper;

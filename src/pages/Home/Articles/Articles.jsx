@@ -31,11 +31,13 @@ const Articles = () => {
     ],
   };
   return (
-    <SectionAnimationWrapper>
-      <section className={css.section}>
-        <div className={css.container}>
+    <section className={css.section}>
+      <div className={css.container}>
+        <SectionAnimationWrapper>
           <h2 className={css.heading}>مقالات وتوجيهات تربوية ومهنية</h2>
-          <div className={css.list_wrapper}>
+        </SectionAnimationWrapper>
+        <div className={css.list_wrapper}>
+          <SectionAnimationWrapper>
             <Slider {...settings}>
               <div className={css.item}>
                 <div className={css.date_wrapper}>
@@ -77,10 +79,10 @@ const Articles = () => {
                 </p>
               </div>
             </Slider>
-          </div>
+          </SectionAnimationWrapper>
         </div>
-      </section>
-    </SectionAnimationWrapper>
+      </div>
+    </section>
   );
 };
 
