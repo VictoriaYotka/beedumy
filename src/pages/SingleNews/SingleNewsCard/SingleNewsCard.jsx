@@ -13,12 +13,14 @@ const SingleNewsCard = ({
   content = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque explicabo ullam ex repudiandae, in iusto veniam nobis, voluptate asperiores illum neque! Praesentium ea blanditiis sit? Facere alias facilis distinctio itaque, eveniet deserunt cum mollitia recusandae quo quam repudiandae similique assumenda perferendis. Temporibus libero ad odit quis quia obcaecati impedit magnam eius distinctio, incidunt, id est nam porro dolore commodi sequi? Beatae quisquam quo ut aperiam eos, magni autem deserunt similique nulla doloribus fugiat nisi saepe consectetur amet facere error, vero eaque quasi ipsam quos iusto natus? Voluptates, placeat aspernatur pariatur labore voluptatum, officia neque eum accusamus similique quo repellendus fugit quis quia corporis, aliquam nobis quibusdam. Libero tenetur perspiciatis non soluta alias ipsum sequi iusto dolor? A necessitatibus modi eaque reiciendis exercitationem porro ad vel provident qui. Libero esse sapiente, natus ad recusandae, neque corporis sunt aut quam labore ducimus, temporibus iste! Facilis esse impedit, eum vel illum placeat earum eaque odit ipsam beatae incidunt laudantium ad omnis ut veritatis possimus, nam fugit repellendus magni unde sed! Reiciendis iste sunt voluptatibus labore ut error sapiente provident dolorem, quos eum ea reprehenderit doloremque exercitationem mollitia odio aspernatur hic suscipit eos eaque modi corporis! Quam reprehenderit quibusdam explicabo reiciendis perferendis itaque! Voluptate.",
 }) => {
   return (
-    <SectionAnimationWrapper>
-      <div>
-        <div className={css.news_card}>
+    <div>
+      <div className={css.news_card}>
+        <SectionAnimationWrapper>
           <div className={css.news_image_wrapper}>
             <img className={css.news_image} src={img} alt="" />
           </div>
+        </SectionAnimationWrapper>
+        <SectionAnimationWrapper>
           <div className={css.news_content_wrapper}>
             <ul className={css.meta_list}>
               <li className={css.meta_item}>
@@ -110,8 +112,10 @@ const SingleNewsCard = ({
               </ul>
             </div>
           </div>
-        </div>
+        </SectionAnimationWrapper>
+      </div>
 
+      <SectionAnimationWrapper>
         <div className={css.autor_card}>
           <div className={css.autor_image_wrapper}>
             <div className={css.image_container}>
@@ -176,8 +180,8 @@ const SingleNewsCard = ({
             <Link className={css.autor_button}>كل المقالات</Link>
           </div>
         </div>
-      </div>
-    </SectionAnimationWrapper>
+      </SectionAnimationWrapper>
+    </div>
   );
 };
 

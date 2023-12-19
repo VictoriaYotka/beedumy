@@ -34,54 +34,6 @@
   font-size: 14px;
 }
 
-// articles
-.articles_item {
-  padding: 20px 0;
-
-  &:not(:last-child) {
-    border-bottom: 2px solid $whiteColor;
-  }
-
-  &:hover,
-  &:focus {
-    .articles_title {
-      scale: 120%;
-    }
-
-    .articles_image_wrapper,
-    .articles_image {
-      scale: 105%;
-    }
-  }
-}
-
-.articles_link {
-  @extend .flex_aligncenter;
-  justify-content: flex-start;
-  gap: 12px;
-}
-
-.articles_title {
-  font-size: 16px;
-
-  transition: all 0.4s ease;
-}
-
-.articles_image_wrapper {
-  width: 80px;
-  height: 80px;
-  background-color: $darkBgButtonColor;
-  overflow: hidden;
-
-  transition: all 0.4s ease;
-}
-
-.articles_image {
-  width: 80px;
-
-  transition: all 0.4s ease;
-}
-
 // keywords
 .keywords_list {
   @extend .flex_aligncenter;

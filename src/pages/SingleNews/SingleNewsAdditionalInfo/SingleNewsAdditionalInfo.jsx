@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import css from "./SingleNewsAdditionalInfo.module.scss";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
+import PopularNewsItem from "../../../components/PopularNewsItem/PopularNewsItem";
 
 const SingleNewsAdditionalInfo = () => {
   return (
@@ -9,30 +10,9 @@ const SingleNewsAdditionalInfo = () => {
         <div className={css.container}>
           <h5 className={css.heading}>مقالات أخرى</h5>
           <ul className={css.articles_list}>
-            <li className={css.articles_item}>
-              <Link className={css.articles_link}>
-                <div className={css.articles_image_wrapper}>
-                  <img className={css.articles_image} src="" alt="" />
-                </div>
-                <h6 className={css.articles_title}>title</h6>
-              </Link>
-            </li>
-            <li className={css.articles_item}>
-              <Link className={css.articles_link}>
-                <div className={css.articles_image_wrapper}>
-                  <img className={css.articles_image} src="" alt="" />
-                </div>
-                <h6 className={css.articles_title}>title</h6>
-              </Link>
-            </li>
-            <li className={css.articles_item}>
-              <Link className={css.articles_link}>
-                <div className={css.articles_image_wrapper}>
-                  <img className={css.articles_image} src="" alt="" />
-                </div>
-                <h6 className={css.articles_title}>title</h6>
-              </Link>
-            </li>
+            <PopularNewsItem />
+            <PopularNewsItem />
+            <PopularNewsItem />
           </ul>
         </div>
       </SectionAnimationWrapper>
