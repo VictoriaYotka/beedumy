@@ -1,6 +1,6 @@
 import NewsCard from "../NewsCard/NewsCard";
 import css from "./NewsList.module.scss";
-import hero_image from "../../../assets/images/home/hero/image.webp";
+import hero_image_sm from "../../../assets/images/home/hero/image_sm.webp";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const NewsList = () => {
@@ -12,7 +12,7 @@ const NewsList = () => {
             <NewsCard
               title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa adipisicing elit..."
               content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas sunt hic fuga aliquid recusandae..."
-              img={hero_image}
+              img={hero_image_sm}
               meta1="some info1"
               meta2="some info2"
               meta3="some info3"
@@ -21,7 +21,7 @@ const NewsList = () => {
             <NewsCard
               title="Lorem ipsum "
               content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas sunt hic fuga aliquid recusandae reiciendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas sunt hic fuga aliquid recusandae reiciendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas sunt hic fuga aliquid recusandae reiciendis"
-              img={hero_image}
+              img={hero_image_sm}
               meta1="some info1"
               meta2="some info2"
               meta3="some info3"
@@ -30,7 +30,7 @@ const NewsList = () => {
             <NewsCard
               title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa"
               content="Lorem"
-              img={hero_image}
+              img={hero_image_sm}
               meta1="some info1"
               meta2="some info2"
               meta3="some info3"

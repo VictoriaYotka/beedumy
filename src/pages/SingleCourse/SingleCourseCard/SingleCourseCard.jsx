@@ -1,13 +1,13 @@
 import css from "./SingleCourseCard.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
-import triangle_green_small from "../../../assets/images/home/hero/triangle-green-small.webp";
+import triangle_green_little_sm from "../../../assets/images/home/hero/triangle-green-little_sm.webp";
 import { Link } from "react-router-dom";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const SingleCourseCard = ({
   curriculum,
   admin,
-  admin_image = triangle_green_small,
+  admin_image = triangle_green_little_sm,
   title,
 }) => {
   return (

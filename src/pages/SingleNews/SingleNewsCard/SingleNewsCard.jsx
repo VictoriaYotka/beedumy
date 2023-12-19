@@ -1,11 +1,11 @@
 import css from "./SingleNewsCard.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
 import { Link } from "react-router-dom";
-import hero_image from "../../../assets/images/home/hero/image.webp";
+import hero_image_sm from "../../../assets/images/home/hero/image_sm.webp";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const SingleNewsCard = ({
-  img = hero_image,
+  img = hero_image_sm,
   meta1 = "meta1",
   meta2 = "meta2",
   meta3 = "meta2",

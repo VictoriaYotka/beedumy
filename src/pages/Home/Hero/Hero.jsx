@@ -1,11 +1,19 @@
 import css from "./Hero.module.scss";
 import { animated, useSpring } from "@react-spring/web";
-import hero_image from "../../../assets/images/home/hero/image.webp";
-import triangle_blue_big from "../../../assets/images/home/hero/triangle-blue-big.webp";
-import triangle_blue from "../../../assets/images/home/hero/triangle-blue.webp";
-import triangle_green from "../../../assets/images/home/hero/triangle-green.webp";
-import triangle_green_small from "../../../assets/images/home/hero/triangle-green-small.webp";
-import triangle_rose from "../../../assets/images/home/hero/triangle-rose.webp";
+import hero_image_sm from "../../../assets/images/home/hero/image_sm.webp";
+import hero_image_md from "../../../assets/images/home/hero/image_md.webp";
+import hero_image_lg from "../../../assets/images/home/hero/image_lg.webp";
+import triangle_blue_big_sm from "../../../assets/images/home/hero/triangle-blue-big_sm.webp";
+import triangle_blue_big_md from "../../../assets/images/home/hero/triangle-blue-big_md.webp";
+import triangle_blue_big_lg from "../../../assets/images/home/hero/triangle-blue-big_lg.webp";
+import triangle_blue_sm from "../../../assets/images/home/hero/triangle-blue_sm.webp";
+import triangle_blue_lg from "../../../assets/images/home/hero/triangle-blue_lg.webp";
+import triangle_green_sm from "../../../assets/images/home/hero/triangle-green_sm.webp";
+import triangle_green_lg from "../../../assets/images/home/hero/triangle-green_lg.webp";
+import triangle_green_little_sm from "../../../assets/images/home/hero/triangle-green-little_sm.webp";
+import triangle_green_little_lg from "../../../assets/images/home/hero/triangle-green-little_lg.webp";
+import triangle_rose_sm from "../../../assets/images/home/hero/triangle-rose_sm.webp";
+import triangle_rose_lg from "../../../assets/images/home/hero/triangle-rose_lg.webp";
 
 const Hero = () => {
   const sectionStyles = useSpring({
@@ -24,8 +32,12 @@ const Hero = () => {
     from: { scale: 0.9, boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)" },
     to: [
       { scale: 1, boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)" },
+      { scale: 1.1, boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.3)" },
       { scale: 1.1, boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.4)" },
       { scale: 1.1, boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.5)" },
+      { scale: 1, boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)" },
+      { scale: 1.1, boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.3)" },
+      { scale: 1.1, boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.4)" },
       { scale: 1, boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.3)" },
       { scale: 0.9, boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)" },
     ],
@@ -46,8 +58,9 @@ const Hero = () => {
 
     config: {
       mass: 9,
-      tension: 170,
+      tension: 50,
       friction: 26,
+      clamp: true,
       transition: "0.4s ease-in-out",
     },
   });
@@ -60,8 +73,9 @@ const Hero = () => {
 
     config: {
       mass: 4,
-      tension: 190,
+      tension: 60,
       friction: 14,
+      clamp: true,
       transition: "0.4s ease-in-out",
     },
   });
@@ -73,8 +87,9 @@ const Hero = () => {
     to: { scale: 1, rotateX: 10 },
     config: {
       mass: 6,
-      tension: 180,
+      tension: 55,
       friction: 12,
+      clamp: true,
       transition: "0.4s ease-in-out",
     },
   });
@@ -91,42 +106,38 @@ const Hero = () => {
     ],
     config: {
       mass: 7,
-      tension: 310,
+      tension: 70,
       friction: 20,
+      clamp: true,
       transition: "0.4s ease-in-out",
     },
   });
 
   const triangleRoseStyles = useSpring({
     reset: true,
-    loop: true,
+    loop: { reverse: true },
     from: { rotateZ: 0, scale: 0.9, x: 0 },
-    to: { rotateZ: 10, scale: 1, x: 10 },
+    to: { rotateZ: 5, scale: 1, x: 10 },
 
     config: {
       mass: 10,
-      tension: 320,
+      tension: 65,
       friction: 23,
+      clamp: true,
       transition: "0.4s ease-in-out",
     },
   });
 
   const triangleGreenStyles = useSpring({
     reset: true,
-    loop: true,
+    loop: { reverse: true },
     from: { rotateZ: 0, scale: 0.9 },
-    to: [
-      { rotateZ: 20, scale: 1 },
-      { rotateZ: 10, scale: 1.1 },
-      { rotateZ: 0, scale: 1.2 },
-      { rotateZ: 20, scale: 0.9 },
-      { rotateZ: 10, scale: 1 },
-      { rotateZ: 0, scale: 0.9 },
-    ],
+    to: { rotateZ: 10, scale: 1 },
     config: {
       mass: 4,
-      tension: 310,
-      friction: 120,
+      tension: 55,
+      friction: 20,
+      clamp: true,
       transition: "0.4s ease-in-out",
     },
   });
@@ -135,50 +146,80 @@ const Hero = () => {
     <animated.section className={css.hero_section} style={sectionStyles}>
       <div className={css.hero_container}>
         <div className={css.picture}>
-          <animated.img
-            src={hero_image}
-            alt="decor"
-            loading="lazy"
-            className={css.hero_image}
-            style={heroImageStyles}
-          />
-          <animated.img
-            src={triangle_blue_big}
-            alt="decor"
-            loading="lazy"
-            className={css.triangle_blue_big}
-            style={triangleBlueBigStyles}
-          />
-          <animated.img
-            src={triangle_blue}
-            alt="decor"
-            loading="lazy"
-            className={css.triangle_blue}
-            style={triangleBlueStyles}
-          />
-          <animated.img
-            src={triangle_green_small}
-            alt="decor"
-            loading="lazy"
-            className={css.triangle_green_small}
-            style={triangleGreenSmallStyles}
-          />
-          <animated.img
-            src={triangle_rose}
-            alt="decor"
-            loading="lazy"
-            className={css.triangle_rose}
-            style={triangleRoseStyles}
-          />
+          <picture>
+            <source media="(max-width: 767px)" srcSet={hero_image_sm} />
+            <source media="(max-width: 991px)" srcSet={hero_image_md} />
+            <source media="(min-width: 992px)" srcSet={hero_image_lg} />
+            <animated.img
+              src={hero_image_sm}
+              alt="decor"
+              className={css.hero_image}
+              style={heroImageStyles}
+            />
+          </picture>
+
+          <picture>
+            <source media="(max-width: 767px)" srcSet={triangle_blue_big_sm} />
+            <source media="(max-width: 991px)" srcSet={triangle_blue_big_md} />
+            <source media="(min-width: 992px)" srcSet={triangle_blue_big_lg} />
+            <animated.img
+              src={triangle_blue_big_sm}
+              alt="decor"
+              className={css.triangle_blue_big}
+              style={triangleBlueBigStyles}
+            />
+          </picture>
+
+          <picture>
+            <source media="(max-width: 767px)" srcSet={triangle_blue_sm} />
+            <source media="(min-width: 768px)" srcSet={triangle_blue_lg} />
+            <animated.img
+              src={triangle_blue_sm}
+              alt="decor"
+              className={css.triangle_blue}
+              style={triangleBlueStyles}
+            />
+          </picture>
+
+          <picture>
+            <source
+              media="(max-width: 767px)"
+              srcSet={triangle_green_little_sm}
+            />
+            <source
+              media="(min-width: 768px)"
+              srcSet={triangle_green_little_lg}
+            />
+            <animated.img
+              src={triangle_green_little_sm}
+              alt="decor"
+              className={css.triangle_green_small}
+              style={triangleGreenSmallStyles}
+            />
+          </picture>
+
+          <picture>
+            <source media="(max-width: 767px)" srcSet={triangle_rose_sm} />
+            <source media="(min-width: 768px)" srcSet={triangle_rose_lg} />
+            <animated.img
+              src={triangle_rose_sm}
+              alt="decor"
+              className={css.triangle_rose}
+              style={triangleRoseStyles}
+            />
+          </picture>
         </div>
         <div className={css.content}>
-          <animated.img
-            src={triangle_green}
-            alt="decor"
-            loading="lazy"
-            className={css.triangle_green}
-            style={triangleGreenStyles}
-          />
+          <picture>
+            <source media="(max-width: 767px)" srcSet={triangle_green_sm} />
+            <source media="(min-width: 768px)" srcSet={triangle_green_lg} />
+            <animated.img
+              src={triangle_green_sm}
+              alt="decor"
+              className={css.triangle_green}
+              style={triangleGreenStyles}
+            />
+          </picture>
           <h1 className={css.heading}>
             <span className={css.heading_colored}>منصة بيرسا </span>التعليمية
           </h1>

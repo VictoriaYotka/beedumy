@@ -1,6 +1,6 @@
 import css from "./Footer.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
-import hero_image from "../../../assets/images/home/hero/image.webp";
+import hero_image_sm from "../../../assets/images/home/hero/image_sm.webp";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import SectionAnimationWrapper from "../../SectionAnimationWrapper/SectionAnimationWrapper";
@@ -134,7 +134,7 @@ const Footer = () => {
                         <ul className={css.gallery_list}>
                           <li className={css.gallery_item}>
                             <img
-                              src={hero_image}
+                              src={hero_image_sm}
                               alt="gallery"
                               loading="lazy"
                               className={css.image}
@@ -142,7 +142,7 @@ const Footer = () => {
                           </li>
                           <li className={css.gallery_item}>
                             <img
-                              src={hero_image}
+                              src={hero_image_sm}
                               alt="gallery"
                               loading="lazy"
                               className={css.image}
@@ -150,7 +150,7 @@ const Footer = () => {
                           </li>
                           <li className={css.gallery_item}>
                             <img
-                              src={hero_image}
+                              src={hero_image_sm}
                               alt="gallery"
                               loading="lazy"
                               className={css.image}
@@ -158,7 +158,7 @@ const Footer = () => {
                           </li>
                           <li className={css.gallery_item}>
                             <img
-                              src={hero_image}
+                              src={hero_image_sm}
                               alt="gallery"
                               loading="lazy"
                               className={css.image}
@@ -166,7 +166,7 @@ const Footer = () => {
                           </li>
                           <li className={css.gallery_item}>
                             <img
-                              src={hero_image}
+                              src={hero_image_sm}
                               alt="gallery"
                               loading="lazy"
                               className={css.image}
@@ -174,7 +174,7 @@ const Footer = () => {
                           </li>
                           <li className={css.gallery_item}>
                             <img
-                              src={hero_image}
+                              src={hero_image_sm}
                               alt="gallery"
                               loading="lazy"
                               className={css.image}

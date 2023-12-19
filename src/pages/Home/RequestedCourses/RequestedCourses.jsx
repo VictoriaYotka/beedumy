@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import css from "./RequestedCourses.module.scss";
-import hero_image from "../../../assets/images/home/hero/image.webp";
+import hero_image_sm from "../../../assets/images/home/hero/image_sm.webp";
 import Slider from "react-slick";
 import CourseCardInCategories from "../../../components/CourseCardInCategories/CourseCardInCategories";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
@@ -41,7 +40,7 @@ const RequestedCourses = () => {
           <Slider {...settings}>
             <CourseCardInCategories
               notion="notion"
-              img={hero_image}
+              img={hero_image_sm}
               imgAlt="about image"
               preheader="Preheader"
               header="Header"
@@ -52,7 +51,7 @@ const RequestedCourses = () => {
 
             <CourseCardInCategories
               notion="notion"
-              img={hero_image}
+              img={hero_image_sm}
               imgAlt="about image"
               preheader="Preheader"
               header="Header"
@@ -63,7 +62,7 @@ const RequestedCourses = () => {
 
             <CourseCardInCategories
               notion="notion"
-              img={hero_image}
+              img={hero_image_sm}
               imgAlt="about image"
               preheader="Preheader"
               header="Header"
@@ -74,7 +73,7 @@ const RequestedCourses = () => {
 
             <CourseCardInCategories
               notion="notion"
-              img={hero_image}
+              img={hero_image_sm}
               imgAlt="about image"
               preheader="Preheader"
               header="Header"
@@ -85,7 +84,7 @@ const RequestedCourses = () => {
 
             <CourseCardInCategories
               notion="notion"
-              img={hero_image}
+              img={hero_image_sm}
               imgAlt="about image"
               preheader="Preheader"
               header="Header"

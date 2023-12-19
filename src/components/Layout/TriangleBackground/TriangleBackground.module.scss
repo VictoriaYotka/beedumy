@@ -4,27 +4,28 @@
   @extend .section;
   flex-grow: 1;
 
-  background: url("../../../assets/images/home/hero/triangle-blue.webp") 0% 0%
+  background: url("../../../assets/images/home/hero/triangle-blue_sm.webp") 0%
+      0% no-repeat,
+    url("../../../assets/images/home/hero/triangle-green_sm.webp") 90% 20%
       no-repeat,
-    url("../../../assets/images/home/hero/triangle-green.webp") 90% 20%
+    url("../../../assets/images/home/hero/triangle-green-little_sm.webp") 40%
+      70% no-repeat,
+    url("../../../assets/images/home/hero/triangle-rose_sm.webp") 95% 95%
       no-repeat,
-    url("../../../assets/images/home/hero/triangle-green-small.webp") 40% 70%
-      no-repeat,
-    url("../../../assets/images/home/hero/triangle-rose.webp") 95% 95% no-repeat,
     $lightGreyBgColor;
 
   background-size: auto, auto, auto, auto;
 
   @include sm {
-    background: url("../../../assets/images/home/hero/triangle-blue-big.webp")
+    background: url("../../../assets/images/home/hero/triangle-blue-big_md.webp")
         10% 20% no-repeat,
-      url("../../../assets/images/home/hero/triangle-blue.webp") 40% 95%
+      url("../../../assets/images/home/hero/triangle-blue_sm.webp") 40% 95%
         no-repeat,
-      url("../../../assets/images/home/hero/triangle-green.webp") 85% 10%
+      url("../../../assets/images/home/hero/triangle-green_sm.webp") 85% 10%
         no-repeat,
-      url("../../../assets/images/home/hero/triangle-green-small.webp") 65% 50%
-        no-repeat,
-      url("../../../assets/images/home/hero/triangle-rose.webp") 95% 95%
+      url("../../../assets/images/home/hero/triangle-green-little_sm.webp") 65%
+        50% no-repeat,
+      url("../../../assets/images/home/hero/triangle-rose_sm.webp") 95% 95%
         no-repeat,
       $lightGreyBgColor;
 
@@ -32,15 +33,15 @@
   }
 
   @include md {
-    background: url("../../../assets/images/home/hero/triangle-blue-big.webp")
+    background: url("../../../assets/images/home/hero/triangle-blue-big_lg.webp")
         120% 100% no-repeat,
-      url("../../../assets/images/home/hero/triangle-blue.webp") 5% 10%
+      url("../../../assets/images/home/hero/triangle-blue_lg.webp") 5% 10%
         no-repeat,
-      url("../../../assets/images/home/hero/triangle-green.webp") 90% 25%
+      url("../../../assets/images/home/hero/triangle-green_lg.webp") 90% 25%
         no-repeat,
-      url("../../../assets/images/home/hero/triangle-green-small.webp") 25% 90%
-        no-repeat,
-      url("../../../assets/images/home/hero/triangle-rose.webp") 75% 80%
+      url("../../../assets/images/home/hero/triangle-green-little_lg.webp") 25%
+        90% no-repeat,
+      url("../../../assets/images/home/hero/triangle-rose_lg.webp") 75% 80%
         no-repeat,
       $lightGreyBgColor;
 

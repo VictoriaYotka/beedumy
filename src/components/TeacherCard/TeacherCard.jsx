@@ -1,6 +1,6 @@
 import css from "./TeacherCard.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
-import hero_image from "../../assets/images/home/hero/image.webp";
+import hero_image_sm from "../../assets/images/home/hero/image_sm.webp";
 import { Link } from "react-router-dom";
 
 const TeacherCard = () => {
@@ -10,7 +10,7 @@ const TeacherCard = () => {
         <Link>
           <div className={css.teacher_thumb}>
             <img
-              src={hero_image}
+              src={hero_image_sm}
               alt=""
               loading="lazy"
               className={css.teacher_image}

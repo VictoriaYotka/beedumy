@@ -1,7 +1,7 @@
 import css from "./CoursesListInCategories.module.scss";
 import CourseCardInCategories from "../../../components/CourseCardInCategories/CourseCardInCategories";
 import Slider from "react-slick";
-import hero_image from "../../../assets/images/home/hero/image.webp";
+import hero_image_sm from "../../../assets/images/home/hero/image_sm.webp";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const CoursesListInCategories = ({ heading }) => {
@@ -45,7 +45,7 @@ const CoursesListInCategories = ({ heading }) => {
           <Slider {...settings}>
             <CourseCardInCategories
               notion="notion"
-              img={hero_image}
+              img={hero_image_sm}
               imgAlt="about image"
               preheader="Preheader"
               header="Header"
@@ -56,7 +56,7 @@ const CoursesListInCategories = ({ heading }) => {
 
             <CourseCardInCategories
               notion="notion"
-              img={hero_image}
+              img={hero_image_sm}
               imgAlt="about image"
               preheader="Preheader"
               header="Header"
@@ -67,7 +67,7 @@ const CoursesListInCategories = ({ heading }) => {
 
             <CourseCardInCategories
               notion="notion"
-              img={hero_image}
+              img={hero_image_sm}
               imgAlt="about image"
               preheader="Preheader"
               header="Header"
@@ -78,7 +78,7 @@ const CoursesListInCategories = ({ heading }) => {
 
             <CourseCardInCategories
               notion="notion"
-              img={hero_image}
+              img={hero_image_sm}
               imgAlt="about image"
               preheader="Preheader"
               header="Header"
@@ -89,7 +89,7 @@ const CoursesListInCategories = ({ heading }) => {
 
             <CourseCardInCategories
               notion="notion"
-              img={hero_image}
+              img={hero_image_sm}
               imgAlt="about image"
               preheader="Preheader"
               header="Header"

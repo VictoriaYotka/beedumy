@@ -1,6 +1,6 @@
 import css from "./SingleNewsComment.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
-import hero_image from "../../../assets/images/home/hero/image.webp";
+import hero_image_sm from "../../../assets/images/home/hero/image_sm.webp";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const SingleNewsComment = () => {
@@ -19,7 +19,11 @@ const SingleNewsComment = () => {
           <ul className={css.comments_list}>
             <li className={css.comments_card}>
               <div className={css.comments_image_wrapper}>
-                <img className={css.comments_image} src={hero_image} alt="" />
+                <img
+                  className={css.comments_image}
+                  src={hero_image_sm}
+                  alt=""
+                />
               </div>
               <div className={css.comments_content_wrapper}>
                 <h6 className={css.comments_name}>آدم السديري</h6>
@@ -34,7 +38,11 @@ const SingleNewsComment = () => {
             </li>
             <li className={css.comments_card}>
               <div className={css.comments_image_wrapper}>
-                <img className={css.comments_image} src={hero_image} alt="" />
+                <img
+                  className={css.comments_image}
+                  src={hero_image_sm}
+                  alt=""
+                />
               </div>
               <div className={css.comments_content_wrapper}>
                 <h6 className={css.comments_name}>آدم السديري</h6>
@@ -49,7 +57,11 @@ const SingleNewsComment = () => {
             </li>
             <li className={css.comments_card}>
               <div className={css.comments_image_wrapper}>
-                <img className={css.comments_image} src={hero_image} alt="" />
+                <img
+                  className={css.comments_image}
+                  src={hero_image_sm}
+                  alt=""
+                />
               </div>
               <div className={css.comments_content_wrapper}>
                 <h6 className={css.comments_name}>آدم السديري</h6>

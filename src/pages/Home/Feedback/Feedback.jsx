@@ -1,5 +1,5 @@
 import css from "./Feedback.module.scss";
-import hero_image from "../../../assets/images/home/hero/image.webp";
+import hero_image_sm from "../../../assets/images/home/hero/image_sm.webp";
 import icons from "../../../assets/images/icons/icons.svg";
 import Slider from "react-slick";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
@@ -69,7 +69,7 @@ const Feedback = () => {
                 وجهد
               </p>
               <img
-                src={hero_image}
+                src={hero_image_sm}
                 alt=""
                 loading="lazy"
                 className={css.image}
@@ -90,7 +90,7 @@ const Feedback = () => {
                 تعب وجهد
               </p>
               <img
-                src={hero_image}
+                src={hero_image_sm}
                 alt=""
                 loading="lazy"
                 className={css.image}
@@ -109,7 +109,7 @@ const Feedback = () => {
                 التمارين التفاعلية Vraiment حاجة مزيان
               </p>
               <img
-                src={hero_image}
+                src={hero_image_sm}
                 alt=""
                 loading="lazy"
                 className={css.image}
@@ -129,7 +129,7 @@ const Feedback = () => {
                 وجهد
               </p>
               <img
-                src={hero_image}
+                src={hero_image_sm}
                 alt=""
                 loading="lazy"
                 className={css.image}
@@ -149,7 +149,7 @@ const Feedback = () => {
                 وجهد
               </p>
               <img
-                src={hero_image}
+                src={hero_image_sm}
                 alt=""
                 loading="lazy"
                 className={css.image}
