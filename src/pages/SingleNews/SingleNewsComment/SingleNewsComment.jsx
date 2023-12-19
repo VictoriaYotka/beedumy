@@ -85,15 +85,22 @@ const SingleNewsComment = () => {
             <div className={css.input_group}>
               <input
                 type="email"
-                placeholder="البريد الإلكتروني
-"
+                name="single_news_comment_email"
+                id="single_news_comment_email"
+                placeholder="البريد الإلكتروني"
                 className={css.input}
               />
-              <input type="text" placeholder="الإسم" className={css.input} />
+              <input
+                type="text"
+                name="single_news_comment_name"
+                id="single_news_comment_name"
+                placeholder="الإسم"
+                className={css.input}
+              />
             </div>
             <textarea
-              name=""
-              id=""
+              name="single_news_comment_comment"
+              id="single_news_comment_comment"
               cols="30"
               rows="5"
               placeholder="مجال حر لإضافة تعليقاتك"

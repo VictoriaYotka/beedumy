@@ -13,8 +13,10 @@
 }
 
 .sign_button {
+  display: inline-block;
   padding: 12px 24px;
   border-radius: 32px;
+  font-size: 14px;
 
   transition: all 0.4s ease;
 

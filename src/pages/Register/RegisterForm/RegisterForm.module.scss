@@ -1,0 +1,105 @@
+@import "../../../scss";
+
+.container {
+  @extend .container;
+  text-align: start;
+  padding-bottom: 16px;
+}
+
+.form {
+  margin: 0 auto 12px auto;
+  max-width: 520px;
+  text-align: center;
+}
+
+.input_wrapper {
+  text-align: start;
+  margin-bottom: 12px;
+}
+
+.label {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 4px;
+  padding-inline-end: 8px;
+  color: #6f8bc2;
+  font-size: 16px;
+  font-weight: $boldFont;
+
+  &:after {
+    content: "*";
+    position: absolute;
+    top: 0;
+    [dir="rtl"] & {
+      left: 0;
+      right: unset;
+    }
+    [dir="ltr"] & {
+      right: 0;
+      left: unset;
+    }
+    color: $accentColor;
+  }
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  text-align: start;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background-color: $whiteColor;
+  box-shadow: $shadow;
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadowDark;
+  }
+}
+
+.button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 8px 24px;
+  border-radius: 4px;
+  box-shadow: $shadow;
+  color: $whiteColor;
+  background-color: #00adef;
+  font-size: 16px;
+  font-weight: $boldFont;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    box-shadow: $shadowDark;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+
+  @include sm {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.descr {
+  color: $secondaryFontColor;
+  font-size: 14px;
+}
+
+.link_button {
+  @extend.button;
+  margin: 0;
+  background-color: $accentColor;
+}

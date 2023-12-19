@@ -9,7 +9,7 @@ const BecomeTeacherForm = () => {
         <div className={css.container}>
           <form className={css.form}>
             <div className={css.input_wrapper}>
-              <label className={css.label} for="become_teacher_name">
+              <label className={css.label} htmlFor="become_teacher_name">
                 الإسم
               </label>
               <input
@@ -22,7 +22,7 @@ const BecomeTeacherForm = () => {
               />
             </div>
             <div className={css.input_wrapper}>
-              <label className={css.label} for="become_teacher_surname">
+              <label className={css.label} htmlFor="become_teacher_surname">
                 اللقب
               </label>
               <input
@@ -35,7 +35,7 @@ const BecomeTeacherForm = () => {
               />
             </div>
             <div className={css.input_wrapper}>
-              <label className={css.label} for="become_teacher_phone">
+              <label className={css.label} htmlFor="become_teacher_phone">
                 الهاتف
               </label>
               <input
@@ -49,7 +49,7 @@ const BecomeTeacherForm = () => {
             </div>
             <div className={css.input_group_wrapper}>
               <div className={css.input_inner_wrapper}>
-                <label className={css.label} for="become_teacher_content">
+                <label className={css.label} htmlFor="become_teacher_content">
                   نوع المحتوى المقدم
                 </label>
                 <input
@@ -62,7 +62,7 @@ const BecomeTeacherForm = () => {
                 />
               </div>
               <div className={css.input_inner_wrapper}>
-                <label className={css.label} for="become_teacher_subject">
+                <label className={css.label} htmlFor="become_teacher_subject">
                   المادة
                 </label>
                 <input
@@ -77,7 +77,7 @@ const BecomeTeacherForm = () => {
             </div>
 
             <div className={css.input_wrapper}>
-              <label className={css.label} for="become_teacher_email">
+              <label className={css.label} htmlFor="become_teacher_email">
                 البريد الإلكتروني
               </label>
               <input
@@ -90,7 +90,7 @@ const BecomeTeacherForm = () => {
               />
             </div>
             <div className={css.input_wrapper}>
-              <label className={css.label} for="become_teacher_file">
+              <label className={css.label} htmlFor="become_teacher_file">
                 جلب الملف
               </label>
               <input
