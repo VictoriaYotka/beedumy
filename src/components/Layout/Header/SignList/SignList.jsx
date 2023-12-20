@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import css from "./SignList.module.scss";
 import icons from "../../../../assets/images/icons/icons.svg";
-import defaultUserImage from "../../../../assets/images/home/defaultUserImage.webp";
 import { useEffect, useState } from "react";
 
 const SignList = ({ userImage }) => {
@@ -57,11 +56,7 @@ const SignList = ({ userImage }) => {
             className={css.account_button}
           >
             {userImage ? (
-              <img
-                src={defaultUserImage}
-                alt="user"
-                className={css.user_image}
-              />
+              <img src={userImage} alt="user" className={css.user_image} />
             ) : (
               <svg className={css.user_icon}>
                 <use href={`${icons}#user`}></use>
