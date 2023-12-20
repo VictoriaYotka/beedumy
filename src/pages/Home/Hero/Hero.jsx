@@ -145,7 +145,7 @@ const Hero = () => {
   return (
     <animated.section className={css.hero_section} style={sectionStyles}>
       <div className={css.hero_container}>
-        <div className={css.picture}>
+        <div className={css.picture_wrapper}>
           <picture>
             <source media="(max-width: 767px)" srcSet={hero_image_sm} />
             <source media="(max-width: 991px)" srcSet={hero_image_md} />

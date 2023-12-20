@@ -1,48 +1,43 @@
 @import "../../../scss";
 
 .hero_section {
-  color: $heroFontColor;
-  background-color: $heroBgColor;
   padding-bottom: 20px;
   overflow: hidden;
-
-  @include md {
-    padding-bottom: 54px;
-  }
+  color: $heroFontColor;
+  background-color: $heroBgColor;
 }
 
 .hero_container {
   @extend .container;
+  height: 75vh;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   min-width: 320px;
 
   @include md {
+    // height: 70vh;
     flex-direction: row;
+    gap: 24px;
   }
 }
 
 .content {
   position: relative;
   z-index: 20;
+  height: 30%;
 
-  padding: 24px 12px 0 12px;
   text-align: start;
 
   @include sm {
-    padding: 80px 16px 0 16px;
     margin: 0 auto;
-  }
-
-  @include sm_plus {
-    padding: 20px 16px 0 16px;
     max-width: 500px;
   }
 
   @include md {
-    flex-basis: 50%;
-    padding: 100px 48px 0 16px;
+    flex-basis: 40%;
+    height: unset;
+    margin: auto;
   }
 
   @include lg {
@@ -52,38 +47,32 @@
   @include xl {
     padding: 120px 100px 0 16px;
   }
-
-  // [dir="ltr"] & {
-  //   padding-left: 0;
-  // }
 }
 
 .triangle_green {
   display: none;
   position: absolute;
-  top: -60px;
-  right: 0;
+  top: -78%;
+  right: -10%;
 
   @include sm {
     display: block;
   }
 
-  @include sm_plus {
-    top: -77px;
-    right: 19%;
-  }
-
   @include md {
-    top: 0;
-    right: 0;
+    top: -60%;
+    right: 5%;
   }
 
   @include lg {
-    right: 50px;
+    top: -23%;
+    right: -8%;
+    width: 45%;
   }
 
   @include xl {
-    right: 160px;
+    top: -35%;
+    width: 50%;
   }
 }
 
@@ -94,7 +83,7 @@
   margin-bottom: 8px;
 
   @include sm {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 }
 
@@ -104,17 +93,18 @@
 
 .subheading {
   font-size: 14px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   max-width: 400px;
 
   @include sm {
     max-width: 540px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     font-size: 16px;
   }
 
   @include md {
     font-size: 20px;
+    margin-bottom: 24px;
   }
 
   @include lg {
@@ -142,15 +132,16 @@
   }
 }
 
-.picture {
+.picture_wrapper {
   position: relative;
   min-width: 320px;
-  min-height: 320px;
   margin-inline-start: auto;
   margin-inline-end: auto;
+  height: 70%;
 
   @include md {
-    flex-basis: 50%;
+    flex-grow: 1;
+    height: unset;
     margin-inline-start: auto;
     margin-inline-end: auto;
 
@@ -160,6 +151,7 @@
   }
 
   @include lg {
+    display: flex;
     [dir="ltr"] & {
       right: -9%;
     }
@@ -168,58 +160,59 @@
 
 .hero_image {
   position: absolute;
-  top: 0;
-  left: -20px;
+  top: 3%;
+  left: -5%;
+  width: 95%;
   z-index: 30;
 
   @include md {
-    height: 364px;
+    top: 8%;
+    left: -4%;
   }
 }
 
 .triangle_blue_big {
   position: absolute;
-  top: 0;
-  left: 28px;
+  top: 3%;
+  left: 10%;
+  width: 95%;
 
   @include md {
-    height: 364px;
+    top: 8%;
+    left: 8%;
   }
 }
 
 .triangle_blue {
   position: absolute;
-  bottom: -80px;
-  left: -30px;
+  bottom: -18%;
+  left: -15%;
 
   @include sm {
-    bottom: -100px;
-  }
-
-  @include sm_plus {
-    left: -70px;
-    bottom: -44px;
+    left: -22%;
+    bottom: -15%;
   }
 
   @include md {
-    left: -64px;
-    bottom: -80px;
+    left: -22%;
+    bottom: -5%;
   }
 
   @include lg {
-    left: -70px;
-    bottom: -50px;
+    left: -12%;
+    bottom: -3%;
+    width: 30%;
   }
 }
 
 .triangle_green_small {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -5%;
 
-  @include sm_plus {
+  @include sm {
     top: 0;
-    left: -40px;
+    left: -15%;
   }
 
   @include md {
@@ -229,28 +222,19 @@
 
   @include lg {
     top: unset;
-    bottom: -16px;
-    left: 60%;
-  }
-
-  @include xl {
-    bottom: -16px;
-    left: 48%;
+    bottom: -2%;
+    left: 85%;
+    width: 30%;
   }
 }
 
 .triangle_rose {
   position: absolute;
-  top: 20px;
-  right: -50px;
+  top: 1%;
+  right: -20%;
 
   @include sm {
-    top: 0;
-    right: -100px;
-  }
-
-  @include sm_plus {
-    right: -130px;
+    right: -25%;
   }
 
   @include md {
@@ -258,11 +242,6 @@
   }
 
   @include lg {
-    right: 20px;
-  }
-
-  @include xl {
-    top: 30px;
-    right: 70px;
+    width: 30%;
   }
 }
