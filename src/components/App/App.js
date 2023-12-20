@@ -2,11 +2,10 @@ import { lazy, useEffect } from "react";
 import { Route, Routes } from "react-router";
 import SharedLayout from "../../pages/SharedLayout/SharedLayout";
 import { useTranslation } from "react-i18next";
-import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import PublicRoute from "../PublicRoute/PublicRoute";
 
 const Register = lazy(() => import("../../pages/Register/Register"));
 const Login = lazy(() => import("../../pages/Login/Login"));
-const Account = lazy(() => import("../../pages/Account/Account"));
 const About = lazy(() => import("../../pages/About/About"));
 const Categories = lazy(() => import("../../pages/Categories/Categories"));
 const SingleCourse = lazy(() =>
@@ -42,14 +41,20 @@ function App() {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
-          <Route path="register" element={<Register />} />
-          <Route path="login" element={<Login />} />
           <Route
-            path="account"
+            path="register"
             element={
-              <PrivateRoute>
-                <Account />
-              </PrivateRoute>
+              <PublicRoute>
+                <Register />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="login"
+            element={
+              <PublicRoute>
+                <Login />
+              </PublicRoute>
             }
           />
           <Route path="courses" element={<Courses />} />

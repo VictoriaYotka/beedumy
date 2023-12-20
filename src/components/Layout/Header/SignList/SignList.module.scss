@@ -4,7 +4,7 @@
   @extend .flex_aligncenter;
   justify-content: center;
   gap: 36px;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 
   @include lg {
     margin-inline-start: auto;
@@ -37,4 +37,123 @@
   @extend .sign_button;
   border: 1px solid $greenBgButtonBgColor;
   color: $secondaryFontColor;
+}
+
+.account_button {
+  @extend .sign_button;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid $greenBgButtonBgColor;
+  color: $secondaryFontColor;
+}
+
+.account_wrapper {
+  @extend .sign_list;
+  position: relative;
+  width: fit-content;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+
+  @include lg {
+    margin-inline-end: unset;
+  }
+}
+
+.icon_wrapper {
+  @extend .flex_aligncenter;
+  background-color: transparent;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+  }
+}
+
+.user_image {
+  border-radius: 50%;
+  width: 32px;
+}
+
+.user_icon {
+  width: 24px;
+  height: 24px;
+  stroke: $greenBgButtonBgColor;
+  fill: none;
+}
+
+.show_more_icon {
+  width: 24px;
+  height: 24px;
+  stroke: $greenBgButtonBgColor;
+  fill: none;
+
+  transition: all 0.4s ease;
+}
+
+.hide_more_icon {
+  @extend .show_more_icon;
+  transform: scale(1, -1);
+}
+
+.options_list {
+  position: absolute;
+  top: 105%;
+  [dir="rtl"] & {
+    left: 0;
+    right: unset;
+  }
+  [dir="ltr"] & {
+    left: unset;
+    right: 0;
+  }
+  width: 100%;
+
+  visibility: hidden;
+  opacity: 0;
+
+  padding: 4px 8px;
+  text-align: start;
+  background-color: $greenBgButtonBgColor;
+  color: $whiteColor;
+
+  transition: all 0.4s ease;
+}
+
+.options_item {
+  @extend .flex_aligncenter;
+  gap: 8px;
+  padding: 4px 12px;
+
+  transition: all 0.4s ease;
+
+  &:not(:last-child) {
+    margin-bottom: 4px;
+
+    @include lg {
+      margin-bottom: 12px;
+    }
+  }
+  &:hover,
+  &:focus {
+    scale: 110%;
+  }
+}
+
+.dropdown {
+  visibility: visible;
+  opacity: 1;
+  z-index: 100;
+
+  transition: all 0.4s ease;
+}
+
+.option_icon {
+  width: 16px;
+  height: 16px;
+  stroke: $whiteColor;
+  fill: none;
 }

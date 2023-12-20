@@ -46,6 +46,7 @@ const Header = () => {
       e.target.closest("#navigation") === null &&
       e.target.closest("#search_form") === null &&
       e.target.closest("#language_switcher") === null &&
+      e.target.closest("#account_button") === null &&
       e.type === "click";
     const target = e.key === "Escape";
 
