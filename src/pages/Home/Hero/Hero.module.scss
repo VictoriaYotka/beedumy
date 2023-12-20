@@ -9,14 +9,13 @@
 
 .hero_container {
   @extend .container;
-  height: 75vh;
+  height: 68vh;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   min-width: 320px;
 
   @include md {
-    // height: 70vh;
     flex-direction: row;
     gap: 24px;
   }
@@ -52,26 +51,25 @@
 .triangle_green {
   display: none;
   position: absolute;
-  top: -78%;
-  right: -10%;
+  top: -60%;
+  right: 0;
 
   @include sm {
     display: block;
   }
 
   @include md {
-    top: -60%;
+    top: -45%;
     right: 5%;
   }
 
   @include lg {
-    top: -23%;
+    top: -7%;
     right: -8%;
     width: 45%;
   }
 
   @include xl {
-    top: -35%;
     width: 50%;
   }
 }
@@ -142,44 +140,55 @@
   @include md {
     flex-grow: 1;
     height: unset;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-
-    [dir="ltr"] & {
-      right: -5%;
-    }
-  }
-
-  @include lg {
-    display: flex;
-    [dir="ltr"] & {
-      right: -9%;
-    }
   }
 }
 
 .hero_image {
   position: absolute;
   top: 3%;
-  left: -5%;
-  width: 95%;
+  left: -7%;
+  max-height: 95%;
   z-index: 30;
 
   @include md {
-    top: 8%;
-    left: -4%;
+    top: 2%;
+    left: -5%;
+  }
+
+  @include lg {
+    left: 12%;
+
+    height: auto;
+    max-width: 95%;
+  }
+
+  @include xl {
+    left: 20%;
   }
 }
 
 .triangle_blue_big {
   position: absolute;
-  top: 3%;
-  left: 10%;
-  width: 95%;
+  top: 2%;
+  left: 3%;
+  max-height: 95%;
 
   @include md {
-    top: 8%;
-    left: 8%;
+    top: 2%;
+    left: 3%;
+  }
+
+  @include lg {
+    top: 2%;
+    left: 12%;
+
+    height: auto;
+    max-height: 95%;
+    max-width: 95%;
+  }
+
+  @include xl {
+    left: 23%;
   }
 }
 
@@ -190,7 +199,7 @@
 
   @include sm {
     left: -22%;
-    bottom: -15%;
+    bottom: -7%;
   }
 
   @include md {
