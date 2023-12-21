@@ -9,8 +9,14 @@
 
   @include md {
     padding-bottom: 100px;
-    background: url("../../../assets/images/categories/background_lg.webp")
-      no-repeat center center;
+    [dir="ltr"] & {
+      background: url("../../../assets/images/categories/background_lg_ltr.webp")
+        no-repeat center center;
+    }
+    [dir="rtl"] & {
+      background: url("../../../assets/images/categories/background_lg_rtl.webp")
+        no-repeat center center;
+    }
   }
 
   @include lg {
@@ -58,37 +64,119 @@
   position: relative;
 
   &:nth-child(even) {
-    left: 40px;
+    [dir="ltr"] & {
+      left: 40px;
+    }
+    [dir="rtl"] & {
+      left: -40px;
+    }
+
+    @include sm {
+      [dir="ltr"] & {
+        left: 80px;
+      }
+      [dir="rtl"] & {
+        left: -80px;
+      }
+    }
 
     @include md {
-      left: unset;
+      [dir="ltr"] & {
+        left: 0;
+      }
+      [dir="rtl"] & {
+        left: 0;
+      }
     }
   }
 
   &:nth-child(odd) {
-    left: -40px;
+    [dir="ltr"] & {
+      left: -40px;
+    }
+    [dir="rtl"] & {
+      left: 40px;
+    }
+
+    @include sm {
+      [dir="ltr"] & {
+        left: -80px;
+      }
+      [dir="rtl"] & {
+        left: 80px;
+      }
+    }
 
     @include md {
-      left: unset;
+      [dir="ltr"] & {
+        left: 0;
+      }
+      [dir="rtl"] & {
+        left: 0;
+      }
+    }
+  }
+}
+
+.item:nth-child(1) {
+  @include md {
+    [dir="ltr"] & {
+      top: 80px;
+    }
+    [dir="rtl"] & {
+      top: 70px;
+    }
+  }
+
+  @include lg {
+    [dir="ltr"] & {
+      top: 120px;
+    }
+    [dir="rtl"] & {
+      top: 90px;
     }
   }
 }
 
 .item:nth-child(2) {
   @include md {
-    top: 10px;
+    [dir="ltr"] & {
+      top: 60px;
+    }
+    [dir="rtl"] & {
+      top: 80px;
+    }
+  }
+
+  @include lg {
+    [dir="ltr"] & {
+      top: 80px;
+    }
+    [dir="rtl"] & {
+      top: 120px;
+    }
   }
 }
 
 .item:nth-child(3) {
   @include md {
-    top: 70px;
+    [dir="ltr"] & {
+      top: 0;
+    }
+    [dir="rtl"] & {
+      top: 30px;
+    }
   }
 }
 
 .item:nth-child(4) {
   @include md {
-    top: 25px;
+    [dir="ltr"] & {
+      top: 25px;
+    }
+    [dir="rtl"] & {
+      top: 0;
+    }
   }
 }
 
