@@ -1,4 +1,5 @@
 import css from "./Header.module.scss";
+import { useTranslation } from "react-i18next";
 import ContactsList from "./ContactsList/ContactsList";
 import SocialsList from "../../SocialsList/SocialsList";
 import SearchButton from "./SearchButton/SearchButton";
@@ -12,6 +13,8 @@ import BurgerMenu from "./BurgerMenu/BurgerMenu";
 import LanguageSwitcher from "./LanguageSwitcher/LanguageSwitcher";
 
 const Header = () => {
+  const { t } = useTranslation();
+
   const [isMediumScreen, setIsMediumScreen] = useState(
     document.body.offsetWidth >= 768
   );
@@ -82,7 +85,9 @@ const Header = () => {
             <div className={css.topper_container}>
               <div className={css.wrapper}>
                 <LanguageSwitcher />
-                <p className={css.socials_title}>تواصل معنا :</p>
+                <p className={css.socials_title}>
+                  {t("sharedLayout.contact_us")}
+                </p>
                 <SocialsList />
               </div>
               <ContactsList />

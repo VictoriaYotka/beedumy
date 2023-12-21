@@ -14,7 +14,7 @@ const NavList = ({ isLargeScreen }) => {
       </li>
       <li>
         <NavLink to="/about" className={css.nav_link}>
-          {t("sharedLayout.aboutUs")}
+          {t("sharedLayout.about_us")}
         </NavLink>
       </li>
     </ul>

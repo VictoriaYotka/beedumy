@@ -1,22 +1,25 @@
 import { NavLink } from "react-router-dom";
 import css from "./NavListBurger.module.scss";
+import { useTranslation } from "react-i18next";
 
-const NavListBurger = ({ isLargeScreen }) => {
+const NavListBurger = () => {
+  const { t } = useTranslation();
+
   return (
     <ul className={css.nav_list}>
       <li>
         <NavLink to="/" className={css.nav_link}>
-          الصفحة الرئيسية
+          {t("sharedLayout.homepage")}
         </NavLink>
       </li>
       <li>
         <NavLink to="/categories" className={css.nav_link}>
-          المحتوى
+          {t("sharedLayout.content")}
         </NavLink>
       </li>
       <li>
         <NavLink to="/about" className={css.nav_link}>
-          من نحن؟
+          {t("sharedLayout.about_us")}
         </NavLink>
       </li>
     </ul>

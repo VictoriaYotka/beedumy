@@ -1,11 +1,14 @@
 import css from "./Footer.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
+import { useTranslation } from "react-i18next";
 import hero_image_sm from "../../../assets/images/home/hero/image_sm.webp";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import SectionAnimationWrapper from "../../SectionAnimationWrapper/SectionAnimationWrapper";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   const [showMore, setshowMore] = useState(
     document.body.offsetWidth >= 768 ? true : false
   );
@@ -42,17 +45,20 @@ const Footer = () => {
         <div className={css.container}>
           <div className={css.topper}>
             <div className={css.about_wrapper}>
-              <h5 className={css.about_heading}>عن منصة بيرسا التعليمية</h5>
+              <h5 className={css.about_heading}>
+                {t("sharedLayout.about_heading")}
+              </h5>
 
               <p className={css.about_descr}>
-                نوفّر مواد تعليمية لدعم التلاميذ من جميع الفئـات العمرية.
-                باإضافة إلى دورات في اخـتصاصات منعــددة
+                {t("sharedLayout.about_description")}
               </p>
 
               <NavLink to="/contact" className={css.follow_more_button}>
-                تواصل معنا
+                {t("sharedLayout.connect")}
               </NavLink>
-              <button className={css.connect_button}>تعرّف أكثر</button>
+              <button className={css.connect_button}>
+                {t("sharedLayout.learn_more")}
+              </button>
             </div>
             <div className={css.navigation_wrapper}>
               <ul className={css.socials}>
@@ -129,7 +135,7 @@ const Footer = () => {
                     <>
                       <div>
                         <NavLink className={css.gallery_heading}>
-                          باقة الصور
+                          {t("sharedLayout.gallery_heading")}
                         </NavLink>
                         <ul className={css.gallery_list}>
                           <li className={css.gallery_item}>
@@ -184,25 +190,29 @@ const Footer = () => {
                       </div>
                       <ul className={css.list}>
                         <li className={css.item}>
-                          <NavLink> تصفح المحتوى</NavLink>
+                          <NavLink>{t("sharedLayout.browse_content")} </NavLink>
                         </li>
                         <li className={css.item}>
-                          <NavLink>الشروط والأحكام </NavLink>
+                          <NavLink>
+                            {t("sharedLayout.terms_and_conditions")}
+                          </NavLink>
                         </li>
                         <li className={css.item}>
-                          <NavLink>سياسة الخصوصية</NavLink>
+                          <NavLink>{t("sharedLayout.privacy_policy")}</NavLink>
                         </li>
                       </ul>
 
                       <ul className={css.list}>
                         <li className={css.item}>
-                          <NavLink>مساعدة</NavLink>
+                          <NavLink>{t("sharedLayout.help")}</NavLink>
                         </li>
                         <li className={css.item}>
-                          <NavLink>تواصل معنا</NavLink>
+                          <NavLink>{t("sharedLayout.contact_us")}</NavLink>
                         </li>
                         <li className={css.item}>
-                          <NavLink>سجل مجـــــانا</NavLink>
+                          <NavLink>
+                            {t("sharedLayout.register_for_free")}
+                          </NavLink>
                         </li>
                       </ul>
                     </>
@@ -213,7 +223,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={css.bottom}>
-          <p className={css.copyright}>©جميع الحقوق محفوظة</p>
+          <p className={css.copyright}> {t("sharedLayout.copyright")}</p>
           <p className={css.copyright_accent}>www.birsaplatform.com</p>
         </div>
       </footer>

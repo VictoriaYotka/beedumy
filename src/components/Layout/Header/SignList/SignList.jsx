@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import css from "./SignList.module.scss";
 import icons from "../../../../assets/images/icons/icons.svg";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const SignList = ({ userImage }) => {
+  const { t } = useTranslation();
   const token = false;
   const isLoggedIn = false;
 
@@ -36,13 +38,13 @@ const SignList = ({ userImage }) => {
           <li>
             {/* register */}
             <Link to="/register" className={css.register_button}>
-              سجل الآن
+              {t("sharedLayout.register")}
             </Link>
           </li>
           <li>
             {/* login  */}
             <Link to="/login" className={css.login_button}>
-              تسجيل الدخول
+              {t("sharedLayout.login")}
             </Link>
           </li>
         </ul>
@@ -62,7 +64,7 @@ const SignList = ({ userImage }) => {
                 <use href={`${icons}#user`}></use>
               </svg>
             )}
-            <p>My account</p>
+            <p>{t("sharedLayout.account")}</p>
             <div className={css.icon_wrapper}>
               <svg
                 className={
@@ -79,25 +81,25 @@ const SignList = ({ userImage }) => {
               <svg className={css.option_icon}>
                 <use href={`${icons}#user`}></use>
               </svg>
-              <Link>Profile</Link>
+              <Link>{t("sharedLayout.profile")}</Link>
             </li>
             <li className={css.options_item}>
               <svg className={css.option_icon}>
                 <use href={`${icons}#play`}></use>
               </svg>
-              <Link>Courses</Link>
+              <Link>{t("sharedLayout.courses")}</Link>
             </li>
             <li className={css.options_item}>
               <svg className={css.option_icon}>
                 <use href={`${icons}#wallet`}></use>
               </svg>
-              <Link>Wallet</Link>
+              <Link>{t("sharedLayout.wallet")}</Link>
             </li>
             <li className={css.options_item}>
               <svg className={css.option_icon}>
                 <use href={`${icons}#exit`}></use>
               </svg>
-              <Link>Log out</Link>
+              <Link>{t("sharedLayout.logout")}</Link>
             </li>
           </ul>
         </div>

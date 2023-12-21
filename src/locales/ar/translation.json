@@ -1,6 +1,33 @@
 {
   "sharedLayout": {
+    "contact_us": "تواصل معنا ",
+    "connect_with_us": "تواصل معنا ",
     "content": "المحتوى",
-    "aboutUs": "من نحن؟"
+    "homepage": "الصفحة الرئيسية",
+    "about_us": "من نحن؟",
+    "account": "Account",
+    "profile": "Profile",
+    "courses": "Courses",
+    "wallet": "Wallet",
+    "logout": "Log out",
+    "login": "تسجيل الدخول",
+    "register": "سجل الآن",
+    "about_heading": "عن منصة بيرسا التعليمية",
+    "about_description": "نوفّر مواد تعليمية لدعم التلاميذ من جميع الفئـات العمرية. باإضافة إلى دورات في اخـتصاصات منعــددة",
+    "connect": "تواصل معنا",
+    "learn_more": "تعرّف أكثر",
+    "gallery_heading": "باقة الصور",
+    "browse_content": " تصفح المحتوى",
+    "terms_and_conditions": " الشروط والأحكام",
+    "privacy_policy": " سياسة الخصوصية",
+    "help": " مساعدة",
+    "register_for_free": "  سجل مجـــــانا",
+    "copyright": "©جميع الحقوق محفوظة"
+  },
+  "home": {
+    "hero_heading_colored": "منصة بيرسا ",
+    "hero_heading": "التعليمية",
+    "hero_subheading": "نقدم محتوى تعليمي يشرح المناهج الدراسية بشكل مبسّط وسلس إضافة إلى  دورات في اختصاصات متعددة نفتح لك بها آفاقا جديدة",
+    "hero_button": "ابدأ رحلة التعلم الآن"
   }
 }

@@ -1,5 +1,6 @@
 import css from "./Hero.module.scss";
 import { animated, useSpring } from "@react-spring/web";
+import { useTranslation } from "react-i18next";
 import hero_image_sm from "../../../assets/images/home/hero/image_sm.webp";
 import hero_image_md from "../../../assets/images/home/hero/image_md.webp";
 import hero_image_lg from "../../../assets/images/home/hero/image_lg.webp";
@@ -16,6 +17,8 @@ import triangle_rose_sm from "../../../assets/images/home/hero/triangle-rose_sm.
 import triangle_rose_lg from "../../../assets/images/home/hero/triangle-rose_lg.webp";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   const sectionStyles = useSpring({
     from: {
       scale: 0.5,
@@ -221,14 +224,14 @@ const Hero = () => {
             />
           </picture>
           <h1 className={css.heading}>
-            <span className={css.heading_colored}>منصة بيرسا </span>التعليمية
+            <span className={css.heading_colored}>
+              {t("home.hero_heading_colored")}
+            </span>
+            {t("home.hero_heading")}
           </h1>
-          <p className={css.subheading}>
-            نقدم محتوى تعليمي يشرح المناهج الدراسية بشكل مبسّط وسلس إضافة إلى
-            دورات في اختصاصات متعددة نفتح لك بها آفاقا جديدة
-          </p>
+          <p className={css.subheading}>{t("home.hero_subheading")}</p>
           <animated.button className={css.hero_button} style={buttonStyles}>
-            ابدأ رحلة التعلم الآن
+            {t("home.hero_button")}
           </animated.button>
         </div>
       </div>
