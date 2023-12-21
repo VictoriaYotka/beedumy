@@ -10,7 +10,6 @@ const RequestedCoursesHeader = ({ heading, background }) => {
             المواد التعليميّة و الدّورات المرتقبة و الأكثر طلبا
           </h2>
         </div>
-        <div className={css.triangle}></div>
       </section>
     </SectionAnimationWrapper>
   );

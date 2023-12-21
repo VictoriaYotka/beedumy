@@ -5,14 +5,16 @@ import SimplePageHeader from "../../components/SimplePageHeader/SimplePageHeader
 
 const BuyCourse = () => {
   return (
-    <TriangleBackground>
+    <>
       <SimplePageHeader
         heading="course"
         subheading="price"
         background="#7c4bc0"
       />
-      <BuyCourseOptions />
-    </TriangleBackground>
+      <TriangleBackground>
+        <BuyCourseOptions />
+      </TriangleBackground>
+    </>
   );
 };
 

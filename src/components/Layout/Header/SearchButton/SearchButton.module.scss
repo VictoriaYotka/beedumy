@@ -1,30 +1,13 @@
 @import "../../../../scss";
 
 .form {
-  &:hover,
-  &:focus {
-    .input {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-}
-
-.search_button {
   position: relative;
-  width: 44px;
-  height: 44px;
-  margin-left: auto;
+  z-index: 10;
+  background: $greenBgButtonBgColor;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $greenBgButtonBgColor;
-  color: $whiteColor;
-  font-size: 18px;
-
-  transition: all 0.4s ease;
+  padding: 12px;
 
   &::before {
     content: "";
@@ -43,67 +26,74 @@
     &:before {
       left: 0;
     }
+
+    .input {
+      width: 90vw;
+      background-color: $greenBgButtonBgColor;
+
+      @include md {
+        width: 50vw;
+      }
+
+      @include lg {
+        width: 600px;
+      }
+    }
   }
+}
+
+.button {
+  color: $whiteColor;
+  background: $greenBgButtonBgColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+
+  transition: all 0.4s ease;
 }
 
 .search_box {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   right: 15px;
+  z-index: 10;
 }
 
 .input {
   position: absolute;
-  background-color: $footerBgColor;
-  top: 16px;
-  left: 16px;
-  right: 70px;
-  height: 44px;
-  opacity: 0;
-  visibility: hidden;
+  top: 0;
+  [dir="ltr"] & {
+    left: 8px;
+    right: unset;
 
-  padding: 4px 8px;
-  border: 1px solid $greenBgButtonBgColor;
-  border-radius: 8px;
+    @include lg {
+      right: 8px;
+      left: unset;
+    }
+  }
+  [dir="rtl"] & {
+    right: 8px;
+    left: unset;
+
+    @include lg {
+      left: 8px;
+      right: unset;
+    }
+  }
+
+  height: 50px;
+  padding-inline-start: 28px;
+  padding-inline-end: 40px;
+
+  background: none;
   outline: none;
-  color: $whiteColor;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 20px;
+  width: 0;
 
   transition: all 0.4s ease;
-
-  @include sm {
-    right: 92px;
-  }
-
-  @include md {
-    left: unset;
-    width: 400px;
-  }
-
-  @include lg {
-    top: 0;
-    left: 80px;
-    right: unset;
-    background-color: $whiteColor;
-    border: 1px solid $darkBgButtonColor;
-    color: $darkBgButtonColor;
-  }
-
-  &:focus {
-    opacity: 1;
-    visibility: visible;
-    border: 1px solid $greenBgButtonBgColor;
-  }
-
-  &:not(:focus) {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-.input_visible {
-  opacity: 1;
-  visibility: visible;
 }
