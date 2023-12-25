@@ -11,7 +11,7 @@ const RequestedCourses = () => {
     // infinite: children.length > 3,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     swipeToSlide: true,
     pauseOnHover: true,
     rtl: true,
@@ -21,7 +21,7 @@ const RequestedCourses = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          initialSlide: 2,
+          initialSlide: 1,
         },
       },
       {

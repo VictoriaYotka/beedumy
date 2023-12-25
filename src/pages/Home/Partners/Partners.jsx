@@ -1,14 +1,17 @@
 import css from "./Partners.module.scss";
+import { useTranslation } from "react-i18next";
 import acces_canada from "../../../assets/images/home/acces_canada.webp";
 import british_counsil from "../../../assets/images/home/british_counsil.webp";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const Partners = () => {
+  const { t } = useTranslation();
+
   return (
     <SectionAnimationWrapper>
       <section className={css.section}>
         <div className={css.container}>
-          <h2 className={css.heading}>شراكاتنا</h2>
+          <h2 className={css.heading}>{t("home.partners_header")}</h2>
           <ul className={css.list}>
             <li className={css.item}>
               <a
@@ -19,7 +22,7 @@ const Partners = () => {
               >
                 <img
                   src={acces_canada}
-                  alt=""
+                  alt="Access Canada"
                   loading="lazy"
                   className={css.image}
                 />
@@ -34,7 +37,7 @@ const Partners = () => {
               >
                 <img
                   src={british_counsil}
-                  alt=""
+                  alt="British Counsil"
                   loading="lazy"
                   className={css.image}
                 />

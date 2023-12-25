@@ -1,8 +1,11 @@
 import { NavLink } from "react-router-dom";
 import css from "./MobileApp.module.scss";
+import { useTranslation } from "react-i18next";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const MobileApp = () => {
+  const { t } = useTranslation();
+
   return (
     <SectionAnimationWrapper>
       <section className={css.section}>
@@ -18,18 +21,15 @@ const MobileApp = () => {
               ></iframe>
             </div>
             <p className={css.video_descr}>
-              تطبيقنا متوفر على الهاتف و الأجهزة الوحية
+              {t("home.mobile_app_video_descr")}
             </p>
           </div>
           <div className={css.info_wrapper}>
-            <h2 className={css.heading}>تطبيق منصة بيرسا التعليمية</h2>
-            <p className={css.descr}>
-              نحاول أن نسهل عملية التعليم عبر تطبيق بيرسا للأجهزةالمحمولة. قم
-              بتنزيل تطبيق بيرسا المناسب لهاتفك الذكي أو جهــــــــازك اللوحي،
-              ستجد نفس البيئة التعليمية الممتعة تنتقل معك أينما كنت تحديث تطبيق
-              منصة بيرسا التعليمية تتم بشكل آلي بدون إزعاجك.
-            </p>
-            <NavLink className={css.button}>حمّل التطبيق الآن</NavLink>
+            <h2 className={css.heading}>{t("home.mobile_app_header")}</h2>
+            <p className={css.descr}>{t("home.mobile_app_descr")}</p>
+            <NavLink className={css.button}>
+              {t("home.mobile_app_button")}
+            </NavLink>
           </div>
         </div>
       </section>

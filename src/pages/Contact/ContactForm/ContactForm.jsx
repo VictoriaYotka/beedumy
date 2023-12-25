@@ -1,11 +1,14 @@
-import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 import css from "./ContactForm.module.scss";
+import { useTranslation } from "react-i18next";
+import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
+
   return (
     <SectionAnimationWrapper>
       <div className={css.container}>
-        <h2 className={css.heading}>لنبني شراكة فعالة معا</h2>
+        <h2 className={css.heading}>{t("contact.contact_form_header")}</h2>
         <form className={css.form}>
           <div className={css.wrapper}>
             <input
@@ -13,7 +16,7 @@ const ContactForm = () => {
               name="contact_name"
               id="contact_name"
               className={css.input}
-              placeholder="الإسم"
+              placeholder={t("contact.contact_form_name")}
               required
             />
             <input
@@ -21,7 +24,7 @@ const ContactForm = () => {
               name="contact_email"
               id="contact_email"
               className={css.input}
-              placeholder="البريد الإلكتروني"
+              placeholder={t("contact.contact_form_email")}
               required
             />
           </div>
@@ -32,10 +35,10 @@ const ContactForm = () => {
             cols="30"
             rows="5"
             className={css.textarea}
-            placeholder="مجال حر لإضافة تعليقاتك"
+            placeholder={t("contact.contact_form_message")}
           ></textarea>
           <button type="submit" className={css.button}>
-            أضف تعليقاتك
+            {t("contact.contact_form_button")}
           </button>
         </form>
       </div>

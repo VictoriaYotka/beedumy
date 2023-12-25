@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
 import css from "./Teachers.module.scss";
+import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import TeacherCard from "../../../components/TeacherCard/TeacherCard";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const Teachers = () => {
+  const { t } = useTranslation();
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     swipeToSlide: true,
     pauseOnHover: true,
     rtl: true,
@@ -36,7 +39,7 @@ const Teachers = () => {
     <section className={css.section}>
       <div className={css.container}>
         <SectionAnimationWrapper>
-          <h2 className={css.heading}>تعرّف على نخبة من الأساتذة والمختصّين</h2>
+          <h2 className={css.heading}>{t("home.teachers_header")}</h2>
         </SectionAnimationWrapper>
         <SectionAnimationWrapper>
           <Slider {...settings}>
@@ -51,7 +54,7 @@ const Teachers = () => {
             <TeacherCard />
           </Slider>
         </SectionAnimationWrapper>
-        <Link className={css.button}>نظرة على بقية المختصّين</Link>
+        <Link className={css.button}>{t("home.teachers_button")}</Link>
       </div>
     </section>
   );

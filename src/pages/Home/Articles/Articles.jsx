@@ -1,14 +1,17 @@
 import Slider from "react-slick";
 import css from "./Articles.module.scss";
+import { useTranslation } from "react-i18next";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const Articles = () => {
+  const { t } = useTranslation();
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     swipeToSlide: true,
     pauseOnHover: true,
     rtl: true,
@@ -34,7 +37,7 @@ const Articles = () => {
     <section className={css.section}>
       <div className={css.container}>
         <SectionAnimationWrapper>
-          <h2 className={css.heading}>مقالات وتوجيهات تربوية ومهنية</h2>
+          <h2 className={css.heading}>{t("home.articles_header")}</h2>
         </SectionAnimationWrapper>
         <div className={css.list_wrapper}>
           <SectionAnimationWrapper>

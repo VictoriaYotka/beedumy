@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import css from "./CourseCardInCourses.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
+import { useTranslation } from "react-i18next";
 import hero_image_sm from "../../assets/images/home/hero/image_sm.webp";
 import triangle_green_little_sm from "../../assets/images/home/hero/triangle-green-little_sm.webp";
 import SectionAnimationWrapper from "../../components/SectionAnimationWrapper/SectionAnimationWrapper";
@@ -15,6 +16,8 @@ const CourseCardInCourses = ({
   downloaded,
   description,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <li className={css.item}>
       <SectionAnimationWrapper>
@@ -52,7 +55,7 @@ const CourseCardInCourses = ({
             </div>
           </div>
           <Link to="/courses/course" className={css.button}>
-            See Preview
+            {t("courses.course_card_button")}
           </Link>
         </div>
       </SectionAnimationWrapper>

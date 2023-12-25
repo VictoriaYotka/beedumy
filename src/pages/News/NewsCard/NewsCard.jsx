@@ -1,8 +1,11 @@
 import css from "./NewsCard.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const NewsCard = ({ title, content, img, meta1, meta2, meta3 }) => {
+  const { t } = useTranslation();
+
   return (
     <li className={css.item}>
       <div className={css.image_wrapper}>
@@ -39,7 +42,7 @@ const NewsCard = ({ title, content, img, meta1, meta2, meta3 }) => {
         <h2 className={css.title}>{title}</h2>
         <p className={css.content}>{content}</p>
         <Link to="/news/news" className={css.button}>
-          اقرأ المقال كاملا
+          {t("news.card_read_more_button")}
         </Link>
       </div>
     </li>

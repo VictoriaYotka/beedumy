@@ -1,7 +1,10 @@
-import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 import css from "./SingleNewsSearch.module.scss";
+import { useTranslation } from "react-i18next";
+import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const SingleNewsSearch = () => {
+  const { t } = useTranslation();
+
   const handleSearchFormSubmit = (e) => {
     e.preventDefault();
     console.log("submit single news search");
@@ -15,7 +18,7 @@ const SingleNewsSearch = () => {
             id="singlenews_search_input"
             type="text"
             name="search_input"
-            placeholder="أبحث عن محتوى"
+            placeholder={t("news.single_news_search")}
             className={css.input}
           />
           <button className={css.search_button}>

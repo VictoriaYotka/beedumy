@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
-import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 import css from "./LoginForm.module.scss";
+import { useTranslation } from "react-i18next";
+import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const LoginForm = () => {
+  const { t } = useTranslation();
+
   const handleLoginFormSubmit = (e) => {
     e.preventDefault();
     console.dir(e.target);
@@ -14,7 +17,7 @@ const LoginForm = () => {
         <form onSubmit={handleLoginFormSubmit} className={css.form}>
           <div className={css.input_wrapper}>
             <label className={css.label} htmlFor="login_email">
-              Email
+              {t("sign.email")}
             </label>
             <input
               type="email"
@@ -27,7 +30,7 @@ const LoginForm = () => {
           </div>
           <div className={css.input_wrapper}>
             <label className={css.label} htmlFor="login_password">
-              Password
+              {t("sign.password")}
             </label>
             <input
               type="password"
@@ -41,12 +44,12 @@ const LoginForm = () => {
 
           <div className={css.wrapper}>
             <button className={css.button} type="submit">
-              Log in
+              {t("sign.login_button")}
             </button>
             <div className={css.inner_wrapper}>
-              <p className={css.descr}>Don't have an account?</p>
+              <p className={css.descr}>{t("sign.register_instead")}</p>
               <Link to="/register" className={css.link_button}>
-                Register
+                {t("sign.register_button")}
               </Link>
             </div>
           </div>

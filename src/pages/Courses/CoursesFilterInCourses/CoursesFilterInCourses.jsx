@@ -1,7 +1,10 @@
 import css from "./CoursesFilterInCourses.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
+import { useTranslation } from "react-i18next";
 
 const CoursesFilterInCourses = ({ curriculum = "curriculum" }) => {
+  const { t } = useTranslation();
+
   return (
     <section className={css.section}>
       <div className={css.container}>
@@ -9,7 +12,7 @@ const CoursesFilterInCourses = ({ curriculum = "curriculum" }) => {
         <ul className={css.list}>
           <li className={css.item}>
             <h4 className={css.item_heading}>
-              <span>الإبتدائية</span>
+              <span>{t("courses.courses_filter_primary")}</span>
               <svg className={css.icon}>
                 <use href={icons + "#chevron-down"}></use>
               </svg>
@@ -17,7 +20,7 @@ const CoursesFilterInCourses = ({ curriculum = "curriculum" }) => {
           </li>
           <li className={css.item}>
             <h4 className={css.item_heading}>
-              <span>الإعدادية</span>
+              <span>{t("courses.courses_filter_middle")}</span>
               <svg className={css.icon}>
                 <use href={icons + "#chevron-down"}></use>
               </svg>
@@ -25,7 +28,7 @@ const CoursesFilterInCourses = ({ curriculum = "curriculum" }) => {
           </li>
           <li className={css.item}>
             <h4 className={css.item_heading}>
-              <span>الثانوية</span>
+              <span>{t("courses.courses_filter_high")}</span>
               <svg className={css.icon}>
                 <use href={icons + "#chevron-down"}></use>
               </svg>
@@ -33,7 +36,7 @@ const CoursesFilterInCourses = ({ curriculum = "curriculum" }) => {
           </li>
           <li className={css.item}>
             <h4 className={css.item_heading}>
-              <span>الباكالوريا</span>
+              <span>{t("courses.courses_filter_bachelor")}</span>
               <svg className={css.icon}>
                 <use href={icons + "#chevron-down"}></use>
               </svg>

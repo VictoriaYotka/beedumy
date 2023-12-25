@@ -1,8 +1,11 @@
 import css from "./BecomeTeacherForm.module.scss";
+import { useTranslation } from "react-i18next";
 import TriangleBackground from "../../../components/Layout/TriangleBackground/TriangleBackground";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const BecomeTeacherForm = () => {
+  const { t } = useTranslation();
+
   return (
     <TriangleBackground>
       <SectionAnimationWrapper>
@@ -10,7 +13,7 @@ const BecomeTeacherForm = () => {
           <form className={css.form}>
             <div className={css.input_wrapper}>
               <label className={css.label} htmlFor="become_teacher_name">
-                الإسم
+                {t("becometeacher.name_label")}
               </label>
               <input
                 type="text"
@@ -23,7 +26,7 @@ const BecomeTeacherForm = () => {
             </div>
             <div className={css.input_wrapper}>
               <label className={css.label} htmlFor="become_teacher_surname">
-                اللقب
+                {t("becometeacher.surname_label")}
               </label>
               <input
                 type="text"
@@ -36,7 +39,7 @@ const BecomeTeacherForm = () => {
             </div>
             <div className={css.input_wrapper}>
               <label className={css.label} htmlFor="become_teacher_phone">
-                الهاتف
+                {t("becometeacher.phone_label")}
               </label>
               <input
                 type="tel"
@@ -50,7 +53,7 @@ const BecomeTeacherForm = () => {
             <div className={css.input_group_wrapper}>
               <div className={css.input_inner_wrapper}>
                 <label className={css.label} htmlFor="become_teacher_content">
-                  نوع المحتوى المقدم
+                  {t("becometeacher.content_type_label")}
                 </label>
                 <input
                   type="text"
@@ -63,7 +66,7 @@ const BecomeTeacherForm = () => {
               </div>
               <div className={css.input_inner_wrapper}>
                 <label className={css.label} htmlFor="become_teacher_subject">
-                  المادة
+                  {t("becometeacher.subject_label")}
                 </label>
                 <input
                   type="text"
@@ -78,7 +81,7 @@ const BecomeTeacherForm = () => {
 
             <div className={css.input_wrapper}>
               <label className={css.label} htmlFor="become_teacher_email">
-                البريد الإلكتروني
+                {t("becometeacher.email_label")}
               </label>
               <input
                 type="email"
@@ -91,7 +94,7 @@ const BecomeTeacherForm = () => {
             </div>
             <div className={css.input_wrapper}>
               <label className={css.label} htmlFor="become_teacher_file">
-                جلب الملف
+                {t("becometeacher.file_label")}
               </label>
               <input
                 type="file"
@@ -103,11 +106,11 @@ const BecomeTeacherForm = () => {
                 required
               />
               <p className={css.descr}>
-                فضلا إرسال السيرة الذاتية بصيغة pdf أو jpg
+                {t("becometeacher.file_types_allowed")}
               </p>
             </div>
             <button className={css.button} type="submit">
-              تأكيد البيانات
+              {t("becometeacher.submit_button")}
             </button>
           </form>
         </div>

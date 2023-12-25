@@ -1,8 +1,11 @@
 import css from "./CoursesFilterInCategories.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const CoursesFilterInCategories = () => {
+  const { t } = useTranslation();
+
   const [isDateList, setIsDateList] = useState(
     document.body.offsetWidth >= 768 ? true : false
   );
@@ -12,7 +15,7 @@ const CoursesFilterInCategories = () => {
   const [isCurriculaList, setIsCurriculaList] = useState(
     document.body.offsetWidth >= 768 ? true : false
   );
-  const [isFavoriteList, setIsFavoriteList] = useState(
+  const [isRatedList, setisRatedList] = useState(
     document.body.offsetWidth >= 768 ? true : false
   );
 
@@ -26,31 +29,31 @@ const CoursesFilterInCategories = () => {
         setIsDateList(true);
         setIsTypeList(false);
         setIsCurriculaList(false);
-        setIsFavoriteList(false);
+        setisRatedList(false);
         break;
       case "type_list":
         setIsDateList(false);
         setIsTypeList(true);
         setIsCurriculaList(false);
-        setIsFavoriteList(false);
+        setisRatedList(false);
         break;
       case "curricula_list":
         setIsDateList(false);
         setIsTypeList(false);
         setIsCurriculaList(true);
-        setIsFavoriteList(false);
+        setisRatedList(false);
         break;
-      case "favorite_list":
+      case "rated_list":
         setIsDateList(false);
         setIsTypeList(false);
         setIsCurriculaList(false);
-        setIsFavoriteList(true);
+        setisRatedList(true);
         break;
       default:
         setIsDateList(false);
         setIsTypeList(false);
         setIsCurriculaList(false);
-        setIsFavoriteList(false);
+        setisRatedList(false);
     }
   };
 
@@ -60,13 +63,13 @@ const CoursesFilterInCategories = () => {
         setIsDateList(true);
         setIsTypeList(true);
         setIsCurriculaList(true);
-        setIsFavoriteList(true);
+        setisRatedList(true);
       }
       if (document.body.offsetWidth < 768) {
         setIsDateList(false);
         setIsTypeList(false);
         setIsCurriculaList(false);
-        setIsFavoriteList(false);
+        setisRatedList(false);
       }
     };
 
@@ -89,11 +92,13 @@ const CoursesFilterInCategories = () => {
               <input
                 className={css.input}
                 type="text"
-                placeholder="أبحث عن محتوى معين من خلال اسم المحتوى أو من يقدمه"
+                placeholder={t("categories.search_input_placeholder")}
               />
             </div>
             <button className={css.form_button}>
-              <p className={css.button_text}>تصنيف</p>
+              <p className={css.button_text}>
+                {t("categories.search_classification")}
+              </p>
               <svg className={css.button_icon}>
                 <use href={icons + "#filter"}></use>
               </svg>
@@ -111,24 +116,32 @@ const CoursesFilterInCategories = () => {
                 <svg className={css.icon}>
                   <use href={icons + "#filter"}></use>
                 </svg>
-                <span>تصنيف</span>
+                <span>
+                  {t("categories.search_classification_classification")}
+                </span>
               </p>
             </li>
-            {/* favorite */}
-            <li onClick={() => handleShow("favorite_list")}>
+            {/* rated */}
+            <li onClick={() => handleShow("rated_list")}>
               <p className={css.item_inner}>
                 <svg className={css.icon}>
                   <use href={icons + "#star"}></use>
                 </svg>
-                <span>التقييمات</span>
+                <span>{t("categories.search_classification_rated")}</span>
               </p>
-              {(isFavoriteList || document.body.offsetWidth >= 768) && (
+              {(isRatedList || document.body.offsetWidth >= 768) && (
                 <ul className={css.subcategories_list}>
                   <li className={css.subcategories_item}>
-                    <p className={css.subcategories_heading}>الأعلى تقييما</p>
+                    <p className={css.subcategories_heading}>
+                      {t("categories.search_classification_rated_top_selling")}
+                    </p>
                   </li>
                   <li className={css.subcategories_item}>
-                    <p className={css.subcategories_heading}>الأعلى مبيع</p>
+                    <p className={css.subcategories_heading}>
+                      {t(
+                        "categories.search_classification_rated_highest_rating"
+                      )}
+                    </p>
                   </li>
                 </ul>
               )}
@@ -139,20 +152,26 @@ const CoursesFilterInCategories = () => {
                 <svg className={css.icon}>
                   <use href={icons + "#clock"}></use>
                 </svg>
-                <span>المناهج</span>
+                <span>{t("categories.search_classification_curricula")}</span>
               </p>
 
               {(isCurriculaList || document.body.offsetWidth >= 768) && (
                 <ul className={css.subcategories_list}>
                   <li className={css.subcategories_item}>
-                    <p className={css.subcategories_heading}>المنهج التونسي</p>
-                  </li>
-                  <li className={css.subcategories_item}>
-                    <p className={css.subcategories_heading}>المنهج الليبي</p>
+                    <p className={css.subcategories_heading}>
+                      {t("categories.search_classification_curricula_tunisian")}
+                    </p>
                   </li>
                   <li className={css.subcategories_item}>
                     <p className={css.subcategories_heading}>
-                      الدورات التكوينية
+                      {t("categories.search_classification_curricula_libyan")}
+                    </p>
+                  </li>
+                  <li className={css.subcategories_item}>
+                    <p className={css.subcategories_heading}>
+                      {t(
+                        "categories.search_classification_curricula_formative"
+                      )}
                     </p>
                   </li>
                 </ul>
@@ -164,18 +183,24 @@ const CoursesFilterInCategories = () => {
                 <svg className={css.icon}>
                   <use href={icons + "#play"}></use>
                 </svg>
-                <span>نوع المحتوى</span>
+                <span>
+                  {t("categories.search_classification_content_type")}
+                </span>
               </p>
               {(isTypeList || document.body.offsetWidth >= 768) && (
                 <ul className={css.subcategories_list}>
                   <li className={css.subcategories_item}>
                     <p className={css.subcategories_heading}>
-                      المحتويات المتوفرة
+                      {t(
+                        "categories.search_classification_content_type_available"
+                      )}
                     </p>
                   </li>
                   <li className={css.subcategories_item}>
                     <p className={css.subcategories_heading}>
-                      المحتويات المرتقبة
+                      {t(
+                        "categories.search_classification_content_type_expected"
+                      )}
                     </p>
                   </li>
                 </ul>
@@ -188,25 +213,47 @@ const CoursesFilterInCategories = () => {
                 <svg className={css.icon}>
                   <use href={icons + "#calendar"}></use>
                 </svg>
-                <span>تاريخ نشر المحتوى</span>
+                <span>
+                  {t("categories.search_classification_publishing_date")}
+                </span>
               </p>
 
               {(isDateList || document.body.offsetWidth >= 768) && (
                 <ul className={css.subcategories_list}>
                   <li className={css.subcategories_item}>
-                    <p className={css.subcategories_heading}>منذ ساعة</p>
+                    <p className={css.subcategories_heading}>
+                      {t(
+                        "categories.search_classification_publishing_date_hour"
+                      )}
+                    </p>
                   </li>
                   <li className={css.subcategories_item}>
-                    <p className={css.subcategories_heading}>اليوم</p>
+                    <p className={css.subcategories_heading}>
+                      {t(
+                        "categories.search_classification_publishing_date_day"
+                      )}
+                    </p>
                   </li>
                   <li className={css.subcategories_item}>
-                    <p className={css.subcategories_heading}>هذا السبوع</p>
+                    <p className={css.subcategories_heading}>
+                      {t(
+                        "categories.search_classification_publishing_date_week"
+                      )}
+                    </p>
                   </li>
                   <li className={css.subcategories_item}>
-                    <p className={css.subcategories_heading}>هذا الشهر</p>
+                    <p className={css.subcategories_heading}>
+                      {t(
+                        "categories.search_classification_publishing_date_month"
+                      )}
+                    </p>
                   </li>
                   <li className={css.subcategories_item}>
-                    <p className={css.subcategories_heading}>هذه السنة</p>
+                    <p className={css.subcategories_heading}>
+                      {t(
+                        "categories.search_classification_publishing_date_year"
+                      )}
+                    </p>
                   </li>
                 </ul>
               )}

@@ -1,7 +1,10 @@
-import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 import css from "./ContactOptions.module.scss";
+import { useTranslation } from "react-i18next";
+import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const ContactOptions = () => {
+  const { t } = useTranslation();
+
   return (
     <SectionAnimationWrapper>
       <div className={css.container}>
@@ -12,7 +15,9 @@ const ContactOptions = () => {
                 <i className="kipso-icon-contact"></i>
               </div>
             </div>
-            <h3 className={css.title}>تواصل معنا عبر</h3>
+            <h3 className={css.title}>
+              {t("contact.contact_options_via_header")}
+            </h3>
             <ul>
               <li>
                 <a
@@ -24,12 +29,14 @@ const ContactOptions = () => {
               </li>
               <li>
                 <a href="tel:+21670253734" className={css.contact_link}>
-                  +216 253 734 70<span>داخل تونس </span>
+                  +216 253 734 70
+                  <span>{t("contact.contact_options_via_tunisia")}</span>
                 </a>
               </li>
               <li>
                 <a href="tel:+21670253734" className={css.contact_link}>
-                  +218 548 85698<span>داخل ليبيا</span>
+                  +218 548 85698
+                  <span>{t("contact.contact_options_via_libya")}</span>
                 </a>
               </li>
             </ul>
@@ -40,8 +47,10 @@ const ContactOptions = () => {
                 <i className="kipso-icon-placeholder"></i>
               </div>
             </div>
-            <h3 className={css.title}>عنواننا</h3>
-            <p>01 نهج 02 مارس 1934 قرطاج بيرسا, قرطاج تونس</p>
+            <h3 className={css.title}>
+              {t("contact.contact_options_address_header")}
+            </h3>
+            <p>{t("contact.contact_options_address")}</p>
           </li>
           <li className={css.item}>
             <div className={css.color_1}>
@@ -49,11 +58,10 @@ const ContactOptions = () => {
                 <i className="kipso-icon-manager"></i>
               </div>
             </div>
-            <h3 className={css.title}>عن منصتنا</h3>
-            <p>
-              نوفّر مواد تعليمية لدعم التلاميذ من جميع الفئـات العمرية. باإضافة
-              إلى دورات في اخـتصاصات منعــددة
-            </p>
+            <h3 className={css.title}>
+              {t("contact.contact_options_about_header")}
+            </h3>
+            <p>{t("contact.contact_options_about")}</p>
           </li>
         </ul>
       </div>

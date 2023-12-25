@@ -1,16 +1,19 @@
 import css from "./Feedback.module.scss";
+import { useTranslation } from "react-i18next";
 import hero_image_sm from "../../../assets/images/home/hero/image_sm.webp";
 import icons from "../../../assets/images/icons/icons.svg";
 import Slider from "react-slick";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const Feedback = () => {
+  const { t } = useTranslation();
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     swipeToSlide: true,
     pauseOnHover: true,
     rtl: true,
@@ -19,7 +22,7 @@ const Feedback = () => {
         breakpoint: 1025,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
         },
       },
@@ -52,9 +55,7 @@ const Feedback = () => {
     <section className={css.section}>
       <div className={css.container}>
         <SectionAnimationWrapper>
-          <h2 className={css.heading}>
-            شهادات تلامذتنا عبر مواقع التواصل الاجتماعي
-          </h2>
+          <h2 className={css.heading}>{t("home.feedback_heading")}</h2>
         </SectionAnimationWrapper>
         <SectionAnimationWrapper>
           <Slider {...settings}>

@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
-import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 import css from "./RegisterForm.module.scss";
+import { useTranslation } from "react-i18next";
+import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const RegisterForm = () => {
+  const { t } = useTranslation();
+
   const handleRegisterFormSubmit = (e) => {
     e.preventDefault();
     console.dir(e.target);
@@ -14,7 +17,7 @@ const RegisterForm = () => {
         <form onSubmit={handleRegisterFormSubmit} className={css.form}>
           <div className={css.input_wrapper}>
             <label className={css.label} htmlFor="register_name">
-              Name
+              {t("sign.name")}
             </label>
             <input
               type="text"
@@ -27,7 +30,7 @@ const RegisterForm = () => {
           </div>
           <div className={css.input_wrapper}>
             <label className={css.label} htmlFor="register_email">
-              Email
+              {t("sign.email")}
             </label>
             <input
               type="email"
@@ -40,7 +43,7 @@ const RegisterForm = () => {
           </div>
           <div className={css.input_wrapper}>
             <label className={css.label} htmlFor="register_password">
-              Password
+              {t("sign.password")}
             </label>
             <input
               type="password"
@@ -53,7 +56,7 @@ const RegisterForm = () => {
           </div>
           <div className={css.input_wrapper}>
             <label className={css.label} htmlFor="register_confirm_password">
-              Confirm password
+              {t("sign.confirm_password")}
             </label>
             <input
               type="password"
@@ -67,12 +70,12 @@ const RegisterForm = () => {
 
           <div className={css.wrapper}>
             <button className={css.button} type="submit">
-              Register
+              {t("sign.register_button")}
             </button>
             <div className={css.inner_wrapper}>
-              <p className={css.descr}>Already have an account?</p>
+              <p className={css.descr}>{t("sign.login_instead")}</p>
               <Link to="/login" className={css.link_button}>
-                Sign up
+                {t("sign.login_button")}
               </Link>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import css from "./SingleNews.module.scss";
+import { useTranslation } from "react-i18next";
 import SingleNewsCard from "./SingleNewsCard/SingleNewsCard";
 import SingleNewsAdditionalInfo from "./SingleNewsAdditionalInfo/SingleNewsAdditionalInfo";
 import SingleNewsSearch from "./SingleNewsSearch/SingleNewsSearch";
@@ -8,6 +9,8 @@ import SimplePageHeader from "../../components/SimplePageHeader/SimplePageHeader
 import NewsHeaderList from "../../components/NewsHeaderList/NewsHeaderList";
 
 const SingleNews = () => {
+  const { t } = useTranslation();
+
   const [isMediumScreen, setIsMediumScreen] = useState(
     document.body.offsetWidth >= 768
   );
@@ -26,7 +29,7 @@ const SingleNews = () => {
 
   return (
     <>
-      <SimplePageHeader heading="مقالاتنا" background="#184d9c">
+      <SimplePageHeader heading={t("news.header")} background="#184d9c">
         <NewsHeaderList />
       </SimplePageHeader>
       {!isMediumScreen && <SingleNewsSearch />}
