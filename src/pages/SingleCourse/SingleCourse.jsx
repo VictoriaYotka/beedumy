@@ -14,7 +14,15 @@ const SingleCourse = () => {
             admin="Name Surname"
             title="Course title"
           />
-          <SingleCourseAdditionalInfo fullPrice="34" discountedPrice="18" />
+          <SingleCourseAdditionalInfo
+            fullPrice="34"
+            discountedPrice="18"
+            currency="د.ل"
+            hours="40"
+            purchasedTimes="30"
+            degree="متقدم"
+            language="العربية"
+          />
         </div>
       </section>
     </>

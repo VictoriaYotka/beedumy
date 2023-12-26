@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import css from "./CourseCardInCategories.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
-import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const CourseCardInCategories = ({
   notion,
@@ -12,6 +13,8 @@ const CourseCardInCategories = ({
   descr,
   id,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className={css.item}>
       <div className={css.img_thumb}>
@@ -29,7 +32,7 @@ const CourseCardInCategories = ({
           <svg className={css.icon}>
             <use href={icons + "#play"}></use>
           </svg>
-          <span>Go to course</span>
+          <span>{t("categories.course_card_button")}</span>
         </Link>
       </div>
     </div>

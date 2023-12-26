@@ -103,7 +103,8 @@
     "start_learning_trip_register_step": "أسجل",
     "start_learning_trip_search_step": "أبحث",
     "start_learning_trip_buy_step": "أشتري",
-    "start_learning_trip_know_step": "أتعلّم"
+    "start_learning_trip_know_step": "أتعلّم",
+    "course_card_button": "Go to course"
   },
   "contact": {
     "header": "تواصل معنا",
@@ -125,7 +126,16 @@
     "courses_filter_middle": "الإعدادية",
     "courses_filter_high": "الثانوية",
     "courses_filter_bachelor": "الباكالوريا",
-    "course_card_button": "See more"
+    "course_card_button": "See more",
+    "single_course_price_header": "ثمن المحتوى",
+    "single_course_price_button": "شراء المحتوى",
+    "single_course_details_duration": " مدّة المحتوى",
+    "single_course_details_hours": "ساعة",
+    "single_course_details_purchased": "مرّات الشّراء",
+    "single_course_details_times": "مرّة",
+    "single_course_details_degree": "درجة الصعوبة",
+    "single_course_details_language": " اللّغة",
+    "single_course_related_header": "محتويات ذات صلة"
   },
   "sign": {
     "name": "Name",

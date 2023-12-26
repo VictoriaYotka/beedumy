@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import css from "./SingleNewsAdditionalInfo.module.scss";
 import { useTranslation } from "react-i18next";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
-import PopularNewsItem from "../../../components/PopularNewsItem/PopularNewsItem";
+import PopularNewsItem from "../PopularNewsItem/PopularNewsItem";
 
 const SingleNewsAdditionalInfo = ({
   keyword1 = "keyword1",
