@@ -1,0 +1,55 @@
+@import "../../../scss";
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 11;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  min-height: 50vh;
+  display: flex;
+  padding: 48px 12px;
+  width: 90vw;
+  text-align: center;
+  background-color: $whiteColor;
+
+  @include md {
+    max-width: 700px;
+  }
+}
+
+.close_button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+  text-align: center;
+
+  transition: all 0.4s ease-in-out;
+
+  &:hover,
+  &:focus {
+    .close_icon {
+      scale: 130%;
+      stroke: rgb(70, 63, 178);
+    }
+  }
+}
+
+.close_icon {
+  width: 24px;
+  height: 24px;
+  stroke: rgb(139, 126, 357);
+
+  transition: all 0.4s ease-in-out;
+}

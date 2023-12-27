@@ -1,0 +1,84 @@
+@import "../../../scss";
+
+.form {
+  margin: auto 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal_heading {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 18px;
+
+  @include md {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+}
+
+.input_group {
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 16px;
+
+  @include md {
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+}
+
+.input {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px 16px;
+  background-color: $lightGreyBgColor;
+  border: none;
+  outline: none;
+  text-align: start;
+  font-size: 16px;
+
+  transition: all 0.4s ease-in-out;
+
+  @include sm {
+    width: 70%;
+    max-width: 400px;
+    padding: 16px 32px;
+  }
+
+  @include md {
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadow;
+  }
+}
+
+.submit_button {
+  cursor: pointer;
+  padding: 12px 32px;
+  background-color: rgb(70, 63, 178);
+  color: $whiteColor;
+  font-size: 18px;
+
+  transition: all 0.4s ease-in-out;
+
+  @include md {
+    padding: 16px 48px;
+    font-size: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    box-shadow: $shadow;
+  }
+}

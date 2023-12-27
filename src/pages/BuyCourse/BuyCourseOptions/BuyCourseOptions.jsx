@@ -1,8 +1,14 @@
 import { useCallback, useEffect, useState } from "react";
 import css from "./BuyCourseOptions.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
-import { animated, useSpring } from "@react-spring/web";
+import { useTransition } from "@react-spring/web";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
+import {
+  CardModal,
+  NetbankingModal,
+  UpiModal,
+  WalletModal,
+} from "../Modals/Modals";
 
 const BuyCourseOptions = () => {
   const [activeModal, setActiveModal] = useState(null);
@@ -43,10 +49,10 @@ const BuyCourseOptions = () => {
     };
   }, [activeModal, closeModal]);
 
-  const modalStyles = useSpring({
-    to: { opacity: activeModal ? 1 : 0 },
+  const transitions = useTransition(activeModal, {
     from: { opacity: 0 },
-    config: { transition: "0.4s ease-in-out" },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
   });
 
   return (
@@ -123,153 +129,30 @@ const BuyCourseOptions = () => {
         </div>
       </SectionAnimationWrapper>
 
-      {/* modals */}
-
-      {activeModal === "card" && (
-        <animated.div
-          id="backdrop"
-          className={css.backdrop}
-          style={modalStyles}
-        >
-          <div id="modal" className={css.modal}>
-            <button className={css.close_button} onClick={closeModal}>
-              <svg className={css.close_icon}>
-                <use href={icons + "#close"}></use>
-              </svg>
-            </button>
-
-            <form className={css.form}>
-              <strong className={css.modal_heading}>
-                Card payment details
-              </strong>
-              <div className={css.input_group}>
-                <label htmlFor="payment_card_input" className={css.label}>
-                  Enter your card number:
-                </label>
-                <input
-                  type="text"
-                  id="payment_card_input"
-                  name="payment_card_input"
-                  className={css.input}
-                  required
-                />
-              </div>
-              <button type="submit" className={css.submit_button}>
-                Use card
-              </button>
-            </form>
-          </div>
-        </animated.div>
-      )}
-
-      {activeModal === "netbanking" && (
-        <animated.div
-          id="backdrop"
-          className={css.backdrop}
-          style={modalStyles}
-        >
-          <div id="modal" className={css.modal}>
-            <button className={css.close_button} onClick={closeModal}>
-              <svg className={css.close_icon}>
-                <use href={icons + "#close"}></use>
-              </svg>
-            </button>
-
-            <form className={css.form}>
-              <strong className={css.modal_heading}>
-                Netbanking payment details
-              </strong>
-              <div className={css.input_group}>
-                <label htmlFor="netbanking_payment_input" className={css.label}>
-                  Enter your card number:
-                </label>
-                <input
-                  type="text"
-                  id="netbanking_payment_input"
-                  name="netbanking_payment_input"
-                  className={css.input}
-                  required
-                />
-              </div>
-              <button type="submit" className={css.submit_button}>
-                Use netbanking
-              </button>
-            </form>
-          </div>
-        </animated.div>
-      )}
-
-      {activeModal === "wallet" && (
-        <animated.div
-          id="backdrop"
-          className={css.backdrop}
-          style={modalStyles}
-        >
-          <div id="modal" className={css.modal}>
-            <button className={css.close_button} onClick={closeModal}>
-              <svg className={css.close_icon}>
-                <use href={icons + "#close"}></use>
-              </svg>
-            </button>
-
-            <form className={css.form}>
-              <strong className={css.modal_heading}>
-                Wallet payment details
-              </strong>
-              <div className={css.input_group}>
-                <label htmlFor="wallet_payment_input" className={css.label}>
-                  Enter your wallet number:
-                </label>
-                <input
-                  type="text"
-                  id="wallet_payment_input"
-                  name="wallet_payment_input"
-                  className={css.input}
-                  required
-                />
-              </div>
-              <button type="submit" className={css.submit_button}>
-                Use wallet
-              </button>
-            </form>
-          </div>
-        </animated.div>
-      )}
-
-      {activeModal === "upi" && (
-        <animated.div
-          id="backdrop"
-          className={css.backdrop}
-          style={modalStyles}
-        >
-          <div id="modal" className={css.modal}>
-            <button className={css.close_button} onClick={closeModal}>
-              <svg className={css.close_icon}>
-                <use href={icons + "#close"}></use>
-              </svg>
-            </button>
-
-            <form className={css.form}>
-              <strong className={css.modal_heading}>UPI payment details</strong>
-              <div className={css.input_group}>
-                <label htmlFor="upi_payment_input" className={css.label}>
-                  Enter your UPI number:
-                </label>
-                <input
-                  type="text"
-                  id="upi_payment_input"
-                  name="upi_payment_input"
-                  className={css.input}
-                  required
-                />
-              </div>
-              <button type="submit" className={css.submit_button}>
-                Use UPI
-              </button>
-            </form>
-          </div>
-        </animated.div>
-      )}
+      {transitions((style, item) => {
+        switch (item) {
+          case "card":
+            return (
+              <CardModal style={style} closeModal={closeModal} key="card" />
+            );
+          case "netbanking":
+            return (
+              <NetbankingModal
+                style={style}
+                closeModal={closeModal}
+                key="netbanking"
+              />
+            );
+          case "wallet":
+            return (
+              <WalletModal style={style} closeModal={closeModal} key="wallet" />
+            );
+          case "upi":
+            return <UpiModal style={style} closeModal={closeModal} key="upi" />;
+          default:
+            return null;
+        }
+      })}
     </>
   );
 };

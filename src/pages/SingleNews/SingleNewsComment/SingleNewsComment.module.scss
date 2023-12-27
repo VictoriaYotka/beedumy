@@ -94,11 +94,6 @@
 
 .comments_content_wrapper {
   flex-basis: 100%;
-  // padding: 4px 12px;
-
-  @include md {
-    // padding: 8px 24px;
-  }
 }
 
 .comments_descr {
@@ -159,6 +154,11 @@
     max-width: unset;
     padding: 16px;
   }
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadow;
+  }
 }
 
 .textarea {
@@ -178,6 +178,11 @@
     min-width: unset;
     max-width: unset;
     padding: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadow;
   }
 }
 
