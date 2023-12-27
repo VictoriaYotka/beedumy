@@ -3,7 +3,7 @@
 .item {
   max-width: 360px;
   margin: 0 auto;
-  text-align: start;
+  // text-align: start;
   border: 2px solid $lightGreyBgColor;
   border-radius: 16px;
 
@@ -44,13 +44,13 @@
 .notion {
   position: absolute;
   top: 16px;
-  [dir="rtl"] & {
-    right: 16px;
-    left: unset;
-  }
   [dir="ltr"] & {
     right: unset;
     left: 16px;
+  }
+  [dir="rtl"] & {
+    right: 16px;
+    left: unset;
   }
   z-index: 10;
 
@@ -75,7 +75,12 @@
 }
 
 .preheader {
-  text-align: start;
+  [dir="ltr"] & {
+    text-align: left;
+  }
+  [dir="rtl"] & {
+    text-align: right;
+  }
   font-size: 16px;
   color: $accentColor;
 
@@ -90,7 +95,12 @@
 }
 
 .header {
-  text-align: start;
+  [dir="ltr"] & {
+    text-align: left;
+  }
+  [dir="rtl"] & {
+    text-align: right;
+  }
   font-size: 20px;
 
   transition: all 0.4s ease;
@@ -107,6 +117,12 @@
   @extend .flex_aligncenter;
   gap: 16px;
   margin-bottom: 16px;
+  [dir="ltr"] & {
+    flex-direction: row;
+  }
+  [dir="rtl"] & {
+    flex-direction: row-reverse;
+  }
 
   @include md {
     margin-bottom: 20px;
@@ -117,7 +133,12 @@
 }
 
 .descr {
-  text-align: start;
+  [dir="ltr"] & {
+    text-align: left;
+  }
+  [dir="rtl"] & {
+    text-align: right;
+  }
   font-size: 16px;
   color: $secondaryFontColor;
 
@@ -133,6 +154,12 @@
 
 .course_button {
   @extend .flex_aligncenter;
+  [dir="ltr"] & {
+    flex-direction: row;
+  }
+  [dir="rtl"] & {
+    flex-direction: row-reverse;
+  }
   justify-content: center;
   gap: 8px;
   padding: 8px;
@@ -163,11 +190,11 @@
 }
 
 .icon {
-  [dir="rtl"] & {
-    scale: (-1 1);
-  }
   [dir="ltr"] & {
-    scale: 1;
+    transform: scale(1, 1);
+  }
+  [dir="rtl"] & {
+    transform: scale(-1, 1);
   }
 
   width: 20px;
