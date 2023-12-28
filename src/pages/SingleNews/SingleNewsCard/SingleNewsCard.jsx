@@ -1,12 +1,11 @@
+import { Link } from "react-router-dom";
 import css from "./SingleNewsCard.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
-import hero_image_sm from "../../../assets/images/home/hero/image_sm.webp";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const SingleNewsCard = ({
-  img = hero_image_sm,
+  img,
   meta1 = "meta1",
   meta2 = "meta2",
   meta3 = "meta3",
@@ -16,7 +15,7 @@ const SingleNewsCard = ({
   keyword2 = "منصات2",
   keyword3 = "منصات3",
   author_name = "author name",
-  author_about = "about the authoe, some descr",
+  author_about = "about the author, some descr",
 }) => {
   const { t } = useTranslation();
 
@@ -24,9 +23,11 @@ const SingleNewsCard = ({
     <div>
       <div className={css.news_card}>
         <SectionAnimationWrapper>
-          <div className={css.news_image_wrapper}>
-            <img className={css.news_image} src={img} alt="" />
-          </div>
+          {img && (
+            <div className={css.news_image_wrapper}>
+              <img className={css.news_image} src={img} alt="" />
+            </div>
+          )}
         </SectionAnimationWrapper>
         <SectionAnimationWrapper>
           <div className={css.news_content_wrapper}>

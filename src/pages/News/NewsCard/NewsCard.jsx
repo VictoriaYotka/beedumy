@@ -8,8 +8,14 @@ const NewsCard = ({ title, content, img, meta1, meta2, meta3 }) => {
 
   return (
     <li className={css.item}>
-      <div className={css.image_wrapper}>
-        <img className={css.image} src={img} alt="" />
+      <div className={css.image_thumb}>
+        {img ? (
+          <img className={css.image} src={img} alt="" />
+        ) : (
+          <svg className={css.placeholder_icon}>
+            <use href={icons + "#placeholder"}></use>
+          </svg>
+        )}
       </div>
       <div className={css.content_wrapper}>
         <ul className={css.meta_list}>

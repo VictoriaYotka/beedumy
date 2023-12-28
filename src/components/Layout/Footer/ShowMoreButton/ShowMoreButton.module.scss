@@ -1,0 +1,51 @@
+@import "../../../../scss";
+
+.show_more_button {
+  @extend .flex_aligncenter;
+  gap: 4px;
+  margin: 0 auto 8px auto;
+  color: $paleWhiteColor;
+  font-size: 10px;
+  font-weight: $boldFont;
+
+  transition: all 0.4s ease;
+
+  @include md {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $whiteColor;
+    scale: 110%;
+
+    .icon {
+      stroke: $whiteColor;
+      scale: 110%;
+    }
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: $paleWhiteColor;
+
+  transition: all 0.4s ease;
+
+  @include md {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.show_more_icon {
+  @extend .icon;
+  stroke: $paleWhiteColor;
+  fill: none;
+}
+
+.hide_more_icon {
+  @extend .show_more_icon;
+  transform: scale(1, -1);
+}

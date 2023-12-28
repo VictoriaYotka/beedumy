@@ -12,7 +12,9 @@ const Contact = () => {
   return (
     <>
       <SimplePageHeader heading={t("contact.header")} background="#9ab3f5">
-        <SocialsList />
+        <ul className={css.socials_list}>
+          <SocialsList />
+        </ul>
       </SimplePageHeader>
       <section className={css.section}>
         <ContactOptions />

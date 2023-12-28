@@ -3,6 +3,7 @@ import css from "./SingleCourseAdditionalInfo.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
 import { useTranslation } from "react-i18next";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
+import RelatedCourseCard from "../RelatedCourseCard/RelatedCourseCard";
 
 const SingleCourseAdditionalInfo = ({
   currency,
@@ -98,36 +99,11 @@ const SingleCourseAdditionalInfo = ({
             {t("courses.single_course_related_header")}
           </h5>
           <ul className={css.related_list}>
-            <li className={css.related_item}>
-              <div className={css.related_image_wrapper}>
-                <img className={css.related_image} src="" alt="" />
-              </div>
-              <div className={css.related_info_wrapper}>
-                <p className={css.admin}>admin</p>
-                <h6 className={css.title}>title</h6>
-                <div className={css.stars}> Stars</div>
-              </div>
-            </li>
-            <li className={css.related_item}>
-              <div className={css.related_image_wrapper}>
-                <img className={css.related_image} src="" alt="" />
-              </div>
-              <div className={css.related_info_wrapper}>
-                <p className={css.admin}>admin</p>
-                <h6 className={css.title}>title</h6>
-                <div className={css.stars}> Stars</div>
-              </div>
-            </li>
-            <li className={css.related_item}>
-              <div className={css.related_image_wrapper}>
-                <img className={css.related_image} src="" alt="" />
-              </div>
-              <div className={css.related_info_wrapper}>
-                <p className={css.admin}>admin</p>
-                <h6 className={css.title}>title</h6>
-                <div className={css.stars}> Stars</div>
-              </div>
-            </li>
+            <RelatedCourseCard admin="Admin" title="Title" stars="Stars" />
+
+            <RelatedCourseCard admin="Admin" title="Title" stars="Stars" />
+
+            <RelatedCourseCard admin="Admin" title="Title" stars="Stars" />
           </ul>
         </div>
       </SectionAnimationWrapper>

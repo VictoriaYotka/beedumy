@@ -1,0 +1,74 @@
+@import "../../../../scss";
+
+.about_wrapper {
+  text-align: center;
+  padding: 8px;
+  max-width: 320px;
+
+  @include md {
+    flex-basis: 35%;
+    padding: 0;
+    text-align: start;
+  }
+
+  @include lg {
+    padding: 0 40px 0 16px;
+  }
+}
+
+.about_heading {
+  margin-bottom: 4px;
+  text-align: center;
+  color: $whiteColor;
+  font-size: 14px;
+  font-weight: $boldFont;
+
+  @include md {
+    margin-bottom: 14px;
+    text-align: start;
+  }
+}
+
+.about_descr {
+  margin-bottom: 12px;
+  text-align: start;
+  font-size: 12px;
+  color: $paleWhiteColor;
+  font-weight: $boldFont;
+
+  @include sm {
+    font-size: 14px;
+  }
+
+  @include md {
+    margin-bottom: 24px;
+  }
+}
+
+.button {
+  padding: 8px 0;
+  width: 100px;
+  text-align: center;
+  font-size: 14px;
+  color: $whiteColor;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    box-shadow: $shadow;
+  }
+}
+
+.follow_more_button {
+  @extend .button;
+  display: inline-block;
+  margin-inline-end: 8px;
+  background-color: $greenBgButtonBgColor;
+}
+
+.connect_button {
+  @extend .button;
+  background-color: $accentColor;
+}

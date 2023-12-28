@@ -47,17 +47,35 @@
   @extend .flex_aligncenter;
   justify-content: flex-start;
   gap: 12px;
+  margin-bottom: 4px;
   font-size: 14px;
   color: $secondaryFontColor;
-  margin-bottom: 4px;
+}
+
+.admin_image_thumb {
+  width: 28px;
+  height: 28px;
+  border: 1px solid $secondaryFontColor;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .admin_image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.placeholder_user_icon {
   width: 24px;
-  border-radius: 50%;
+  height: 24px;
+  stroke: $secondaryFontColor;
+  fill: none;
 }
 
 .admin {
+  @extend .flex_aligncenter;
+  justify-content: flex-start;
+  gap: 12px;
   font-size: 14px;
 }
 

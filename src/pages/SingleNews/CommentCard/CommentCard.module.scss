@@ -1,0 +1,88 @@
+@import "../../../scss";
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  padding: 12px;
+  gap: 12px;
+  text-align: start;
+  background-color: $lightGreyBgColor;
+  font-size: 14px;
+
+  @include md {
+    gap: 24px;
+    font-size: 16px;
+  }
+
+  @include lg {
+    margin-bottom: 24px;
+  }
+}
+
+.image_wrapper {
+  display: flex;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid $whiteColor;
+  flex-basis: 80px;
+  height: 80px;
+  text-align: center;
+}
+
+.teacher_image {
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+.placeholder_icon {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  stroke: $secondaryFontColor;
+  fill: none;
+
+  transition: all 0.4s ease;
+}
+
+.content_wrapper {
+  flex-basis: calc(100% - 100px);
+  //   flex-grow: 1;
+}
+
+.name {
+  font-size: 12px;
+  margin-bottom: 8px;
+
+  @include md {
+    font-size: 14px;
+  }
+}
+
+.descr {
+  margin-bottom: 4px;
+  text-align: start;
+  color: $secondaryFontColor;
+}
+
+.additional_wrapper {
+  @extend .flex_aligncenter;
+  gap: 12px;
+}
+
+.date {
+  color: $secondaryFontColor;
+}
+
+.answer_button {
+  font-size: 18px;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    color: $accentColor;
+  }
+}

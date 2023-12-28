@@ -14,6 +14,7 @@
     box-shadow: $shadow;
 
     .image,
+    .placeholder_icon,
     .preheader,
     .header,
     .course_button {
@@ -29,6 +30,8 @@
 .img_thumb {
   position: relative;
   width: 100%;
+  height: 200px;
+  display: flex;
   background-color: $lightGreyBgColor;
   border-radius: 16px;
   border: 2px solid $lightGreyBgColor;
@@ -36,7 +39,20 @@
 }
 
 .image {
+  width: 100%;
+  object-fit: cover;
+  margin: auto;
   border-radius: 16px;
+
+  transition: all 0.4s ease;
+}
+
+.placeholder_icon {
+  display: block;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  fill: $secondaryFontColor;
 
   transition: all 0.4s ease;
 }

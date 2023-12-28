@@ -3,6 +3,7 @@
 .item {
   max-width: 320px;
   margin: 0 auto;
+  border: 2px solid $lightGreyBgColor;
 
   transition: all 0.4s ease;
 
@@ -18,17 +19,39 @@
   &:focus {
     scale: 105%;
     box-shadow: $shadow;
+
+    .image,
+    .placeholder_icon {
+      scale: 105%;
+    }
+
+    .admin_wrapper {
+      color: $darkFontColor;
+    }
   }
 }
 
 .img_thumb {
   position: relative;
-
+  display: flex;
   height: 220px;
   overflow: hidden;
+  background-color: $lightGreyBgColor;
 }
 
 .image {
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+.placeholder_icon {
+  width: 130px;
+  height: 130px;
+  margin: auto;
+  fill: $secondaryFontColor;
+
+  transition: all 0.4s ease;
 }
 
 .favorite_button {
@@ -61,8 +84,6 @@
 .wrapper {
   position: relative;
   padding: 24px 44px;
-  border: 2px solid $lightGreyBgColor;
-  border-top: 0;
 }
 
 .category {
@@ -98,21 +119,37 @@
 }
 
 .admin_wrapper {
-  @extend .flex_aligncenter;
-  justify-content: flex-start;
-  gap: 12px;
+  margin-bottom: 4px;
   font-size: 14px;
   color: $secondaryFontColor;
-  margin-bottom: 4px;
+
+  transition: all 0.4s ease;
+}
+
+.admin_image_thumb {
+  width: 28px;
+  height: 28px;
+  border: 1px solid $secondaryFontColor;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .admin_image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.placeholder_user_icon {
   width: 24px;
-  border-radius: 50%;
+  height: 24px;
+  stroke: $secondaryFontColor;
+  fill: none;
 }
 
 .admin {
-  font-size: 14px;
+  @extend .flex_aligncenter;
+  justify-content: flex-start;
+  gap: 12px;
 }
 
 .title {

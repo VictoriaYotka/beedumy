@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import css from "./SingleNewsAdditionalInfo.module.scss";
 import { useTranslation } from "react-i18next";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
-import PopularNewsItem from "../PopularNewsItem/PopularNewsItem";
+import RelatedNewsCard from "../RelatedNewsCard/RelatedNewsCard";
 
 const SingleNewsAdditionalInfo = ({
   keyword1 = "keyword1",
@@ -19,14 +19,15 @@ const SingleNewsAdditionalInfo = ({
   return (
     <div className={css.wrapper}>
       <SectionAnimationWrapper>
-        <div className={css.container}>
+        <div className={css.articles_container}>
           <h5 className={css.heading}>
             {t("news.single_news_additional_other_articles")}
           </h5>
           <ul className={css.articles_list}>
-            <PopularNewsItem />
-            <PopularNewsItem />
-            <PopularNewsItem />
+            {/* <PopularNewsItem /> */}
+            <RelatedNewsCard title="Title" />
+            <RelatedNewsCard title="Title" />
+            <RelatedNewsCard title="Title" />
           </ul>
         </div>
       </SectionAnimationWrapper>

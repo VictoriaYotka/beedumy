@@ -16,7 +16,7 @@
 
   &:hover,
   &:focus {
-    scale: 105%;
+    scale: 102%;
     box-shadow: $shadowDark;
     .title {
       color: $accentColor;
@@ -26,22 +26,55 @@
       color: $darkFontColor;
     }
 
-    .image {
+    .image,
+    .placeholder_icon {
       scale: 105%;
+    }
+
+    .meta_icon {
+      fill: $darkFontColor;
     }
   }
 }
 
-.image_wrapper {
-  max-height: 300px;
+.image_thumb {
+  display: flex;
+  height: 160px;
   overflow: hidden;
-  border: 1px solid $lightGreyBgColor;
+  background-color: $lightGreyBgColor;
+
+  @include sm {
+    height: 180px;
+  }
+
+  @include md {
+    height: 200px;
+  }
+
+  @include lg {
+    height: 240px;
+  }
 }
 
 .image {
-  object-fit: contain;
+  width: 100%;
+  object-fit: cover;
 
   transition: all 0.4s ease;
+}
+
+.placeholder_icon {
+  width: 130px;
+  height: 130px;
+  margin: auto;
+  fill: $secondaryFontColor;
+
+  transition: all 0.4s ease;
+
+  @include lg {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 .content_wrapper {

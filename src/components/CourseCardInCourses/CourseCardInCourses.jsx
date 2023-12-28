@@ -2,16 +2,14 @@ import { Link } from "react-router-dom";
 import css from "./CourseCardInCourses.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
 import { useTranslation } from "react-i18next";
-import hero_image_sm from "../../assets/images/home/hero/image_sm.webp";
-import triangle_green_little_sm from "../../assets/images/home/hero/triangle-green-little_sm.webp";
 import SectionAnimationWrapper from "../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
 const CourseCardInCourses = ({
-  course_image = hero_image_sm,
+  course_image,
   title,
   category,
   admin,
-  admin_image = triangle_green_little_sm,
+  admin_image,
   hours,
   downloaded,
   description,
@@ -22,7 +20,13 @@ const CourseCardInCourses = ({
     <li className={css.item}>
       <SectionAnimationWrapper>
         <div className={css.img_thumb}>
-          <img className={css.image} src={course_image} alt={title} />
+          {course_image ? (
+            <img className={css.image} src={course_image} alt={title} />
+          ) : (
+            <svg className={css.placeholder_icon}>
+              <use href={icons + "#placeholder"}></use>
+            </svg>
+          )}
           <button className={css.favorite_button}>
             <svg className={css.icon}>
               <use href={icons + "#heart"}></use>
@@ -32,8 +36,22 @@ const CourseCardInCourses = ({
         <div className={css.wrapper}>
           <Link className={css.category}>{category}</Link>
           <div className={css.admin_wrapper}>
-            <img className={css.admin_image} src={admin_image} alt={admin} />
-            <Link className={css.admin}>by {admin}</Link>
+            <Link className={css.admin}>
+              <div className={css.admin_image_thumb}>
+                {admin_image ? (
+                  <img
+                    className={css.admin_image}
+                    src={admin_image}
+                    alt={admin}
+                  />
+                ) : (
+                  <svg className={css.placeholder_user_icon}>
+                    <use href={icons + "#user"}></use>
+                  </svg>
+                )}
+              </div>
+              by {admin}
+            </Link>
           </div>
           <h2 className={css.title}>
             <Link>{title}</Link>

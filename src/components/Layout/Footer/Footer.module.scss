@@ -64,51 +64,6 @@
   }
 }
 
-.list {
-  @extend .flex_aligncenter;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 12px;
-
-  @include sm {
-    justify-content: space-around;
-    gap: 20px;
-  }
-
-  @include md {
-    flex-direction: column;
-    justify-content: center;
-    gap: 4px;
-    margin-bottom: 0;
-  }
-
-  @include lg {
-    gap: 24px;
-  }
-}
-
-.item {
-  text-align: start;
-  color: $paleWhiteColor;
-  font-size: 10px;
-
-  transition: all 0.4s ease;
-
-  @include sm {
-    font-size: 12px;
-    font-weight: $boldFont;
-  }
-  @include md {
-    font-size: 14px;
-  }
-
-  &:hover,
-  &:focus {
-    scale: 110%;
-    color: $whiteColor;
-  }
-}
-
 .socials {
   @extend .flex_aligncenter;
   justify-content: space-between;
@@ -140,69 +95,6 @@
       right: unset;
     }
   }
-}
-
-.social_link {
-  display: inline-block;
-  padding: 8px;
-
-  &:hover,
-  &:focus {
-    .icon {
-      scale: 120%;
-      fill: $whiteColor;
-    }
-  }
-}
-
-.icon {
-  width: 16px;
-  height: 16px;
-  fill: $paleWhiteColor;
-
-  transition: all 0.4s ease;
-
-  @include md {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-.show_more_button {
-  @extend .flex_aligncenter;
-  gap: 4px;
-  margin: 0 auto 8px auto;
-  color: $paleWhiteColor;
-  font-size: 10px;
-  font-weight: $boldFont;
-
-  transition: all 0.4s ease;
-
-  @include md {
-    display: none;
-  }
-
-  &:hover,
-  &:focus {
-    color: $whiteColor;
-    scale: 110%;
-
-    .icon {
-      stroke: $whiteColor;
-      scale: 110%;
-    }
-  }
-}
-
-.show_more_icon {
-  @extend .icon;
-  stroke: $paleWhiteColor;
-  fill: none;
-}
-
-.hide_more_icon {
-  @extend .show_more_icon;
-  transform: scale(1, -1);
 }
 
 .gallery_heading {
@@ -247,90 +139,7 @@
   }
 }
 
-.image {
-  width: 60px;
-  height: 60px;
-  border: 1px solid $accentColor;
-
-  @include lg {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-.about_wrapper {
-  text-align: center;
-  padding: 8px;
-  max-width: 320px;
-
-  @include md {
-    flex-basis: 35%;
-    padding: 0;
-    text-align: start;
-  }
-
-  @include lg {
-    padding: 0 40px 0 16px;
-  }
-}
-
-.about_heading {
-  margin-bottom: 4px;
-  text-align: center;
-  color: $whiteColor;
-  font-size: 14px;
-  font-weight: $boldFont;
-
-  @include md {
-    margin-bottom: 14px;
-    text-align: start;
-  }
-}
-
-.about_descr {
-  margin-bottom: 12px;
-  text-align: start;
-  font-size: 12px;
-  color: $paleWhiteColor;
-  font-weight: $boldFont;
-
-  @include sm {
-    font-size: 14px;
-  }
-
-  @include md {
-    margin-bottom: 24px;
-  }
-}
-
-.button {
-  padding: 8px 0;
-  width: 100px;
-  text-align: center;
-  font-size: 14px;
-  color: $whiteColor;
-
-  transition: all 0.4s ease;
-
-  &:hover,
-  &:focus {
-    scale: 110%;
-    box-shadow: $shadow;
-  }
-}
-
-.follow_more_button {
-  @extend .button;
-  display: inline-block;
-  margin-inline-end: 8px;
-  background-color: $greenBgButtonBgColor;
-}
-
-.connect_button {
-  @extend .button;
-  background-color: $accentColor;
-}
-
+// bottom
 .bottom {
   padding: 8px 0;
   text-align: center;

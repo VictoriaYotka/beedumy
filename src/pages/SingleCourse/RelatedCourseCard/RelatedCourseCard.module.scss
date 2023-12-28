@@ -1,0 +1,72 @@
+@import "../../../scss";
+
+.item {
+  padding: 20px 0;
+
+  transition: all 0.4s ease;
+
+  &:not(:last-child) {
+    border-bottom: 2px solid $lightGreyBgColor;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+
+    .admin {
+      color: $darkFontColor;
+    }
+
+    .title {
+      color: $accentColor;
+    }
+
+    .image,
+    .placeholder_icon {
+      scale: 105%;
+    }
+  }
+}
+
+.content {
+  @extend .flex_aligncenter;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.admin {
+  color: $secondaryFontColor;
+  font-size: 14px;
+
+  transition: all 0.4s ease;
+}
+
+.title {
+  font-size: 16px;
+
+  transition: all 0.4s ease;
+}
+
+.image_wrapper {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  background-color: $lightGreyBgColor;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+
+  transition: all 0.4s ease;
+}
+
+.placeholder_icon {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  fill: $secondaryFontColor;
+
+  transition: all 0.4s ease;
+}

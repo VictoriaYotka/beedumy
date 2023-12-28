@@ -33,7 +33,9 @@ const BurgerMenu = ({ toggleMenu, isOpenBurgerMenu }) => {
           <SignList />
 
           <div className={css.bottom_wrapper}>
-            <SocialsList />
+            <ul className={css.socials_list}>
+              <SocialsList />
+            </ul>
             <ContactsList />
           </div>
         </div>

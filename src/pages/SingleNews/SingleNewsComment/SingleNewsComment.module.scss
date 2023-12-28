@@ -57,72 +57,6 @@
   fill: none;
 }
 
-.comments_card {
-  display: flex;
-  align-items: flex-start;
-  padding: 12px;
-  gap: 12px;
-  text-align: start;
-  background-color: $lightGreyBgColor;
-  font-size: 14px;
-
-  &:not(:last-child) {
-    margin-bottom: 12px;
-
-    @include lg {
-      margin-bottom: 24px;
-    }
-  }
-
-  @include md {
-    gap: 24px;
-    font-size: 16px;
-  }
-}
-
-.comments_image_wrapper {
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid $whiteColor;
-  width: 80px;
-  text-align: center;
-}
-
-.comments_name {
-  margin-bottom: 8px;
-}
-
-.comments_content_wrapper {
-  flex-basis: 100%;
-}
-
-.comments_descr {
-  margin-bottom: 4px;
-  text-align: start;
-  color: $secondaryFontColor;
-}
-
-.comments_additional_wrapper {
-  @extend .flex_aligncenter;
-  gap: 12px;
-}
-
-.comments_date {
-  color: $secondaryFontColor;
-}
-
-.comments_answer_button {
-  font-size: 18px;
-
-  transition: all 0.4s ease;
-
-  &:hover,
-  &:focus {
-    scale: 110%;
-    color: $accentColor;
-  }
-}
-
 .add_wrapper {
   text-align: start;
 }
@@ -148,6 +82,8 @@
   outline: none;
   text-align: start;
 
+  transition: all 0.4s ease;
+
   @include sm {
     width: 50%;
     min-width: unset;
@@ -172,6 +108,8 @@
   outline: none;
   text-align: start;
   resize: vertical;
+
+  transition: all 0.4s ease;
 
   @include sm {
     width: 100%;

@@ -1,9 +1,9 @@
 import css from "./Feedback.module.scss";
 import { useTranslation } from "react-i18next";
 import hero_image_sm from "../../../assets/images/home/hero/image_sm.webp";
-import icons from "../../../assets/images/icons/icons.svg";
 import Slider from "react-slick";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
+import FeedbackCard from "./FeedbackCard/FeedbackCard";
 
 const Feedback = () => {
   const { t } = useTranslation();
@@ -59,105 +59,37 @@ const Feedback = () => {
         </SectionAnimationWrapper>
         <SectionAnimationWrapper>
           <Slider {...settings}>
-            <div className={css.item}>
-              <div className={css.icon_wrapper}>
-                <svg className={css.icon}>
-                  <use href={icons + "#quotes"}></use>
-                </svg>
-              </div>
-              <p className={css.content}>
-                التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب
-                وجهد
-              </p>
-              <img
-                src={hero_image_sm}
-                alt=""
-                loading="lazy"
-                className={css.image}
-              />
-              <p className={css.name}>إلهام بن عبيد</p>
-              <p className={css.descr}>تلميذة</p>
-            </div>
+            <FeedbackCard
+              content="التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد"
+              name="Student name"
+              descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. "
+            />
 
-            <div className={css.item}>
-              <div className={css.icon_wrapper}>
-                <svg className={css.icon}>
-                  <use href={icons + "#quotes"}></use>
-                </svg>
-              </div>
-              <p className={css.content}>
-                التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب
-                وجهد التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا
-                تعب وجهد
-              </p>
-              <img
-                src={hero_image_sm}
-                alt=""
-                loading="lazy"
-                className={css.image}
-              />
-              <p className={css.name}>إلهام بن عبيد</p>
-              <p className={css.descr}>تلميذة</p>
-            </div>
+            <FeedbackCard
+              content="التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد"
+              name="Student name"
+              descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis  dicta."
+            />
 
-            <div className={css.item}>
-              <div className={css.icon_wrapper}>
-                <svg className={css.icon}>
-                  <use href={icons + "#quotes"}></use>
-                </svg>
-              </div>
-              <p className={css.content}>
-                التمارين التفاعلية Vraiment حاجة مزيان
-              </p>
-              <img
-                src={hero_image_sm}
-                alt=""
-                loading="lazy"
-                className={css.image}
-              />
-              <p className={css.name}>إلهام بن عبيد</p>
-              <p className={css.descr}>تلميذة</p>
-            </div>
+            <FeedbackCard
+              content="التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد"
+              name="Student name"
+              descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam similique, veniam libero exercitationem incidunt fugit dicta."
+            />
 
-            <div className={css.item}>
-              <div className={css.icon_wrapper}>
-                <svg className={css.icon}>
-                  <use href={icons + "#quotes"}></use>
-                </svg>
-              </div>
-              <p className={css.content}>
-                التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب
-                وجهد
-              </p>
-              <img
-                src={hero_image_sm}
-                alt=""
-                loading="lazy"
-                className={css.image}
-              />
-              <p className={css.name}>إلهام بن عبيد</p>
-              <p className={css.descr}>تلميذة</p>
-            </div>
+            <FeedbackCard
+              content="التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد"
+              img={hero_image_sm}
+              name="Student name"
+              descr="Lorem ipsum dolor fugit dicta."
+            />
 
-            <div className={css.item}>
-              <div className={css.icon_wrapper}>
-                <svg className={css.icon}>
-                  <use href={icons + "#quotes"}></use>
-                </svg>
-              </div>
-              <p className={css.content}>
-                التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب
-                وجهد
-              </p>
-              <img
-                src={hero_image_sm}
-                alt=""
-                loading="lazy"
-                className={css.image}
-              />
-              <p className={css.name}>إلهام بن عبيد</p>
-              <p className={css.descr}>تلميذة</p>
-            </div>
+            <FeedbackCard
+              content="التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد"
+              img={hero_image_sm}
+              name="Student name"
+              descr="Lorem ipsum  facere corporis debitis esse officiis dicta."
+            />
           </Slider>
         </SectionAnimationWrapper>
       </div>

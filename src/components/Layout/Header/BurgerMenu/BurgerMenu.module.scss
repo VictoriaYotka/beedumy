@@ -39,6 +39,17 @@
   gap: 16px;
 }
 
+.socials_list {
+  @extend .flex_aligncenter;
+  justify-content: center;
+  gap: 32px;
+
+  @include lg {
+    gap: 12px;
+    margin: 0;
+  }
+}
+
 .icon {
   width: 32px;
   height: 32px;

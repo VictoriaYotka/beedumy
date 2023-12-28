@@ -45,7 +45,6 @@ const CoursesListInCategories = ({ heading }) => {
           <Slider {...settings}>
             <CourseCardInCategories
               notion="notion"
-              img={hero_image_sm}
               imgAlt="about image"
               preheader="Preheader"
               header="Header"
@@ -56,7 +55,6 @@ const CoursesListInCategories = ({ heading }) => {
 
             <CourseCardInCategories
               notion="notion"
-              img={hero_image_sm}
               imgAlt="about image"
               preheader="Preheader"
               header="Header"
@@ -67,7 +65,6 @@ const CoursesListInCategories = ({ heading }) => {
 
             <CourseCardInCategories
               notion="notion"
-              img={hero_image_sm}
               imgAlt="about image"
               preheader="Preheader"
               header="Header"

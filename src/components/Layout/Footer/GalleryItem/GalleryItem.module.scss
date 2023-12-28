@@ -1,0 +1,32 @@
+@import "../../../../scss";
+
+.gallery_item {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  background-color: $lightGreyBgColor;
+  border: 1px solid $accentColor;
+  overflow: hidden;
+
+  @include lg {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.placeholder_icon {
+  width: 32px;
+  height: 32px;
+  margin: auto;
+  fill: $secondaryFontColor;
+
+  @include lg {
+    width: 54px;
+    height: 54px;
+  }
+}

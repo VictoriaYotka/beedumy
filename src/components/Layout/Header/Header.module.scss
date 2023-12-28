@@ -87,3 +87,14 @@
 
   transition: all 0.4s ease;
 }
+
+.socials_list {
+  @extend .flex_aligncenter;
+  justify-content: center;
+  gap: 32px;
+
+  @include lg {
+    gap: 12px;
+    margin: 0;
+  }
+}

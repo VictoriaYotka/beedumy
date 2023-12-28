@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import TeacherCard from "../../../components/TeacherCard/TeacherCard";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
+import hero_image_sm from "../../../assets/images/home/hero/image_sm.webp";
 
 const Teachers = () => {
   const { t } = useTranslation();
@@ -43,15 +44,37 @@ const Teachers = () => {
         </SectionAnimationWrapper>
         <SectionAnimationWrapper>
           <Slider {...settings}>
-            <TeacherCard />
+            <TeacherCard
+              img={hero_image_sm}
+              name="Teachers name"
+              occupation="Occupation"
+              descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis debitis esse officiis quae a eligendi similique, veniam libero exercitationem incidunt fugit dicta."
+            />
 
-            <TeacherCard />
+            <TeacherCard
+              img={hero_image_sm}
+              name="Teachers name"
+              occupation="Occupation"
+              descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis debitis esse officiis quae a eligendi similique, veniam libero exercitationem incidunt fugit dicta."
+            />
 
-            <TeacherCard />
+            <TeacherCard
+              name="Teachers name"
+              occupation="Occupation"
+              descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis debitis esse officiis quae a eligendi similique, veniam libero exercitationem incidunt fugit dicta."
+            />
 
-            <TeacherCard />
+            <TeacherCard
+              name="Teachers name"
+              occupation="Occupation"
+              descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis debitis esse officiis quae a eligendi similique, veniam libero exercitationem incidunt fugit dicta."
+            />
 
-            <TeacherCard />
+            <TeacherCard
+              name="Teachers name"
+              occupation="Occupation"
+              descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis debitis esse officiis quae a eligendi similique, veniam libero exercitationem incidunt fugit dicta."
+            />
           </Slider>
         </SectionAnimationWrapper>
         <Link className={css.button}>{t("home.teachers_button")}</Link>

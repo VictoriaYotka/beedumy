@@ -1,25 +1,30 @@
 import css from "./TeacherCard.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
-import hero_image_sm from "../../assets/images/home/hero/image_sm.webp";
 import { Link } from "react-router-dom";
 
-const TeacherCard = () => {
+const TeacherCard = ({ img, name, occupation, descr }) => {
   return (
     <div className={css.item_thumb}>
       <div className={css.item}>
         <Link>
           <div className={css.teacher_thumb}>
-            <img
-              src={hero_image_sm}
-              alt=""
-              loading="lazy"
-              className={css.teacher_image}
-            />
-            <h4 className={css.name}>Teacher's name</h4>
-            <h5 className={css.occupation}>Occupation</h5>
-            <p className={css.descr}>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </p>
+            <div className={css.image_thumb}>
+              {img ? (
+                <img
+                  src={img}
+                  alt=""
+                  loading="lazy"
+                  className={css.teacher_image}
+                />
+              ) : (
+                <svg className={css.placeholder_icon}>
+                  <use href={icons + "#user"}></use>
+                </svg>
+              )}
+            </div>
+            <h4 className={css.name}>{name}</h4>
+            <h5 className={css.occupation}>{occupation}</h5>
+            <p className={css.descr}>{descr}</p>
           </div>
         </Link>
         <ul className={css.socials}>

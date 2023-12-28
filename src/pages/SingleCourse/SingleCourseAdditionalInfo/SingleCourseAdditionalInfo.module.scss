@@ -176,39 +176,3 @@
   border: 2px solid $lightGreyBgColor;
   text-align: start;
 }
-
-.related_heading {
-}
-
-.related_list {
-}
-
-.related_item {
-  @extend .flex_aligncenter;
-  justify-content: flex-start;
-  gap: 12px;
-  padding: 20px 0;
-  &:not(:last-child) {
-    border-bottom: 2px solid $lightGreyBgColor;
-  }
-}
-
-.admin {
-  color: $secondaryFontColor;
-  font-size: 14px;
-}
-
-.title {
-  font-size: 16px;
-}
-
-.related_image_wrapper {
-  width: 80px;
-  height: 80px;
-  background-color: $darkBgButtonColor;
-  overflow: hidden;
-}
-
-.related_image {
-  width: 80px;
-}

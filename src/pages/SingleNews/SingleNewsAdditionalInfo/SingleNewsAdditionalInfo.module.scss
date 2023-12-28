@@ -27,6 +27,11 @@
   }
 }
 
+.articles_container {
+  @extend .container;
+  padding-bottom: 4px;
+}
+
 .heading {
   margin-bottom: 4px;
   text-align: start;

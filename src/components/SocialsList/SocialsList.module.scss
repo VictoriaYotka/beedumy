@@ -1,21 +1,8 @@
 @import "../../scss";
 
-.item {
-  @extend .flex_aligncenter;
-}
-
-.socials {
-  @extend .flex_aligncenter;
-  justify-content: center;
-  gap: 32px;
-
-  @include lg {
-    gap: 12px;
-    margin: 0;
-  }
-}
-
 .social_link {
+  display: inline-block;
+
   &:hover,
   &:focus {
     .icon {

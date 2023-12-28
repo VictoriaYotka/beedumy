@@ -1,4 +1,5 @@
 import css from "./SingleCourse.module.scss";
+import triangle_green_little_sm from "../../assets/images/home/hero/triangle-green-little_sm.webp";
 import SingleCourseCard from "./SingleCourseCard/SingleCourseCard";
 import SingleCourseAdditionalInfo from "./SingleCourseAdditionalInfo/SingleCourseAdditionalInfo";
 import SimplePageHeader from "../../components/SimplePageHeader/SimplePageHeader";
@@ -12,6 +13,7 @@ const SingleCourse = () => {
           <SingleCourseCard
             curriculum="curriculum"
             admin="Name Surname"
+            admin_image={triangle_green_little_sm}
             title="Course title"
           />
           <SingleCourseAdditionalInfo

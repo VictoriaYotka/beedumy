@@ -73,7 +73,7 @@ const RequestedCourses = () => {
 
             <CourseCardInCategories
               notion="notion"
-              img={hero_image_sm}
+              // img={hero_image_sm}
               imgAlt="about image"
               preheader="Preheader"
               header="Header"
@@ -84,7 +84,7 @@ const RequestedCourses = () => {
 
             <CourseCardInCategories
               notion="notion"
-              img={hero_image_sm}
+              // img={hero_image_sm}
               imgAlt="about image"
               preheader="Preheader"
               header="Header"

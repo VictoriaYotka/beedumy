@@ -88,7 +88,9 @@ const Header = () => {
                 <p className={css.socials_title}>
                   {t("sharedLayout.contact_us")}
                 </p>
-                <SocialsList />
+                <ul className={css.socials_list}>
+                  <SocialsList />
+                </ul>
               </div>
               <ContactsList />
             </div>

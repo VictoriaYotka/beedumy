@@ -18,8 +18,9 @@
       scale: 110%;
     }
 
-    .teacher_image {
-      scale: 101%;
+    .teacher_image,
+    .placeholder_icon {
+      scale: 103%;
     }
 
     .occupation {
@@ -40,15 +41,34 @@
   color: $secondaryFontColor;
 }
 
-.teacher_image {
+.image_thumb {
   position: absolute;
   top: -100px;
   left: 50%;
   transform: translateX(-50%);
-  border: 2px solid $accentColor;
-  border-radius: 50%;
+  display: flex;
   width: 200px;
   height: 200px;
+  overflow: hidden;
+  background-color: $whiteColor;
+  border: 2px solid $accentColor;
+  border-radius: 50%;
+
+  transition: all 0.4s ease;
+}
+
+.teacher_image {
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+.placeholder_icon {
+  width: 130px;
+  height: 130px;
+  margin: auto;
+  stroke: $secondaryFontColor;
+  fill: none;
 
   transition: all 0.4s ease;
 }

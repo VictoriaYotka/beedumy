@@ -19,7 +19,13 @@ const CourseCardInCategories = ({
     <div className={css.item}>
       <div className={css.img_thumb}>
         <p className={css.notion}>{notion}</p>
-        <img src={img} alt={imgAlt} loading="lazy" className={css.image} />
+        {img ? (
+          <img src={img} alt={imgAlt} loading="lazy" className={css.image} />
+        ) : (
+          <svg className={css.placeholder_icon}>
+            <use href={icons + "#placeholder"}></use>
+          </svg>
+        )}
       </div>
       <div className={css.info_thumb}>
         <h4 className={css.preheader}>{preheader}</h4>
