@@ -1,32 +1,370 @@
 import { lazy } from "react";
+import { Link } from "react-router-dom";
+import css from "./Home.module.scss";
+import { useTranslation } from "react-i18next";
+import Slider from "react-slick";
 import Hero from "./Hero/Hero";
 import Categories from "./Categories/Categories";
 import RequestedCoursesHeader from "./RequestedCoursesHeader/RequestedCoursesHeader";
 import LearnMore from "./LearnMore/LearnMore";
+import hero_image_sm from "../../assets/images/home/hero/image_sm.webp";
+import SectionAnimationWrapper from "../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
-const RequestedCourses = lazy(() =>
-  import("./RequestedCourses/RequestedCourses")
+const CourseCardInCategories = lazy(() =>
+  import("../../components/CourseCardInCategories/CourseCardInCategories")
 );
-const Teachers = lazy(() => import("./Teachers/Teachers"));
+const TeacherCard = lazy(() =>
+  import("../../components/TeacherCard/TeacherCard")
+);
 const MobileApp = lazy(() => import("./MobileApp/MobileApp"));
-const Feedback = lazy(() => import("./Feedback/Feedback"));
-const Articles = lazy(() => import("./Articles/Articles"));
+const FeedbackCard = lazy(() => import("./FeedbackCard/FeedbackCard"));
+const ArticleCard = lazy(() => import("./ArticleCard/ArticleCard"));
 const Partners = lazy(() => import("./Partners/Partners"));
 const Subscription = lazy(() => import("./Subscription/Subscription"));
 
 const Home = () => {
+  const { t } = useTranslation();
+
+  const requestedCoursesSettings = {
+    dots: true,
+    infinite: true,
+    // infinite: children.length > 3,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    pauseOnHover: true,
+    rtl: true,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 481,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+  const teachersSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    pauseOnHover: true,
+    rtl: true,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 481,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+  const feedbackSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    pauseOnHover: true,
+    rtl: true,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 923,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 481,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+  const articleSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    pauseOnHover: true,
+    rtl: true,
+    responsive: [
+      {
+        breakpoint: 993,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <Hero />
+
       <Categories />
+
       <RequestedCoursesHeader />
-      <RequestedCourses />
+
+      {/* requested courses list */}
+      <SectionAnimationWrapper>
+        <section className={css.requested_courses_section}>
+          <div className="container">
+            <Slider {...requestedCoursesSettings}>
+              <CourseCardInCategories
+                notion="notion"
+                img={hero_image_sm}
+                imgAlt="about image"
+                preheader="Preheader"
+                header="Header"
+                rating="stars"
+                descr="Some description"
+                id="123"
+              />
+
+              <CourseCardInCategories
+                notion="notion"
+                img={hero_image_sm}
+                imgAlt="about image"
+                preheader="Preheader"
+                header="Header"
+                rating="stars"
+                descr="Some description"
+                id="123"
+              />
+
+              <CourseCardInCategories
+                notion="notion"
+                img={hero_image_sm}
+                imgAlt="about image"
+                preheader="Preheader"
+                header="Header"
+                rating="stars"
+                descr="Some description"
+                id="123"
+              />
+
+              <CourseCardInCategories
+                notion="notion"
+                // img={hero_image_sm}
+                imgAlt="about image"
+                preheader="Preheader"
+                header="Header"
+                rating="stars"
+                descr="Some description"
+                id="123"
+              />
+
+              <CourseCardInCategories
+                notion="notion"
+                // img={hero_image_sm}
+                imgAlt="about image"
+                preheader="Preheader"
+                header="Header"
+                rating="stars"
+                descr="Some description"
+                id="123"
+              />
+            </Slider>
+          </div>
+        </section>
+      </SectionAnimationWrapper>
+
       <LearnMore />
-      <Teachers />
+
+      {/* teachers section */}
+      <section className="section">
+        <div className={css.teachers_container}>
+          <SectionAnimationWrapper>
+            <h2 className={css.teachers_heading}>
+              {t("home.teachers_header")}
+            </h2>
+          </SectionAnimationWrapper>
+          <SectionAnimationWrapper>
+            <Slider {...teachersSettings}>
+              <TeacherCard
+                img={hero_image_sm}
+                name="Teachers name"
+                occupation="Occupation"
+                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis debitis esse officiis quae a eligendi similique, veniam libero exercitationem incidunt fugit dicta."
+              />
+
+              <TeacherCard
+                img={hero_image_sm}
+                name="Teachers name"
+                occupation="Occupation"
+                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis debitis esse officiis quae a eligendi similique, veniam libero exercitationem incidunt fugit dicta."
+              />
+
+              <TeacherCard
+                name="Teachers name"
+                occupation="Occupation"
+                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis debitis esse officiis quae a eligendi similique, veniam libero exercitationem incidunt fugit dicta."
+              />
+
+              <TeacherCard
+                name="Teachers name"
+                occupation="Occupation"
+                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis debitis esse officiis quae a eligendi similique, veniam libero exercitationem incidunt fugit dicta."
+              />
+
+              <TeacherCard
+                name="Teachers name"
+                occupation="Occupation"
+                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis debitis esse officiis quae a eligendi similique, veniam libero exercitationem incidunt fugit dicta."
+              />
+            </Slider>
+          </SectionAnimationWrapper>
+          <Link className={css.teachers_button}>
+            {t("home.teachers_button")}
+          </Link>
+        </div>
+      </section>
+
       <MobileApp />
-      <Feedback />
-      <Articles />
+
+      {/* feedback */}
+      <section className={css.feedback_section}>
+        <div className={css.feedback_container}>
+          <SectionAnimationWrapper>
+            <h2 className={css.feedback_heading}>
+              {t("home.feedback_heading")}
+            </h2>
+          </SectionAnimationWrapper>
+          <SectionAnimationWrapper>
+            <Slider {...feedbackSettings}>
+              <FeedbackCard
+                content="التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد"
+                name="Student name"
+                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. "
+              />
+
+              <FeedbackCard
+                content="التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد"
+                name="Student name"
+                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis  dicta."
+              />
+
+              <FeedbackCard
+                content="التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد"
+                name="Student name"
+                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam similique, veniam libero exercitationem incidunt fugit dicta."
+              />
+
+              <FeedbackCard
+                content="التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد"
+                img={hero_image_sm}
+                name="Student name"
+                descr="Lorem ipsum dolor fugit dicta."
+              />
+
+              <FeedbackCard
+                content="التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد"
+                img={hero_image_sm}
+                name="Student name"
+                descr="Lorem ipsum  facere corporis debitis esse officiis dicta."
+              />
+            </Slider>
+          </SectionAnimationWrapper>
+        </div>
+      </section>
+
+      {/* articles */}
+      <section className={css.article_section}>
+        <div className={css.article_container}>
+          <SectionAnimationWrapper>
+            <h2 className={css.article_heading}>{t("home.articles_header")}</h2>
+          </SectionAnimationWrapper>
+          <div className={css.article_list_wrapper}>
+            <SectionAnimationWrapper>
+              <Slider {...articleSettings}>
+                <ArticleCard
+                  date="06 أوت"
+                  name="كُتب بواسطة آدم . 12 تعليق"
+                  content="أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل"
+                />
+
+                <ArticleCard
+                  date="06 أوت"
+                  name="كُتب بواسطة آدم . 12 تعليق"
+                  content="أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل"
+                />
+
+                <ArticleCard
+                  date="06 أوت"
+                  name="كُتب بواسطة آدم . 12 تعليق"
+                  content="أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل"
+                />
+
+                <ArticleCard
+                  date="06 أوت"
+                  name="كُتب بواسطة آدم . 12 تعليق"
+                  content="أثر التعليم التفاعلي في مناهج التعليم الحديثة في نفسية الطفل"
+                />
+              </Slider>
+            </SectionAnimationWrapper>
+          </div>
+        </div>
+      </section>
+
       <Partners />
+
       <Subscription />
     </>
   );

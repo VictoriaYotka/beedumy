@@ -1,5 +1,5 @@
 import css from "./FeedbackCard.module.scss";
-import icons from "../../../../assets/images/icons/icons.svg";
+import icons from "../../../assets/images/icons/icons.svg";
 
 const FeedbackCard = ({ content, img, name, descr }) => {
   return (

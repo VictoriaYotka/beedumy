@@ -16,6 +16,7 @@ const Contact = () => {
           <SocialsList />
         </ul>
       </SimplePageHeader>
+
       <section className={css.section}>
         <ContactOptions />
         <ContactForm />

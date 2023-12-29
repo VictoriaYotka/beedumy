@@ -9,6 +9,7 @@ const Courses = () => {
     <>
       <CoursesFilterInCourses />
 
+      {/* courses list */}
       <section className={css.section}>
         <div className={css.container}>
           <ul className={css.list}>

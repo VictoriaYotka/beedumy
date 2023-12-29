@@ -1,0 +1,130 @@
+@import "../../scss";
+
+.requested_courses_section {
+  padding: 12px 0 40px 0;
+
+  @include sm {
+    padding: 16px 0 40px 0;
+  }
+
+  @include md {
+    padding: 20px 0 40px 0;
+  }
+}
+
+.teachers_container {
+  @extend .container;
+  text-align: center;
+}
+
+.teachers_heading {
+  @extend .heading;
+  margin-bottom: 8px;
+}
+
+.teachers_button {
+  margin-top: 40px;
+  display: inline-block;
+  padding: 20px 40px;
+  background-color: $darkBgButtonColor;
+  color: $whiteColor;
+  font-weight: $boldFont;
+
+  transition: all 0.4s ease;
+
+  @include md {
+    margin-top: 44px;
+  }
+
+  @include lg {
+    margin-top: 48px;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    box-shadow: $shadow;
+  }
+}
+
+.feedback_section {
+  @extend .section;
+  padding-bottom: 40px;
+
+  @include sm {
+    padding-bottom: 44px;
+  }
+
+  @include md {
+    padding-bottom: 48px;
+  }
+}
+
+.feedback_container {
+  @extend .container;
+  text-align: center;
+}
+
+.feedback_heading {
+  @extend .heading;
+  margin-bottom: 12px;
+  text-align: center;
+
+  @include sm {
+    margin-bottom: 20px;
+  }
+  @include md {
+    margin-bottom: 32px;
+  }
+}
+
+.article_section {
+  background-color: $peachBgColor;
+
+  padding: 12px 0 200px 0;
+  text-align: center;
+
+  @include sm {
+    padding: 16px 0 200px 0;
+  }
+
+  @include md {
+    padding: 20px 0 240px 0;
+  }
+
+  @include lg {
+    padding: 24px 0 300px 0;
+  }
+
+  @include xl {
+    padding: 28px 0 220px 0;
+  }
+}
+
+.article_container {
+  @extend .container;
+  position: relative;
+
+  text-align: center;
+}
+
+.article_heading {
+  @extend .heading;
+  color: $whiteColor;
+}
+
+.article_list_wrapper {
+  position: absolute;
+  top: 40px;
+  right: 5%;
+  left: 5%;
+  z-index: 2;
+
+  @include md {
+    top: 60px;
+  }
+
+  @include xl {
+    top: 80px;
+  }
+}
