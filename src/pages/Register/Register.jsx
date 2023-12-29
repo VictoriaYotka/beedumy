@@ -73,7 +73,7 @@ const Register = () => {
               <button className={css.button} type="submit">
                 {t("sign.register_button")}
               </button>
-              <div className={css.inner_wrapper}>
+              <div>
                 <p className={css.descr}>{t("sign.login_instead")}</p>
                 <Link to="/login" className={css.link_button}>
                   {t("sign.login_button")}

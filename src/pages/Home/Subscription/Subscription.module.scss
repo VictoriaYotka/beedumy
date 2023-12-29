@@ -108,6 +108,13 @@
   outline: none;
   font-size: 16px;
   background-color: $whiteColor;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadow;
+  }
 }
 
 .button {

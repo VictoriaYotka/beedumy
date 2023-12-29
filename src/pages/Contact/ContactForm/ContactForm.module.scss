@@ -41,6 +41,13 @@
   border: none;
   outline: none;
   text-align: start;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadowDark;
+  }
 }
 
 .textarea {
@@ -55,4 +62,12 @@
   color: $whiteColor;
   background-color: $accentColor;
   font-weight: $boldFont;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    box-shadow: $shadowDark;
+  }
 }

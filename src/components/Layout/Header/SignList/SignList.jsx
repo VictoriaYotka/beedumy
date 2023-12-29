@@ -6,8 +6,8 @@ import { useTranslation } from "react-i18next";
 
 const SignList = ({ userImage }) => {
   const { t } = useTranslation();
-  const token = false;
-  const isLoggedIn = false;
+  const token = true;
+  const isLoggedIn = true;
 
   const [isOpened, setIsOpened] = useState(false);
 

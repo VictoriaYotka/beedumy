@@ -133,13 +133,17 @@
 .picture_wrapper {
   position: relative;
   min-width: 320px;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
+  margin: auto;
   height: 70%;
 
   @include md {
     flex-grow: 1;
-    height: unset;
+    height: 100%;
+    max-height: 500px;
+  }
+
+  @include lg {
+    max-height: 700px;
   }
 }
 

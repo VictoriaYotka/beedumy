@@ -1,7 +1,7 @@
 import { Navigate } from "react-router-dom";
 
 const PublicRoute = ({ children }) => {
-  const isLoggedIn = true;
+  const isLoggedIn = false;
 
   return isLoggedIn ? <Navigate to="/" replace /> : children;
 };
