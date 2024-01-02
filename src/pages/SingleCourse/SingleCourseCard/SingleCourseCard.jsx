@@ -39,7 +39,7 @@ const SingleCourseCard = ({ curriculum, admin, admin_image, title }) => {
             className={css.video}
             title={`${title} course video`}
             src="https://www.youtube.com/embed/JfJYHfrOGgQ"
-            gesture="media"
+            loading="lazy"
             allow="autoplay; encrypted-media"
             allowFullScreen
           ></iframe>
