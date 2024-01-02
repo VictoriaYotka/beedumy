@@ -1,20 +1,24 @@
 @import "../../../scss";
 
 .section {
-  @extend .section;
+  padding: 12px 0;
   background-color: $lightGreyBgColor;
+
+  @include md {
+    padding: 0;
+  }
 }
 
 .container {
   @extend .container;
   @extend .flex_aligncenter;
   justify-content: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 16px;
 
   @include md {
     flex-direction: row;
-    gap: 0;
+    gap: 60px;
   }
 }
 
@@ -26,15 +30,12 @@
   }
 
   @include md {
-    flex-basis: 56%;
-    max-width: unset;
+    max-width: 44%;
     padding: 32px 0;
-    padding-inline-start: 60px;
   }
 
   @include lg {
     padding: 40px 0;
-    padding-inline-start: 100px;
   }
 }
 
@@ -72,6 +73,19 @@
   }
 }
 
+.descr_accent {
+  font-size: 14px;
+  color: $redCategoryAccent;
+
+  @include md {
+    font-size: 16px;
+  }
+
+  @include lg {
+    font-size: 20px;
+  }
+}
+
 .button {
   display: inline-block;
   padding: 8px 12px;
@@ -80,7 +94,6 @@
   font-weight: $boldFont;
   color: $accentColor;
   background-color: $whiteColor;
-  box-shadow: $shadow;
 
   transition: all 0.4s ease;
 
@@ -92,20 +105,13 @@
   &:hover,
   &:focus {
     scale: 110%;
-    box-shadow: $shadowDark;
+    box-shadow: $shadow;
   }
 }
 
 .video_group_wrapper {
   flex-basis: 100%;
-
-  @include sm {
-    flex-basis: 90%;
-  }
-
-  @include md {
-    flex-basis: 44%;
-  }
+  width: 100%;
 }
 
 .video_wrapper {
@@ -120,8 +126,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
   width: 100%;
   height: 100%;
 }

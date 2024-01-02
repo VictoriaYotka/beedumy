@@ -5,6 +5,8 @@
 }
 
 .item {
+  max-width: 300px;
+  margin: 0 auto;
   border: 2px solid $lightGreyBgColor;
 
   transition: all 0.4s ease;
@@ -51,7 +53,7 @@
   height: 200px;
   overflow: hidden;
   background-color: $whiteColor;
-  border: 2px solid $accentColor;
+  border: 1px solid $lightGreyBgColor;
   border-radius: 50%;
 
   transition: all 0.4s ease;
@@ -108,8 +110,8 @@
   }
 }
 .icon {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   fill: $secondaryFontColor;
 
   transition: all 0.4s ease;

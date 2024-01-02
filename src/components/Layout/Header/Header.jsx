@@ -7,7 +7,7 @@ import SignList from "./SignList/SignList";
 import NavList from "./NavList/NavList";
 import Logo from "./Logo/Logo";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import BurgerMenu from "./BurgerMenu/BurgerMenu";
 import LanguageSwitcher from "./LanguageSwitcher/LanguageSwitcher";
@@ -85,9 +85,9 @@ const Header = () => {
             <div className={css.topper_container}>
               <div className={css.wrapper}>
                 <LanguageSwitcher />
-                <p className={css.socials_title}>
+                <Link to="/contact" className={css.socials_title}>
                   {t("sharedLayout.contact_us")}
-                </p>
+                </Link>
                 <ul className={css.socials_list}>
                   <SocialsList />
                 </ul>

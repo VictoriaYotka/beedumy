@@ -58,12 +58,20 @@ const Home = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     swipeToSlide: true,
     pauseOnHover: true,
     rtl: true,
     responsive: [
+      {
+        breakpoint: 923,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
       {
         breakpoint: 769,
         settings: {
@@ -145,7 +153,7 @@ const Home = () => {
         },
       },
       {
-        breakpoint: 769,
+        breakpoint: 767,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -242,32 +250,32 @@ const Home = () => {
                 img={hero_image_sm}
                 name="Teachers name"
                 occupation="Occupation"
-                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis debitis esse officiis quae a eligendi similique, veniam libero exercitationem incidunt fugit dicta."
+                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. exercitationem."
               />
 
               <TeacherCard
                 img={hero_image_sm}
                 name="Teachers name"
                 occupation="Occupation"
-                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis debitis esse officiis quae a eligendi similique, veniam libero exercitationem incidunt fugit dicta."
+                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint is quae."
               />
 
               <TeacherCard
                 name="Teachers name"
                 occupation="Occupation"
-                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis debitis esse officiis quae a eligendi similique, veniam libero exercitationem incidunt fugit dicta."
+                descr="Lorem ipsum unt fugit dicta."
               />
 
               <TeacherCard
                 name="Teachers name"
                 occupation="Occupation"
-                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis debitis esse officiis quae a eligendi similique, veniam libero exercitationem incidunt fugit dicta."
+                descr="Lorem ipsum dolor sit amet consectetur adipisicing corporis incidunt fugit dicta."
               />
 
               <TeacherCard
                 name="Teachers name"
                 occupation="Occupation"
-                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis debitis esse officiis quae a eligendi similique, veniam libero exercitationem incidunt fugit dicta."
+                descr="Lorem ipsum dolor sit  debitis esse officiis quae a eligendi  dicta."
               />
             </Slider>
           </SectionAnimationWrapper>
@@ -292,33 +300,31 @@ const Home = () => {
               <FeedbackCard
                 content="التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد"
                 name="Student name"
-                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. "
+                descr="Lorem ipsum "
+              />
+
+              <FeedbackCard
+                content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis  dicta."
+                name="Student name"
+                descr="مدرس إعلامية"
+              />
+
+              <FeedbackCard
+                content="Lorem ipsum dolor odit. Aliquam necessitatibus architecto minima facere corporis  dicta."
+                name="Student name"
+                descr="مدرس إعلامية"
+              />
+
+              <FeedbackCard
+                content="Lorem ipsum dolor sit amet consecteturarchitecto minima facere corporis  dicta."
+                name="Student name"
+                descr="مدرس إعلامية"
               />
 
               <FeedbackCard
                 content="التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد"
                 name="Student name"
-                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam necessitatibus architecto minima facere corporis  dicta."
-              />
-
-              <FeedbackCard
-                content="التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد"
-                name="Student name"
-                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint odit. Aliquam similique, veniam libero exercitationem incidunt fugit dicta."
-              />
-
-              <FeedbackCard
-                content="التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد"
-                img={hero_image_sm}
-                name="Student name"
-                descr="Lorem ipsum dolor fugit dicta."
-              />
-
-              <FeedbackCard
-                content="التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد"
-                img={hero_image_sm}
-                name="Student name"
-                descr="Lorem ipsum  facere corporis debitis esse officiis dicta."
+                descr="Lorem ipsum "
               />
             </Slider>
           </SectionAnimationWrapper>

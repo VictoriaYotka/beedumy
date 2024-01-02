@@ -1,6 +1,8 @@
 @import "../../../scss";
 
 .item {
+  max-width: 300px;
+  margin: 0 auto;
   padding: 12px 24px;
   text-align: center;
   border: 2px solid $lightGreyBgColor;
@@ -97,7 +99,7 @@
   height: 60px;
   overflow: hidden;
   border-radius: 50%;
-  border: 1px solid $accentColor;
+  border: 1px solid $lightGreyBgColor;
 }
 
 .image {

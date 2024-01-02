@@ -23,6 +23,13 @@ const MobileApp = () => {
             </div>
             <p className={css.video_descr}>
               {t("home.mobile_app_video_descr")}
+              <span className={css.descr_accent}>
+                {t("home.mobile_app_video_descr_phones")}
+              </span>
+              {t("home.mobile_app_video_descr_and")}
+              <span className={css.descr_accent}>
+                {t("home.mobile_app_video_descr_tablets")}
+              </span>
             </p>
           </div>
           <div className={css.info_wrapper}>

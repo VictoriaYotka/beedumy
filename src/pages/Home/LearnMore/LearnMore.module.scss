@@ -21,7 +21,7 @@
 
 .button {
   display: inline-block;
-  padding: 12px 28px;
+  padding: 8px 28px;
   font-size: 16px;
   font-weight: $boldFont;
   color: $whiteColor;
@@ -31,11 +31,11 @@
 
   @include md {
     font-size: 20px;
-    padding: 12px 36px;
+    padding: 8px 36px;
   }
   @include lg {
     font-size: 24px;
-    padding: 16px 44px;
+    padding: 8px 44px;
   }
 
   &:hover,

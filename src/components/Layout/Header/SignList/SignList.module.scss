@@ -29,14 +29,35 @@
 
 .register_button {
   @extend .sign_button;
-  background-color: $redBgButtonColor;
   color: $whiteColor;
+  background: linear-gradient(to left, $redBgButtonColor 50%, #fa2f2f 50%) right;
+  background-size: 200% 100%;
+  background-position: right bottom;
+
+  &:hover,
+  &:focus {
+    background-position: left bottom;
+  }
 }
 
 .login_button {
   @extend .sign_button;
   border: 1px solid $greenBgButtonBgColor;
   color: $secondaryFontColor;
+  background: linear-gradient(
+      to left,
+      $whiteColor 50%,
+      $greenBgButtonBgColor 50%
+    )
+    right;
+  background-size: 200% 100%;
+  background-position: right bottom;
+
+  &:hover,
+  &:focus {
+    background-position: left bottom;
+    color: $whiteColor;
+  }
 }
 
 .account_button {

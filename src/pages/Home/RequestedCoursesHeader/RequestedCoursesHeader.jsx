@@ -11,6 +11,7 @@ const RequestedCoursesHeader = () => {
         <div className="container">
           <h2 className={css.heading}>{t("home.requested_courses_header")}</h2>
         </div>
+        <div className={css.triangle}></div>
       </section>
     </SectionAnimationWrapper>
   );

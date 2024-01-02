@@ -40,11 +40,14 @@
   }
 
   @include lg {
-    padding: 120px 40px 0 16px;
+    padding-top: 120px;
+    padding-bottom: 0;
+    padding-inline-end: 40px;
+    padding-inline-start: 16px;
   }
 
   @include xl {
-    padding: 120px 100px 0 16px;
+    padding-inline-end: 100px;
   }
 }
 
@@ -64,13 +67,8 @@
   }
 
   @include lg {
-    top: -22%;
-    right: -8%;
-    width: 35%;
-  }
-
-  @include xl {
-    width: 40%;
+    top: -10%;
+    right: 20%;
   }
 }
 
@@ -212,9 +210,8 @@
   }
 
   @include lg {
-    left: -12%;
+    left: 5%;
     bottom: -3%;
-    width: 30%;
   }
 }
 
@@ -236,8 +233,7 @@
   @include lg {
     top: unset;
     bottom: -2%;
-    left: 85%;
-    width: 20%;
+    left: 70%;
   }
 }
 
@@ -252,9 +248,5 @@
 
   @include md {
     right: -60px;
-  }
-
-  @include lg {
-    width: 30%;
   }
 }

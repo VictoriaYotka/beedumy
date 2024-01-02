@@ -19,13 +19,7 @@
 .icon {
   width: 20px;
   height: 20px;
-  margin-left: 12px;
   fill: $whiteColor;
 
   transition: all 0.4s ease;
-
-  @include sm {
-    width: 24px;
-    height: 24px;
-  }
 }

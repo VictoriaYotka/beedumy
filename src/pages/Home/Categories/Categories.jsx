@@ -58,7 +58,10 @@ const Categories = () => {
     <SectionAnimationWrapper>
       <section className={css.section}>
         <div className={css.container}>
-          <h2 className={css.heading}>{t("home.categories_heading")}</h2>
+          <h2 className={css.heading}>
+            {t("home.categories_heading_first_line")} <br />{" "}
+            {t("home.categories_heading_second_line")}
+          </h2>
 
           <Slider {...settings}>
             <div className={css.item}>

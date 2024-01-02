@@ -1,15 +1,7 @@
 @import "../../../scss";
 
 .section {
-  @extend .section;
-  text-align: center;
-  background-color: $blueBgColor;
-  color: $whiteColor;
-}
-
-.section {
   padding: 36px 0;
-  text-align: center;
   text-align: center;
   background-color: $blueBgColor;
   color: $whiteColor;
@@ -29,4 +21,17 @@
 
 .heading {
   @extend .heading;
+}
+
+.triangle {
+  position: absolute;
+  bottom: -28px;
+  right: 50%;
+  z-index: 10;
+  transform: translateX(50%);
+
+  background-color: $blueBgColor;
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  width: 90px;
+  height: 30px;
 }

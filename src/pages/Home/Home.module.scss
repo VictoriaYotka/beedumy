@@ -1,14 +1,14 @@
 @import "../../scss";
 
 .requested_courses_section {
-  padding: 12px 0 40px 0;
+  padding: 40px 0;
 
   @include sm {
-    padding: 16px 0 40px 0;
+    padding: 40px 0;
   }
 
   @include md {
-    padding: 20px 0 40px 0;
+    padding: 52px 0;
   }
 }
 
@@ -111,6 +111,10 @@
 .article_heading {
   @extend .heading;
   color: $whiteColor;
+
+  @include md {
+    max-width: 30%;
+  }
 }
 
 .article_list_wrapper {
@@ -121,10 +125,10 @@
   z-index: 2;
 
   @include md {
-    top: 60px;
+    top: 80px;
   }
 
-  @include xl {
-    top: 80px;
+  @include lg {
+    top: 100px;
   }
 }

@@ -67,7 +67,7 @@
 .socials {
   @extend .flex_aligncenter;
   justify-content: space-between;
-  gap: 8px;
+  gap: 16px;
 
   @include md {
     position: absolute;

@@ -3,7 +3,7 @@ import css from "./Logo.module.scss";
 
 const Logo = () => {
   return (
-    <NavLink to="/" className={css.nav_link}>
+    <NavLink to="/" className={css.logo}>
       LOGO
     </NavLink>
   );

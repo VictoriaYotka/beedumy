@@ -15,6 +15,7 @@ import triangle_green_little_sm from "../../../assets/images/home/hero/triangle-
 import triangle_green_little_lg from "../../../assets/images/home/hero/triangle-green-little_lg.webp";
 import triangle_rose_sm from "../../../assets/images/home/hero/triangle-rose_sm.webp";
 import triangle_rose_lg from "../../../assets/images/home/hero/triangle-rose_lg.webp";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -27,30 +28,6 @@ const Hero = () => {
     },
     to: { scale: 1, opacity: 1, transform: "translateY(0)" },
     config: { transition: "0.4s ease-in-out" },
-  });
-
-  const buttonStyles = useSpring({
-    reset: true,
-    loop: true,
-    from: { scale: 0.9, boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)" },
-    to: [
-      { scale: 1, boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)" },
-      { scale: 1.1, boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.3)" },
-      { scale: 1.1, boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.4)" },
-      { scale: 1.1, boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.5)" },
-      { scale: 1, boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)" },
-      { scale: 1.1, boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.3)" },
-      { scale: 1.1, boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.4)" },
-      { scale: 1, boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.3)" },
-      { scale: 0.9, boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)" },
-    ],
-    config: {
-      mass: 5,
-      tension: 400,
-      friction: 45,
-      clamp: true,
-      transition: "0.3s ease-in-out",
-    },
   });
 
   const heroImageStyles = useSpring({
@@ -145,6 +122,30 @@ const Hero = () => {
     },
   });
 
+  const [buttonStyles, set] = useSpring(() => ({
+    reset: true,
+    loop: true,
+    from: { scale: 0.9, boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)" },
+    to: [
+      { scale: 1, boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)" },
+      { scale: 1.1, boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.3)" },
+      { scale: 1.1, boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.4)" },
+      { scale: 1.1, boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.5)" },
+      { scale: 1, boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.2)" },
+      { scale: 1.1, boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.3)" },
+      { scale: 1.1, boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.4)" },
+      { scale: 1, boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.3)" },
+      { scale: 0.9, boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)" },
+    ],
+    config: {
+      mass: 5,
+      tension: 400,
+      friction: 45,
+      clamp: true,
+      transition: "0.3s ease-in-out",
+    },
+  }));
+
   return (
     <animated.section className={css.hero_section} style={sectionStyles}>
       <div className={css.hero_container}>
@@ -230,8 +231,17 @@ const Hero = () => {
             {t("home.hero_heading")}
           </h1>
           <p className={css.subheading}>{t("home.hero_subheading")}</p>
-          <animated.button className={css.hero_button} style={buttonStyles}>
-            {t("home.hero_button")}
+          <animated.button
+            className={css.hero_button}
+            style={buttonStyles}
+            onMouseEnter={() => {
+              set.pause();
+            }}
+            onMouseLeave={() => {
+              set.resume();
+            }}
+          >
+            <Link to="/categories">{t("home.hero_button")}</Link>
           </animated.button>
         </div>
       </div>
