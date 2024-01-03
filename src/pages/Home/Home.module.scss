@@ -25,9 +25,10 @@
 .teachers_button {
   margin-top: 40px;
   display: inline-block;
-  padding: 20px 40px;
+  padding: 16px 44px;
   background-color: $darkBgButtonColor;
   color: $whiteColor;
+  font-size: 16px;
   font-weight: $boldFont;
 
   transition: all 0.4s ease;
@@ -111,6 +112,7 @@
 .article_heading {
   @extend .heading;
   color: $whiteColor;
+  max-width: 320px;
 
   @include md {
     max-width: 30%;
@@ -119,7 +121,7 @@
 
 .article_list_wrapper {
   position: absolute;
-  top: 40px;
+  top: 60px;
   right: 5%;
   left: 5%;
   z-index: 2;

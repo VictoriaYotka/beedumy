@@ -21,22 +21,13 @@
 
 .button {
   display: inline-block;
-  padding: 8px 28px;
+  padding: 16px 44px;
   font-size: 16px;
   font-weight: $boldFont;
   color: $whiteColor;
   background-color: $footerBgColor;
 
   transition: all 0.4s ease;
-
-  @include md {
-    font-size: 20px;
-    padding: 8px 36px;
-  }
-  @include lg {
-    font-size: 24px;
-    padding: 8px 44px;
-  }
 
   &:hover,
   &:focus {

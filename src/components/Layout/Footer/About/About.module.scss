@@ -46,6 +46,7 @@
 }
 
 .button {
+  display: inline-block;
   padding: 8px 0;
   width: 100px;
   text-align: center;
@@ -63,7 +64,6 @@
 
 .follow_more_button {
   @extend .button;
-  display: inline-block;
   margin-inline-end: 8px;
   background-color: $greenBgButtonBgColor;
 }

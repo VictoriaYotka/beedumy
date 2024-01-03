@@ -68,7 +68,14 @@
 
   justify-content: center;
   margin-bottom: 40px;
-  margin-inline-end: auto;
+  [dir="ltr"] & {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  [dir="rtl"] & {
+    margin-left: auto;
+    margin-right: 0;
+  }
   padding: 12px;
   width: 70px;
   height: 70px;
@@ -109,14 +116,16 @@
 .name {
   position: relative;
   z-index: 2;
-
-  display: inline-block;
-
   margin-bottom: 24px;
-  text-align: start;
+  [dir="ltr"] & {
+    text-align: left;
+  }
+  [dir="rtl"] & {
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+  }
   font-weight: $boldFont;
-  // background-color: $accentColor;
-
   backdrop-filter: blur(10px);
 
   transition: all 0.4s ease;
@@ -125,9 +134,12 @@
 .content {
   position: relative;
   z-index: 2;
-  display: inline-block;
-  text-align: start;
-  // background-color: $accentColor;
+  [dir="ltr"] & {
+    text-align: left;
+  }
+  [dir="rtl"] & {
+    text-align: right;
+  }
 
   backdrop-filter: blur(10px);
 }

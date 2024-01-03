@@ -13,7 +13,7 @@ const Categories = () => {
     speed: 500,
     autoplay: true,
     autoplaySpeed: 1500,
-    slidesToShow: 5,
+    slidesToShow: 6,
     slidesToScroll: 1,
     swipeToSlide: true,
     pauseOnHover: true,

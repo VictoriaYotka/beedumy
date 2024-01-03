@@ -1,0 +1,73 @@
+@import "../../scss";
+
+.container {
+  @extend .container;
+  display: flex;
+  max-width: 90%;
+  padding: 32px;
+  background-color: $whiteColor;
+
+  @include sm {
+    padding: 40px 32px;
+  }
+
+  @include md {
+    max-width: 520px;
+    padding: 60px 32px;
+  }
+}
+
+.form {
+  flex-grow: 1;
+}
+
+.header {
+  text-align: start;
+  margin-bottom: 4px;
+
+  @include md {
+    margin-bottom: 12px;
+  }
+}
+
+.subheader {
+  text-align: start;
+  color: $secondaryFontColor;
+  margin-bottom: 20px;
+
+  @include md {
+    margin-bottom: 40px;
+  }
+}
+
+.button {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: $blueAccentColor;
+  color: $whiteColor;
+  font-size: 16px;
+  font-weight: $boldFont;
+
+  transition: all 0.4s ease;
+
+  @include md {
+    margin-bottom: 40px;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 105%;
+    box-shadow: $shadow;
+  }
+}
+
+.notion {
+  margin-inline-end: 4px;
+}
+
+.accent {
+  color: $blueAccentColor;
+}

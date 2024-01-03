@@ -4,9 +4,9 @@ import SharedLayout from "../../pages/SharedLayout/SharedLayout";
 import { useTranslation } from "react-i18next";
 import PublicRoute from "../PublicRoute/PublicRoute";
 
-const Register = lazy(() => import("../../pages/Register/Register"));
-const Login = lazy(() => import("../../pages/Login/Login"));
-const About = lazy(() => import("../../pages/About/About"));
+const Register = lazy(() => import("../../pages/Sign/Register"));
+const Login = lazy(() => import("../../pages/Sign/Login"));
+const ForgotPassword = lazy(() => import("../../pages/Sign/ForgotPassword"));
 const Categories = lazy(() => import("../../pages/Categories/Categories"));
 const SingleCourse = lazy(() =>
   import("../../pages/SingleCourse/SingleCourse")
@@ -26,6 +26,8 @@ const BecomeTeacher = lazy(() =>
   import("../../pages/BecomeTeacher/BecomeTeacher")
 );
 const Contact = lazy(() => import("../../pages/Contact/Contact"));
+const About = lazy(() => import("../../pages/About/About"));
+const Gallery = lazy(() => import("../../pages/Gallery/Gallery"));
 
 function App() {
   const { i18n } = useTranslation();
@@ -57,6 +59,14 @@ function App() {
               </PublicRoute>
             }
           />
+          <Route
+            path="forgotpassword"
+            element={
+              <PublicRoute>
+                <ForgotPassword />
+              </PublicRoute>
+            }
+          />
           <Route path="courses" element={<Courses />} />
           <Route path="courses/:courseId" element={<SingleCourse />} />
           <Route path="courses/:courseId/buy" element={<BuyCourse />} />
@@ -68,6 +78,7 @@ function App() {
           <Route path="becometeacher" element={<BecomeTeacher />} />
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
+          <Route path="gallery" element={<Gallery />} />
           <Route path="faq" element={<Faq />} />
           <Route path="*" element={<NotFound />} />
         </Route>

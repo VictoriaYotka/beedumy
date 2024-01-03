@@ -1,7 +1,7 @@
 import css from "./Footer.module.scss";
 import { useTranslation } from "react-i18next";
 import hero_image_sm from "../../../assets/images/home/hero/image_sm.webp";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import SectionAnimationWrapper from "../../SectionAnimationWrapper/SectionAnimationWrapper";
 import GalleryItem from "./GalleryItem/GalleryItem";
@@ -63,9 +63,9 @@ const Footer = () => {
                 {showMore && (
                   <>
                     <div>
-                      <NavLink className={css.gallery_heading}>
+                      <Link to="/gallery" className={css.gallery_heading}>
                         {t("sharedLayout.gallery_heading")}
-                      </NavLink>
+                      </Link>
                       <ul className={css.gallery_list}>
                         <GalleryItem img={hero_image_sm} />
                         <GalleryItem img={hero_image_sm} />

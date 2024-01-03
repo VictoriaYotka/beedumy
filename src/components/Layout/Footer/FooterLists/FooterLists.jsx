@@ -9,7 +9,9 @@ const FooterLists = () => {
     <>
       <ul className={css.list}>
         <li className={css.item}>
-          <NavLink>{t("sharedLayout.browse_content")} </NavLink>
+          <NavLink to="/categories">
+            {t("sharedLayout.browse_content")}{" "}
+          </NavLink>
         </li>
         <li className={css.item}>
           <NavLink>{t("sharedLayout.terms_and_conditions")}</NavLink>
@@ -24,10 +26,12 @@ const FooterLists = () => {
           <NavLink>{t("sharedLayout.help")}</NavLink>
         </li>
         <li className={css.item}>
-          <NavLink>{t("sharedLayout.contact_us")}</NavLink>
+          <NavLink to="/contact">{t("sharedLayout.contact_us")}</NavLink>
         </li>
         <li className={css.item}>
-          <NavLink>{t("sharedLayout.register_for_free")}</NavLink>
+          <NavLink to="/register">
+            {t("sharedLayout.register_for_free")}
+          </NavLink>
         </li>
       </ul>
     </>
