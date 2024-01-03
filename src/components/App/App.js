@@ -11,7 +11,12 @@ const Categories = lazy(() => import("../../pages/Categories/Categories"));
 const SingleCourse = lazy(() =>
   import("../../pages/SingleCourse/SingleCourse")
 );
-const Courses = lazy(() => import("../../pages/Courses/Courses"));
+const CoursesTunisian = lazy(() =>
+  import("../../pages/CoursesTunisian/CoursesTunisian")
+);
+const CoursesLibyan = lazy(() =>
+  import("../../pages/CoursesLibyan/CoursesLibyan")
+);
 const BuyCourse = lazy(() => import("../../pages/BuyCourse/BuyCourse"));
 const Faq = lazy(() => import("../../pages/Faq/Faq"));
 const Home = lazy(() => import("../../pages/Home/Home"));
@@ -67,7 +72,8 @@ function App() {
               </PublicRoute>
             }
           />
-          <Route path="courses" element={<Courses />} />
+          <Route path="courses-tunisian" element={<CoursesTunisian />} />
+          <Route path="courses-libyan" element={<CoursesLibyan />} />
           <Route path="courses/:courseId" element={<SingleCourse />} />
           <Route path="courses/:courseId/buy" element={<BuyCourse />} />
           <Route path="categories" element={<Categories />} />

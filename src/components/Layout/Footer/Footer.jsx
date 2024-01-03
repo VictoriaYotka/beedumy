@@ -1,7 +1,7 @@
 import css from "./Footer.module.scss";
 import { useTranslation } from "react-i18next";
 import hero_image_sm from "../../../assets/images/home/hero/image_sm.webp";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import SectionAnimationWrapper from "../../SectionAnimationWrapper/SectionAnimationWrapper";
 import GalleryItem from "./GalleryItem/GalleryItem";

@@ -127,11 +127,63 @@
     "contact_options_about_header": "عن منصتنا",
     "contact_options_about": "نوفّر مواد تعليمية لدعم التلاميذ من جميع الفئـات العمرية. باإضافة إلى دورات في اخـتصاصات منعــددة"
   },
-  "courses": {
+  "courses_filter": {
     "courses_filter_primary": "الإبتدائية",
     "courses_filter_middle": "الإعدادية",
     "courses_filter_high": "الثانوية",
     "courses_filter_bachelor": "الباكالوريا",
+    "primary": {
+      "first_year": "السنة الأولى إبتدائي",
+      "second_year": "السنة الثانية إبتدائي",
+      "third_year": "السنة الثالثة إبتدائي",
+      "fourth_year": "السنة الرابعة إبتدائي",
+      "fifth_year": "السنة الخامسة إبتدائي",
+      "sixth_year": "السنة السادسة إبتدائي"
+    },
+    "middle_tunisian": {
+      "seventh_year_essential": "السابعة أساسي",
+      "eighth_year_essential": "الثامنة أساســي",
+      "ninth_year_essential": "التاسعة أساسي"
+    },
+    "middle_libyan": {
+      "first_year_preparatory": "السابعة أساسي",
+      "second_year_preparatory": "الثامنة أساســي",
+      "third_year_preparatory": "التاسعة أساسي"
+    },
+    "high": {
+      "first_year": "الأولى ثانوي",
+      "second_year": "الثانية ثانوي",
+      "third_year": "الثالثة ثانوي"
+    },
+    "high_tunisian": {
+      "second_year_etiquette": "الثانية آداب",
+      "second_year_informational": "الثانية إعلامية",
+      "second_year_experimental_science": "الثانية علوم تجريبية",
+      "second_year_economics": "الثانية إقتصاد",
+      "third_year_etiquette": "الثالثة آداب",
+      "third_year_sports": "الثالثة رياضة",
+      "third_year_experimental_science": "الثالثة علوم تجريبية",
+      "third_year_economics": "الثالثة إقتصاد",
+      "third_year_informational": "الثالثة إعلامية",
+      "third_year_mathematics": "الثالثة رياضيات",
+      "third_year_technical": "الثالثة تقنية"
+    },
+    "high_libyan": {
+      "second_year_scientific": "الثانية علمي",
+      "second_year_literary": "الثانية أدبي",
+      "third_year_scientific": "الثالثة علمي",
+      "third_year_literary": "الثالثة أدبي"
+    },
+    "bachelor_tunisian": {
+      "arts": "باكالوريا آداب",
+      "technical": "باكالوريا تقنية",
+      "mathematics": "باكالوريا رياضيات",
+      "experimental_science": "باكالوريا علوم تجريبية",
+      "media": "باكالوريا إعلامية",
+      "economics_management": "باكالوريا إقتصاد وتصرف"
+    }
+  },
+  "courses": {
     "course_card_button": "See more",
     "single_course_price_header": "ثمن المحتوى",
     "single_course_price_button": "شراء المحتوى",

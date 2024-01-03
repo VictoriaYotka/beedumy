@@ -7,12 +7,16 @@
 
 .container {
   @extend .container;
+  text-align: start;
 }
 
 .list_heading {
-  font-size: 16px;
+  display: inline-block;
   margin-bottom: 8px;
   text-align: start;
+  font-size: 16px;
+
+  transition: all 0.4s ease;
 
   @include sm {
     font-size: 18px;
@@ -29,6 +33,42 @@
 
   @include xl {
     font-size: 28px;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    scale: 105%;
+    color: $accentColor;
+
+    .icon {
+      stroke: $accentColor;
+    }
+  }
+}
+
+.list_heading_link {
+  @extend .flex_aligncenter;
+  gap: 4px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke: $darkFontColor;
+  fill: none;
+  [dir="ltr"] & {
+    transform: rotate(-90deg);
+  }
+  [dir="rtl"] & {
+    transform: rotate(90deg);
+  }
+
+  transition: all 0.4s ease;
+
+  @include md {
+    width: 32px;
+    height: 32px;
   }
 }
 
