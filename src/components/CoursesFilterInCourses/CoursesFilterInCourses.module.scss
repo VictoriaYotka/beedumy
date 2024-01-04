@@ -20,8 +20,8 @@
 
 .list {
   @extend .flex_aligncenter;
-  justify-content: space-around;
   flex-direction: column;
+  justify-content: space-around;
   gap: 8px;
   font-size: 14px;
   color: $whiteColor;
@@ -36,9 +36,21 @@
   }
 }
 
+.item {
+  position: relative;
+}
+
 .item_heading {
   @extend .flex_aligncenter;
   gap: 4px;
+  cursor: pointer;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 120%;
+  }
 }
 
 .icon {
@@ -46,4 +58,90 @@
   height: 20px;
   stroke: $whiteColor;
   fill: none;
+
+  transition: all 0.4s ease;
+}
+
+.icon_active {
+  transform: scale(1, -1);
+}
+
+.sub_list {
+  position: absolute;
+  top: 140%;
+
+  [dir="ltr"] & {
+    left: -100%;
+  }
+  [dir="rtl"] & {
+    right: -100%;
+  }
+  z-index: 2;
+  width: 220px;
+  padding: 16px;
+  background-color: $whiteColor;
+  border: 2px solid $lightGreyBgColor;
+  border-start-start-radius: 16px;
+  border-end-end-radius: 16px;
+  box-shadow: $shadow;
+
+  @include md {
+    [dir="ltr"] & {
+      left: -70%;
+    }
+    [dir="rtl"] & {
+      right: -70%;
+    }
+  }
+}
+
+.sub_item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.sub_item_heading {
+  @extend .item_heading;
+  color: $darkFontColor;
+  font-size: 12px;
+  font-weight: $boldFont;
+
+  @include md {
+    font-size: 14px;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 105%;
+  }
+}
+
+.sub_icon {
+  margin-inline-start: auto;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: $accentColor;
+
+  [dir="ltr"] & {
+    transform: rotate(-90deg);
+  }
+  [dir="rtl"] & {
+    transform: rotate(90deg);
+  }
+  transition: all 0.4s ease;
+}
+
+.sub_sub_list {
+  margin-inline-start: 16px;
+  margin-top: 16px;
+}
+
+.sub_icon_content {
+  margin-inline-start: auto;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: $accentColor;
+
+  transition: all 0.4s ease;
 }

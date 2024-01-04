@@ -154,6 +154,7 @@ const BuyCourseOptions = () => {
             );
           case "upi":
             return <UpiModal style={style} closeModal={closeModal} key="upi" />;
+
           default:
             return null;
         }
