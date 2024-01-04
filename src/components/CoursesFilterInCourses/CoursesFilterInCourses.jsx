@@ -1,8 +1,8 @@
+import { useLocation } from "react-router-dom";
+import { useCallback, useEffect, useState } from "react";
 import css from "./CoursesFilterInCourses.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
 import { useTranslation } from "react-i18next";
-import { useLocation } from "react-router-dom";
-import { useCallback, useEffect, useState } from "react";
 
 const CoursesFilterInCourses = ({ curriculum }) => {
   const { t } = useTranslation();

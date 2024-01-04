@@ -1,3 +1,4 @@
 import truncateText from "./truncateText";
+import replaceHyphensWithSpaces from "./replaceHyphensWithSpaces";
 
-export { truncateText };
+export { truncateText, replaceHyphensWithSpaces };

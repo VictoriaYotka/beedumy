@@ -13,7 +13,7 @@ const Categories = () => {
     speed: 500,
     autoplay: true,
     autoplaySpeed: 1500,
-    slidesToShow: 6,
+    slidesToShow: 5.99,
     slidesToScroll: 1,
     swipeToSlide: true,
     pauseOnHover: true,
@@ -59,7 +59,7 @@ const Categories = () => {
       <section className={css.section}>
         <div className={css.container}>
           <h2 className={css.heading}>
-            {t("home.categories_heading_first_line")} <br />{" "}
+            {t("home.categories_heading_first_line")} <br />
             {t("home.categories_heading_second_line")}
           </h2>
 

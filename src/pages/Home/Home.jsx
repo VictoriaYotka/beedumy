@@ -11,6 +11,7 @@ import hero_image_sm from "../../assets/images/home/hero/image_sm.webp";
 import SectionAnimationWrapper from "../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 import { useEffect } from "react";
 import axios from "axios";
+import { replaceHyphensWithSpaces } from "../../utils";
 
 const CourseCardInCategories = lazy(() =>
   import("../../components/CourseCardInCategories/CourseCardInCategories")
@@ -203,7 +204,7 @@ const Home = () => {
                     img={img}
                     imgAlt=""
                     preheader={teacher.full_name}
-                    header={slug}
+                    header={replaceHyphensWithSpaces(slug)}
                     rating="stars"
                     descr="Some description"
                     id="123"
