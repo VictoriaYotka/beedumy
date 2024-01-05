@@ -10,8 +10,10 @@ import LearnMore from "./LearnMore/LearnMore";
 import hero_image_sm from "../../assets/images/home/hero/image_sm.webp";
 import SectionAnimationWrapper from "../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 import { useEffect } from "react";
-import axios from "axios";
 import { replaceHyphensWithSpaces } from "../../utils";
+import { useDispatch, useSelector } from "react-redux";
+import { coursesSelector } from "../../redux/selectors/contentSelectors";
+import { homePage } from "../../redux/operations/contentOperations";
 
 const CourseCardInCategories = lazy(() =>
   import("../../components/CourseCardInCategories/CourseCardInCategories")
@@ -164,22 +166,17 @@ const articleSettings = {
 
 const Home = () => {
   const { t } = useTranslation();
+  const dispatch = useDispatch();
 
-  const [first, setfirst] = useState([]);
+  const courses = useSelector(coursesSelector);
 
   useEffect(() => {
-    axios({
-      method: "get",
-      url: "http://192.168.100.2:8000/api/users",
-    })
-      .then(function (response) {
-        console.log(response.data);
-        setfirst(response.data);
-      })
-      .catch(function (response) {
-        console.log(response);
-      });
-  }, []);
+    console.log(courses);
+    if (courses.length === 0) {
+      dispatch(homePage());
+      console.log(courses);
+    }
+  }, [courses.length, dispatch, courses]);
 
   return (
     <>
@@ -194,7 +191,7 @@ const Home = () => {
         <section className={css.requested_courses_section}>
           <div className="container">
             <Slider {...requestedCoursesSettings}>
-              {first.map((el, index) => {
+              {courses.map((el, index) => {
                 const { image_cover, teacher, slug } = el;
                 const img = `http://192.168.100.2:8000${image_cover}`;
                 return (

@@ -215,17 +215,15 @@
 .count {
   position: absolute;
   top: 0;
-  left: 0;
-
-  [dir="rtl"] & {
-    right: 0;
-    left: unset;
-    transform: translateX(-70%);
-  }
   [dir="ltr"] & {
     left: 0;
     right: unset;
     transform: translateX(70%);
+  }
+  [dir="rtl"] & {
+    right: 0;
+    left: unset;
+    transform: translateX(-70%);
   }
 
   width: 40px;
@@ -239,33 +237,31 @@
   font-weight: $boldFont;
 
   @include sm {
-    [dir="rtl"] & {
-      right: 0;
-      left: unset;
-      transform: translateX(-30%);
-    }
     [dir="ltr"] & {
       left: 0;
-      right: unset;
       transform: translateX(30%);
+    }
+    [dir="rtl"] & {
+      right: 0;
+      transform: translateX(-30%);
     }
   }
 
   @include md {
-    [dir="rtl"] & {
-      transform: translateX(-15%);
-    }
     [dir="ltr"] & {
       transform: translateX(15%);
+    }
+    [dir="rtl"] & {
+      transform: translateX(-15%);
     }
   }
 
   @include lg {
-    [dir="rtl"] & {
-      transform: translateX(-25%);
-    }
     [dir="ltr"] & {
       transform: translateX(25%);
+    }
+    [dir="rtl"] & {
+      transform: translateX(-25%);
     }
   }
 }
