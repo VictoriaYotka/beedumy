@@ -3,6 +3,14 @@ import { useCallback, useEffect, useState } from "react";
 import css from "./CoursesFilterInCourses.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
 import { useTranslation } from "react-i18next";
+import { useTransition } from "@react-spring/web";
+import {
+  BachelorList,
+  HighList,
+  MiddleLibyanList,
+  MiddleTunisianList,
+  PrimaryList,
+} from "./CoursesFilterSubLists";
 
 const CoursesFilterInCourses = ({ curriculum }) => {
   const { t } = useTranslation();
@@ -60,6 +68,18 @@ const CoursesFilterInCourses = ({ curriculum }) => {
     };
   }, [activeList, closeList]);
 
+  const transition = useTransition(activeList, {
+    from: { opacity: 0, transform: "translateY(-20px)" },
+    enter: {
+      opacity: 1,
+      transform: "translateY(0)",
+    },
+    leave: {
+      opacity: 0,
+      transform: "translateY(-20px)",
+    },
+  });
+
   return (
     <section className={css.section}>
       <div className={css.container}>
@@ -84,58 +104,14 @@ const CoursesFilterInCourses = ({ curriculum }) => {
               </svg>
             </h4>
 
-            {activeList === "primary" && (
-              <ul data-sublist="sublist" className={css.sub_list}>
-                <li className={css.sub_item}>
-                  <p className={css.sub_item_heading}>
-                    <span>{t("courses_filter.primary.first_year")}</span>
-                    <svg className={css.sub_icon}>
-                      <use href={icons + "#chevron-down"}></use>
-                    </svg>
-                  </p>
-                </li>
-                <li className={css.sub_item}>
-                  <p className={css.sub_item_heading}>
-                    <span>{t("courses_filter.primary.second_year")}</span>
-                    <svg className={css.sub_icon}>
-                      <use href={icons + "#chevron-down"}></use>
-                    </svg>
-                  </p>
-                </li>
-                <li className={css.sub_item}>
-                  <p className={css.sub_item_heading}>
-                    <span>{t("courses_filter.primary.third_year")}</span>
-                    <svg className={css.sub_icon}>
-                      <use href={icons + "#chevron-down"}></use>
-                    </svg>
-                  </p>
-                </li>
-                <li className={css.sub_item}>
-                  <p className={css.sub_item_heading}>
-                    <span>{t("courses_filter.primary.fourth_year")}</span>
-                    <svg className={css.sub_icon}>
-                      <use href={icons + "#chevron-down"}></use>
-                    </svg>
-                  </p>
-                </li>
-                <li className={css.sub_item}>
-                  <p className={css.sub_item_heading}>
-                    <span>{t("courses_filter.primary.fifth_year")}</span>
-                    <svg className={css.sub_icon}>
-                      <use href={icons + "#chevron-down"}></use>
-                    </svg>
-                  </p>
-                </li>
-                <li className={css.sub_item}>
-                  <p className={css.sub_item_heading}>
-                    <span>{t("courses_filter.primary.sixth_year")}</span>
-                    <svg className={css.sub_icon}>
-                      <use href={icons + "#chevron-down"}></use>
-                    </svg>
-                  </p>
-                </li>
-              </ul>
-            )}
+            {transition((style, item) => {
+              switch (item) {
+                case "primary":
+                  return <PrimaryList style={style} />;
+                default:
+                  return null;
+              }
+            })}
           </li>
 
           {/* middle */}
@@ -157,89 +133,21 @@ const CoursesFilterInCourses = ({ curriculum }) => {
               </svg>
             </h4>
 
-            {activeList === "middle" &&
-              location.pathname === "/courses-tunisian" && (
-                <ul data-sublist="sublist" className={css.sub_list}>
-                  <li className={css.sub_item}>
-                    <p className={css.sub_item_heading}>
-                      <span>
-                        {t(
-                          "courses_filter.middle_tunisian.seventh_year_essential"
-                        )}
-                      </span>
-                      <svg className={css.sub_icon}>
-                        <use href={icons + "#chevron-down"}></use>
-                      </svg>
-                    </p>
-                  </li>
-                  <li className={css.sub_item}>
-                    <p className={css.sub_item_heading}>
-                      <span>
-                        {t(
-                          "courses_filter.middle_tunisian.eighth_year_essential"
-                        )}
-                      </span>
-                      <svg className={css.sub_icon}>
-                        <use href={icons + "#chevron-down"}></use>
-                      </svg>
-                    </p>
-                  </li>
-                  <li className={css.sub_item}>
-                    <p className={css.sub_item_heading}>
-                      <span>
-                        {t(
-                          "courses_filter.middle_tunisian.ninth_year_essential"
-                        )}
-                      </span>
-                      <svg className={css.sub_icon}>
-                        <use href={icons + "#chevron-down"}></use>
-                      </svg>
-                    </p>
-                  </li>
-                </ul>
-              )}
-
-            {activeList === "middle" &&
-              location.pathname === "/courses-libyan" && (
-                <ul data-sublist="sublist" className={css.sub_list}>
-                  <li className={css.sub_item}>
-                    <p className={css.sub_item_heading}>
-                      <span>
-                        {t(
-                          "courses_filter.middle_libyan.first_year_preparatory"
-                        )}
-                      </span>
-                      <svg className={css.sub_icon}>
-                        <use href={icons + "#chevron-down"}></use>
-                      </svg>
-                    </p>
-                  </li>
-                  <li className={css.sub_item}>
-                    <p className={css.sub_item_heading}>
-                      <span>
-                        {t(
-                          "courses_filter.middle_libyan.second_year_preparatory"
-                        )}
-                      </span>
-                      <svg className={css.sub_icon}>
-                        <use href={icons + "#chevron-down"}></use>
-                      </svg>
-                    </p>
-                  </li>
-                  <li className={css.sub_item}>
-                    <p className={css.sub_item_heading}>
-                      <span>
-                        {t(
-                          "courses_filter.middle_libyan.third_year_preparatory"
-                        )}
-                      </span>
-                      <svg className={css.sub_icon}>
-                        <use href={icons + "#chevron-down"}></use>
-                      </svg>
-                    </p>
-                  </li>
-                </ul>
-              )}
+            {transition((style, item) => {
+              switch (item) {
+                case "middle":
+                  switch (location.pathname) {
+                    case "/courses-tunisian":
+                      return <MiddleTunisianList style={style} />;
+                    case "/courses-libyan":
+                      return <MiddleLibyanList style={style} />;
+                    default:
+                      return null;
+                  }
+                default:
+                  return null;
+              }
+            })}
           </li>
 
           {/* high */}
@@ -261,261 +169,20 @@ const CoursesFilterInCourses = ({ curriculum }) => {
               </svg>
             </h4>
 
-            {activeList === "high" && (
-              <ul data-sublist="sublist" className={css.sub_list}>
-                <li className={css.sub_item}>
-                  <p className={css.sub_item_heading}>
-                    <span>{t("courses_filter.high.first_year")}</span>
-                    <svg className={css.sub_icon}>
-                      <use href={icons + "#chevron-down"}></use>
-                    </svg>
-                  </p>
-                </li>
-
-                {/* second year */}
-                <li
-                  className={css.sub_item}
-                  onClick={() => toggleSubList("second_year")}
-                >
-                  <p className={css.sub_item_heading}>
-                    <span>{t("courses_filter.high.second_year")}</span>
-                    <svg
-                      // className={css.sub_icon_content}
-                      className={
-                        activeSubList.includes("second_year")
-                          ? `${css.sub_icon_content} ${css.icon_active}`
-                          : `${css.sub_icon_content}`
-                      }
-                    >
-                      <use href={icons + "#chevron-down"}></use>
-                    </svg>
-                  </p>
-
-                  {activeSubList.includes("second_year") &&
-                    location.pathname === "/courses-tunisian" && (
-                      <ul className={css.sub_sub_list}>
-                        <li className={css.sub_item}>
-                          <p className={css.sub_item_heading}>
-                            <span>
-                              {t(
-                                "courses_filter.high_tunisian.second_year_etiquette"
-                              )}
-                            </span>
-                            <svg className={css.sub_icon}>
-                              <use href={icons + "#chevron-down"}></use>
-                            </svg>
-                          </p>
-                        </li>
-                        <li className={css.sub_item}>
-                          <p className={css.sub_item_heading}>
-                            <span>
-                              {t(
-                                "courses_filter.high_tunisian.second_year_informational"
-                              )}
-                            </span>
-                            <svg className={css.sub_icon}>
-                              <use href={icons + "#chevron-down"}></use>
-                            </svg>
-                          </p>
-                        </li>
-                        <li className={css.sub_item}>
-                          <p className={css.sub_item_heading}>
-                            <span>
-                              {t(
-                                "courses_filter.high_tunisian.second_year_experimental_science"
-                              )}
-                            </span>
-                            <svg className={css.sub_icon}>
-                              <use href={icons + "#chevron-down"}></use>
-                            </svg>
-                          </p>
-                        </li>
-                        <li className={css.sub_item}>
-                          <p className={css.sub_item_heading}>
-                            <span>
-                              {t(
-                                "courses_filter.high_tunisian.second_year_economics"
-                              )}
-                            </span>
-                            <svg className={css.sub_icon}>
-                              <use href={icons + "#chevron-down"}></use>
-                            </svg>
-                          </p>
-                        </li>
-                      </ul>
-                    )}
-
-                  {activeSubList.includes("second_year") &&
-                    location.pathname === "/courses-libyan" && (
-                      <ul className={css.sub_sub_list}>
-                        <li className={css.sub_item}>
-                          <p className={css.sub_item_heading}>
-                            <span>
-                              {t(
-                                "courses_filter.high_libyan.second_year_scientific"
-                              )}
-                            </span>
-                            <svg className={css.sub_icon}>
-                              <use href={icons + "#chevron-down"}></use>
-                            </svg>
-                          </p>
-                        </li>
-                        <li className={css.sub_item}>
-                          <p className={css.sub_item_heading}>
-                            <span>
-                              {t(
-                                "courses_filter.high_libyan.second_year_literary"
-                              )}
-                            </span>
-                            <svg className={css.sub_icon}>
-                              <use href={icons + "#chevron-down"}></use>
-                            </svg>
-                          </p>
-                        </li>
-                      </ul>
-                    )}
-                </li>
-
-                {/* third year */}
-                <li
-                  className={css.sub_item}
-                  onClick={() => toggleSubList("third_year")}
-                >
-                  <p className={css.sub_item_heading}>
-                    <span>{t("courses_filter.high.third_year")}</span>
-                    <svg
-                      className={
-                        activeSubList.includes("third_year")
-                          ? `${css.sub_icon_content} ${css.icon_active}`
-                          : `${css.sub_icon_content}`
-                      }
-                    >
-                      <use href={icons + "#chevron-down"}></use>
-                    </svg>
-                  </p>
-
-                  {activeSubList.includes("third_year") &&
-                    location.pathname === "/courses-tunisian" && (
-                      <ul className={css.sub_sub_list}>
-                        <li className={css.sub_item}>
-                          <p className={css.sub_item_heading}>
-                            <span>
-                              {t(
-                                "courses_filter.high_tunisian.third_year_etiquette"
-                              )}
-                            </span>
-                            <svg className={css.sub_icon}>
-                              <use href={icons + "#chevron-down"}></use>
-                            </svg>
-                          </p>
-                        </li>
-                        <li className={css.sub_item}>
-                          <p className={css.sub_item_heading}>
-                            <span>
-                              {t(
-                                "courses_filter.high_tunisian.third_year_sports"
-                              )}
-                            </span>
-                            <svg className={css.sub_icon}>
-                              <use href={icons + "#chevron-down"}></use>
-                            </svg>
-                          </p>
-                        </li>
-                        <li className={css.sub_item}>
-                          <p className={css.sub_item_heading}>
-                            <span>
-                              {t(
-                                "courses_filter.high_tunisian.third_year_experimental_science"
-                              )}
-                            </span>
-                            <svg className={css.sub_icon}>
-                              <use href={icons + "#chevron-down"}></use>
-                            </svg>
-                          </p>
-                        </li>
-                        <li className={css.sub_item}>
-                          <p className={css.sub_item_heading}>
-                            <span>
-                              {t(
-                                "courses_filter.high_tunisian.third_year_economics"
-                              )}
-                            </span>
-                            <svg className={css.sub_icon}>
-                              <use href={icons + "#chevron-down"}></use>
-                            </svg>
-                          </p>
-                        </li>
-                        <li className={css.sub_item}>
-                          <p className={css.sub_item_heading}>
-                            <span>
-                              {t(
-                                "courses_filter.high_tunisian.third_year_informational"
-                              )}
-                            </span>
-                            <svg className={css.sub_icon}>
-                              <use href={icons + "#chevron-down"}></use>
-                            </svg>
-                          </p>
-                        </li>
-                        <li className={css.sub_item}>
-                          <p className={css.sub_item_heading}>
-                            <span>
-                              {t(
-                                "courses_filter.high_tunisian.third_year_mathematics"
-                              )}
-                            </span>
-                            <svg className={css.sub_icon}>
-                              <use href={icons + "#chevron-down"}></use>
-                            </svg>
-                          </p>
-                        </li>
-                        <li className={css.sub_item}>
-                          <p className={css.sub_item_heading}>
-                            <span>
-                              {t(
-                                "courses_filter.high_tunisian.third_year_technical"
-                              )}
-                            </span>
-                            <svg className={css.sub_icon}>
-                              <use href={icons + "#chevron-down"}></use>
-                            </svg>
-                          </p>
-                        </li>
-                      </ul>
-                    )}
-
-                  {activeSubList.includes("third_year") &&
-                    location.pathname === "/courses-libyan" && (
-                      <ul className={css.sub_sub_list}>
-                        <li className={css.sub_item}>
-                          <p className={css.sub_item_heading}>
-                            <span>
-                              {t(
-                                "courses_filter.high_libyan.third_year_scientific"
-                              )}
-                            </span>
-                            <svg className={css.sub_icon}>
-                              <use href={icons + "#chevron-down"}></use>
-                            </svg>
-                          </p>
-                        </li>
-                        <li className={css.sub_item}>
-                          <p className={css.sub_item_heading}>
-                            <span>
-                              {t(
-                                "courses_filter.high_libyan.third_year_literary"
-                              )}
-                            </span>
-                            <svg className={css.sub_icon}>
-                              <use href={icons + "#chevron-down"}></use>
-                            </svg>
-                          </p>
-                        </li>
-                      </ul>
-                    )}
-                </li>
-              </ul>
-            )}
+            {transition((style, item) => {
+              switch (item) {
+                case "high":
+                  return (
+                    <HighList
+                      style={style}
+                      toggleSubList={toggleSubList}
+                      activeSubList={activeSubList}
+                    />
+                  );
+                default:
+                  return null;
+              }
+            })}
           </li>
 
           {/* bachelor */}
@@ -538,70 +205,14 @@ const CoursesFilterInCourses = ({ curriculum }) => {
                 </svg>
               </h4>
 
-              {activeList === "bachelor" && (
-                <ul data-sublist="sublist" className={css.sub_list}>
-                  <li className={css.sub_item}>
-                    <p className={css.sub_item_heading}>
-                      <span>{t("courses_filter.bachelor_tunisian.arts")}</span>
-                      <svg className={css.sub_icon}>
-                        <use href={icons + "#chevron-down"}></use>
-                      </svg>
-                    </p>
-                  </li>
-                  <li className={css.sub_item}>
-                    <p className={css.sub_item_heading}>
-                      <span>
-                        {t("courses_filter.bachelor_tunisian.technical")}
-                      </span>
-                      <svg className={css.sub_icon}>
-                        <use href={icons + "#chevron-down"}></use>
-                      </svg>
-                    </p>
-                  </li>
-                  <li className={css.sub_item}>
-                    <p className={css.sub_item_heading}>
-                      <span>
-                        {t("courses_filter.bachelor_tunisian.mathematics")}
-                      </span>
-                      <svg className={css.sub_icon}>
-                        <use href={icons + "#chevron-down"}></use>
-                      </svg>
-                    </p>
-                  </li>
-                  <li className={css.sub_item}>
-                    <p className={css.sub_item_heading}>
-                      <span>
-                        {t(
-                          "courses_filter.bachelor_tunisian.experimental_science"
-                        )}
-                      </span>
-                      <svg className={css.sub_icon}>
-                        <use href={icons + "#chevron-down"}></use>
-                      </svg>
-                    </p>
-                  </li>
-                  <li className={css.sub_item}>
-                    <p className={css.sub_item_heading}>
-                      <span>{t("courses_filter.bachelor_tunisian.media")}</span>
-                      <svg className={css.sub_icon}>
-                        <use href={icons + "#chevron-down"}></use>
-                      </svg>
-                    </p>
-                  </li>
-                  <li className={css.sub_item}>
-                    <p className={css.sub_item_heading}>
-                      <span>
-                        {t(
-                          "courses_filter.bachelor_tunisian.economics_management"
-                        )}
-                      </span>
-                      <svg className={css.sub_icon}>
-                        <use href={icons + "#chevron-down"}></use>
-                      </svg>
-                    </p>
-                  </li>
-                </ul>
-              )}
+              {transition((style, item) => {
+                switch (item) {
+                  case "bachelor":
+                    return <BachelorList style={style} />;
+                  default:
+                    return null;
+                }
+              })}
             </li>
           )}
         </ul>
