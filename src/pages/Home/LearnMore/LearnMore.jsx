@@ -11,7 +11,7 @@ const LearnMore = () => {
       <section className={css.section}>
         <div className="container">
           <h2 className={css.heading}>{t("home.learn_more_header")}</h2>
-          <Link to="/courses" className={css.button}>
+          <Link to="/categories" className={css.button}>
             {t("home.learn_more_button")}
           </Link>
         </div>

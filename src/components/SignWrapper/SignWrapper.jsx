@@ -16,6 +16,18 @@ const SignWrapper = ({
   const { t } = useTranslation();
   const location = useLocation();
 
+  const getLinkTo = () => {
+    switch (location.pathname) {
+      case "/register":
+        return "/login";
+      case "/login":
+        return "/register";
+      // Add more cases as needed
+      default:
+        return "/"; // Default fallback link
+    }
+  };
+
   return (
     <TriangleBackground>
       <SectionAnimationWrapper>
@@ -25,7 +37,9 @@ const SignWrapper = ({
             <h4 className={css.subheader}>
               {subheader}
               {subheaderAccent && (
-                <Link className={css.accent}> {subheaderAccent}</Link>
+                <Link to={getLinkTo()} className={css.accent}>
+                  {subheaderAccent}
+                </Link>
               )}
             </h4>
             {children}

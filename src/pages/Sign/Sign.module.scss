@@ -101,4 +101,11 @@ input[type="checkbox"] {
   margin-inline-end: auto;
   text-align: start;
   font-weight: $boldFont;
+
+  transition: all 0.4s ease;
+  &:hover,
+  &:focus {
+    scale: 105%;
+    color: $blueAccentColor;
+  }
 }

@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import SingleNewsComment from "./SingleNewsComment/SingleNewsComment";
 import SimplePageHeader from "../../components/SimplePageHeader/SimplePageHeader";
 import NewsHeaderList from "../../components/NewsHeaderList/NewsHeaderList";
+import { Link } from "react-router-dom";
 
 const SingleNews = () => {
   const { t } = useTranslation();
@@ -27,9 +28,15 @@ const SingleNews = () => {
     };
   });
 
+  const NewsLink = () => (
+    <Link to="/news" className={css.link}>
+      {t("news.header")}
+    </Link>
+  );
+
   return (
     <>
-      <SimplePageHeader heading={t("news.header")} background="#184d9c">
+      <SimplePageHeader heading={<NewsLink />} background="#184d9c">
         <NewsHeaderList />
       </SimplePageHeader>
       {!isMediumScreen && <SingleNewsSearch />}
