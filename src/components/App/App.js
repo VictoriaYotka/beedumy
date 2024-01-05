@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router";
 import SharedLayout from "../../pages/SharedLayout/SharedLayout";
 import { useTranslation } from "react-i18next";
 import PublicRoute from "../PublicRoute/PublicRoute";
+import ScrollTop from "../Layout/ScrollTop/ScrollTop";
 
 const Register = lazy(() => import("../../pages/Sign/Register"));
 const Login = lazy(() => import("../../pages/Sign/Login"));
@@ -45,6 +46,8 @@ function App() {
 
   return (
     <>
+      <ScrollTop />
+
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
