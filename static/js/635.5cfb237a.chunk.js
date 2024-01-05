@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkbirsaplatform=self.webpackChunkbirsaplatform||[]).push([[635],{4313:(r,s,u)=>{u.r(s),u.d(s,{default:()=>i});var a=u(9230),e=u(5764),t=u(9429),c=u(184);const i=()=>{const{t:r}=(0,a.$G)();return(0,c.jsxs)(c.Fragment,{children:[(0,c.jsx)(e.Z,{curriculum:r("categories.heading_tunisian_curriculum")}),(0,c.jsx)(t.Z,{})]})}}}]);
+//# sourceMappingURL=635.5cfb237a.chunk.js.map
