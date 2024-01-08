@@ -15,7 +15,7 @@ const Categories = () => {
     autoplaySpeed: 1500,
     slidesToShow: 5.99,
     slidesToScroll: 1,
-    swipeToSlide: true,
+    swipe: true,
     pauseOnHover: true,
     rtl: true,
     responsive: [

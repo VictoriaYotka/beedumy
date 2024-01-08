@@ -16,11 +16,10 @@ const Categories = () => {
   const settings = {
     dots: true,
     infinite: true,
-    // infinite: children.length > 3,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    swipeToSlide: true,
+    swipe: true,
     pauseOnHover: true,
     rtl: true,
     responsive: [

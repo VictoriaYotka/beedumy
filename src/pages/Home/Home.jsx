@@ -30,11 +30,10 @@ const Subscription = lazy(() => import("./Subscription/Subscription"));
 const requestedCoursesSettings = {
   dots: true,
   infinite: true,
-  // infinite: children.length > 3,
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
-  swipeToSlide: true,
+  swipe: true,
   pauseOnHover: true,
   rtl: true,
   responsive: [
@@ -62,7 +61,7 @@ const teachersSettings = {
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 1,
-  swipeToSlide: true,
+  swipe: true,
   pauseOnHover: true,
   rtl: true,
   responsive: [
@@ -98,7 +97,7 @@ const feedbackSettings = {
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 1,
-  swipeToSlide: true,
+  swipe: true,
   pauseOnHover: true,
   rtl: true,
   responsive: [
@@ -142,7 +141,7 @@ const articleSettings = {
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
-  swipeToSlide: true,
+  swipe: true,
   pauseOnHover: true,
   rtl: true,
   responsive: [
