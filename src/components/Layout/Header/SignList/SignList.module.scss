@@ -6,6 +6,8 @@
   gap: 36px;
   margin-bottom: 48px;
 
+  transition: all 0.4s ease;
+
   @include lg {
     margin-inline-start: auto;
     margin-bottom: 0;

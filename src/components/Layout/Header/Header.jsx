@@ -47,7 +47,8 @@ const Header = () => {
     const backdrop =
       e.target.closest("#burger_menu") === null &&
       e.target.closest("#navigation") === null &&
-      e.target.closest("#search_form") === null &&
+      e.target.closest("#header_search_form") === null &&
+      e.target.closest("#header_search_close") === null &&
       e.target.closest("#language_switcher") === null &&
       e.target.closest("#account_button") === null &&
       e.type === "click";

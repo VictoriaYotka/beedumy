@@ -1,13 +1,72 @@
 @import "../../../../scss";
 
 .form {
-  position: relative;
-  z-index: 10;
-  background: $greenBgButtonBgColor;
+  position: absolute;
+  top: 0;
+  [dir="ltr"] & {
+    right: 0;
+  }
+  [dir="rtl"] & {
+    left: 0;
+  }
+  transform: translateY(-20%);
+
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  padding: 12px;
+  z-index: 2;
+
+  @include lg {
+    position: relative;
+    right: unset;
+    left: unset;
+    transform: translateY(0);
+  }
+}
+
+.active {
+  width: 100%;
+
+  @include md {
+    width: 50vw;
+  }
+
+  @include lg {
+    width: 30vw;
+  }
+
+  & .search_button::before {
+    left: 0;
+  }
+}
+
+.search_button {
+  position: absolute;
+  top: 0;
+  [dir="ltr"] & {
+    right: 0;
+  }
+  [dir="rtl"] & {
+    left: 0;
+  }
+
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: $greenBgButtonBgColor;
+  color: $whiteColor;
+  font-size: 18px;
+
+  transition: all 0.4s ease;
+
+  @include lg {
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
   &::before {
     content: "";
@@ -26,74 +85,57 @@
     &:before {
       left: 0;
     }
-
-    .input {
-      width: 90vw;
-      background-color: $greenBgButtonBgColor;
-
-      @include md {
-        width: 50vw;
-      }
-
-      @include lg {
-        width: 600px;
-      }
-    }
   }
 }
 
-.button {
-  color: $whiteColor;
-  background: $greenBgButtonBgColor;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
+.input {
+  width: 100%;
+  height: 50px;
+  padding: 12px 40px;
+
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  background-color: $greenBgButtonBgColor;
+  color: white;
+  font-size: 20px;
 
   transition: all 0.4s ease;
 }
 
-.search_box {
+.close_button {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  right: 15px;
-  z-index: 10;
-}
-
-.input {
-  position: absolute;
-  top: 0;
   [dir="ltr"] & {
-    left: 8px;
-    right: unset;
-
-    @include lg {
-      right: 8px;
-      left: unset;
-    }
+    left: 0;
+    transform: translate(50%, -50%);
   }
   [dir="rtl"] & {
-    right: 8px;
-    left: unset;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+  z-index: 10;
 
-    @include lg {
-      left: 8px;
-      right: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $whiteColor;
+  font-size: 18px;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    & .close_icon {
+      scale: 120%;
     }
   }
+}
 
-  height: 50px;
-  padding-inline-start: 28px;
-  padding-inline-end: 40px;
-
-  background: none;
-  outline: none;
-  border: none;
-  border-radius: 25px;
-  color: white;
-  font-size: 20px;
-  width: 0;
+.close_icon {
+  width: 24px;
+  height: 24px;
+  stroke: $whiteColor;
 
   transition: all 0.4s ease;
 }

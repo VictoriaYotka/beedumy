@@ -25,6 +25,7 @@
 
 .topper_wrapper {
   @extend .flex_aligncenter;
+  position: relative;
   justify-content: space-between;
   margin-bottom: 24px;
 }

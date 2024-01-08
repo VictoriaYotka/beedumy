@@ -2,8 +2,10 @@
 
 .wrapper {
   position: relative;
+  margin-inline-end: auto;
 
   @include lg {
+    margin: 0;
     padding-inline-end: 8px;
     border-inline-end: 2px solid $whiteColor;
   }
