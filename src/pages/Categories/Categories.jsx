@@ -9,37 +9,10 @@ import FAQ from "./FAQ/FAQ";
 import CourseCardInCategories from "../../components/CourseCardInCategories/CourseCardInCategories";
 import SectionAnimationWrapper from "../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 import { Link } from "react-router-dom";
+import { carouselsSettings } from "../../utils";
 
 const Categories = () => {
   const { t } = useTranslation();
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    swipe: true,
-    pauseOnHover: true,
-    rtl: true,
-    responsive: [
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 481,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
 
   return (
     <>
@@ -60,7 +33,7 @@ const Categories = () => {
           </SectionAnimationWrapper>
 
           <SectionAnimationWrapper>
-            <Slider {...settings}>
+            <Slider {...carouselsSettings.categoriesPageSettings}>
               <CourseCardInCategories
                 notion="notion"
                 imgAlt="about image"
@@ -132,7 +105,7 @@ const Categories = () => {
           </SectionAnimationWrapper>
 
           <SectionAnimationWrapper>
-            <Slider {...settings}>
+            <Slider {...carouselsSettings.categoriesPageSettings}>
               <CourseCardInCategories
                 notion="notion"
                 imgAlt="about image"

@@ -3,56 +3,10 @@ import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import css from "./Categories.module.scss";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
+import { carouselsSettings } from "../../../utils";
 
 const Categories = () => {
   const { t } = useTranslation();
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    slidesToShow: 5.99,
-    slidesToScroll: 1,
-    swipe: true,
-    pauseOnHover: true,
-    rtl: true,
-    responsive: [
-      {
-        breakpoint: 1281,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 923,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 481,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
 
   return (
     <SectionAnimationWrapper>
@@ -63,7 +17,7 @@ const Categories = () => {
             {t("home.categories_heading_second_line")}
           </h2>
 
-          <Slider {...settings}>
+          <Slider {...carouselsSettings.categoriesSectionSettings}>
             <div className={css.item}>
               <Link href="#">
                 <div className={css.color_1}>

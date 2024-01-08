@@ -1,4 +1,4 @@
-import { lazy, useState } from "react";
+import { lazy } from "react";
 import { Link } from "react-router-dom";
 import css from "./Home.module.scss";
 import { useTranslation } from "react-i18next";
@@ -10,7 +10,7 @@ import LearnMore from "./LearnMore/LearnMore";
 import hero_image_sm from "../../assets/images/home/hero/image_sm.webp";
 import SectionAnimationWrapper from "../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 import { useEffect } from "react";
-import { replaceHyphensWithSpaces } from "../../utils";
+import { carouselsSettings, replaceHyphensWithSpaces } from "../../utils";
 import { useDispatch, useSelector } from "react-redux";
 import { coursesSelector } from "../../redux/selectors/contentSelectors";
 import { homePage } from "../../redux/operations/contentOperations";
@@ -26,142 +26,6 @@ const FeedbackCard = lazy(() => import("./FeedbackCard/FeedbackCard"));
 const ArticleCard = lazy(() => import("./ArticleCard/ArticleCard"));
 const Partners = lazy(() => import("./Partners/Partners"));
 const Subscription = lazy(() => import("./Subscription/Subscription"));
-
-const requestedCoursesSettings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  swipe: true,
-  pauseOnHover: true,
-  rtl: true,
-  responsive: [
-    {
-      breakpoint: 769,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        initialSlide: 1,
-      },
-    },
-    {
-      breakpoint: 481,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
-
-const teachersSettings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  swipe: true,
-  pauseOnHover: true,
-  rtl: true,
-  responsive: [
-    {
-      breakpoint: 923,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        initialSlide: 2,
-      },
-    },
-    {
-      breakpoint: 769,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        initialSlide: 2,
-      },
-    },
-    {
-      breakpoint: 481,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
-
-const feedbackSettings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  swipe: true,
-  pauseOnHover: true,
-  rtl: true,
-  responsive: [
-    {
-      breakpoint: 1025,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        initialSlide: 2,
-      },
-    },
-    {
-      breakpoint: 923,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        initialSlide: 2,
-      },
-    },
-    {
-      breakpoint: 769,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        initialSlide: 2,
-      },
-    },
-    {
-      breakpoint: 481,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
-
-const articleSettings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  swipe: true,
-  pauseOnHover: true,
-  rtl: true,
-  responsive: [
-    {
-      breakpoint: 993,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        initialSlide: 2,
-      },
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
 
 const Home = () => {
   const { t } = useTranslation();
@@ -189,7 +53,7 @@ const Home = () => {
       <SectionAnimationWrapper>
         <section className={css.requested_courses_section}>
           <div className="container">
-            <Slider {...requestedCoursesSettings}>
+            <Slider {...carouselsSettings.requestedCoursesSectionSettings}>
               {courses.map((el, index) => {
                 const { image_cover, teacher, slug } = el;
                 const img = `http://192.168.100.2:8000${image_cover}`;
@@ -223,7 +87,7 @@ const Home = () => {
             </h2>
           </SectionAnimationWrapper>
           <SectionAnimationWrapper>
-            <Slider {...teachersSettings}>
+            <Slider {...carouselsSettings.teachersSectionSettings}>
               <TeacherCard
                 img={hero_image_sm}
                 name="Teachers name"
@@ -274,7 +138,7 @@ const Home = () => {
             </h2>
           </SectionAnimationWrapper>
           <SectionAnimationWrapper>
-            <Slider {...feedbackSettings}>
+            <Slider {...carouselsSettings.feedbackSectionSettings}>
               <FeedbackCard
                 content="التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد"
                 name="Student name"
@@ -317,7 +181,7 @@ const Home = () => {
           </SectionAnimationWrapper>
           <div className={css.article_list_wrapper}>
             <SectionAnimationWrapper>
-              <Slider {...articleSettings}>
+              <Slider {...carouselsSettings.articleSectionSettings}>
                 <ArticleCard
                   date="06 أوت"
                   name="كُتب بواسطة آدم . 12 تعليق"
