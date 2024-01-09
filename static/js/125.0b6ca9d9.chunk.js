@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkbirsaplatform=self.webpackChunkbirsaplatform||[]).push([[125],{3205:(r,s,a)=>{a.r(s),a.d(s,{default:()=>i});var e=a(9230),u=a(5764),c=a(9429),t=a(184);const i=()=>{const{t:r}=(0,e.$G)();return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(u.Z,{curriculum:r("categories.heading_libyan_curriculum")}),(0,t.jsx)(c.Z,{})]})}}}]);
-//# sourceMappingURL=125.0b6ca9d9.chunk.js.map
