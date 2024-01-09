@@ -71,7 +71,7 @@ function App() {
             }
           />
           <Route path="categories" element={<Categories />} />
-          <Route path="courses/:curricula" element={<Curricula />} />
+          <Route path="categories/:curricula" element={<Curricula />} />
           <Route path="courses/:courseId" element={<SingleCourse />} />
           <Route path="courses/:courseId/buy" element={<BuyCourse />} />
 

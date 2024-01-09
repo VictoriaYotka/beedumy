@@ -66,8 +66,8 @@ const Categories = () => {
         <div className={css.container}>
           <SectionAnimationWrapper>
             <h3 className={css.list_heading}>
-              <Link to="/courses/tunisian" className={css.list_heading_link}>
-                {t("categories.search_classification_curricula_tunisian")}
+              <Link to="/categories/tunisian" className={css.list_heading_link}>
+                {t("tunisian")}
                 <svg className={css.icon}>
                   <use href={icons + "#chevron-down"}></use>
                 </svg>
@@ -138,8 +138,8 @@ const Categories = () => {
         <div className={css.container}>
           <SectionAnimationWrapper>
             <h3 className={css.list_heading}>
-              <Link to="/courses/libyan" className={css.list_heading_link}>
-                {t("categories.search_classification_curricula_libyan")}
+              <Link to="/categories/libyan" className={css.list_heading_link}>
+                {t("libyan")}
                 <svg className={css.icon}>
                   <use href={icons + "#chevron-down"}></use>
                 </svg>
@@ -210,8 +210,11 @@ const Categories = () => {
         <div className={css.container}>
           <SectionAnimationWrapper>
             <h3 className={css.list_heading}>
-              <Link to="/courses/formative" className={css.list_heading_link}>
-                {t("categories.search_classification_curricula_formative")}
+              <Link
+                to="/categories/formative"
+                className={css.list_heading_link}
+              >
+                {t("formative")}
                 <svg className={css.icon}>
                   <use href={icons + "#chevron-down"}></use>
                 </svg>

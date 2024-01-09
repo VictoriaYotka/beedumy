@@ -19,79 +19,67 @@ const Categories = () => {
 
           <Slider {...carouselsSettings.categoriesSectionSettings}>
             <div className={css.item}>
-              <Link to="/courses/media">
+              <Link to="/categories/media">
                 <div className={css.color_1}>
                   <div className={css.icon}>
                     <i className="kipso-icon-desktop"></i>
                   </div>
-                  <h3 className={css.title}>
-                    {t("home.categories_name_media")}
-                  </h3>
+                  <h3 className={css.title}>{t("media")}</h3>
                 </div>
               </Link>
             </div>
 
             <div className={css.item}>
-              <Link to="/courses/programming">
+              <Link to="/categories/programming">
                 <div className={css.color_2}>
                   <div className={css.icon}>
                     <i className="kipso-icon-web-programming"></i>
                   </div>
-                  <h3 className={css.title}>
-                    {t("home.categories_name_programming")}
-                  </h3>
+                  <h3 className={css.title}>{t("programming")}</h3>
                 </div>
               </Link>
             </div>
 
             <div className={css.item}>
-              <Link to="/courses/autodesk">
+              <Link to="/categories/autodesk">
                 <div className={css.color_3}>
                   <div className={css.icon}>
                     <i className="kipso-icon-music-player"></i>
                   </div>
-                  <h3 className={css.title}>
-                    {t("home.categories_name_autodesk")}
-                  </h3>
+                  <h3 className={css.title}>{t("autodesk")}</h3>
                 </div>
               </Link>
             </div>
 
             <div className={css.item}>
-              <Link to="/courses/languages">
+              <Link to="/categories/languages">
                 <div className={css.color_4}>
                   <div className={css.icon}>
                     <i className="kipso-icon-camera"></i>
                   </div>
-                  <h3 className={css.title}>
-                    {t("home.categories_name_languages")}
-                  </h3>
+                  <h3 className={css.title}>{t("languages")}</h3>
                 </div>
               </Link>
             </div>
 
             <div className={css.item}>
-              <Link to="/courses/libyan">
+              <Link to="/categories/libyan">
                 <div className={css.color_5}>
                   <div className={css.icon}>
                     <i className="kipso-icon-targeting"></i>
                   </div>
-                  <h3 className={css.title}>
-                    {t("home.categories_name_libyan")}
-                  </h3>
+                  <h3 className={css.title}>{t("libyan")}</h3>
                 </div>
               </Link>
             </div>
 
             <div className={css.item}>
-              <Link to="/courses/tunisian">
+              <Link to="/categories/tunisian">
                 <div className={css.color_6}>
                   <div className={css.icon}>
                     <i className="kipso-icon-health"></i>
                   </div>
-                  <h3 className={css.title}>
-                    {t("home.categories_name_tunisian")}
-                  </h3>
+                  <h3 className={css.title}>{t("tunisian")}</h3>
                 </div>
               </Link>
             </div>

@@ -1,4 +1,11 @@
 {
+  "media": "دورات في الإعلامية",
+  "programming": "دورات في البرمجة",
+  "autodesk": "دورات في Autodesk",
+  "languages": "دورات في اللغات",
+  "libyan": "المنهج الليبيي",
+  "tunisian": "المنهج التونسي",
+  "formative": "الدورات التكوينية",
   "sharedLayout": {
     "contact_us": "تواصل معنا ",
     "connect_with_us": "تواصل معنا ",
