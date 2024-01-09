@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import css from "./CoursesFilterInCourses.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
 import { useTranslation } from "react-i18next";
-import { useTransition, animated } from "@react-spring/web";
+import { animated } from "@react-spring/web";
+import { useConditionalListsTransition } from "../../utils";
 
 const PrimaryList = ({ style }) => {
   const { t } = useTranslation();
@@ -315,15 +316,7 @@ const HighList = ({ style, toggleSubList, activeSubList }) => {
     setActive(activeSubList);
   }, [activeSubList]);
 
-  const transition = useTransition(active, {
-    from: { opacity: 0, transform: "translateY(-20px)" },
-    enter: { opacity: 1, transform: "translateY(0)" },
-    leave: {
-      opacity: 0,
-      transform: "translateY(-20px)",
-      config: { duration: 200 },
-    },
-  });
+  const transition = useConditionalListsTransition(active);
 
   return (
     <animated.ul data-sublist="sublist" className={css.sub_list} style={style}>
