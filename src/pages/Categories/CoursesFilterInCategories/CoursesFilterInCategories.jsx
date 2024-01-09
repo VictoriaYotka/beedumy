@@ -1,22 +1,27 @@
 import css from "./CoursesFilterInCategories.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { animated } from "@react-spring/web";
 import { useConditionalListsTransition } from "../../../utils";
+import { useSearchParams } from "react-router-dom";
 
-const RatedList = ({ style }) => {
+const RatedList = ({ style, handleOptionSelect }) => {
   const { t } = useTranslation();
 
   return (
-    <animated.ul className={css.subcategories_list} style={style}>
+    <animated.ul
+      className={css.subcategories_list}
+      style={style}
+      onClick={(e) => handleOptionSelect("rated_list", e)}
+    >
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading}>
+        <p className={css.subcategories_heading} data-option="option">
           {t("categories.search_classification_rated_top_selling")}
         </p>
       </li>
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading}>
+        <p className={css.subcategories_heading} data-option="option">
           {t("categories.search_classification_rated_highest_rating")}
         </p>
       </li>
@@ -24,23 +29,27 @@ const RatedList = ({ style }) => {
   );
 };
 
-const CurriculaList = ({ style }) => {
+const CurriculaList = ({ style, handleOptionSelect }) => {
   const { t } = useTranslation();
 
   return (
-    <animated.ul className={css.subcategories_list} style={style}>
+    <animated.ul
+      className={css.subcategories_list}
+      style={style}
+      onClick={(e) => handleOptionSelect("curricula_list", e)}
+    >
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading}>
+        <p className={css.subcategories_heading} data-option="option">
           {t("categories.search_classification_curricula_tunisian")}
         </p>
       </li>
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading}>
+        <p className={css.subcategories_heading} data-option="option">
           {t("categories.search_classification_curricula_libyan")}
         </p>
       </li>
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading}>
+        <p className={css.subcategories_heading} data-option="option">
           {t("categories.search_classification_curricula_formative")}
         </p>
       </li>
@@ -48,18 +57,22 @@ const CurriculaList = ({ style }) => {
   );
 };
 
-const TypeList = ({ style }) => {
+const TypeList = ({ style, handleOptionSelect }) => {
   const { t } = useTranslation();
 
   return (
-    <animated.ul className={css.subcategories_list} style={style}>
+    <animated.ul
+      className={css.subcategories_list}
+      style={style}
+      onClick={(e) => handleOptionSelect("type_list", e)}
+    >
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading}>
+        <p className={css.subcategories_heading} data-option="option">
           {t("categories.search_classification_content_type_available")}
         </p>
       </li>
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading}>
+        <p className={css.subcategories_heading} data-option="option">
           {t("categories.search_classification_content_type_expected")}
         </p>
       </li>
@@ -67,33 +80,37 @@ const TypeList = ({ style }) => {
   );
 };
 
-const DateList = ({ style }) => {
+const DateList = ({ style, handleOptionSelect }) => {
   const { t } = useTranslation();
 
   return (
-    <animated.ul className={css.subcategories_list} style={style}>
+    <animated.ul
+      className={css.subcategories_list}
+      style={style}
+      onClick={(e) => handleOptionSelect("date_list", e)}
+    >
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading}>
+        <p className={css.subcategories_heading} data-option="option">
           {t("categories.search_classification_publishing_date_hour")}
         </p>
       </li>
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading}>
+        <p className={css.subcategories_heading} data-option="option">
           {t("categories.search_classification_publishing_date_day")}
         </p>
       </li>
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading}>
+        <p className={css.subcategories_heading} data-option="option">
           {t("categories.search_classification_publishing_date_week")}
         </p>
       </li>
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading}>
+        <p className={css.subcategories_heading} data-option="option">
           {t("categories.search_classification_publishing_date_month")}
         </p>
       </li>
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading}>
+        <p className={css.subcategories_heading} data-option="option">
           {t("categories.search_classification_publishing_date_year")}
         </p>
       </li>
@@ -110,6 +127,11 @@ const CoursesFilterInCategories = ({ style }) => {
       : []
   );
 
+  const [ratedFilter, setRatedFilter] = useState("");
+  const [curriculaFilter, setCurriculaFilter] = useState("");
+  const [typeFilter, setTypeFilter] = useState("");
+  const [dateFilter, setDateFilter] = useState("");
+
   const handleShow = (category) => {
     if (window.innerWidth < 768) {
       setLists((prevLists) => {
@@ -119,6 +141,29 @@ const CoursesFilterInCategories = ({ style }) => {
           return [...prevLists, category];
         }
       });
+    }
+  };
+
+  const handleOptionSelect = (category, e) => {
+    if (e.target.dataset.option === "option") {
+      const option = e.target.innerHTML;
+
+      switch (category) {
+        case "rated_list":
+          setRatedFilter(option);
+          break;
+        case "curricula_list":
+          setCurriculaFilter(option);
+          break;
+        case "type_list":
+          setTypeFilter(option);
+          break;
+        case "date_list":
+          setDateFilter(option);
+          break;
+        default:
+          break;
+      }
     }
   };
 
@@ -170,7 +215,12 @@ const CoursesFilterInCategories = ({ style }) => {
             {transition((style, item) => {
               switch (item) {
                 case "rated_list":
-                  return <RatedList style={style} />;
+                  return (
+                    <RatedList
+                      style={style}
+                      handleOptionSelect={handleOptionSelect}
+                    />
+                  );
                 default:
                   return null;
               }
@@ -191,7 +241,12 @@ const CoursesFilterInCategories = ({ style }) => {
             {transition((style, item) => {
               switch (item) {
                 case "curricula_list":
-                  return <CurriculaList style={style} />;
+                  return (
+                    <CurriculaList
+                      style={style}
+                      handleOptionSelect={handleOptionSelect}
+                    />
+                  );
                 default:
                   return null;
               }
@@ -211,7 +266,12 @@ const CoursesFilterInCategories = ({ style }) => {
             {transition((style, item) => {
               switch (item) {
                 case "type_list":
-                  return <TypeList style={style} />;
+                  return (
+                    <TypeList
+                      style={style}
+                      handleOptionSelect={handleOptionSelect}
+                    />
+                  );
                 default:
                   return null;
               }
@@ -235,7 +295,12 @@ const CoursesFilterInCategories = ({ style }) => {
             {transition((style, item) => {
               switch (item) {
                 case "date_list":
-                  return <DateList style={style} />;
+                  return (
+                    <DateList
+                      style={style}
+                      handleOptionSelect={handleOptionSelect}
+                    />
+                  );
                 default:
                   return null;
               }

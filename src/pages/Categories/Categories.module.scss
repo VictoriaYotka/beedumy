@@ -29,6 +29,8 @@
   transform: translateY(-50%);
   background-color: transparent;
 
+  transition: all 0.4s ease;
+
   [dir="rtl"] & {
     right: 8px;
     left: unset;
@@ -48,6 +50,15 @@
       right: unset;
     }
   }
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+
+    & .submit_icon {
+      stroke: $purpleBgButtonColor;
+    }
+  }
 }
 
 .submit_icon {
@@ -55,6 +66,8 @@
   height: 24px;
   stroke: $darkFontColor;
   fill: $whiteColor;
+
+  transition: all 0.4s ease;
 }
 
 .input {

@@ -15,10 +15,20 @@ import CoursesFilterInCategories from "./CoursesFilterInCategories/CoursesFilter
 const Categories = () => {
   const { t } = useTranslation();
 
+  const [inputValue, setInputValue] = useState("");
   const [isFilterShown, setIsFilterShown] = useState(false);
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (inputValue.trim !== "") {
+      console.log(inputValue);
+      e.target.reset();
+    }
   };
 
   const toggleShowFilter = () => {
@@ -38,7 +48,11 @@ const Categories = () => {
               </svg>
             </button>
             <input
+              onChange={handleInputChange}
+              value={inputValue}
               className={css.input}
+              id="categories_search_input"
+              name="categories_search_input"
               type="text"
               placeholder={t("categories.search_input_placeholder")}
             />
