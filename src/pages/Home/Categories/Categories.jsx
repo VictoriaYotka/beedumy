@@ -19,7 +19,7 @@ const Categories = () => {
 
           <Slider {...carouselsSettings.categoriesSectionSettings}>
             <div className={css.item}>
-              <Link href="#">
+              <Link to="/courses/media">
                 <div className={css.color_1}>
                   <div className={css.icon}>
                     <i className="kipso-icon-desktop"></i>
@@ -32,7 +32,7 @@ const Categories = () => {
             </div>
 
             <div className={css.item}>
-              <Link href="#">
+              <Link to="/courses/programming">
                 <div className={css.color_2}>
                   <div className={css.icon}>
                     <i className="kipso-icon-web-programming"></i>
@@ -45,7 +45,7 @@ const Categories = () => {
             </div>
 
             <div className={css.item}>
-              <Link href="#">
+              <Link to="/courses/autodesk">
                 <div className={css.color_3}>
                   <div className={css.icon}>
                     <i className="kipso-icon-music-player"></i>
@@ -58,7 +58,7 @@ const Categories = () => {
             </div>
 
             <div className={css.item}>
-              <Link href="#">
+              <Link to="/courses/languages">
                 <div className={css.color_4}>
                   <div className={css.icon}>
                     <i className="kipso-icon-camera"></i>
@@ -71,26 +71,26 @@ const Categories = () => {
             </div>
 
             <div className={css.item}>
-              <Link href="#">
+              <Link to="/courses/libyan">
                 <div className={css.color_5}>
                   <div className={css.icon}>
                     <i className="kipso-icon-targeting"></i>
                   </div>
                   <h3 className={css.title}>
-                    {t("home.categories_name_libyan_curriculum")}
+                    {t("home.categories_name_libyan")}
                   </h3>
                 </div>
               </Link>
             </div>
 
             <div className={css.item}>
-              <Link href="#">
+              <Link to="/courses/tunisian">
                 <div className={css.color_6}>
                   <div className={css.icon}>
                     <i className="kipso-icon-health"></i>
                   </div>
                   <h3 className={css.title}>
-                    {t("home.categories_name_tunisian_curriculum")}
+                    {t("home.categories_name_tunisian")}
                   </h3>
                 </div>
               </Link>

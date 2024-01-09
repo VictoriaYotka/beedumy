@@ -37,8 +37,8 @@
     "categories_name_programming": "دورات في البرمجة",
     "categories_name_autodesk": "دورات في Autodesk",
     "categories_name_languages": "دورات في اللغات",
-    "categories_name_libyan_curriculum": "المنهج الليبيي",
-    "categories_name_tunisian_curriculum": "المنهج التونسي",
+    "categories_name_libyan": "المنهج الليبيي",
+    "categories_name_tunisian": "المنهج التونسي",
     "categories_browse_all": "تصفح جميع المحاور",
     "requested_courses_header": "المواد التعليميّة و الدّورات المرتقبة و الأكثر طلبا",
     "learn_more_header": "نوفّر تجربة تعليميّة تفاعليّة ونفتح آفاقا معرفيّة جديدة",
@@ -73,8 +73,6 @@
     "submit_button": "تأكيد البيانات"
   },
   "categories": {
-    "heading_tunisian_curriculum": "المنهج التونسي",
-    "heading_libyan_curriculum": "المنهج الليبي",
     "search_input_placeholder": "أبحث عن محتوى معين من خلال اسم المحتوى أو من يقدمه",
     "search_classification": "تصنيف",
     "search_classification_classification": "تصنيف",

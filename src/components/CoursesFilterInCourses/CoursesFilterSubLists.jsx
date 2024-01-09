@@ -348,9 +348,9 @@ const HighList = ({ style, toggleSubList, activeSubList }) => {
           switch (active.includes("second_year")) {
             case true:
               switch (location.pathname) {
-                case "/courses-tunisian":
+                case "/courses/tunisian":
                   return <HighSecondYearTunisianSubList style={style} />;
-                case "/courses-libyan":
+                case "/courses/libyan":
                   return <HighSecondYearLibyanSubList style={style} />;
                 default:
                   return null;
@@ -380,9 +380,9 @@ const HighList = ({ style, toggleSubList, activeSubList }) => {
           switch (active.includes("third_year")) {
             case true:
               switch (location.pathname) {
-                case "/courses-tunisian":
+                case "/courses/tunisian":
                   return <HighThirdYearTunisianSubList style={style} />;
-                case "/courses-libyan":
+                case "/courses/libyan":
                   return <HighThirdYearLibyanSubList style={style} />;
                 default:
                   return null;

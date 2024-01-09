@@ -66,8 +66,8 @@ const Categories = () => {
         <div className={css.container}>
           <SectionAnimationWrapper>
             <h3 className={css.list_heading}>
-              <Link to="/courses-tunisian" className={css.list_heading_link}>
-                {t("categories.heading_tunisian_curriculum")}
+              <Link to="/courses/tunisian" className={css.list_heading_link}>
+                {t("categories.search_classification_curricula_tunisian")}
                 <svg className={css.icon}>
                   <use href={icons + "#chevron-down"}></use>
                 </svg>
@@ -138,8 +138,80 @@ const Categories = () => {
         <div className={css.container}>
           <SectionAnimationWrapper>
             <h3 className={css.list_heading}>
-              <Link to="/courses-libyan" className={css.list_heading_link}>
-                {t("categories.heading_libyan_curriculum")}
+              <Link to="/courses/libyan" className={css.list_heading_link}>
+                {t("categories.search_classification_curricula_libyan")}
+                <svg className={css.icon}>
+                  <use href={icons + "#chevron-down"}></use>
+                </svg>
+              </Link>
+            </h3>
+          </SectionAnimationWrapper>
+
+          <SectionAnimationWrapper>
+            <Slider {...carouselsSettings.categoriesPageSettings}>
+              <CourseCardInCategories
+                notion="notion"
+                imgAlt="about image"
+                preheader="Preheader"
+                header="Header"
+                rating="stars"
+                descr="Some description here"
+                id="123"
+              />
+
+              <CourseCardInCategories
+                notion="notion"
+                imgAlt="about image"
+                preheader="Preheader"
+                header="Header"
+                rating="stars"
+                descr="Some description here"
+                id="123"
+              />
+
+              <CourseCardInCategories
+                notion="notion"
+                imgAlt="about image"
+                preheader="Preheader"
+                header="Header"
+                rating="stars"
+                descr="Some description here"
+                id="123"
+              />
+
+              <CourseCardInCategories
+                notion="notion"
+                img={hero_image_sm}
+                imgAlt="about image"
+                preheader="Preheader"
+                header="Header"
+                rating="stars"
+                descr="Some description here"
+                id="123"
+              />
+
+              <CourseCardInCategories
+                notion="notion"
+                img={hero_image_sm}
+                imgAlt="about image"
+                preheader="Preheader"
+                header="Header"
+                rating="stars"
+                descr="Some description here"
+                id="123"
+              />
+            </Slider>
+          </SectionAnimationWrapper>
+        </div>
+      </section>
+
+      {/* formative courses list */}
+      <section className={css.section}>
+        <div className={css.container}>
+          <SectionAnimationWrapper>
+            <h3 className={css.list_heading}>
+              <Link to="/courses/formative" className={css.list_heading_link}>
+                {t("categories.search_classification_curricula_formative")}
                 <svg className={css.icon}>
                   <use href={icons + "#chevron-down"}></use>
                 </svg>

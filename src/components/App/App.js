@@ -12,12 +12,7 @@ const Categories = lazy(() => import("../../pages/Categories/Categories"));
 const SingleCourse = lazy(() =>
   import("../../pages/SingleCourse/SingleCourse")
 );
-const CoursesTunisian = lazy(() =>
-  import("../../pages/CoursesTunisian/CoursesTunisian")
-);
-const CoursesLibyan = lazy(() =>
-  import("../../pages/CoursesLibyan/CoursesLibyan")
-);
+const Curricula = lazy(() => import("../../pages/Curricula/Curricula"));
 const BuyCourse = lazy(() => import("../../pages/BuyCourse/BuyCourse"));
 const Faq = lazy(() => import("../../pages/Faq/Faq"));
 const Home = lazy(() => import("../../pages/Home/Home"));
@@ -75,11 +70,11 @@ function App() {
               </PublicRoute>
             }
           />
-          <Route path="courses-tunisian" element={<CoursesTunisian />} />
-          <Route path="courses-libyan" element={<CoursesLibyan />} />
+          <Route path="categories" element={<Categories />} />
+          <Route path="courses/:curricula" element={<Curricula />} />
           <Route path="courses/:courseId" element={<SingleCourse />} />
           <Route path="courses/:courseId/buy" element={<BuyCourse />} />
-          <Route path="categories" element={<Categories />} />
+
           <Route path="news" element={<News />} />
           <Route path="news/:newsId" element={<SingleNews />} />
           <Route path="teachers" element={<Teachers />} />
