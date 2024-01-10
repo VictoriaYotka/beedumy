@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import css from "./BuyCourseOptions.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
-import { useTransition } from "@react-spring/web";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 import {
   CardModal,
@@ -9,18 +8,10 @@ import {
   UpiModal,
   WalletModal,
 } from "../Modals/Modals";
+import { toggleBodyScroll, useConditionalTransition } from "../../../utils";
 
 const BuyCourseOptions = () => {
   const [activeModal, setActiveModal] = useState(null);
-
-  const toggleBodyScroll = (bodyScrollStyle) => {
-    const scrollbarWidth =
-      window.innerWidth - document.documentElement.clientWidth;
-
-    document.body.style.paddingRight =
-      bodyScrollStyle === "clip" ? `${scrollbarWidth}px` : "0";
-    document.body.style.overflowY = bodyScrollStyle;
-  };
 
   const openModal = (paymentType) => {
     toggleBodyScroll("clip");
@@ -54,11 +45,8 @@ const BuyCourseOptions = () => {
     };
   }, [activeModal, closeModal]);
 
-  const transitions = useTransition(activeModal, {
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
-  });
+  const transitions =
+    useConditionalTransition.useConditionalModalsTransition(activeModal);
 
   return (
     <>

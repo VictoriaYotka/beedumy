@@ -11,9 +11,11 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import BurgerMenu from "./BurgerMenu/BurgerMenu";
 import LanguageSwitcher from "./LanguageSwitcher/LanguageSwitcher";
+import toggleBodyScroll from "../../../utils/toggleBodyScroll";
 
 const Header = () => {
   const { t } = useTranslation();
+  const location = useLocation();
 
   const [isMediumScreen, setIsMediumScreen] = useState(
     document.body.offsetWidth >= 768
@@ -21,13 +23,8 @@ const Header = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(
     document.body.offsetWidth >= 992
   );
+
   const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState(false);
-
-  const location = useLocation();
-
-  const toggleBodyScroll = (bodyScrollStyle) => {
-    document.body.style.overflowY = bodyScrollStyle;
-  };
 
   const toggleMenu = () => {
     setIsOpenBurgerMenu(!isOpenBurgerMenu);

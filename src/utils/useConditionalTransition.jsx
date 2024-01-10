@@ -15,4 +15,17 @@ const useConditionalListsTransition = (condition) => {
   });
 };
 
-export default useConditionalListsTransition;
+const useConditionalModalsTransition = (condition) => {
+  return useTransition(condition, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+  });
+};
+
+const useConditionalTransition = {
+  useConditionalListsTransition,
+  useConditionalModalsTransition,
+};
+
+export default useConditionalTransition;

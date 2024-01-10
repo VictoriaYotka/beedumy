@@ -3,7 +3,7 @@ import icons from "../../../assets/images/icons/icons.svg";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { animated } from "@react-spring/web";
-import { useConditionalListsTransition } from "../../../utils";
+import { useConditionalTransition } from "../../../utils";
 
 const CloseButton = ({ onClick }) => {
   return (
@@ -338,7 +338,8 @@ const CoursesFilterInCategories = ({ style }) => {
     };
   }, []);
 
-  const transition = useConditionalListsTransition(lists);
+  const transition =
+    useConditionalTransition.useConditionalListsTransition(lists);
 
   return (
     <animated.section className={css.filter_section} style={style}>

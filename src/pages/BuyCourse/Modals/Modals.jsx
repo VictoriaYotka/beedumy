@@ -1,4 +1,4 @@
-import ModalWrapper from "../ModalWrapper/ModalWrapper";
+import ModalWrapper from "../../../components/ModalWrapper/ModalWrapper";
 import css from "./Modals.module.scss";
 
 const CardModal = ({ closeModal, style }) => {

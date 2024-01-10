@@ -1,5 +1,5 @@
 import css from "./ModalWrapper.module.scss";
-import icons from "../../../assets/images/icons/icons.svg";
+import icons from "../../assets/images/icons/icons.svg";
 import { animated } from "@react-spring/web";
 
 const ModalWrapper = ({ children, closeModal, style }) => {

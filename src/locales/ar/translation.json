@@ -192,7 +192,15 @@
     "single_course_details_times": "مرّة",
     "single_course_details_degree": "درجة الصعوبة",
     "single_course_details_language": " اللّغة",
-    "single_course_related_header": "محتويات ذات صلة"
+    "single_course_related_header": "محتويات ذات صلة",
+    "single_course_details_submission": "التقديم",
+    "single_course_details_content": "المحتوى",
+    "single_course_details_exams": "الإمتحانات",
+    "single_course_details_rating": "التقييمات",
+    "single_course_details_content_heading": "منهجية التقديم",
+    "single_course_details_content_watch": "شاهد مجانا",
+    "single_course_details_content_minutes": "دقيقة",
+    "single_course_details_content_exercises": "تمارين"
   },
   "sign": {
     "register_header": "إنشاء حساب",

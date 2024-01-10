@@ -1,11 +1,15 @@
 import truncateText from "./truncateText";
+import splitText from "./splitText";
 import replaceHyphensWithSpaces from "./replaceHyphensWithSpaces";
 import carouselsSettings from "./carouselsSettings";
-import useConditionalListsTransition from "./useConditionalListsTransition";
+import toggleBodyScroll from "./toggleBodyScroll";
+import useConditionalTransition from "./useConditionalTransition";
 
 export {
   truncateText,
+  splitText,
   replaceHyphensWithSpaces,
   carouselsSettings,
-  useConditionalListsTransition,
+  toggleBodyScroll,
+  useConditionalTransition,
 };

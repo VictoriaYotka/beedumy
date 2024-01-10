@@ -10,7 +10,7 @@ import {
   MiddleTunisianList,
   PrimaryList,
 } from "./CoursesFilterSubLists";
-import { useConditionalListsTransition } from "../../utils";
+import { useConditionalTransition } from "../../utils";
 
 const CoursesFilterInCourses = ({ curricula }) => {
   const { t } = useTranslation();
@@ -68,7 +68,8 @@ const CoursesFilterInCourses = ({ curricula }) => {
     };
   }, [activeList, closeList]);
 
-  const transition = useConditionalListsTransition(activeList);
+  const transition =
+    useConditionalTransition.useConditionalListsTransition(activeList);
 
   return (
     <section className={css.section}>

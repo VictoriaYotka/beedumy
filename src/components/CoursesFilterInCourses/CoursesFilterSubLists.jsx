@@ -4,7 +4,7 @@ import css from "./CoursesFilterInCourses.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
 import { useTranslation } from "react-i18next";
 import { animated } from "@react-spring/web";
-import { useConditionalListsTransition } from "../../utils";
+import { useConditionalTransition } from "../../utils";
 
 const PrimaryList = ({ style }) => {
   const { t } = useTranslation();
@@ -316,7 +316,8 @@ const HighList = ({ style, toggleSubList, activeSubList }) => {
     setActive(activeSubList);
   }, [activeSubList]);
 
-  const transition = useConditionalListsTransition(active);
+  const transition =
+    useConditionalTransition.useConditionalListsTransition(active);
 
   return (
     <animated.ul data-sublist="sublist" className={css.sub_list} style={style}>

@@ -40,12 +40,6 @@
     "hero_button": "ابدأ رحلة التعلم الآن",
     "categories_heading_first_line": "هنا تبدأ رحلتك",
     "categories_heading_second_line": "من العِلم إلى العَمل",
-    "categories_name_media": "دورات في الإعلامية",
-    "categories_name_programming": "دورات في البرمجة",
-    "categories_name_autodesk": "دورات في Autodesk",
-    "categories_name_languages": "دورات في اللغات",
-    "categories_name_libyan": "المنهج الليبيي",
-    "categories_name_tunisian": "المنهج التونسي",
     "categories_browse_all": "تصفح جميع المحاور",
     "requested_courses_header": "المواد التعليميّة و الدّورات المرتقبة و الأكثر طلبا",
     "learn_more_header": "نوفّر تجربة تعليميّة تفاعليّة ونفتح آفاقا معرفيّة جديدة",
@@ -202,7 +196,11 @@
     "single_course_details_times": "مرّة",
     "single_course_details_degree": "درجة الصعوبة",
     "single_course_details_language": " اللّغة",
-    "single_course_related_header": "محتويات ذات صلة"
+    "single_course_related_header": "محتويات ذات صلة",
+    "single_course_details_submission": "التقديم",
+    "single_course_details_content": "المحتوى",
+    "single_course_details_exams": "الإمتحانات",
+    "single_course_details_rating": "التقييمات"
   },
   "sign": {
     "register_header": "إنشاء حساب",

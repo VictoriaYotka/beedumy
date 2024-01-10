@@ -1,4 +1,4 @@
-@import "../../../scss";
+@import "../../scss";
 
 .backdrop {
   position: fixed;
@@ -16,12 +16,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 20;
-  min-height: 50vh;
+  max-height: 80vh;
   display: flex;
   padding: 48px 12px;
   width: 90vw;
   text-align: center;
   background-color: $whiteColor;
+  overflow-y: scroll;
 
   @include md {
     max-width: 700px;
