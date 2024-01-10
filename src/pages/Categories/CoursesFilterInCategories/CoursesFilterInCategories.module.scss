@@ -110,3 +110,38 @@
     margin-bottom: 8px;
   }
 }
+
+.subcategories_inner {
+  position: relative;
+  display: inline-block;
+}
+
+.active {
+  color: $blueHoverColor;
+}
+
+.close_button {
+  position: absolute;
+  top: 0;
+  [dir="ltr"] & {
+    right: -24px;
+  }
+  [dir="rtl"] & {
+    left: -24px;
+  }
+  transform: translateY(-5%);
+  padding: 4px;
+}
+
+.close_icon {
+  width: 16px;
+  height: 16px;
+  stroke: $blueHoverColor;
+
+  transition: all 0.4s ease;
+
+  &:hover,
+  &:focus {
+    scale: 120%;
+  }
+}

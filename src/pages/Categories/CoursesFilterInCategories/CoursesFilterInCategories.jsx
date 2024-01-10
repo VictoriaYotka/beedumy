@@ -1,12 +1,26 @@
 import css from "./CoursesFilterInCategories.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { animated } from "@react-spring/web";
 import { useConditionalListsTransition } from "../../../utils";
-import { useSearchParams } from "react-router-dom";
 
-const RatedList = ({ style, handleOptionSelect }) => {
+const CloseButton = ({ onClick }) => {
+  return (
+    <button className={css.close_button} onClick={onClick}>
+      <svg className={css.close_icon}>
+        <use href={icons + "#close"}></use>
+      </svg>
+    </button>
+  );
+};
+
+const RatedList = ({
+  style,
+  handleOptionSelect,
+  handleOptionClear,
+  selectedOption,
+}) => {
   const { t } = useTranslation();
 
   return (
@@ -16,20 +30,43 @@ const RatedList = ({ style, handleOptionSelect }) => {
       onClick={(e) => handleOptionSelect("rated_list", e)}
     >
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading} data-option="option">
-          {t("categories.search_classification_rated_top_selling")}
+        <p className={css.subcategories_inner}>
+          <span
+            data-option="top_selling"
+            className={selectedOption === "top_selling" ? css.active : ""}
+          >
+            {t("categories.search_classification_rated_top_selling")}
+          </span>
+
+          {selectedOption === "top_selling" && (
+            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          )}
         </p>
       </li>
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading} data-option="option">
-          {t("categories.search_classification_rated_highest_rating")}
+        <p className={css.subcategories_inner}>
+          <span
+            data-option="highest_rating"
+            className={selectedOption === "highest_rating" ? css.active : ""}
+          >
+            {t("categories.search_classification_rated_highest_rating")}
+          </span>
+
+          {selectedOption === "highest_rating" && (
+            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          )}
         </p>
       </li>
     </animated.ul>
   );
 };
 
-const CurriculaList = ({ style, handleOptionSelect }) => {
+const CurriculaList = ({
+  style,
+  handleOptionSelect,
+  handleOptionClear,
+  selectedOption,
+}) => {
   const { t } = useTranslation();
 
   return (
@@ -39,25 +76,56 @@ const CurriculaList = ({ style, handleOptionSelect }) => {
       onClick={(e) => handleOptionSelect("curricula_list", e)}
     >
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading} data-option="option">
-          {t("categories.search_classification_curricula_tunisian")}
+        <p className={css.subcategories_inner}>
+          <span
+            data-option="tunisian"
+            className={selectedOption === "tunisian" ? css.active : ""}
+          >
+            {t("categories.search_classification_curricula_tunisian")}
+          </span>
+          {selectedOption === "tunisian" && (
+            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          )}{" "}
         </p>
       </li>
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading} data-option="option">
-          {t("categories.search_classification_curricula_libyan")}
+        <p className={css.subcategories_inner}>
+          <span
+            data-option="libyan"
+            className={selectedOption === "libyan" ? css.active : ""}
+          >
+            {t("categories.search_classification_curricula_libyan")}
+          </span>
+
+          {selectedOption === "libyan" && (
+            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          )}
         </p>
       </li>
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading} data-option="option">
-          {t("categories.search_classification_curricula_formative")}
+        <p className={css.subcategories_inner}>
+          <span
+            data-option="formative"
+            className={selectedOption === "formative" ? css.active : ""}
+          >
+            {t("categories.search_classification_curricula_formative")}
+          </span>
+
+          {selectedOption === "formative" && (
+            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          )}
         </p>
       </li>
     </animated.ul>
   );
 };
 
-const TypeList = ({ style, handleOptionSelect }) => {
+const TypeList = ({
+  style,
+  handleOptionSelect,
+  handleOptionClear,
+  selectedOption,
+}) => {
   const { t } = useTranslation();
 
   return (
@@ -67,20 +135,43 @@ const TypeList = ({ style, handleOptionSelect }) => {
       onClick={(e) => handleOptionSelect("type_list", e)}
     >
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading} data-option="option">
-          {t("categories.search_classification_content_type_available")}
+        <p className={css.subcategories_inner}>
+          <span
+            data-option="available"
+            className={selectedOption === "available" ? css.active : ""}
+          >
+            {t("categories.search_classification_content_type_available")}
+          </span>
+
+          {selectedOption === "available" && (
+            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          )}
         </p>
       </li>
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading} data-option="option">
-          {t("categories.search_classification_content_type_expected")}
+        <p className={css.subcategories_inner}>
+          <span
+            data-option="expected"
+            className={selectedOption === "expected" ? css.active : ""}
+          >
+            {t("categories.search_classification_content_type_expected")}
+          </span>
+
+          {selectedOption === "expected" && (
+            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          )}
         </p>
       </li>
     </animated.ul>
   );
 };
 
-const DateList = ({ style, handleOptionSelect }) => {
+const DateList = ({
+  style,
+  handleOptionSelect,
+  handleOptionClear,
+  selectedOption,
+}) => {
   const { t } = useTranslation();
 
   return (
@@ -90,28 +181,73 @@ const DateList = ({ style, handleOptionSelect }) => {
       onClick={(e) => handleOptionSelect("date_list", e)}
     >
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading} data-option="option">
-          {t("categories.search_classification_publishing_date_hour")}
+        <p className={css.subcategories_inner}>
+          <span
+            data-option="hour"
+            className={selectedOption === "hour" ? css.active : ""}
+          >
+            {t("categories.search_classification_publishing_date_hour")}
+          </span>
+
+          {selectedOption === "hour" && (
+            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          )}
         </p>
       </li>
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading} data-option="option">
-          {t("categories.search_classification_publishing_date_day")}
+        <p className={css.subcategories_inner}>
+          <span
+            data-option="day"
+            className={selectedOption === "day" ? css.active : ""}
+          >
+            {t("categories.search_classification_publishing_date_day")}
+          </span>
+
+          {selectedOption === "day" && (
+            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          )}
         </p>
       </li>
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading} data-option="option">
-          {t("categories.search_classification_publishing_date_week")}
+        <p className={css.subcategories_inner}>
+          <span
+            data-option="week"
+            className={selectedOption === "week" ? css.active : ""}
+          >
+            {t("categories.search_classification_publishing_date_week")}
+          </span>
+
+          {selectedOption === "week" && (
+            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          )}
         </p>
       </li>
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading} data-option="option">
-          {t("categories.search_classification_publishing_date_month")}
+        <p className={css.subcategories_inner}>
+          <span
+            data-option="month"
+            className={selectedOption === "month" ? css.active : ""}
+          >
+            {t("categories.search_classification_publishing_date_month")}
+          </span>
+
+          {selectedOption === "month" && (
+            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          )}
         </p>
       </li>
       <li className={css.subcategories_item}>
-        <p className={css.subcategories_heading} data-option="option">
-          {t("categories.search_classification_publishing_date_year")}
+        <p className={css.subcategories_inner}>
+          <span
+            data-option="year"
+            className={selectedOption === "year" ? css.active : ""}
+          >
+            {t("categories.search_classification_publishing_date_year")}
+          </span>
+
+          {selectedOption === "year" && (
+            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          )}
         </p>
       </li>
     </animated.ul>
@@ -145,8 +281,8 @@ const CoursesFilterInCategories = ({ style }) => {
   };
 
   const handleOptionSelect = (category, e) => {
-    if (e.target.dataset.option === "option") {
-      const option = e.target.innerHTML;
+    if (e.target.dataset.option) {
+      const option = e.target.dataset.option;
 
       switch (category) {
         case "rated_list":
@@ -164,6 +300,25 @@ const CoursesFilterInCategories = ({ style }) => {
         default:
           break;
       }
+    }
+  };
+
+  const handleOptionClear = (category) => {
+    switch (category) {
+      case "rated_list":
+        setRatedFilter("");
+        break;
+      case "curricula_list":
+        setCurriculaFilter("");
+        break;
+      case "type_list":
+        setTypeFilter("");
+        break;
+      case "date_list":
+        setDateFilter("");
+        break;
+      default:
+        break;
     }
   };
 
@@ -219,6 +374,8 @@ const CoursesFilterInCategories = ({ style }) => {
                     <RatedList
                       style={style}
                       handleOptionSelect={handleOptionSelect}
+                      handleOptionClear={() => handleOptionClear("rated_list")}
+                      selectedOption={ratedFilter}
                     />
                   );
                 default:
@@ -245,6 +402,10 @@ const CoursesFilterInCategories = ({ style }) => {
                     <CurriculaList
                       style={style}
                       handleOptionSelect={handleOptionSelect}
+                      handleOptionClear={() =>
+                        handleOptionClear("curricula_list")
+                      }
+                      selectedOption={curriculaFilter}
                     />
                   );
                 default:
@@ -270,6 +431,8 @@ const CoursesFilterInCategories = ({ style }) => {
                     <TypeList
                       style={style}
                       handleOptionSelect={handleOptionSelect}
+                      handleOptionClear={() => handleOptionClear("type_list")}
+                      selectedOption={typeFilter}
                     />
                   );
                 default:
@@ -299,6 +462,8 @@ const CoursesFilterInCategories = ({ style }) => {
                     <DateList
                       style={style}
                       handleOptionSelect={handleOptionSelect}
+                      handleOptionClear={() => handleOptionClear("date_list")}
+                      selectedOption={dateFilter}
                     />
                   );
                 default:
