@@ -1,18 +1,18 @@
 const common = {
   dots: true,
   infinite: true,
-  speed: 500,
+  speed: 800,
   slidesToScroll: 1,
   swipe: true,
   pauseOnHover: true,
-  rtl: true,
+  // rtl: true,
 };
 
 // homepage
 const categoriesSectionSettings = {
   ...common,
   autoplay: true,
-  autoplaySpeed: 1500,
+  autoplaySpeed: 2000,
   slidesToShow: 5.99,
   responsive: [
     {

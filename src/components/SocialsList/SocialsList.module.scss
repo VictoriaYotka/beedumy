@@ -1,7 +1,7 @@
 @import "../../scss";
 
 .social_link {
-  display: inline-block;
+  display: block;
 
   &:hover,
   &:focus {
@@ -17,6 +17,7 @@
 }
 
 .icon {
+  display: block;
   width: 20px;
   height: 20px;
   fill: $whiteColor;

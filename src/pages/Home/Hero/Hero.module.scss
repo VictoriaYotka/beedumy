@@ -109,6 +109,7 @@
 }
 
 .hero_button {
+  display: inline-block;
   padding: 4px 32px;
   border-radius: 32px;
   background-image: linear-gradient(to right, $headerBgColor, #9499f1);
@@ -124,7 +125,7 @@
   &:hover,
   &:focus {
     scale: 110%;
-    box-shadow: $shadow;
+    box-shadow: $shadowDark;
   }
 }
 

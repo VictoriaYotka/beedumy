@@ -49,9 +49,9 @@ const Hero = () => {
     ...useConditionalSpring.useTriangleGreenStyles,
   });
 
-  const [buttonStyles, set] = useSpring(() => ({
-    ...useConditionalSpring.useButtonStyles,
-  }));
+  // const [buttonStyles, set] = useSpring(() => ({
+  //   ...useConditionalSpring.useButtonStyles,
+  // }));
 
   return (
     <animated.section className={css.hero_section} style={sectionStyles}>
@@ -138,18 +138,10 @@ const Hero = () => {
             {t("home.hero_heading")}
           </h1>
           <p className={css.subheading}>{t("home.hero_subheading")}</p>
-          <animated.button
-            className={css.hero_button}
-            style={buttonStyles}
-            onMouseEnter={() => {
-              set.pause();
-            }}
-            onMouseLeave={() => {
-              set.resume();
-            }}
-          >
-            <Link to="/categories">{t("home.hero_button")}</Link>
-          </animated.button>
+
+          <Link to="/categories" className={css.hero_button}>
+            {t("home.hero_button")}
+          </Link>
         </div>
       </div>
     </animated.section>

@@ -73,6 +73,7 @@ const SearchButton = () => {
           id="header_search_input"
           name="header_search_input"
           className={css.input}
+          required
         />
       )}
 

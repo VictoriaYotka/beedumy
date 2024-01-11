@@ -6,7 +6,7 @@ const useSectionStyles = (inView) => {
     scale: inView ? 1 : 0.9,
     opacity: inView ? 1 : 0,
     transform: inView ? "translateY(0)" : "translateY(40px)",
-    transition: "0.6s ease-in-out",
+    transition: "0.8s ease-in-out",
   };
 };
 
@@ -17,7 +17,7 @@ const useHeroSectionStyles = {
     transform: "translateY(-100px)",
   },
   to: { scale: 1, opacity: 1, transform: "translateY(0)" },
-  config: { transition: "0.4s ease-in-out" },
+  config: { transition: "0.8s ease-in-out" },
 };
 
 const useHeroImageStyles = {
@@ -28,10 +28,10 @@ const useHeroImageStyles = {
 
   config: {
     mass: 9,
-    tension: 50,
+    tension: 35,
     friction: 26,
     clamp: true,
-    transition: "0.4s ease-in-out",
+    transition: "0.8s ease-in-out",
   },
 };
 
@@ -43,10 +43,10 @@ const useTriangleBlueBigStyles = {
 
   config: {
     mass: 4,
-    tension: 60,
+    tension: 30,
     friction: 14,
     clamp: true,
-    transition: "0.4s ease-in-out",
+    transition: "0.8s ease-in-out",
   },
 };
 
@@ -57,10 +57,10 @@ const useTriangleBlueStyles = {
   to: { scale: 1, rotateX: 10 },
   config: {
     mass: 6,
-    tension: 55,
+    tension: 25,
     friction: 12,
     clamp: true,
-    transition: "0.4s ease-in-out",
+    transition: "0.8s ease-in-out",
   },
 };
 
@@ -76,10 +76,10 @@ const useTriangleGreenSmallStyles = {
   ],
   config: {
     mass: 7,
-    tension: 70,
+    tension: 20,
     friction: 20,
     clamp: true,
-    transition: "0.4s ease-in-out",
+    transition: "0.8s ease-in-out",
   },
 };
 
@@ -91,10 +91,10 @@ const useTriangleRoseStyles = {
 
   config: {
     mass: 10,
-    tension: 65,
+    tension: 25,
     friction: 23,
     clamp: true,
-    transition: "0.4s ease-in-out",
+    transition: "0.8s ease-in-out",
   },
 };
 
@@ -105,10 +105,10 @@ const useTriangleGreenStyles = {
   to: { rotateZ: 10, scale: 1 },
   config: {
     mass: 4,
-    tension: 55,
+    tension: 25,
     friction: 20,
     clamp: true,
-    transition: "0.4s ease-in-out",
+    transition: "0.8s ease-in-out",
   },
 };
 
@@ -132,7 +132,7 @@ const useButtonStyles = {
     tension: 400,
     friction: 45,
     clamp: true,
-    transition: "0.3s ease-in-out",
+    transition: "0.8s ease-in-out",
   },
 };
 
@@ -156,6 +156,7 @@ const useConditionalModalsTransition = (condition) => {
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
+    config: { duration: 600 },
   });
 };
 

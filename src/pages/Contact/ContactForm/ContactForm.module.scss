@@ -46,7 +46,7 @@
 
   &:hover,
   &:focus {
-    box-shadow: $shadowDark;
+    box-shadow: $shadow;
   }
 }
 
@@ -68,6 +68,6 @@
   &:hover,
   &:focus {
     scale: 110%;
-    box-shadow: $shadowDark;
+    box-shadow: $shadow;
   }
 }
