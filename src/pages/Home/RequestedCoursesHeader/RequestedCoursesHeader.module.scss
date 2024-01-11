@@ -1,6 +1,7 @@
 @import "../../../scss";
 
 .section {
+  position: relative;
   padding: 36px 0;
   text-align: center;
   background-color: $blueBgColor;
@@ -17,21 +18,21 @@
   @include lg {
     padding: 64px 0;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 98%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 30px;
+
+    background-color: $blueBgColor;
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+  }
 }
 
 .heading {
   @extend .heading;
-}
-
-.triangle {
-  position: absolute;
-  bottom: -28px;
-  right: 50%;
-  z-index: 10;
-  transform: translateX(50%);
-
-  background-color: $blueBgColor;
-  clip-path: polygon(100% 0, 0 0, 50% 100%);
-  width: 90px;
-  height: 30px;
 }

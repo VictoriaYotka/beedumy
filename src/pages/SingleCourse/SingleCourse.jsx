@@ -1,5 +1,6 @@
 import css from "./SingleCourse.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
+import { animated, useSpring } from "@react-spring/web";
 import triangle_green_little_sm from "../../assets/images/home/hero/triangle-green-little_sm.webp";
 import SingleCourseCard from "./SingleCourseCard/SingleCourseCard";
 import SingleCourseAdditionalInfo from "./SingleCourseAdditionalInfo/SingleCourseAdditionalInfo";
@@ -7,7 +8,11 @@ import SimplePageHeader from "../../components/SimplePageHeader/SimplePageHeader
 import SingleCourseDetails from "./SingleCourseDetails/SingleCourseDetails";
 import { useCallback, useEffect, useState } from "react";
 import ModalWrapper from "../../components/ModalWrapper/ModalWrapper";
-import { toggleBodyScroll, useConditionalTransition } from "../../utils";
+import {
+  toggleBodyScroll,
+  useConditionalTransition,
+  useConditionalSpring,
+} from "../../utils";
 
 const SingleCourse = () => {
   const [isMediumScreen, setIsMediumScreen] = useState(
@@ -68,6 +73,10 @@ const SingleCourse = () => {
       isOpenAdditionalInfo
     );
 
+  const [buttonStyles, set] = useSpring(() => ({
+    ...useConditionalSpring.useButtonStyles,
+  }));
+
   return (
     <>
       <SimplePageHeader heading="heading" subheading="level" />
@@ -82,14 +91,21 @@ const SingleCourse = () => {
             />
             {!isMediumScreen && (
               <>
-                <button
+                <animated.button
                   className={css.cart_button}
+                  style={buttonStyles}
                   onClick={openAdditionalInfo}
+                  onMouseEnter={() => {
+                    set.pause();
+                  }}
+                  onMouseLeave={() => {
+                    set.resume();
+                  }}
                 >
                   <svg className={css.cart_icon}>
                     <use href={icons + "#cart"}></use>
                   </svg>
-                </button>
+                </animated.button>
 
                 {transitions((style, isTrue) => {
                   switch (isTrue) {

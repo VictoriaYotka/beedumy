@@ -23,11 +23,21 @@
 }
 
 .cart_button {
-  margin-bottom: 8px;
+  position: fixed;
+  top: 70%;
+  right: 5%;
+  z-index: 2;
+  display: block;
+  padding: 12px;
+  background-color: $lightGreyBgColor;
+  border: 2px solid $redCategoryAccent;
+  border-radius: 50%;
+
   transition: all 0.4s ease;
 
   &:hover,
   &:focus {
+    scale: 140%;
     & .cart_icon {
       scale: 120%;
       fill: $redCategoryAccent;
@@ -36,8 +46,9 @@
 }
 
 .cart_icon {
-  width: 24px;
-  height: 24px;
+  display: block;
+  width: 32px;
+  height: 32px;
   fill: $secondaryFontColor;
 
   transition: all 0.4s ease;

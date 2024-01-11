@@ -5,11 +5,11 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 12px;
-  min-width: 300px;
   margin: 0 auto;
 
   @include md {
     margin-top: 32px;
+    min-width: 300px;
   }
 }
 

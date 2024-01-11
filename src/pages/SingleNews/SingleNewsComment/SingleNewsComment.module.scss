@@ -126,17 +126,13 @@
 
 .form_button {
   display: block;
-  margin: 0 auto 0 auto;
+  margin-inline-end: auto;
   padding: 12px 24px;
   color: $whiteColor;
   background-color: $accentColor;
   font-size: 18px;
 
   transition: all 0.4s ease;
-
-  @include sm {
-    margin: 0 0 0 auto;
-  }
 
   &:hover,
   &:focus {

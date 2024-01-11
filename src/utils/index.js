@@ -4,6 +4,7 @@ import replaceHyphensWithSpaces from "./replaceHyphensWithSpaces";
 import carouselsSettings from "./carouselsSettings";
 import toggleBodyScroll from "./toggleBodyScroll";
 import useConditionalTransition from "./useConditionalTransition";
+import useConditionalSpring from "./useConditionalSpring";
 
 export {
   truncateText,
@@ -12,4 +13,5 @@ export {
   carouselsSettings,
   toggleBodyScroll,
   useConditionalTransition,
+  useConditionalSpring,
 };
