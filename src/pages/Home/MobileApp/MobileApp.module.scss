@@ -95,7 +95,7 @@
   color: $accentColor;
   background-color: $whiteColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include md {
     padding: 8px 24px;

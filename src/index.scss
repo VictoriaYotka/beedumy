@@ -84,6 +84,16 @@ button {
 input {
   border: 1px solid $secondaryFontColor;
   outline: none;
+
+  &::placeholder {
+    font-family: $font-family;
+  }
+}
+
+textarea {
+  &::placeholder {
+    font-family: $font-family;
+  }
 }
 
 iframe {

@@ -64,7 +64,7 @@
   margin-bottom: 8px;
   cursor: pointer;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include md {
     margin-bottom: 32px;
@@ -85,7 +85,7 @@
   width: 20px;
   height: 20px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .subcategories_list {
@@ -94,7 +94,7 @@
 }
 
 .subcategories_item {
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -138,7 +138,7 @@
   height: 16px;
   stroke: $blueHoverColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {

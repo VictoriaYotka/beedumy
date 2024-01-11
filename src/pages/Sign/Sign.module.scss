@@ -30,7 +30,7 @@
   border-radius: 4px;
   border: 1px solid $lightGreyBgColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -58,7 +58,7 @@
   font-size: 14px;
   font-weight: $boldFont;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:after {
     content: "*";
@@ -102,7 +102,7 @@ input[type="checkbox"] {
   text-align: start;
   font-weight: $boldFont;
 
-  transition: all 0.4s ease;
+  transition: $transition;
   &:hover,
   &:focus {
     scale: 105%;

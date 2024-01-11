@@ -50,7 +50,7 @@
   cursor: pointer;
   text-align: center;
 
-  transition: all 0.4s ease-in-out;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -66,5 +66,5 @@
   height: 24px;
   stroke: rgb(139, 126, 357);
 
-  transition: all 0.4s ease-in-out;
+  transition: $transition;
 }

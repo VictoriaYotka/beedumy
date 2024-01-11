@@ -35,7 +35,7 @@
   color: $whiteColor;
   font-size: 18px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &::before {
     content: "";
@@ -46,7 +46,7 @@
     height: 100%;
     border-radius: 50%;
     border: 1px solid $accentColor;
-    transition: all 0.4s ease;
+    transition: $transition;
   }
 
   &:hover,
@@ -78,7 +78,7 @@
   background-color: $lightGreyBgColor;
   text-align: start;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {

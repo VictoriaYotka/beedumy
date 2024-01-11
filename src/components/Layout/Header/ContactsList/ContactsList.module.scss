@@ -23,7 +23,7 @@
   color: $whiteColor;
   font-size: 14px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include sm {
     padding: 0 8px;
@@ -56,7 +56,7 @@
 
 .link_content {
   direction: ltr;
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .icon {
@@ -65,7 +65,7 @@
   margin-inline-end: 8px;
   fill: $whiteColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include md {
     margin-inline-end: 12px;

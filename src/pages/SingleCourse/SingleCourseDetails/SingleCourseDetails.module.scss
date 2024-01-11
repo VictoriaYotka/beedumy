@@ -11,12 +11,15 @@
 .item {
   flex-basis: 25%;
   cursor: pointer;
+  background-color: $lightGreyBgColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {
     & .item_heading {
+      color: $whiteColor;
+      background-color: $greenCategoryAccent;
       font-weight: $boldFont;
     }
   }
@@ -26,10 +29,10 @@
   position: relative;
   padding: 16px 0;
   color: $secondaryFontColor;
-  background-color: $lightGreyBgColor;
+
   font-size: 12px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &::after {
     content: "";
@@ -46,7 +49,7 @@
     background-color: $greenCategoryAccent;
     clip-path: polygon(100% 0, 0 0, 50% 100%);
 
-    transition: all 0.4s ease;
+    transition: $transition;
   }
 
   @include sm {
@@ -60,7 +63,7 @@
   background-color: $greenCategoryAccent;
   font-weight: $boldFont;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &::after {
     opacity: 1;
@@ -131,7 +134,7 @@
   height: 40px;
   border-radius: 50%;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &::before {
     content: "";
@@ -142,7 +145,7 @@
     height: 100%;
     border-radius: 50%;
 
-    transition: all 0.4s ease;
+    transition: $transition;
   }
 }
 
@@ -180,13 +183,13 @@
   margin-inline-end: auto;
   font-weight: $boldFont;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .lessons_info {
   color: $secondaryFontColor;
   font-weight: $boldFont;
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 // submission
@@ -237,7 +240,7 @@
   font-size: 12px;
   font-weight: $boldFont;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include sm {
     padding: 4px 8px;
@@ -402,7 +405,7 @@
   outline: none;
   text-align: start;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include lg {
     padding: 16px;
@@ -426,7 +429,7 @@
   text-align: start;
   resize: vertical;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include sm {
     min-width: unset;
@@ -448,7 +451,7 @@
   background-color: $accentColor;
   font-size: 18px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {

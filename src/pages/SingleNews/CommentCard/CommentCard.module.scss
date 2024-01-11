@@ -33,7 +33,7 @@
 .teacher_image {
   width: 100%;
   object-fit: cover;
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .placeholder_icon {
@@ -43,7 +43,7 @@
   stroke: $secondaryFontColor;
   fill: none;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .content_wrapper {
@@ -78,7 +78,7 @@
 .answer_button {
   font-size: 18px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {

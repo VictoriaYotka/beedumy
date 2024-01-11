@@ -5,7 +5,7 @@
   margin: 0 auto;
   border: 2px solid $lightGreyBgColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include lg {
     width: 310px;
@@ -42,7 +42,7 @@
 .image {
   width: 100%;
   object-fit: cover;
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .placeholder_icon {
@@ -51,7 +51,7 @@
   margin: auto;
   fill: $secondaryFontColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .favorite_button {
@@ -61,7 +61,7 @@
   top: 16px;
   right: 16px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -78,7 +78,7 @@
   stroke: $whiteColor;
   fill: none;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .wrapper {
@@ -110,7 +110,7 @@
   line-height: 27px;
   padding: 0 17px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -123,7 +123,7 @@
   font-size: 14px;
   color: $secondaryFontColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .admin_image_thumb {
@@ -160,7 +160,7 @@
 
   a {
     color: inherit;
-    transition: all 0.4s ease;
+    transition: $transition;
   }
 }
 
@@ -199,7 +199,7 @@
   background-color: $lightGreyBgColor;
   font-weight: $boldFont;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {

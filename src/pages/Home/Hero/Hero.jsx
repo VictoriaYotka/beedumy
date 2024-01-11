@@ -49,10 +49,6 @@ const Hero = () => {
     ...useConditionalSpring.useTriangleGreenStyles,
   });
 
-  // const [buttonStyles, set] = useSpring(() => ({
-  //   ...useConditionalSpring.useButtonStyles,
-  // }));
-
   return (
     <animated.section className={css.hero_section} style={sectionStyles}>
       <div className={css.hero_container}>

@@ -63,7 +63,7 @@
     justify-content: center;
     background-color: $whiteColor;
 
-    transition: all 0.4s ease;
+    transition: $transition;
 
     @include md {
       width: 112px;
@@ -79,7 +79,7 @@
       height: 100%;
       border: 2px solid $whiteColor;
       border-radius: 50%;
-      transition: all 0.4s ease;
+      transition: $transition;
 
       @include md {
         left: -10px;
@@ -109,7 +109,7 @@
   font-size: 16px;
   background-color: $whiteColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -123,7 +123,7 @@
   color: $whiteColor;
   background-color: $footerBgColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {

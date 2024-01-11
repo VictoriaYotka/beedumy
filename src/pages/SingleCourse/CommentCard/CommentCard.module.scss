@@ -12,14 +12,14 @@
   font-size: 18px;
   font-weight: $boldFont;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .date {
   color: $secondaryFontColor;
   font-size: 14px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .image_wrapper {
@@ -34,7 +34,7 @@
   width: 100%;
   object-fit: cover;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .user_icon {
@@ -43,7 +43,7 @@
   margin: auto;
   fill: $secondaryFontColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .info_inner_wrapper {

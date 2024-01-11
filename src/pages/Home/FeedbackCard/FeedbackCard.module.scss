@@ -7,7 +7,7 @@
   text-align: center;
   border: 2px solid $lightGreyBgColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include sm {
     padding: 16px;
@@ -57,7 +57,7 @@
   border-radius: 50%;
   background-color: $accentColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &::before {
     content: "";
@@ -69,7 +69,7 @@
     border-radius: 50%;
     border: 1px solid $accentColor;
 
-    transition: all 0.4s ease;
+    transition: $transition;
   }
 }
 
@@ -105,7 +105,7 @@
 .image {
   width: 100%;
   object-fit: cover;
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .placeholder_icon {
@@ -116,18 +116,18 @@
   fill: none;
   background-color: $whiteColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .name {
   font-weight: $boldFont;
   color: $darkFontColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .descr {
   color: $secondaryFontColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }

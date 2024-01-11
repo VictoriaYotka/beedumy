@@ -9,7 +9,7 @@
 
 .item {
   font-size: 12px;
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include sm {
     font-size: 14px;

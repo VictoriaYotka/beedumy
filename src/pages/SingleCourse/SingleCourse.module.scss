@@ -33,7 +33,7 @@
   border: 2px solid $redCategoryAccent;
   border-radius: 50%;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -51,5 +51,5 @@
   height: 24px;
   fill: $secondaryFontColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }

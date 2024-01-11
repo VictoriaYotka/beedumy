@@ -27,7 +27,7 @@
   color: $whiteColor;
   background-color: $footerBgColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {

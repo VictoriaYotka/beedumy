@@ -18,7 +18,7 @@
   color: $whiteColor;
   background-color: transparent;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -32,7 +32,7 @@
   stroke: $whiteColor;
   fill: none;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .hide_more_icon {
@@ -60,7 +60,7 @@
   background-color: $greenBgButtonBgColor;
   color: $whiteColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include lg {
     background-color: $headerBgColor;
@@ -73,7 +73,7 @@
   padding-inline-end: 24px;
   cursor: pointer;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -86,5 +86,5 @@
   opacity: 1;
   z-index: 100;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }

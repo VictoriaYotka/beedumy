@@ -25,7 +25,7 @@
   background-color: $whiteColor;
   text-align: center;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include md {
     padding: 16px 0;
@@ -61,7 +61,7 @@
   color: $darkFontColor;
   margin-top: 12px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   a {
     color: inherit;
@@ -76,7 +76,7 @@
   margin-left: auto;
   margin-right: auto;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include md {
     width: 92px;
@@ -93,7 +93,7 @@
     border: 2px solid $accentColor;
     border-radius: 50%;
 
-    transition: all 0.4s ease;
+    transition: $transition;
   }
 
   i {
@@ -177,7 +177,7 @@
   font-weight: $boldFont;
   background-color: $footerBgColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {

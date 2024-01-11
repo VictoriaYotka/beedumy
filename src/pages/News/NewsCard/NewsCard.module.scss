@@ -4,7 +4,7 @@
   max-width: 340px;
   box-shadow: $shadow;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include lg {
     max-width: 300px;
@@ -60,7 +60,7 @@
   width: 100%;
   object-fit: cover;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .placeholder_icon {
@@ -69,7 +69,7 @@
   margin: auto;
   fill: $secondaryFontColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include lg {
     width: 160px;
@@ -135,7 +135,7 @@
   border-radius: 50%;
   background-color: $lightGreyBgColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &::before {
     content: "";
@@ -147,7 +147,7 @@
     border-radius: 50%;
     border: 1px solid $lightGreyBgColor;
 
-    transition: all 0.4s ease;
+    transition: $transition;
   }
 }
 
@@ -156,7 +156,7 @@
   height: 20px;
   fill: $secondaryFontColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .meta_info {
@@ -177,7 +177,7 @@
   box-shadow: $shadow;
   font-size: 12px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:after {
     content: "";
@@ -192,7 +192,7 @@
     height: 8px;
     box-shadow: $shadow;
 
-    transition: all 0.4s ease;
+    transition: $transition;
   }
 }
 
@@ -208,7 +208,7 @@
     font-size: 18px;
   }
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .content {
@@ -217,7 +217,7 @@
   font-size: 12px;
   overflow: hidden;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include sm {
     max-height: 60px;
@@ -236,7 +236,7 @@
   display: inline-block;
   color: $accentColor;
   font-weight: $boldFont;
-  transition: all 0.4s ease;
+  transition: $transition;
 
   font-size: 14px;
 

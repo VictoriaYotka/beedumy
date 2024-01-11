@@ -9,7 +9,7 @@
   text-align: start;
   color: $whiteColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include sm {
     max-width: 320px;
@@ -86,7 +86,7 @@
 
   backdrop-filter: blur(10px);
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include sm {
     margin-bottom: 60px;
@@ -105,7 +105,7 @@
     border-radius: 50%;
     border: 1px solid $whiteColor;
 
-    transition: all 0.4s ease;
+    transition: $transition;
   }
 }
 
@@ -128,7 +128,7 @@
   font-weight: $boldFont;
   backdrop-filter: blur(10px);
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .content {

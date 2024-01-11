@@ -73,7 +73,7 @@
   border-radius: 50%;
   background-color: $lightGreyBgColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &::before {
     content: "";
@@ -85,7 +85,7 @@
     border-radius: 50%;
     border: 1px solid $lightGreyBgColor;
 
-    transition: all 0.4s ease;
+    transition: $transition;
   }
 }
 
@@ -94,7 +94,7 @@
   height: 20px;
   fill: $secondaryFontColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .meta_info {
@@ -116,7 +116,7 @@
   box-shadow: $shadow;
   font-size: 12px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:after {
     content: "";
@@ -131,7 +131,7 @@
     height: 8px;
     box-shadow: $shadow;
 
-    transition: all 0.4s ease;
+    transition: $transition;
   }
 }
 
@@ -152,7 +152,7 @@
   font-size: 14px;
   overflow: hidden;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include sm {
     margin-bottom: 28px;
@@ -243,7 +243,7 @@
   height: 24px;
   fill: $secondaryFontColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -326,7 +326,7 @@
   text-align: center;
   flex-basis: 25%;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:not(:last-child) {
     border-right: 1px solid $lightGreyBgColor;
@@ -353,7 +353,7 @@
   height: 16px;
   fill: $secondaryFontColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -391,7 +391,7 @@
   border-radius: 16px;
   font-weight: $boldFont;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {

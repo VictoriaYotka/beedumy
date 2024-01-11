@@ -71,7 +71,7 @@
   background-color: $whiteColor;
   box-shadow: $shadow;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -96,7 +96,7 @@
   font-size: 16px;
   font-weight: $boldFont;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {

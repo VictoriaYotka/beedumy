@@ -147,7 +147,7 @@ const useConditionalListsTransition = (condition) => {
       opacity: 0,
       transform: "translateY(-20px)",
     },
-    config: { duration: 200 },
+    config: { duration: 400 },
   });
 };
 

@@ -43,7 +43,7 @@
   text-align: start;
   font-size: 16px;
 
-  transition: all 0.4s ease-in-out;
+  transition: $transition;
 
   @include sm {
     width: 70%;
@@ -69,7 +69,7 @@
   color: $whiteColor;
   font-size: 18px;
 
-  transition: all 0.4s ease-in-out;
+  transition: $transition;
 
   @include md {
     padding: 16px 48px;

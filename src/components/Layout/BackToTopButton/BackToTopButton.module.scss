@@ -16,7 +16,7 @@
   background-color: $darkFooterBgColor;
   border-radius: 50%;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include sm {
     bottom: 32px;
@@ -41,7 +41,7 @@
     border-radius: 50%;
     border: 2px solid $darkFooterBgColor;
 
-    transition: all 0.4s ease;
+    transition: $transition;
   }
 
   &:hover,

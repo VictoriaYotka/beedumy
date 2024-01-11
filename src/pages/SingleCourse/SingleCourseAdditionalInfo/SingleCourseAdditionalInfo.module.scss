@@ -52,7 +52,7 @@
   font-weight: $boldFont;
   background-color: $purpleCategoryAccent;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -107,7 +107,7 @@
   height: 40px;
   border-radius: 50%;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &::before {
     content: "";
@@ -118,7 +118,7 @@
     height: 100%;
     border-radius: 50%;
 
-    transition: all 0.4s ease;
+    transition: $transition;
   }
 }
 
@@ -163,11 +163,11 @@
 .condition {
   color: $secondaryFontColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .info {
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 // related container

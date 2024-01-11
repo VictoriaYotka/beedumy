@@ -6,7 +6,7 @@
   border: 2px solid $lightGreyBgColor;
   border-radius: 16px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -43,7 +43,7 @@
   margin: auto;
   border-radius: 16px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .placeholder_icon {
@@ -53,7 +53,7 @@
   height: 150px;
   fill: $secondaryFontColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .notion {
@@ -99,7 +99,7 @@
   font-size: 16px;
   color: $accentColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include md {
     font-size: 18px;
@@ -118,7 +118,7 @@
   }
   font-size: 20px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include md {
     font-size: 22px;
@@ -157,7 +157,7 @@
   font-size: 16px;
   color: $secondaryFontColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include md {
     font-size: 18px;
@@ -183,7 +183,7 @@
   color: #007733;
   border: 1px solid $accentColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include md {
     font-size: 18px;
@@ -216,5 +216,5 @@
   height: 20px;
   fill: $accentColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }

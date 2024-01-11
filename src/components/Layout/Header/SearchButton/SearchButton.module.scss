@@ -15,7 +15,7 @@
   height: 50px;
   z-index: 2;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include lg {
     position: relative;
@@ -63,7 +63,7 @@
   color: $whiteColor;
   font-size: 18px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include lg {
     top: 50%;
@@ -79,7 +79,7 @@
     height: 100%;
     border-radius: 50%;
     border: 1px solid $greenBgButtonBgColor;
-    transition: all 0.4s ease;
+    transition: $transition;
   }
 
   &:hover,
@@ -102,7 +102,7 @@
   color: white;
   font-size: 20px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .close_button {
@@ -124,7 +124,7 @@
   color: $whiteColor;
   font-size: 18px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -139,5 +139,5 @@
   height: 24px;
   stroke: $whiteColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }

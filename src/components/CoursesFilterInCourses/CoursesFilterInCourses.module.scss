@@ -45,7 +45,7 @@
   gap: 4px;
   cursor: pointer;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   &:hover,
   &:focus {
@@ -59,7 +59,7 @@
   stroke: $whiteColor;
   fill: none;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .icon_active {
@@ -96,8 +96,12 @@
   }
 }
 
-.sub_item:not(:last-child) {
-  margin-bottom: 16px;
+.sub_item {
+  transition: $transition;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
 }
 
 .sub_item_heading {
@@ -128,7 +132,7 @@
   [dir="rtl"] & {
     transform: rotate(90deg);
   }
-  transition: all 0.4s ease;
+  transition: $transition;
 }
 
 .sub_sub_list {
@@ -144,5 +148,5 @@
   fill: none;
   stroke: $accentColor;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 }

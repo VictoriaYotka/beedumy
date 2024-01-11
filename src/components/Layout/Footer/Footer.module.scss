@@ -104,7 +104,7 @@
   color: $paleWhiteColor;
   font-size: 10px;
 
-  transition: all 0.4s ease;
+  transition: $transition;
 
   @include sm {
     font-size: 12px;
