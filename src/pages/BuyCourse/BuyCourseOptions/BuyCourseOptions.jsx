@@ -8,7 +8,7 @@ import {
   UpiModal,
   WalletModal,
 } from "../Modals/Modals";
-import { toggleBodyScroll, useConditionalTransition } from "../../../utils";
+import { toggleBodyScroll, useConditionalSpring } from "../../../utils";
 
 const BuyCourseOptions = () => {
   const [activeModal, setActiveModal] = useState(null);
@@ -46,7 +46,7 @@ const BuyCourseOptions = () => {
   }, [activeModal, closeModal]);
 
   const transitions =
-    useConditionalTransition.useConditionalModalsTransition(activeModal);
+    useConditionalSpring.useConditionalModalsTransition(activeModal);
 
   return (
     <>

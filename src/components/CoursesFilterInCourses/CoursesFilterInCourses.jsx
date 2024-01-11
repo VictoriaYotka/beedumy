@@ -10,7 +10,7 @@ import {
   MiddleTunisianList,
   PrimaryList,
 } from "./CoursesFilterSubLists";
-import { useConditionalTransition } from "../../utils";
+import { useConditionalSpring } from "../../utils";
 
 const CoursesFilterInCourses = ({ curricula }) => {
   const { t } = useTranslation();
@@ -69,15 +69,15 @@ const CoursesFilterInCourses = ({ curricula }) => {
   }, [activeList, closeList]);
 
   const transition =
-    useConditionalTransition.useConditionalListsTransition(activeList);
+    useConditionalSpring.useConditionalListsTransition(activeList);
 
   return (
     <section className={css.section}>
       <div className={css.container}>
         <h2 className={css.heading}>{curricula} </h2>
 
-        {(location.pathname === "/courses/tunisian" ||
-          location.pathname === "/courses/libyan") && (
+        {(location.pathname === "/categories/tunisian" ||
+          location.pathname === "/categories/libyan") && (
           <ul id="level_list" className={css.list}>
             {/* primary */}
             <li className={css.item}>
@@ -131,9 +131,9 @@ const CoursesFilterInCourses = ({ curricula }) => {
                 switch (item) {
                   case "middle":
                     switch (location.pathname) {
-                      case "/courses/tunisian":
+                      case "/categories/tunisian":
                         return <MiddleTunisianList style={style} />;
-                      case "/courses/libyan":
+                      case "/categories/libyan":
                         return <MiddleLibyanList style={style} />;
                       default:
                         return null;
@@ -180,7 +180,7 @@ const CoursesFilterInCourses = ({ curricula }) => {
             </li>
 
             {/* bachelor */}
-            {location.pathname === "/courses/tunisian" && (
+            {location.pathname === "/categories/tunisian" && (
               <li className={css.item}>
                 <h4
                   data-item="item"

@@ -1,3 +1,15 @@
+import { useTransition } from "@react-spring/web";
+
+const useSectionStyles = (inView) => {
+  return {
+    width: "100%",
+    scale: inView ? 1 : 0.9,
+    opacity: inView ? 1 : 0,
+    transform: inView ? "translateY(0)" : "translateY(40px)",
+    transition: "0.6s ease-in-out",
+  };
+};
+
 const useHeroSectionStyles = {
   from: {
     scale: 0.5,
@@ -124,7 +136,31 @@ const useButtonStyles = {
   },
 };
 
+const useConditionalListsTransition = (condition) => {
+  return useTransition(condition, {
+    from: { opacity: 0, transform: "translateY(-20px)" },
+    enter: {
+      opacity: 1,
+      transform: "translateY(0)",
+    },
+    leave: {
+      opacity: 0,
+      transform: "translateY(-20px)",
+    },
+    config: { duration: 200 },
+  });
+};
+
+const useConditionalModalsTransition = (condition) => {
+  return useTransition(condition, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+  });
+};
+
 const useConditionalSpring = {
+  useSectionStyles,
   useHeroSectionStyles,
   useHeroImageStyles,
   useTriangleBlueBigStyles,
@@ -133,6 +169,8 @@ const useConditionalSpring = {
   useTriangleRoseStyles,
   useTriangleGreenStyles,
   useButtonStyles,
+  useConditionalListsTransition,
+  useConditionalModalsTransition,
 };
 
 export default useConditionalSpring;

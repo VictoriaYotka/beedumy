@@ -8,7 +8,7 @@ import FAQ from "./FAQ/FAQ";
 import CourseCardInCategories from "../../components/CourseCardInCategories/CourseCardInCategories";
 import SectionAnimationWrapper from "../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 import { Link } from "react-router-dom";
-import { carouselsSettings, useConditionalTransition } from "../../utils";
+import { carouselsSettings, useConditionalSpring } from "../../utils";
 import { useState } from "react";
 import CoursesFilterInCategories from "./CoursesFilterInCategories/CoursesFilterInCategories";
 
@@ -36,7 +36,7 @@ const Categories = () => {
   };
 
   const transition =
-    useConditionalTransition.useConditionalListsTransition(isFilterShown);
+    useConditionalSpring.useConditionalListsTransition(isFilterShown);
 
   return (
     <>

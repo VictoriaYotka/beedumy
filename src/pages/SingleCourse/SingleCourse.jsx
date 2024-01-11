@@ -8,11 +8,7 @@ import SimplePageHeader from "../../components/SimplePageHeader/SimplePageHeader
 import SingleCourseDetails from "./SingleCourseDetails/SingleCourseDetails";
 import { useCallback, useEffect, useState } from "react";
 import ModalWrapper from "../../components/ModalWrapper/ModalWrapper";
-import {
-  toggleBodyScroll,
-  useConditionalTransition,
-  useConditionalSpring,
-} from "../../utils";
+import { toggleBodyScroll, useConditionalSpring } from "../../utils";
 
 const SingleCourse = () => {
   const [isMediumScreen, setIsMediumScreen] = useState(
@@ -69,9 +65,7 @@ const SingleCourse = () => {
   }, [isOpenAdditionalInfo, closeAdditionalInfo]);
 
   const transitions =
-    useConditionalTransition.useConditionalModalsTransition(
-      isOpenAdditionalInfo
-    );
+    useConditionalSpring.useConditionalModalsTransition(isOpenAdditionalInfo);
 
   const [buttonStyles, set] = useSpring(() => ({
     ...useConditionalSpring.useButtonStyles,

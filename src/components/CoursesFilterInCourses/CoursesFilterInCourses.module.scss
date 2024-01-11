@@ -79,6 +79,7 @@
   z-index: 2;
   width: 220px;
   padding: 16px;
+  color: $darkFontColor;
   background-color: $whiteColor;
   border: 2px solid $lightGreyBgColor;
   border-start-start-radius: 16px;
@@ -101,7 +102,6 @@
 
 .sub_item_heading {
   @extend .item_heading;
-  color: $darkFontColor;
   font-size: 12px;
   font-weight: $boldFont;
 
@@ -134,6 +134,7 @@
 .sub_sub_list {
   margin-inline-start: 16px;
   margin-top: 16px;
+  color: $secondaryFontColor;
 }
 
 .sub_icon_content {

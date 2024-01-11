@@ -4,7 +4,7 @@ import css from "./CoursesFilterInCourses.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
 import { useTranslation } from "react-i18next";
 import { animated } from "@react-spring/web";
-import { useConditionalTransition } from "../../utils";
+import { useConditionalSpring } from "../../utils";
 
 const PrimaryList = ({ style }) => {
   const { t } = useTranslation();
@@ -316,8 +316,7 @@ const HighList = ({ style, toggleSubList, activeSubList }) => {
     setActive(activeSubList);
   }, [activeSubList]);
 
-  const transition =
-    useConditionalTransition.useConditionalListsTransition(active);
+  const transition = useConditionalSpring.useConditionalListsTransition(active);
 
   return (
     <animated.ul data-sublist="sublist" className={css.sub_list} style={style}>
@@ -349,9 +348,9 @@ const HighList = ({ style, toggleSubList, activeSubList }) => {
           switch (active.includes("second_year")) {
             case true:
               switch (location.pathname) {
-                case "/courses/tunisian":
+                case "/categories/tunisian":
                   return <HighSecondYearTunisianSubList style={style} />;
-                case "/courses/libyan":
+                case "/categories/libyan":
                   return <HighSecondYearLibyanSubList style={style} />;
                 default:
                   return null;
@@ -381,9 +380,9 @@ const HighList = ({ style, toggleSubList, activeSubList }) => {
           switch (active.includes("third_year")) {
             case true:
               switch (location.pathname) {
-                case "/courses/tunisian":
+                case "/categories/tunisian":
                   return <HighThirdYearTunisianSubList style={style} />;
-                case "/courses/libyan":
+                case "/categories/libyan":
                   return <HighThirdYearLibyanSubList style={style} />;
                 default:
                   return null;

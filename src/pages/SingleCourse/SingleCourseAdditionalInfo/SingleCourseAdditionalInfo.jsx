@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import css from "./SingleCourseAdditionalInfo.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
 import { useTranslation } from "react-i18next";

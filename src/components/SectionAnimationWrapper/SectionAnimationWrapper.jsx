@@ -1,19 +1,13 @@
 import { useInView, animated } from "@react-spring/web";
+import { useConditionalSpring } from "../../utils";
 
 const SectionAnimationWrapper = ({ children }) => {
   const [ref, inView] = useInView();
 
+  const sectionStyle = useConditionalSpring.useSectionStyles(inView);
+
   return (
-    <animated.div
-      ref={ref}
-      style={{
-        width: "100%",
-        scale: inView ? 1 : 0.9,
-        opacity: inView ? 1 : 0,
-        transform: inView ? "translateY(0)" : "translateY(40px)",
-        transition: "0.4s ease-in-out",
-      }}
-    >
+    <animated.div ref={ref} style={{ ...sectionStyle }}>
       {children}
     </animated.div>
   );
