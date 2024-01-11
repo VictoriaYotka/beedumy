@@ -9,6 +9,7 @@ import {
 } from "../../../utils";
 import { animated } from "@react-spring/web";
 import ModalWrapper from "../../../components/ModalWrapper/ModalWrapper";
+import CommentCard from "../CommentCard/CommentCard";
 
 const LessonItems = ({ unit = "unit name", minutes = 16, exercises = 3 }) => {
   const { t } = useTranslation();
@@ -33,7 +34,7 @@ const LessonItems = ({ unit = "unit name", minutes = 16, exercises = 3 }) => {
           </div>
           <p className={css.lessons_condition}>video</p>
           <p className={css.lessons_info}>
-            {minutes} {t("courses.single_course_details_content_minutes")}
+            {minutes} {t("courses.single_course_details_lessons_minutes")}
           </p>
         </li>
       )}
@@ -47,7 +48,7 @@ const LessonItems = ({ unit = "unit name", minutes = 16, exercises = 3 }) => {
           </div>
           <p className={css.lessons_condition}>exercises</p>
           <p className={css.lessons_info}>
-            {exercises} {t("courses.single_course_details_content_exercises")}
+            {exercises} {t("courses.single_course_details_lessons_exercises")}
           </p>
         </li>
       )}
@@ -196,19 +197,134 @@ const ExamsInfo = ({ style }) => {
   );
 };
 
-const RatingInfo = ({ style }) => {
+const RatingInfo = ({ style, votes = 3, rating = "4.6", comments = "02" }) => {
+  const { t } = useTranslation();
+
   return (
-    <animated.div
-      className={css.info_wrapper}
-      style={style}
-      data-option="rating"
-    >
-      RatingInfo
-    </animated.div>
+    <>
+      {/* rating */}
+      <animated.div
+        className={css.info_wrapper}
+        style={style}
+        data-option="rating"
+      >
+        <div className={css.rating_container}>
+          <ul className={css.diagram_list}>
+            <li className={css.diagram_item}>
+              <span className={css.diagram_heading}>
+                {t("courses.single_course_details_rating_excellent")}
+              </span>
+              <span className={css.diagram_range}></span>
+              <span className={css.diagram_votes}>{votes}</span>
+            </li>
+            <li className={css.diagram_item}>
+              <span className={css.diagram_heading}>
+                {t("courses.single_course_details_rating_fine")}
+              </span>
+              <span className={css.diagram_range}></span>
+              <span className={css.diagram_votes}>{votes}</span>
+            </li>
+            <li className={css.diagram_item}>
+              <span className={css.diagram_heading}>
+                {t("courses.single_course_details_rating_middle")}
+              </span>
+              <span className={css.diagram_range}></span>
+              <span className={css.diagram_votes}>{votes}</span>
+            </li>
+            <li className={css.diagram_item}>
+              <span className={css.diagram_heading}>
+                {t("courses.single_course_details_rating_bad")}
+              </span>
+              <span className={css.diagram_range}></span>
+              <span className={css.diagram_votes}>{votes}</span>
+            </li>
+            <li className={css.diagram_item}>
+              <span className={css.diagram_heading}>
+                {t("courses.single_course_details_rating_very_bad")}
+              </span>
+              <span className={css.diagram_range}></span>
+              <span className={css.diagram_votes}>{votes}</span>
+            </li>
+          </ul>
+
+          <div className={css.rating_circle}>
+            <p className={css.rating}>{rating}</p>
+            <p>Stars</p>
+            <p>
+              <span className={css.rating_comments}>{comments}</span>
+
+              {t("courses.single_course_details_rating_comments")}
+            </p>
+          </div>
+        </div>
+      </animated.div>
+
+      {/* comments */}
+      <animated.div
+        className={css.info_wrapper}
+        style={style}
+        data-option="rating"
+      >
+        <CommentCard />
+      </animated.div>
+
+      {/* add comment */}
+      <animated.div
+        className={css.info_wrapper}
+        style={style}
+        data-option="rating"
+      >
+        <div className={css.add_wrapper}>
+          <h3 className={css.add_header}>
+            {t("courses.single_course_details_rating_add_comment_header")}
+          </h3>
+          <div className={css.add_subheader}>
+            <p className={css.add_evaluate}>
+              {t("courses.single_course_details_rating_add_comment_subheader")}
+            </p>
+            <div>Stars</div>
+          </div>
+          <form>
+            <input
+              type="text"
+              name="single_course_comment_name"
+              id="single_course_comment_name"
+              placeholder={t(
+                "courses.single_course_details_rating_add_comment_name_placeholder"
+              )}
+              className={css.input}
+            />
+            <input
+              type="email"
+              name="single_course_comment_email"
+              id="single_course_comment_email"
+              placeholder={t(
+                "courses.single_course_details_rating_add_comment_email_placeholder"
+              )}
+              className={css.input}
+            />
+
+            <textarea
+              name="single_course_comment_comment"
+              id="single_course_comment_comment"
+              cols="30"
+              rows="5"
+              placeholder={t(
+                "courses.single_course_details_rating_add_comment_textarea_placeholder"
+              )}
+              className={css.textarea}
+            ></textarea>
+            <button type="submit" className={css.form_button}>
+              {t("courses.single_course_details_rating_add_comment_button")}
+            </button>
+          </form>
+        </div>
+      </animated.div>
+    </>
   );
 };
 
-const SingleCoursecontent = () => {
+const SingleCourseDetails = () => {
   const { t } = useTranslation();
 
   const [info, setInfo] = useState("submission");
@@ -286,4 +402,4 @@ const SingleCoursecontent = () => {
   );
 };
 
-export default SingleCoursecontent;
+export default SingleCourseDetails;

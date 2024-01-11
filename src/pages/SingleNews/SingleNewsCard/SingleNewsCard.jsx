@@ -130,7 +130,13 @@ const SingleNewsCard = ({
         <div className={css.autor_card}>
           <div className={css.autor_image_wrapper}>
             <div className={css.image_container}>
-              <img className={css.autor_image} src={img} alt="" />
+              {img ? (
+                <img className={css.autor_image} src={img} alt="" />
+              ) : (
+                <svg className={css.user_icon}>
+                  <use href={icons + "#user"}></use>
+                </svg>
+              )}
             </div>
             <h5 className={css.author_name}>{author_name}</h5>
             <ul className={css.author_socials}>

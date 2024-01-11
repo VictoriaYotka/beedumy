@@ -1,0 +1,56 @@
+@import "../../../scss";
+
+.content {
+  @extend .flex_aligncenter;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.name {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: $boldFont;
+
+  transition: all 0.4s ease;
+}
+
+.date {
+  color: $secondaryFontColor;
+  font-size: 14px;
+
+  transition: all 0.4s ease;
+}
+
+.image_wrapper {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  background-color: $lightGreyBgColor;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+
+  transition: all 0.4s ease;
+}
+
+.user_icon {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  fill: $secondaryFontColor;
+
+  transition: all 0.4s ease;
+}
+
+.info_inner_wrapper {
+  @extend .flex_aligncenter;
+  gap: 8px;
+}
+
+.comment {
+  color: $secondaryFontColor;
+}

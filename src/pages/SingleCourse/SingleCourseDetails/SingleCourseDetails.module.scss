@@ -71,6 +71,10 @@
   @include md {
     padding: 32px;
   }
+
+  &:not(:last-child) {
+    border-bottom: 2px solid $lightGreyBgColor;
+  }
 }
 
 // lessons list
@@ -190,6 +194,7 @@
 // content
 .content_header {
   margin-bottom: 12px;
+  margin-inline-start: 12px;
 
   @include md {
     margin-bottom: 24px;
@@ -199,6 +204,7 @@
 
 .content_descr {
   margin-bottom: 12px;
+  margin-inline-start: 12px;
   color: $secondaryFontColor;
   font-weight: $boldFont;
   font-size: 12px;
@@ -260,4 +266,189 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+// rating
+
+.rating_container {
+  @extend .flex_aligncenter;
+  flex-direction: column;
+  gap: 32px;
+
+  @include lg {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 8px;
+  }
+}
+
+.diagram_list {
+  width: 100%;
+  max-width: 340px;
+  text-align: start;
+
+  @include lg {
+    flex-basis: 50%;
+    max-width: unset;
+  }
+}
+
+.diagram_item {
+  @extend .flex_aligncenter;
+  gap: 8px;
+
+  @include sm {
+    gap: 16px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+
+    @include lg {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.diagram_heading {
+  flex-shrink: 1;
+  min-width: 80px;
+  color: $secondaryFontColor;
+}
+
+.diagram_range {
+  position: relative;
+  flex-shrink: 2;
+  width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $accentColor;
+  }
+}
+
+.diagram_votes {
+  flex-shrink: 1;
+}
+
+.rating_circle {
+  @extend .flex_aligncenter;
+  flex-direction: column;
+  justify-content: center;
+  width: 240px;
+  height: 240px;
+  background-color: $lightGreyBgColor;
+  border-radius: 50%;
+}
+
+.rating {
+  color: $greenCategoryAccent;
+  font-size: 80px;
+  letter-spacing: -5px;
+  line-height: 80%;
+}
+
+.rating_comments {
+  margin-inline-end: 8px;
+}
+
+.add_wrapper {
+  text-align: start;
+}
+
+.add_header {
+  text-align: start;
+  margin-bottom: 8px;
+  font-size: 18px;
+
+  @include md {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+
+  @include lg {
+    font-size: 24px;
+  }
+}
+
+.add_subheader {
+  @extend .flex_aligncenter;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: $secondaryFontColor;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 12px;
+  padding: 12px;
+  background-color: $lightGreyBgColor;
+  border: none;
+  outline: none;
+  text-align: start;
+
+  transition: all 0.4s ease;
+
+  @include lg {
+    padding: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadow;
+  }
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 12px auto;
+  padding: 12px;
+  background-color: $lightGreyBgColor;
+  border: none;
+  outline: none;
+  text-align: start;
+  resize: vertical;
+
+  transition: all 0.4s ease;
+
+  @include sm {
+    min-width: unset;
+    max-width: unset;
+    padding: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadow;
+  }
+}
+
+.form_button {
+  display: block;
+  margin: 0 auto 0 auto;
+  padding: 12px 24px;
+  color: $whiteColor;
+  background-color: $accentColor;
+  font-size: 18px;
+
+  transition: all 0.4s ease;
+
+  @include sm {
+    margin: 0 0 0 auto;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+    box-shadow: $shadow;
+  }
 }

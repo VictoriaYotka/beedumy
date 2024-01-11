@@ -281,19 +281,29 @@
 }
 
 .image_container {
+  display: flex;
+  text-align: center;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto 8px auto;
   border: 1px solid $lightGreyBgColor;
   width: 100px;
-
+  height: 100px;
   @include md {
     width: 120px;
+    height: 120px;
   }
 
   @include lg {
     margin: 16px 24px 0 24px;
   }
+}
+
+.user_icon {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  fill: $secondaryFontColor;
 }
 
 .author_name {

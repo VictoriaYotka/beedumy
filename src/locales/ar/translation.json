@@ -199,8 +199,20 @@
     "single_course_details_rating": "التقييمات",
     "single_course_details_content_heading": "منهجية التقديم",
     "single_course_details_content_watch": "شاهد مجانا",
-    "single_course_details_content_minutes": "دقيقة",
-    "single_course_details_content_exercises": "تمارين"
+    "single_course_details_lessons_minutes": "دقيقة",
+    "single_course_details_lessons_exercises": "تمارين",
+    "single_course_details_rating_excellent": "ممتاز جدا",
+    "single_course_details_rating_fine": "ممتاز",
+    "single_course_details_rating_middle": "متوسط",
+    "single_course_details_rating_bad": "سيء",
+    "single_course_details_rating_very_bad": "سيء جدا",
+    "single_course_details_rating_comments": "تعليق",
+    "single_course_details_rating_add_comment_header": "إضافة تقييم للدرس",
+    "single_course_details_rating_add_comment_subheader": "هل أعجبك المحتوى؟",
+    "single_course_details_rating_add_comment_name_placeholder": "الإسم",
+    "single_course_details_rating_add_comment_email_placeholder": "البريد الإلكتروني",
+    "single_course_details_rating_add_comment_textarea_placeholder": "مجال حر لإضافة تقييمك للمحتوى",
+    "single_course_details_rating_add_comment_button": "أضف التقييم"
   },
   "sign": {
     "register_header": "إنشاء حساب",
