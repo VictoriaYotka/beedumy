@@ -1,4 +1,4 @@
-import { useTransition } from "@react-spring/web";
+import { useTransition, easings, config } from "@react-spring/web";
 
 const useSectionStyles = (inView) => {
   return {
@@ -12,12 +12,15 @@ const useSectionStyles = (inView) => {
 
 const useHeroSectionStyles = {
   from: {
-    scale: 0.5,
+    scale: 0.6,
     opacity: 0,
-    transform: "translateY(-100px)",
+    transform: "translateY(-80px)",
   },
   to: { scale: 1, opacity: 1, transform: "translateY(0)" },
-  config: { transition: "0.8s ease-in-out" },
+  config: {
+    duration: 1500,
+    easing: easings.easeInOutBack,
+  },
 };
 
 const useHeroImageStyles = {
@@ -138,16 +141,47 @@ const useButtonStyles = {
 
 const useConditionalListsTransition = (condition) => {
   return useTransition(condition, {
-    from: { opacity: 0, transform: "translateY(-20px)" },
+    from: {
+      opacity: 0,
+      transform: "translateY(-20px)",
+    },
     enter: {
       opacity: 1,
       transform: "translateY(0)",
     },
     leave: {
+      transform: "translateY(-24px)",
+      opacity: 0,
+    },
+    config: {
+      duration: 400,
+    },
+  });
+};
+
+const useConditionalSubListsTransition = (condition) => {
+  return useTransition(condition, {
+    from: {
       opacity: 0,
       transform: "translateY(-20px)",
+      height: 0,
     },
-    config: { duration: 400 },
+    enter: {
+      opacity: 1,
+      transform: "translateY(0)",
+      height: "auto",
+    },
+    leave: {
+      opacity: 0,
+      transform: "translateY(-20px)",
+      height: 0,
+    },
+    update: { height: "auto" },
+    config: {
+      // easing: easings.easeInOutBack,
+      duration: 50,
+    },
+    // config: condition ? { ...config.gentle, duration: 0 } : { duration: 650 },
   });
 };
 
@@ -156,7 +190,10 @@ const useConditionalModalsTransition = (condition) => {
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
-    config: { duration: 600 },
+    config: {
+      duration: 600,
+      easing: easings.easeInOutBack,
+    },
   });
 };
 
@@ -171,6 +208,7 @@ const useConditionalSpring = {
   useTriangleGreenStyles,
   useButtonStyles,
   useConditionalListsTransition,
+  useConditionalSubListsTransition,
   useConditionalModalsTransition,
 };
 

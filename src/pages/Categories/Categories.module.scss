@@ -10,18 +10,16 @@
 
 .search_container {
   @extend .container;
-  @extend .flex_aligncenter;
+  display: flex;
   justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-
-  @include md {
-    gap: 32px;
-  }
 }
 
 .form {
   position: relative;
+
+  min-width: 280px;
+  max-width: 520px;
+  width: 100%;
 }
 
 .submit_button {
@@ -73,7 +71,7 @@
 }
 
 .input {
-  min-width: 280px;
+  width: 100%;
   padding: 8px 16px;
   padding-inline-start: 36px;
   border: 1px solid $paleWhiteColor;
@@ -85,7 +83,6 @@
   @include md {
     padding: 16px 32px;
     padding-inline-start: 48px;
-    min-width: 520px;
     font-size: 18px;
   }
 
@@ -93,37 +90,6 @@
   &:focus {
     border: 1px solid $purpleBgButtonColor;
   }
-}
-
-.filter_button {
-  @extend .flex_aligncenter;
-  justify-content: center;
-  gap: 12px;
-  padding: 8px 16px;
-  color: $whiteColor;
-  background-color: $purpleBgButtonColor;
-  border-radius: 8px;
-  font-size: 14px;
-
-  transition: $transition;
-
-  @include md {
-    padding: 16px 32px;
-    font-size: 20px;
-  }
-
-  &:hover,
-  &:focus {
-    scale: 105%;
-    box-shadow: $shadow;
-    box-shadow: $shadowDark;
-  }
-}
-
-.filter_icon {
-  width: 20px;
-  height: 20px;
-  fill: $whiteColor;
 }
 
 // categories sections

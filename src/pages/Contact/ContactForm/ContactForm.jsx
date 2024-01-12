@@ -33,7 +33,7 @@ const ContactForm = () => {
             name="contact_message"
             id="contact_message"
             cols="30"
-            rows="5"
+            rows="8"
             className={css.textarea}
             placeholder={t("contact.contact_form_message")}
           ></textarea>

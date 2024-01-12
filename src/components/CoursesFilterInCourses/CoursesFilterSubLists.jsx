@@ -316,7 +316,8 @@ const HighList = ({ style, toggleSubList, activeSubList }) => {
     setActive(activeSubList);
   }, [activeSubList]);
 
-  const transition = useConditionalSpring.useConditionalListsTransition(active);
+  const transition =
+    useConditionalSpring.useConditionalSubListsTransition(active);
 
   return (
     <animated.ul data-sublist="sublist" className={css.sub_list} style={style}>
@@ -345,19 +346,17 @@ const HighList = ({ style, toggleSubList, activeSubList }) => {
         </p>
 
         {transition((style, active) => {
-          switch (active.includes("second_year")) {
-            case true:
-              switch (location.pathname) {
-                case "/categories/tunisian":
-                  return <HighSecondYearTunisianSubList style={style} />;
-                case "/categories/libyan":
-                  return <HighSecondYearLibyanSubList style={style} />;
-                default:
-                  return null;
-              }
-            default:
-              return null;
+          if (active.includes("second_year")) {
+            switch (location.pathname) {
+              case "/categories/tunisian":
+                return <HighSecondYearTunisianSubList style={style} />;
+              case "/categories/libyan":
+                return <HighSecondYearLibyanSubList style={style} />;
+              default:
+                return null;
+            }
           }
+          return null;
         })}
       </li>
 
@@ -377,19 +376,17 @@ const HighList = ({ style, toggleSubList, activeSubList }) => {
         </p>
 
         {transition((style, active) => {
-          switch (active.includes("third_year")) {
-            case true:
-              switch (location.pathname) {
-                case "/categories/tunisian":
-                  return <HighThirdYearTunisianSubList style={style} />;
-                case "/categories/libyan":
-                  return <HighThirdYearLibyanSubList style={style} />;
-                default:
-                  return null;
-              }
-            default:
-              return null;
+          if (active.includes("third_year")) {
+            switch (location.pathname) {
+              case "/categories/tunisian":
+                return <HighThirdYearTunisianSubList style={style} />;
+              case "/categories/libyan":
+                return <HighThirdYearLibyanSubList style={style} />;
+              default:
+                return null;
+            }
           }
+          return null;
         })}
       </li>
     </animated.ul>

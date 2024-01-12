@@ -1,6 +1,6 @@
 import css from "./CoursesFilterInCategories.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { animated } from "@react-spring/web";
 import { useConditionalSpring } from "../../../utils";
@@ -14,27 +14,75 @@ import {
 const CoursesFilterInCategories = ({ style }) => {
   const { t } = useTranslation();
 
-  const [lists, setLists] = useState(
-    window.innerWidth >= 768
-      ? ["rated_list", "curricula_list", "type_list", "date_list"]
-      : []
-  );
+  const [lists, setLists] = useState([]);
 
   const [ratedFilter, setRatedFilter] = useState("");
   const [curriculaFilter, setCurriculaFilter] = useState("");
   const [typeFilter, setTypeFilter] = useState("");
   const [dateFilter, setDateFilter] = useState("");
 
+  // onClick={() => handleShow("date_list", "date")}
+  // const handleShow = (category) => {
+  //   setLists((prevLists) => {
+  //     if (prevLists.includes(category)) {
+  //       switch (category) {
+  //         case "rated_list":
+  //           return ratedFilter === ""
+  //             ? prevLists.filter((item) => item !== category)
+  //             : prevLists;
+  //         case "curricula_list":
+  //           return curriculaFilter === ""
+  //             ? prevLists.filter((item) => item !== category)
+  //             : prevLists;
+  //         case "type_list":
+  //           return typeFilter === ""
+  //             ? prevLists.filter((item) => item !== category)
+  //             : prevLists;
+  //         case "date_list":
+  //           return dateFilter === ""
+  //             ? prevLists.filter((item) => item !== category)
+  //             : prevLists;
+  //         default:
+  //           return prevLists;
+  //       }
+  //     } else {
+  //       return [...prevLists, category];
+  //     }
+  //   });
+  // };
+
   const handleShow = (category) => {
-    if (window.innerWidth < 768) {
-      setLists((prevLists) => {
-        if (prevLists.includes(category)) {
-          return prevLists.filter((item) => item !== category);
-        } else {
-          return [...prevLists, category];
-        }
-      });
-    }
+    setLists((prevLists) => {
+      // Close all categories
+      const updatedLists = [];
+
+      // Check each category and add to the updatedLists array if filter is not empty
+      if (ratedFilter !== "" || category === "rated_list") {
+        prevLists.includes(category)
+          ? prevLists.filter((item) => item !== category)
+          : updatedLists.push("rated_list");
+      }
+
+      if (curriculaFilter !== "" || category === "curricula_list") {
+        prevLists.includes(category)
+          ? prevLists.filter((item) => item !== category)
+          : updatedLists.push("curricula_list");
+      }
+
+      if (typeFilter !== "" || category === "type_list") {
+        prevLists.includes(category)
+          ? prevLists.filter((item) => item !== category)
+          : updatedLists.push("type_list");
+      }
+
+      if (dateFilter !== "" || category === "date_list") {
+        prevLists.includes(category)
+          ? prevLists.filter((item) => item !== category)
+          : updatedLists.push("date_list");
+      }
+
+      return updatedLists;
+    });
   };
 
   const handleOptionSelect = (category, e) => {
@@ -78,22 +126,6 @@ const CoursesFilterInCategories = ({ style }) => {
         break;
     }
   };
-
-  useEffect(() => {
-    const updateMedia = () => {
-      if (document.body.offsetWidth >= 768) {
-        setLists(["rated_list", "curricula_list", "type_list", "date_list"]);
-      } else {
-        setLists([]);
-      }
-    };
-
-    window.addEventListener("resize", updateMedia);
-
-    return () => {
-      window.removeEventListener("resize", updateMedia);
-    };
-  }, []);
 
   const transition = useConditionalSpring.useConditionalListsTransition(lists);
 

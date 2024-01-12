@@ -1,11 +1,16 @@
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max) + 1;
+}
+
 const common = {
   dots: true,
   infinite: true,
   speed: 800,
+  autoplay: true,
   slidesToScroll: 1,
   swipe: true,
   pauseOnHover: true,
-  // rtl: true,
+  // initialSlide: 1,
 };
 
 // homepage
@@ -25,14 +30,12 @@ const categoriesSectionSettings = {
       breakpoint: 923,
       settings: {
         slidesToShow: 4,
-        initialSlide: 1,
       },
     },
     {
       breakpoint: 769,
       settings: {
         slidesToShow: 3,
-        initialSlide: 1,
       },
     },
     {
@@ -47,13 +50,13 @@ const categoriesSectionSettings = {
 
 const requestedCoursesSectionSettings = {
   ...common,
-  slidesToShow: 3,
+  autoplaySpeed: 2000,
+  slidesToShow: 2.99,
   responsive: [
     {
       breakpoint: 769,
       settings: {
         slidesToShow: 2,
-        initialSlide: 1,
       },
     },
     {
@@ -67,20 +70,19 @@ const requestedCoursesSectionSettings = {
 
 const teachersSectionSettings = {
   ...common,
-  slidesToShow: 4,
+  autoplaySpeed: 2000,
+  slidesToShow: 3.99,
   responsive: [
     {
       breakpoint: 923,
       settings: {
         slidesToShow: 3,
-        initialSlide: 2,
       },
     },
     {
       breakpoint: 769,
       settings: {
         slidesToShow: 2,
-        initialSlide: 2,
       },
     },
     {
@@ -94,27 +96,25 @@ const teachersSectionSettings = {
 
 const feedbackSectionSettings = {
   ...common,
-  slidesToShow: 4,
+  autoplaySpeed: 2000,
+  slidesToShow: 3.99,
   responsive: [
     {
       breakpoint: 1025,
       settings: {
         slidesToShow: 4,
-        initialSlide: 2,
       },
     },
     {
       breakpoint: 923,
       settings: {
         slidesToShow: 3,
-        initialSlide: 2,
       },
     },
     {
       breakpoint: 769,
       settings: {
         slidesToShow: 2,
-        initialSlide: 2,
       },
     },
     {
@@ -128,13 +128,13 @@ const feedbackSectionSettings = {
 
 const articleSectionSettings = {
   ...common,
-  slidesToShow: 3,
+  autoplaySpeed: 2000,
+  slidesToShow: 2.99,
   responsive: [
     {
       breakpoint: 993,
       settings: {
         slidesToShow: 2,
-        initialSlide: 2,
       },
     },
     {
@@ -150,13 +150,13 @@ const articleSectionSettings = {
 
 const categoriesPageSettings = {
   ...common,
-  slidesToShow: 3,
+  autoplaySpeed: 2000,
+  slidesToShow: 2.99,
   responsive: [
     {
       breakpoint: 769,
       settings: {
         slidesToShow: 2,
-        initialSlide: 2,
       },
     },
     {
@@ -169,6 +169,7 @@ const categoriesPageSettings = {
 };
 
 const carouselsSettings = {
+  getRandomInt,
   categoriesSectionSettings,
   requestedCoursesSectionSettings,
   teachersSectionSettings,

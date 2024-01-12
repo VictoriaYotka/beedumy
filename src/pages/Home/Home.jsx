@@ -53,7 +53,12 @@ const Home = () => {
       <SectionAnimationWrapper>
         <section className={css.requested_courses_section}>
           <div className="container">
-            <Slider {...carouselsSettings.requestedCoursesSectionSettings}>
+            <Slider
+              {...{
+                initialSlide: carouselsSettings.getRandomInt(courses.length),
+                ...carouselsSettings.requestedCoursesSectionSettings,
+              }}
+            >
               {courses.map((el, index) => {
                 const { image_cover, teacher, slug } = el;
                 const img = `http://192.168.100.2:8000${image_cover}`;

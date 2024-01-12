@@ -136,9 +136,12 @@
 }
 
 .sub_sub_list {
+  height: 100%;
   margin-inline-start: 16px;
   margin-top: 16px;
   color: $secondaryFontColor;
+
+  transition: $transition;
 }
 
 .sub_icon_content {

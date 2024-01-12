@@ -308,7 +308,7 @@ const RatingInfo = ({ style, votes = 3, rating = "4.6", comments = "02" }) => {
               name="single_course_comment_comment"
               id="single_course_comment_comment"
               cols="30"
-              rows="5"
+              rows="8"
               placeholder={t(
                 "courses.single_course_details_rating_add_comment_textarea_placeholder"
               )}

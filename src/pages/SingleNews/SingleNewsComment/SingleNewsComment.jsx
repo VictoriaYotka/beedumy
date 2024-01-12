@@ -67,7 +67,7 @@ const SingleNewsComment = ({ comments_quantity = "3" }) => {
               name="single_news_comment_comment"
               id="single_news_comment_comment"
               cols="30"
-              rows="5"
+              rows="8"
               placeholder={t("news.single_news_comments_comment")}
               className={css.textarea}
             ></textarea>

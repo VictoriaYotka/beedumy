@@ -8,7 +8,7 @@ import FAQ from "./FAQ/FAQ";
 import CourseCardInCategories from "../../components/CourseCardInCategories/CourseCardInCategories";
 import SectionAnimationWrapper from "../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 import { Link } from "react-router-dom";
-import { carouselsSettings, useConditionalSpring } from "../../utils";
+import { carouselsSettings } from "../../utils";
 import { useState } from "react";
 import CoursesFilterInCategories from "./CoursesFilterInCategories/CoursesFilterInCategories";
 
@@ -16,7 +16,6 @@ const Categories = () => {
   const { t } = useTranslation();
 
   const [inputValue, setInputValue] = useState("");
-  const [isFilterShown, setIsFilterShown] = useState(false);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -30,13 +29,6 @@ const Categories = () => {
       e.target.reset();
     }
   };
-
-  const toggleShowFilter = () => {
-    isFilterShown ? setIsFilterShown(false) : setIsFilterShown(true);
-  };
-
-  const transition =
-    useConditionalSpring.useConditionalListsTransition(isFilterShown);
 
   return (
     <>
@@ -58,25 +50,9 @@ const Categories = () => {
               placeholder={t("categories.search_input_placeholder")}
             />
           </form>
-          <button className={css.filter_button} onClick={toggleShowFilter}>
-            <p>{t("categories.search_classification")}</p>
-            <svg className={css.filter_icon}>
-              <use href={icons + "#filter"}></use>
-            </svg>
-          </button>
         </div>
       </section>
-
-      {transition((style, item) => {
-        switch (item) {
-          case true:
-            return <CoursesFilterInCategories style={style} />;
-          default:
-            return null;
-        }
-      })}
-
-      {/* tunisian curriculum courses list */}
+      <CoursesFilterInCategories />;{/* tunisian curriculum courses list */}
       <section className={css.section}>
         <div className={css.container}>
           <SectionAnimationWrapper>
@@ -147,7 +123,6 @@ const Categories = () => {
           </SectionAnimationWrapper>
         </div>
       </section>
-
       {/* libyan curriculum courses list */}
       <section className={css.section}>
         <div className={css.container}>
@@ -219,7 +194,6 @@ const Categories = () => {
           </SectionAnimationWrapper>
         </div>
       </section>
-
       {/* formative courses list */}
       <section className={css.section}>
         <div className={css.container}>
@@ -294,7 +268,6 @@ const Categories = () => {
           </SectionAnimationWrapper>
         </div>
       </section>
-
       <StartLearningTrip />
       <FAQ />
     </>
