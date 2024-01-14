@@ -13,20 +13,21 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-inline-start: 20%;
+  padding-inline-start: 20%;
 
   gap: 12px;
   padding-bottom: 12px;
-  border-bottom: 2px solid $lightGreyBgColor;
   text-align: start;
   font-weight: $boldFont;
+  border-bottom: 2px solid $lightGreyBgColor;
 
   @include md {
     flex-direction: row;
     align-items: baseline;
     justify-content: center;
     gap: 32px;
-    margin-inline-start: 0;
+    padding-inline-start: 0;
+    border: none;
 
     &::after {
       content: "";
@@ -48,6 +49,10 @@
       width: 70%;
     }
   }
+}
+
+.not_empty {
+  border-bottom: 2px solid $lightGreyBgColor;
 }
 
 .empty_item {

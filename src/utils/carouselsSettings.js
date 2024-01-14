@@ -6,7 +6,6 @@ const common = {
   dots: true,
   infinite: true,
   speed: 800,
-  autoplay: true,
   slidesToScroll: 1,
   swipe: true,
   pauseOnHover: true,
@@ -50,8 +49,7 @@ const categoriesSectionSettings = {
 
 const requestedCoursesSectionSettings = {
   ...common,
-  autoplaySpeed: 2000,
-  slidesToShow: 2.99,
+  slidesToShow: 3,
   responsive: [
     {
       breakpoint: 769,
@@ -70,8 +68,7 @@ const requestedCoursesSectionSettings = {
 
 const teachersSectionSettings = {
   ...common,
-  autoplaySpeed: 2000,
-  slidesToShow: 3.99,
+  slidesToShow: 4,
   responsive: [
     {
       breakpoint: 923,
@@ -96,8 +93,7 @@ const teachersSectionSettings = {
 
 const feedbackSectionSettings = {
   ...common,
-  autoplaySpeed: 2000,
-  slidesToShow: 3.99,
+  slidesToShow: 5,
   responsive: [
     {
       breakpoint: 1025,
@@ -128,8 +124,7 @@ const feedbackSectionSettings = {
 
 const articleSectionSettings = {
   ...common,
-  autoplaySpeed: 2000,
-  slidesToShow: 2.99,
+  slidesToShow: 3,
   responsive: [
     {
       breakpoint: 993,
@@ -150,8 +145,7 @@ const articleSectionSettings = {
 
 const categoriesPageSettings = {
   ...common,
-  autoplaySpeed: 2000,
-  slidesToShow: 2.99,
+  slidesToShow: 3,
   responsive: [
     {
       breakpoint: 769,

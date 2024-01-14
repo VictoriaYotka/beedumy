@@ -10,11 +10,20 @@
   @include md {
     padding: 52px 0;
   }
+
+  @include lg {
+    padding: 64px 0;
+  }
+}
+
+.requested_courses_container {
+  @extend .container;
 }
 
 .teachers_container {
   @extend .container;
   text-align: center;
+  max-width: 1000px;
 }
 
 .teachers_heading {
@@ -63,6 +72,7 @@
 
 .feedback_container {
   @extend .container;
+  max-width: 1400px;
   text-align: center;
 }
 
@@ -112,7 +122,7 @@
 .article_heading {
   @extend .heading;
   color: $whiteColor;
-  max-width: 320px;
+  max-width: 280px;
 
   @include md {
     max-width: 30%;
@@ -132,5 +142,7 @@
 
   @include lg {
     top: 100px;
+    right: 10%;
+    left: 10%;
   }
 }

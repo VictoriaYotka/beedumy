@@ -2,7 +2,6 @@
 
 .item {
   position: relative;
-  display: block;
   margin: 0 auto;
   padding: 12px 16px 20px 16px;
   background-color: $darkFooterBgColor;
@@ -17,6 +16,10 @@
 
   @include md {
     padding: 20px 32px 40px 32px;
+  }
+
+  @include lg {
+    max-width: 280px;
   }
 
   &:hover,
@@ -43,6 +46,10 @@
       }
     }
   }
+}
+
+.link {
+  display: block;
 }
 
 .image_thumb {
@@ -90,9 +97,6 @@
 
   @include sm {
     margin-bottom: 60px;
-  }
-  @include md {
-    margin-bottom: 100px;
   }
 
   &::before {

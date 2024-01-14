@@ -132,7 +132,10 @@ const CoursesFilterInCategories = ({ style }) => {
   return (
     <animated.section className={css.filter_section} style={style}>
       <div className={css.filter_container}>
-        <ul className={css.list}>
+        <ul
+          // className={css.list}
+          className={`${css.list} ${lists.length ? css.not_empty : ""}`}
+        >
           {/* classification */}
           <li className={css.empty_item}>
             <p className={css.item_inner}>

@@ -1,20 +1,16 @@
 .section {
-  padding: 12px 0;
+  padding: 16px 0;
   text-align: center;
 
   @include sm {
-    padding: 16px 0;
-  }
-
-  @include md {
     padding: 20px 0;
   }
 
-  @include lg {
+  @include md {
     padding: 24px 0;
   }
 
-  @include xl {
+  @include lg {
     padding: 28px 0;
   }
 }

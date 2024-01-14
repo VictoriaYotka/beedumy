@@ -52,7 +52,7 @@ const Home = () => {
       {/* requested courses list */}
       <SectionAnimationWrapper>
         <section className={css.requested_courses_section}>
-          <div className="container">
+          <div className={css.requested_courses_container}>
             <Slider
               {...{
                 initialSlide: carouselsSettings.getRandomInt(courses.length),
