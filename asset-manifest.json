@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/birsaplatform/static/css/main.56907ee3.css",
-    "main.js": "/birsaplatform/static/js/main.9f65e78e.js",
+    "main.css": "/birsaplatform/static/css/main.65a0ddba.css",
+    "main.js": "/birsaplatform/static/js/main.8745c2e4.js",
     "static/css/671.38c45168.chunk.css": "/birsaplatform/static/css/671.38c45168.chunk.css",
     "static/js/671.4db9215e.chunk.js": "/birsaplatform/static/js/671.4db9215e.chunk.js",
     "static/css/878.38c45168.chunk.css": "/birsaplatform/static/css/878.38c45168.chunk.css",
@@ -17,7 +17,7 @@
     "static/css/544.3b495573.chunk.css": "/birsaplatform/static/css/544.3b495573.chunk.css",
     "static/js/544.d4fa0f29.chunk.js": "/birsaplatform/static/js/544.d4fa0f29.chunk.js",
     "static/js/145.31c745fd.chunk.js": "/birsaplatform/static/js/145.31c745fd.chunk.js",
-    "static/css/821.8eabbc33.chunk.css": "/birsaplatform/static/css/821.8eabbc33.chunk.css",
+    "static/css/821.f39e360a.chunk.css": "/birsaplatform/static/css/821.f39e360a.chunk.css",
     "static/js/821.020c1ba3.chunk.js": "/birsaplatform/static/js/821.020c1ba3.chunk.js",
     "static/css/54.6f1e2181.chunk.css": "/birsaplatform/static/css/54.6f1e2181.chunk.css",
     "static/js/54.75eeecc1.chunk.js": "/birsaplatform/static/js/54.75eeecc1.chunk.js",
@@ -88,8 +88,8 @@
     "index.html": "/birsaplatform/index.html",
     "static/media/papers_sm.webp": "/birsaplatform/static/media/papers_sm.fb9f58a2316a991ed10f.webp",
     "static/media/getFetch.cjs": "/birsaplatform/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.56907ee3.css.map": "/birsaplatform/static/css/main.56907ee3.css.map",
-    "main.9f65e78e.js.map": "/birsaplatform/static/js/main.9f65e78e.js.map",
+    "main.65a0ddba.css.map": "/birsaplatform/static/css/main.65a0ddba.css.map",
+    "main.8745c2e4.js.map": "/birsaplatform/static/js/main.8745c2e4.js.map",
     "671.38c45168.chunk.css.map": "/birsaplatform/static/css/671.38c45168.chunk.css.map",
     "671.4db9215e.chunk.js.map": "/birsaplatform/static/js/671.4db9215e.chunk.js.map",
     "878.38c45168.chunk.css.map": "/birsaplatform/static/css/878.38c45168.chunk.css.map",
@@ -105,7 +105,7 @@
     "544.3b495573.chunk.css.map": "/birsaplatform/static/css/544.3b495573.chunk.css.map",
     "544.d4fa0f29.chunk.js.map": "/birsaplatform/static/js/544.d4fa0f29.chunk.js.map",
     "145.31c745fd.chunk.js.map": "/birsaplatform/static/js/145.31c745fd.chunk.js.map",
-    "821.8eabbc33.chunk.css.map": "/birsaplatform/static/css/821.8eabbc33.chunk.css.map",
+    "821.f39e360a.chunk.css.map": "/birsaplatform/static/css/821.f39e360a.chunk.css.map",
     "821.020c1ba3.chunk.js.map": "/birsaplatform/static/js/821.020c1ba3.chunk.js.map",
     "54.6f1e2181.chunk.css.map": "/birsaplatform/static/css/54.6f1e2181.chunk.css.map",
     "54.75eeecc1.chunk.js.map": "/birsaplatform/static/js/54.75eeecc1.chunk.js.map",
@@ -142,7 +142,7 @@
     "717.835f2ee6.chunk.js.map": "/birsaplatform/static/js/717.835f2ee6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.56907ee3.css",
-    "static/js/main.9f65e78e.js"
+    "static/css/main.65a0ddba.css",
+    "static/js/main.8745c2e4.js"
   ]
 }
