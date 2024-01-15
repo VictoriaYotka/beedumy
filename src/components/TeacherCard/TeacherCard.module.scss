@@ -5,11 +5,15 @@
 }
 
 .item {
-  max-width: 300px;
+  max-width: 280px;
   margin: 0 auto;
   border: 2px solid $lightGreyBgColor;
 
   transition: $transition;
+
+  @include md {
+    max-width: 300px;
+  }
 
   &:hover,
   &:focus {
@@ -39,8 +43,12 @@
   position: relative;
   text-align: center;
 
-  padding: 120px 24px 20px 24px;
+  padding: 80px 24px 20px 24px;
   color: $secondaryFontColor;
+
+  @include md {
+    padding: 120px 24px 20px 24px;
+  }
 }
 
 .image_thumb {
@@ -49,14 +57,19 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   overflow: hidden;
   background-color: $whiteColor;
   border: 1px solid $lightGreyBgColor;
   border-radius: 50%;
 
   transition: $transition;
+
+  @include md {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .teacher_image {

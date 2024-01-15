@@ -176,13 +176,18 @@
 .button {
   display: inline-block;
   margin-top: 40px;
-  padding: 16px 44px;
-  font-size: 16px;
+  padding: 12px 36px;
+  font-size: 14px;
   color: $whiteColor;
   font-weight: $boldFont;
   background-color: $footerBgColor;
 
   transition: $transition;
+
+  @include md {
+    padding: 16px 44px;
+    font-size: 16px;
+  }
 
   &:hover,
   &:focus {

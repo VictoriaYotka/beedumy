@@ -1,22 +1,26 @@
 @import "../../../scss";
 
 .hero_section {
-  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 32px;
   overflow: hidden;
   color: $heroFontColor;
   background-color: $heroBgColor;
+
+  @include md {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
 }
 
 .hero_container {
   @extend .container;
-  height: 68vh;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
   min-width: 320px;
 
   @include md {
-    flex-direction: row;
+    height: 68vh;
     gap: 24px;
   }
 }
@@ -25,8 +29,7 @@
   position: relative;
   z-index: 20;
   height: 30%;
-
-  text-align: start;
+  text-align: center;
 
   @include sm {
     margin: 0 auto;
@@ -37,6 +40,7 @@
     flex-basis: 40%;
     height: unset;
     margin: auto;
+    text-align: start;
   }
 
   @include lg {
@@ -54,14 +58,9 @@
 .triangle_green {
   display: none;
   position: absolute;
-  top: -60%;
-  right: 0;
-
-  @include sm {
-    display: block;
-  }
 
   @include md {
+    display: block;
     top: -45%;
     right: 5%;
   }
@@ -75,11 +74,15 @@
 .heading {
   @extend .heading;
   margin-inline-start: 0;
-  text-align: start;
+  text-align: center;
   margin-bottom: 8px;
 
   @include sm {
     margin-bottom: 24px;
+  }
+
+  @include md {
+    text-align: start;
   }
 }
 
@@ -130,12 +133,14 @@
 }
 
 .picture_wrapper {
+  display: none;
   position: relative;
   min-width: 320px;
   margin: auto;
   height: 70%;
 
   @include md {
+    display: block;
     flex-grow: 1;
     height: 100%;
     max-height: 500px;

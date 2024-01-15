@@ -23,7 +23,7 @@
 }
 
 .info_wrapper {
-  text-align: start;
+  text-align: center;
 
   @include sm {
     max-width: 480px;
@@ -32,6 +32,7 @@
   @include md {
     max-width: 44%;
     padding: 32px 0;
+    text-align: start;
   }
 
   @include lg {
@@ -41,15 +42,19 @@
 
 .heading {
   @extend .heading;
-  margin-inline-start: 0;
-  text-align: start;
+  text-align: center;
   padding-bottom: 8px;
+
+  @include md {
+    margin-inline-start: 0;
+    text-align: start;
+  }
 }
 
 .descr {
   padding-bottom: 32px;
   font-size: 14px;
-  text-align: start;
+  text-align: center;
   color: $secondaryFontColor;
 
   background-repeat: no-repeat;
@@ -66,6 +71,7 @@
 
   @include md {
     font-size: 16px;
+    text-align: start;
   }
 
   @include lg {

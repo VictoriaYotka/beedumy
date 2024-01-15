@@ -102,14 +102,19 @@
 
 .input {
   max-width: 240px;
-  padding: 16px;
+  padding: 12px;
   text-align: start;
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 14px;
   background-color: $whiteColor;
 
   transition: $transition;
+
+  @include md {
+    padding: 16px;
+    font-size: 16px;
+  }
 
   &:hover,
   &:focus {
@@ -118,12 +123,17 @@
 }
 
 .button {
-  padding: 16px;
-  font-size: 16px;
+  padding: 12px;
+  font-size: 14px;
   color: $whiteColor;
   background-color: $footerBgColor;
 
   transition: $transition;
+
+  @include md {
+    padding: 16px;
+    font-size: 16px;
+  }
 
   &:hover,
   &:focus {

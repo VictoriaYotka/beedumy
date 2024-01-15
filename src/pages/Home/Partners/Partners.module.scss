@@ -7,16 +7,12 @@
     padding: 120px 0 20px 0;
   }
 
-  @include md {
-    padding: 156px 0 24px 0;
-  }
-
   @include lg {
     padding: 100px 0 32px 0;
   }
 
   @include xl {
-    padding: 180px 0 60px 0;
+    padding: 140px 0 60px 0;
   }
 }
 
@@ -48,5 +44,9 @@
 }
 
 .image {
-  max-height: 60px;
+  max-height: 30px;
+
+  @include md {
+    max-height: 60px;
+  }
 }

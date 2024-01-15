@@ -21,13 +21,18 @@
 
 .button {
   display: inline-block;
-  padding: 12px 44px;
-  font-size: 16px;
+  padding: 12px 36px;
+  font-size: 14px;
   font-weight: $boldFont;
   color: $whiteColor;
   background-color: $footerBgColor;
 
   transition: $transition;
+
+  @include md {
+    padding: 12px 44px;
+    font-size: 16px;
+  }
 
   &:hover,
   &:focus {

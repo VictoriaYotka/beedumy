@@ -52,7 +52,8 @@ const Categories = () => {
           </form>
         </div>
       </section>
-      <CoursesFilterInCategories />;{/* tunisian curriculum courses list */}
+      <CoursesFilterInCategories />
+      {/* tunisian curriculum courses list */}
       <section className={css.section}>
         <div className={css.container}>
           <SectionAnimationWrapper>
