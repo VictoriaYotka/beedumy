@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://poin.care/";
+const baseUrl = "https://poin.care/";
 
 const instance = axios.create({
   baseURL: baseUrl + "api/",

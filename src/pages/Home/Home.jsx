@@ -40,16 +40,8 @@ const Home = () => {
   const news = useSelector(newsSelector);
 
   useEffect(() => {
-    console.log(courses);
-    console.log(teachers);
-    console.log(news);
-    if (courses.length === 0) {
-      dispatch(homePage());
-      console.log(courses);
-      console.log(teachers);
-      console.log(news);
-    }
-  });
+    dispatch(homePage());
+  }, [dispatch]);
 
   return (
     <>
