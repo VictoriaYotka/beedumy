@@ -62,12 +62,17 @@
 }
 
 .submit_icon {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   stroke: $darkFontColor;
   fill: $whiteColor;
 
   transition: $transition;
+
+  @include md {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .input {
