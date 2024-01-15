@@ -130,7 +130,7 @@
 .article_heading {
   @extend .heading;
   color: $whiteColor;
-  max-width: 280px;
+  max-width: 200px;
 
   @include md {
     max-width: 30%;
@@ -139,14 +139,10 @@
 
 .article_list_wrapper {
   position: absolute;
-  top: 60px;
+  top: 80px;
   right: 5%;
   left: 5%;
   z-index: 2;
-
-  @include md {
-    top: 80px;
-  }
 
   @include lg {
     top: 100px;

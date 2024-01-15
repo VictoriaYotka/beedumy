@@ -1,7 +1,7 @@
 @import "../../../scss";
 
 .section {
-  padding: 12px 0;
+  padding: 40px 0;
   background-color: $lightGreyBgColor;
 
   @include md {
@@ -14,7 +14,7 @@
   @extend .flex_aligncenter;
   justify-content: center;
   flex-direction: column;
-  gap: 16px;
+  gap: 40px;
 
   @include md {
     flex-direction: row;
@@ -43,10 +43,13 @@
 .heading {
   @extend .heading;
   text-align: center;
-  padding-bottom: 8px;
+  padding-bottom: 24px;
+  max-width: 180px;
 
   @include md {
+    max-width: unset;
     margin-inline-start: 0;
+    padding-bottom: 8px;
     text-align: start;
   }
 }
