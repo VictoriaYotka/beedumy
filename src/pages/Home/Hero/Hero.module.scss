@@ -18,6 +18,7 @@
   display: flex;
   justify-content: space-between;
   min-width: 320px;
+  height: 50vh;
 
   @include md {
     height: 68vh;
@@ -28,11 +29,13 @@
 .content {
   position: relative;
   z-index: 20;
-  height: 30%;
+  margin: auto;
+  padding: 40px 20px;
   text-align: center;
+  background-color: $blueBgColor;
+  border-radius: 24px;
 
   @include sm {
-    margin: 0 auto;
     max-width: 500px;
   }
 
@@ -40,7 +43,9 @@
     flex-basis: 40%;
     height: unset;
     margin: auto;
+    padding: 0;
     text-align: start;
+    background-color: unset;
   }
 
   @include lg {
@@ -73,14 +78,13 @@
 
 .heading {
   @extend .heading;
+  width: 200px;
   text-align: center;
-  margin-bottom: 8px;
-
-  @include sm {
-    margin-bottom: 24px;
-  }
+  margin-bottom: 32px;
 
   @include md {
+    width: unset;
+    margin-bottom: 24px;
     margin-inline-start: 0;
     text-align: start;
   }
@@ -92,7 +96,7 @@
 
 .subheading {
   font-size: 20px;
-  margin-bottom: 16px;
+  margin-bottom: 36px;
   max-width: 400px;
 
   @include sm {
@@ -100,8 +104,8 @@
   }
 
   @include md {
+    margin-bottom: 28px;
     font-size: 20px;
-    margin-bottom: 24px;
   }
 
   @include lg {

@@ -95,8 +95,7 @@
 .button {
   display: inline-block;
   padding: 8px 12px;
-  border-radius: 32px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: $boldFont;
   color: $accentColor;
   background-color: $whiteColor;
@@ -105,7 +104,7 @@
 
   @include md {
     padding: 8px 24px;
-    font-size: 28px;
+    font-size: 20px;
   }
 
   &:hover,

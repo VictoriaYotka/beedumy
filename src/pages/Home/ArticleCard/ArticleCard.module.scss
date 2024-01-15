@@ -35,15 +35,11 @@
     }
 
     .name {
-      color: $accentColor;
+      scale: 110%;
     }
 
     .date_wrapper {
-      background-color: $accentColor;
       scale: 110%;
-      &::before {
-        border-color: $accentColor;
-      }
     }
   }
 }
@@ -55,15 +51,32 @@
 .image_thumb {
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
 
   overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      0deg,
+      rgba(2, 0, 36, 0.9) 6%,
+      rgba(110, 147, 249, 0.8) 38%,
+      rgba(255, 255, 255, 0) 49%
+    );
+  }
 }
 
 .image {
-  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -128,8 +141,6 @@
     margin-right: 0;
   }
   font-weight: $boldFont;
-  // backdrop-filter: blur(10px);
-  text-shadow: $shadowText;
 
   transition: $transition;
 }
@@ -143,7 +154,4 @@
   [dir="rtl"] & {
     text-align: right;
   }
-
-  // backdrop-filter: blur(10px);
-  text-shadow: $shadowText;
 }

@@ -8,7 +8,7 @@ const ArticleCard = ({ date, name, content }) => {
         <div className={css.image_thumb}>
           <img
             className={css.image}
-            src="https://images.pexels.com/photos/17340547/pexels-photo-17340547/free-photo-of-black-and-white-photo-of-a-footbridge.jpeg"
+            src="https://images.pexels.com/photos/19733182/pexels-photo-19733182/free-photo-of-a-large-group-of-tall-buildings-in-the-distance.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
           />
         </div>

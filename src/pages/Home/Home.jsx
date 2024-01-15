@@ -84,7 +84,7 @@ const Home = () => {
       <LearnMore />
 
       {/* teachers section */}
-      <section className="section">
+      <section className={css.teachers_section}>
         <div className={css.teachers_container}>
           <SectionAnimationWrapper>
             <h2 className={css.teachers_heading}>

@@ -20,6 +20,14 @@
   @extend .container;
 }
 
+.teachers_section {
+  @extend .section;
+
+  @include lg {
+    padding-bottom: 44px;
+  }
+}
+
 .teachers_container {
   @extend .container;
   text-align: center;
@@ -90,7 +98,7 @@
 }
 
 .article_section {
-  background-color: $peachBgColor;
+  background-color: $blueBgColor;
 
   padding: 12px 0 200px 0;
   text-align: center;

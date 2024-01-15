@@ -144,14 +144,17 @@ const useConditionalListsTransition = (condition) => {
     from: {
       opacity: 0,
       transform: "translateY(-20px)",
+      height: 0,
     },
     enter: {
       opacity: 1,
       transform: "translateY(0)",
+      height: "auto",
     },
     leave: {
       transform: "translateY(-24px)",
       opacity: 0,
+      height: 0,
     },
     config: {
       duration: 400,
