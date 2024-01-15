@@ -2,12 +2,9 @@
 
 .section {
   @extend .section;
+  padding: 36px 0;
   text-align: center;
   background-color: $lightGreyBgColor;
-
-  @include lg {
-    padding: 36px 0;
-  }
 }
 
 .container {
@@ -17,7 +14,7 @@
 
 .heading {
   @extend .heading;
-  margin-bottom: 8px;
+  margin-bottom: 24px;
   max-width: unset;
 
   @include md {
