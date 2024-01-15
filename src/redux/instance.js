@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://192.168.100.2:8000/";
+const baseUrl = "http://poin.care/";
 
 const instance = axios.create({
   baseURL: baseUrl + "api/",

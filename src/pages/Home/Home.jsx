@@ -12,7 +12,11 @@ import SectionAnimationWrapper from "../../components/SectionAnimationWrapper/Se
 import { useEffect } from "react";
 import { carouselsSettings, replaceHyphensWithSpaces } from "../../utils";
 import { useDispatch, useSelector } from "react-redux";
-import { coursesSelector } from "../../redux/selectors/contentSelectors";
+import {
+  coursesSelector,
+  newsSelector,
+  teachersSelector,
+} from "../../redux/selectors/contentSelectors";
 import { homePage } from "../../redux/operations/contentOperations";
 
 const CourseCardInCategories = lazy(() =>
@@ -32,14 +36,20 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const courses = useSelector(coursesSelector);
+  const teachers = useSelector(teachersSelector);
+  const news = useSelector(newsSelector);
 
   useEffect(() => {
     console.log(courses);
+    console.log(teachers);
+    console.log(news);
     if (courses.length === 0) {
       dispatch(homePage());
       console.log(courses);
+      console.log(teachers);
+      console.log(news);
     }
-  }, [courses.length, dispatch, courses]);
+  });
 
   return (
     <>
@@ -60,12 +70,12 @@ const Home = () => {
               }}
             >
               {courses.map((el, index) => {
-                const { image_cover, teacher, slug } = el;
-                const img = `http://192.168.100.2:8000${image_cover}`;
+                const { image_cover, teacher, slug, type } = el;
+                const img = `http://poin.care${image_cover}`;
                 return (
                   <CourseCardInCategories
                     key={index}
-                    notion=""
+                    notion={type}
                     img={img}
                     imgAlt=""
                     preheader={teacher.full_name}
@@ -93,37 +103,20 @@ const Home = () => {
           </SectionAnimationWrapper>
           <SectionAnimationWrapper>
             <Slider {...carouselsSettings.teachersSectionSettings}>
-              <TeacherCard
-                img={hero_image_sm}
-                name="Teachers name"
-                occupation="Occupation"
-                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. exercitationem."
-              />
+              {teachers.map((el, index) => {
+                const { full_name, avatar, bio } = el;
+                const img = `http://poin.care${avatar}`;
 
-              <TeacherCard
-                img={hero_image_sm}
-                name="Teachers name"
-                occupation="Occupation"
-                descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, sint is quae."
-              />
-
-              <TeacherCard
-                name="Teachers name"
-                occupation="Occupation"
-                descr="Lorem ipsum unt fugit dicta."
-              />
-
-              <TeacherCard
-                name="Teachers name"
-                occupation="Occupation"
-                descr="Lorem ipsum dolor sit amet consectetur adipisicing corporis incidunt fugit dicta."
-              />
-
-              <TeacherCard
-                name="Teachers name"
-                occupation="Occupation"
-                descr="Lorem ipsum dolor sit  debitis esse officiis quae a eligendi  dicta."
-              />
+                return (
+                  <TeacherCard
+                    key={index}
+                    img={img}
+                    name={full_name}
+                    occupation={bio}
+                    descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. exercitationem."
+                  />
+                );
+              })}
             </Slider>
           </SectionAnimationWrapper>
           <Link className={css.teachers_button}>

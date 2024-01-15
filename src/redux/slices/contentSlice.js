@@ -15,6 +15,8 @@ import {
 const initialState = {
   search: "",
   courses: [],
+  teachers: [],
+  testimonials: [],
   courseByID: "",
   favorite: [],
   news: [],
@@ -24,7 +26,10 @@ const initialState = {
 };
 
 const handleHomePage = (state, { payload }) => {
-  state.courses = payload;
+  state.courses = payload.webinar;
+  state.teachers = payload.users;
+  state.news = payload.blogs;
+  state.testimonials = payload.testimonials;
   handleFullfilled(state);
 };
 
