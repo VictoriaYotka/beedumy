@@ -18,7 +18,7 @@
   display: flex;
   justify-content: space-between;
   min-width: 320px;
-  height: 50vh;
+  min-height: 50vh;
 
   @include md {
     height: 68vh;
@@ -30,7 +30,7 @@
   position: relative;
   z-index: 20;
   margin: auto;
-  padding: 40px 20px;
+  padding: 48px 20px;
   text-align: center;
   background-color: $blueBgColor;
   border-radius: 24px;
@@ -115,7 +115,7 @@
 
 .hero_button {
   display: inline-block;
-  padding: 4px 32px;
+  padding: 8px 32px;
   border-radius: 32px;
   background-image: linear-gradient(to right, $headerBgColor, #9499f1);
   font-size: 20px;
@@ -124,6 +124,7 @@
   transition: $transition;
 
   @include md {
+    padding: 4px 32px;
     font-size: 24px;
   }
 
@@ -158,11 +159,14 @@
   top: 3%;
   left: -7%;
   max-height: 95%;
+  max-width: 100%;
   z-index: 30;
+  margin: auto;
 
   @include md {
     top: 2%;
     left: -5%;
+    right: 5%;
   }
 
   @include lg {
@@ -179,13 +183,14 @@
 
 .triangle_blue_big {
   position: absolute;
-  top: 2%;
-  left: 3%;
   max-height: 95%;
+  max-width: 95%;
+  margin: auto;
 
   @include md {
     top: 2%;
     left: 3%;
+    right: -3%;
   }
 
   @include lg {
@@ -204,13 +209,6 @@
 
 .triangle_blue {
   position: absolute;
-  bottom: -18%;
-  left: -15%;
-
-  @include sm {
-    left: -22%;
-    bottom: -7%;
-  }
 
   @include md {
     left: -22%;
@@ -225,21 +223,13 @@
 
 .triangle_green_small {
   position: absolute;
-  top: 0;
-  left: -5%;
-
-  @include sm {
-    top: 0;
-    left: -15%;
-  }
 
   @include md {
-    top: 90%;
+    bottom: -10%;
     left: 80%;
   }
 
   @include lg {
-    top: unset;
     bottom: -2%;
     left: 70%;
   }
@@ -247,12 +237,7 @@
 
 .triangle_rose {
   position: absolute;
-  top: 1%;
-  right: -20%;
-
-  @include sm {
-    right: -25%;
-  }
+  top: 0;
 
   @include md {
     right: -60px;
