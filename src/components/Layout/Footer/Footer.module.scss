@@ -71,7 +71,7 @@
 
   @include md {
     position: absolute;
-    bottom: 60px;
+    bottom: 90px;
 
     [dir="ltr"] & {
       right: 80px;
@@ -84,7 +84,6 @@
   }
 
   @include lg {
-    position: absolute;
     bottom: -8px;
     [dir="ltr"] & {
       right: 100px;

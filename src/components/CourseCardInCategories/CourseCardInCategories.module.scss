@@ -74,6 +74,7 @@
   font-size: 16px;
   background-color: $fioletBgButtonColor;
   border-radius: 24px;
+  text-transform: capitalize;
 }
 
 .info_thumb {
@@ -98,6 +99,7 @@
   }
   font-size: 16px;
   color: $accentColor;
+  text-transform: capitalize;
 
   transition: $transition;
 
@@ -117,6 +119,7 @@
     text-align: right;
   }
   font-size: 20px;
+  text-transform: capitalize;
 
   transition: $transition;
 

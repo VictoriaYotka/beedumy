@@ -1,10 +1,5 @@
 @import "../../../scss";
 
-.container {
-  @extend .container;
-  text-align: center;
-}
-
 .map_wrapper {
   max-width: 100%;
   overflow: hidden;
@@ -26,6 +21,7 @@ iframe {
   max-width: none !important;
   background: none !important;
 }
+
 img {
   max-width: none;
 }

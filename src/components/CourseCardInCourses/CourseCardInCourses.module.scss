@@ -150,13 +150,15 @@
   @extend .flex_aligncenter;
   justify-content: flex-start;
   gap: 12px;
+  text-transform: capitalize;
 }
 
 .title {
+  margin-bottom: 4px;
   text-align: start;
   font-size: 24px;
   font-weight: $boldFont;
-  margin-bottom: 4px;
+  text-transform: capitalize;
 
   a {
     color: inherit;

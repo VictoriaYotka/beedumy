@@ -91,18 +91,21 @@
 .name {
   font-size: 16px;
   color: $darkFontColor;
+  text-transform: capitalize;
 
   transition: $transition;
 }
 
 .occupation {
   margin-bottom: 12px;
+  text-transform: capitalize;
 
   transition: $transition;
 }
 
 .descr {
   transition: $transition;
+  line-height: 1.5;
 }
 
 .socials {
@@ -112,7 +115,7 @@
 }
 
 .social_link {
-  display: inline-block;
+  display: block;
   padding: 16px;
   &:hover,
   &:focus {
@@ -123,6 +126,7 @@
   }
 }
 .icon {
+  display: block;
   width: 20px;
   height: 20px;
   fill: $secondaryFontColor;

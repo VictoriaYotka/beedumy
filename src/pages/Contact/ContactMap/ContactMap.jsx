@@ -4,7 +4,7 @@ import css from "./ContactMap.module.scss";
 const ContactMap = () => {
   return (
     <SectionAnimationWrapper>
-      <div className={css.container}>
+      <div>
         {/* <iframe
           title="map"
           //   width="600"

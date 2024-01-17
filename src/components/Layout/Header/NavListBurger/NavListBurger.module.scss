@@ -4,7 +4,7 @@
   @extend .flex_aligncenter;
   flex-direction: column;
   gap: 20px;
-  color: $secondaryFontColor;
+  color: $whiteColor;
 
   @include sm {
     font-size: 18px;

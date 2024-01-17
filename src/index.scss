@@ -165,6 +165,10 @@ iframe {
   transition: all 0.4s ease;
 }
 
+.slick-dots li {
+  margin: 0;
+}
+
 .slick-dots li button:before {
   font-size: 8px;
 

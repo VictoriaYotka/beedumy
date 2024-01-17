@@ -122,12 +122,14 @@
 .name {
   font-weight: $boldFont;
   color: $darkFontColor;
+  text-transform: capitalize;
 
   transition: $transition;
 }
 
 .descr {
   color: $secondaryFontColor;
+  text-transform: capitalize;
 
   transition: $transition;
 }

@@ -45,7 +45,7 @@
 .login_button {
   @extend .sign_button;
   border: 1px solid $greenBgButtonBgColor;
-  color: $secondaryFontColor;
+  color: $whiteColor;
   background: linear-gradient(
       to left,
       transparent 50%,
@@ -54,6 +54,10 @@
     right;
   background-size: 200% 100%;
   background-position: right bottom;
+
+  @include lg {
+    color: $secondaryFontColor;
+  }
 
   &:hover,
   &:focus {

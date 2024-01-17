@@ -69,6 +69,7 @@ const requestedCoursesSectionSettings = {
 const teachersSectionSettings = {
   ...common,
   slidesToShow: 4,
+  arrows: false,
   responsive: [
     {
       breakpoint: 923,
