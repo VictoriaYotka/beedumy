@@ -12,6 +12,15 @@
   max-width: 1400px;
 }
 
+.carousel_wrapper {
+  [dir="ltr"] & {
+    direction: ltr;
+  }
+  [dir="rtl"] & {
+    direction: rtl;
+  }
+}
+
 .heading {
   @extend .heading;
   margin-bottom: 24px;

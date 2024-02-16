@@ -7,7 +7,6 @@ import Hero from "./Hero/Hero";
 import Categories from "./Categories/Categories";
 import RequestedCoursesHeader from "./RequestedCoursesHeader/RequestedCoursesHeader";
 import LearnMore from "./LearnMore/LearnMore";
-import hero_image_sm from "../../assets/images/home/hero/image_sm.webp";
 import SectionAnimationWrapper from "../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 import { useEffect } from "react";
 import { carouselsSettings, replaceHyphensWithSpaces } from "../../utils";
@@ -94,7 +93,12 @@ const Home = () => {
             </h2>
           </SectionAnimationWrapper>
           <SectionAnimationWrapper>
-            <Slider {...carouselsSettings.teachersSectionSettings}>
+            <Slider
+              {...{
+                initialSlide: carouselsSettings.getRandomInt(teachers.length),
+                ...carouselsSettings.teachersSectionSettings,
+              }}
+            >
               {teachers.map((el, index) => {
                 const { full_name, avatar, bio } = el;
                 const img = `http://poin.care${avatar}`;
