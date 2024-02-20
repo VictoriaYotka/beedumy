@@ -116,9 +116,9 @@ const Home = () => {
               })}
             </Slider>
           </SectionAnimationWrapper>
-          <Link className={css.teachers_button}>
+          {/* <Link className={css.teachers_button}>
             {t("home.teachers_button")}
-          </Link>
+          </Link> */}
         </div>
       </section>
 

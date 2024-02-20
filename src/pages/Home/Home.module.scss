@@ -23,9 +23,7 @@
 .teachers_section {
   @extend .section;
 
-  @include lg {
-    padding-bottom: 44px;
-  }
+  padding-bottom: 44px;
 }
 
 .teachers_container {
