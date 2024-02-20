@@ -17,6 +17,7 @@ import {
   teachersSelector,
 } from "../../redux/selectors/contentSelectors";
 import { homePage } from "../../redux/operations/contentOperations";
+import { baseUrl } from "../../constants";
 
 const CourseCardInCategories = lazy(() =>
   import("../../components/CourseCardInCategories/CourseCardInCategories")
@@ -61,19 +62,19 @@ const Home = () => {
               }}
             >
               {courses.map((el, index) => {
-                const { image_cover, teacher, slug, type } = el;
-                const img = `http://poin.care${image_cover}`;
+                const { image_cover, teacher, slug, type, id } = el;
+                const img = `${baseUrl}${image_cover}`;
                 return (
                   <CourseCardInCategories
                     key={index}
                     notion={type}
                     img={img}
-                    imgAlt=""
+                    imgAlt={replaceHyphensWithSpaces(slug)}
                     preheader={teacher.full_name}
                     header={replaceHyphensWithSpaces(slug)}
                     rating="stars"
                     descr="Some description"
-                    id="123"
+                    id={id}
                   />
                 );
               })}
@@ -101,7 +102,7 @@ const Home = () => {
             >
               {teachers.map((el, index) => {
                 const { full_name, avatar, bio } = el;
-                const img = `http://poin.care${avatar}`;
+                const img = `${baseUrl}${avatar}`;
 
                 return (
                   <TeacherCard

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import css from "./CourseCardInCategories.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
 import { useTranslation } from "react-i18next";
@@ -14,6 +14,12 @@ const CourseCardInCategories = ({
   id,
 }) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const handleButtonClick = (e) => {
+    console.log(e.target);
+    navigate(`/courses/${id}`);
+  };
 
   return (
     <div className={css.item}>
@@ -34,12 +40,16 @@ const CourseCardInCategories = ({
           <p className={css.descr}>{descr}</p>
           <div className={css.rating}>{rating}</div>
         </div>
-        <Link to="/courses/course" className={css.course_button}>
+        <button
+          onClick={handleButtonClick}
+          data-id={id}
+          className={css.course_button}
+        >
           <svg className={css.icon}>
             <use href={icons + "#play"}></use>
           </svg>
           <span>{t("categories.course_card_button")}</span>
-        </Link>
+        </button>
       </div>
     </div>
   );

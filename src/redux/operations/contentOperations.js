@@ -35,11 +35,11 @@ const search = createAsyncThunk(
   }
 );
 
-const coursesByCategory = createAsyncThunk(
-  "content/coursesByCategory",
-  async (category, { rejectWithValue }) => {
+const courses = createAsyncThunk(
+  "content/courses",
+  async (_, { rejectWithValue }) => {
     try {
-      const { data } = await instance.get(`recipes/category/${category}`);
+      const { data } = await instance.get("webinars");
 
       return data;
     } catch (e) {
@@ -117,7 +117,7 @@ const removeFromFavorite = createAsyncThunk(
 export {
   homePage,
   search,
-  coursesByCategory,
+  courses,
   courseByID,
   news,
   newsById,

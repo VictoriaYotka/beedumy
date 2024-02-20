@@ -1,14 +1,31 @@
 import css from "./Curricula.module.scss";
 import { useTranslation } from "react-i18next";
-import hero_image_sm from "../../assets/images/home/hero/image_sm.webp";
-import triangle_green_little_sm from "../../assets/images/home/hero/triangle-green-little_sm.webp";
 import CoursesFilterInCourses from "../../components/CoursesFilterInCourses/CoursesFilterInCourses";
 import { useParams } from "react-router-dom";
-import CourseCardInCourses from "../../components/CourseCardInCourses/CourseCardInCourses";
+import CourseCardInCategories from "../../components/CourseCardInCategories/CourseCardInCategories";
+import { useDispatch, useSelector } from "react-redux";
+import { coursesSelector } from "../../redux/selectors/contentSelectors";
+import { replaceHyphensWithSpaces } from "../../utils";
+import { useEffect, useState } from "react";
+import { courses } from "../../redux/operations/contentOperations";
+import { baseUrl } from "../../constants";
 
 const Curricula = () => {
   const { t } = useTranslation();
+  const dispatch = useDispatch();
   const { curricula } = useParams();
+
+  // ADD FILTER!!!
+  const [allCourses, setAllCourses] =
+    useState(useSelector(coursesSelector)) || [];
+
+  useEffect(() => {
+    if (allCourses.length === 0) {
+      dispatch(courses())
+        .unwrap()
+        .then(({ webinar }) => setAllCourses(webinar));
+    }
+  }, [allCourses, dispatch, setAllCourses]);
 
   return (
     <>
@@ -16,56 +33,23 @@ const Curricula = () => {
       <section className={css.section}>
         <div className={css.container}>
           <ul className={css.list}>
-            <CourseCardInCourses
-              course_image={hero_image_sm}
-              title="Course Title1"
-              category="Category1"
-              admin="Name Surname1"
-              admin_image={triangle_green_little_sm}
-              hours="Hours"
-              downloaded="Downl"
-              description="Course descr1"
-            />
-            <CourseCardInCourses
-              title="Course Title2"
-              category="Category2"
-              admin="Name Surname"
-              hours="Hours2"
-              downloaded="Downl"
-              description="Course descr2"
-            />
-            <CourseCardInCourses
-              title="Course Title3"
-              category="Category3"
-              admin="Name Surname3"
-              hours="Hours3"
-              downloaded="Downl"
-              description="Course descr3"
-            />
-            <CourseCardInCourses
-              title="Course Title1"
-              category="Category1"
-              admin="Name Surname1"
-              hours="Hours"
-              downloaded="Downl"
-              description="Course descr1"
-            />
-            <CourseCardInCourses
-              title="Course Title2"
-              category="Category2"
-              admin="Name Surname"
-              hours="Hours2"
-              downloaded="Downl"
-              description="Course descr2"
-            />
-            <CourseCardInCourses
-              title="Course Title3"
-              category="Category3"
-              admin="Name Surname3"
-              hours="Hours3"
-              downloaded="Downl"
-              description="Course descr3"
-            />
+            {allCourses.map((el, index) => {
+              const { image_cover, teacher, slug, type, id } = el;
+              const img = `${baseUrl}${image_cover}`;
+              return (
+                <CourseCardInCategories
+                  key={index}
+                  notion={type}
+                  img={img}
+                  imgAlt={replaceHyphensWithSpaces(slug)}
+                  preheader={teacher.full_name}
+                  header={replaceHyphensWithSpaces(slug)}
+                  rating="stars"
+                  descr="Some description"
+                  id={id}
+                />
+              );
+            })}
           </ul>
         </div>
       </section>

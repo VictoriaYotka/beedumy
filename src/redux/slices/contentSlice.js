@@ -4,7 +4,7 @@ import { handlePending, handleRejected, handleFullfilled } from "../utils";
 import {
   homePage,
   search,
-  coursesByCategory,
+  courses,
   courseByID,
   news,
   newsById,
@@ -38,8 +38,8 @@ const handleSearch = (state, { payload }) => {
   handleFullfilled(state);
 };
 
-const handleCoursesByCategory = (state, { payload }) => {
-  state.courses = payload;
+const handleCourses = (state, { payload }) => {
+  state.courses = payload.webinar;
   handleFullfilled(state);
 };
 
@@ -77,7 +77,7 @@ const contentSlice = createSlice({
     builder
       .addCase(homePage.fulfilled, handleHomePage)
       .addCase(search.fulfilled, handleSearch)
-      .addCase(coursesByCategory.fulfilled, handleCoursesByCategory)
+      .addCase(courses.fulfilled, handleCourses)
       .addCase(courseByID.fulfilled, handleCourseByID)
       .addCase(news.fulfilled, handleNews)
       .addCase(newsById.fulfilled, handleNewsByID)

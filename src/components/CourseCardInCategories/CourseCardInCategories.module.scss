@@ -120,6 +120,7 @@
   }
   font-size: 20px;
   text-transform: capitalize;
+  letter-spacing: -1px;
 
   transition: $transition;
 
@@ -179,8 +180,9 @@
     flex-direction: row-reverse;
   }
   justify-content: center;
+  width: 100%;
   gap: 8px;
-  padding: 8px;
+  padding: 12px;
   border-radius: 28px;
   font-size: 16px;
   color: #007733;

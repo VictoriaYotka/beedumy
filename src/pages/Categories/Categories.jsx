@@ -2,20 +2,40 @@ import css from "./Categories.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
-import hero_image_sm from "../../assets/images/home/hero/image_sm.webp";
 import StartLearningTrip from "./StartLearningTrip/StartLearningTrip";
 import FAQ from "./FAQ/FAQ";
 import CourseCardInCategories from "../../components/CourseCardInCategories/CourseCardInCategories";
 import SectionAnimationWrapper from "../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 import { Link } from "react-router-dom";
-import { carouselsSettings } from "../../utils";
-import { useState } from "react";
+import { carouselsSettings, replaceHyphensWithSpaces } from "../../utils";
+import { useEffect, useState } from "react";
 import CoursesFilterInCategories from "./CoursesFilterInCategories/CoursesFilterInCategories";
+import { useDispatch, useSelector } from "react-redux";
+import { coursesSelector } from "../../redux/selectors/contentSelectors";
+import { courses } from "../../redux/operations/contentOperations";
+import { baseUrl } from "../../constants";
 
 const Categories = () => {
   const { t } = useTranslation();
+  const dispatch = useDispatch();
+
+  const [allCourses, setAllCourses] =
+    useState(useSelector(coursesSelector)) || [];
 
   const [inputValue, setInputValue] = useState("");
+
+  useEffect(() => {
+    if (allCourses.length === 0) {
+      dispatch(courses())
+        .unwrap()
+        .then(({ webinar }) => setAllCourses(webinar));
+    }
+  }, [allCourses, dispatch, setAllCourses]);
+
+  // ADD FILTER!!!
+  const tunisianCourses = allCourses;
+  const libyanCourses = allCourses;
+  const formativeCourses = allCourses;
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -69,57 +89,23 @@ const Categories = () => {
 
           <SectionAnimationWrapper>
             <Slider {...carouselsSettings.categoriesPageSettings}>
-              <CourseCardInCategories
-                notion="notion"
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description here"
-                id="123"
-              />
-
-              <CourseCardInCategories
-                notion="notion"
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description here"
-                id="123"
-              />
-
-              <CourseCardInCategories
-                notion="notion"
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description here"
-                id="123"
-              />
-
-              <CourseCardInCategories
-                notion="notion"
-                img={hero_image_sm}
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description here"
-                id="123"
-              />
-
-              <CourseCardInCategories
-                notion="notion"
-                img={hero_image_sm}
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description here"
-                id="123"
-              />
+              {tunisianCourses.map((el, index) => {
+                const { image_cover, teacher, slug, type, id } = el;
+                const img = `${baseUrl}${image_cover}`;
+                return (
+                  <CourseCardInCategories
+                    key={index}
+                    notion={type}
+                    img={img}
+                    imgAlt={replaceHyphensWithSpaces(slug)}
+                    preheader={teacher.full_name}
+                    header={replaceHyphensWithSpaces(slug)}
+                    rating="stars"
+                    descr="Some description"
+                    id={id}
+                  />
+                );
+              })}
             </Slider>
           </SectionAnimationWrapper>
         </div>
@@ -140,57 +126,23 @@ const Categories = () => {
 
           <SectionAnimationWrapper>
             <Slider {...carouselsSettings.categoriesPageSettings}>
-              <CourseCardInCategories
-                notion="notion"
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description here"
-                id="123"
-              />
-
-              <CourseCardInCategories
-                notion="notion"
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description here"
-                id="123"
-              />
-
-              <CourseCardInCategories
-                notion="notion"
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description here"
-                id="123"
-              />
-
-              <CourseCardInCategories
-                notion="notion"
-                img={hero_image_sm}
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description here"
-                id="123"
-              />
-
-              <CourseCardInCategories
-                notion="notion"
-                img={hero_image_sm}
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description here"
-                id="123"
-              />
+              {libyanCourses.map((el, index) => {
+                const { image_cover, teacher, slug, type, id } = el;
+                const img = `${baseUrl}${image_cover}`;
+                return (
+                  <CourseCardInCategories
+                    key={index}
+                    notion={type}
+                    img={img}
+                    imgAlt={replaceHyphensWithSpaces(slug)}
+                    preheader={teacher.full_name}
+                    header={replaceHyphensWithSpaces(slug)}
+                    rating="stars"
+                    descr="Some description"
+                    id={id}
+                  />
+                );
+              })}
             </Slider>
           </SectionAnimationWrapper>
         </div>
@@ -214,57 +166,23 @@ const Categories = () => {
 
           <SectionAnimationWrapper>
             <Slider {...carouselsSettings.categoriesPageSettings}>
-              <CourseCardInCategories
-                notion="notion"
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description here"
-                id="123"
-              />
-
-              <CourseCardInCategories
-                notion="notion"
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description here"
-                id="123"
-              />
-
-              <CourseCardInCategories
-                notion="notion"
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description here"
-                id="123"
-              />
-
-              <CourseCardInCategories
-                notion="notion"
-                img={hero_image_sm}
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description here"
-                id="123"
-              />
-
-              <CourseCardInCategories
-                notion="notion"
-                img={hero_image_sm}
-                imgAlt="about image"
-                preheader="Preheader"
-                header="Header"
-                rating="stars"
-                descr="Some description here"
-                id="123"
-              />
+              {formativeCourses.map((el, index) => {
+                const { image_cover, teacher, slug, type, id } = el;
+                const img = `${baseUrl}${image_cover}`;
+                return (
+                  <CourseCardInCategories
+                    key={index}
+                    notion={type}
+                    img={img}
+                    imgAlt={replaceHyphensWithSpaces(slug)}
+                    preheader={teacher.full_name}
+                    header={replaceHyphensWithSpaces(slug)}
+                    rating="stars"
+                    descr="Some description"
+                    id={id}
+                  />
+                );
+              })}
             </Slider>
           </SectionAnimationWrapper>
         </div>
