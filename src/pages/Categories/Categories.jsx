@@ -15,7 +15,7 @@ import { coursesSelector } from "../../redux/selectors/contentSelectors";
 import { courses } from "../../redux/operations/contentOperations";
 import { baseUrl } from "../../constants";
 
-const Categories = () => {
+const Categories = ({ direction }) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
 
@@ -88,7 +88,16 @@ const Categories = () => {
           </SectionAnimationWrapper>
 
           <SectionAnimationWrapper>
-            <Slider {...carouselsSettings.categoriesPageSettings}>
+            <Slider
+              {...carouselsSettings.categoriesPageSettings}
+              {...{
+                initialSlide: carouselsSettings.getRandomInt(
+                  tunisianCourses.length
+                ),
+                rtl: direction === "rtl" ? true : false,
+                ...carouselsSettings.categoriesPageSettings,
+              }}
+            >
               {tunisianCourses.map((el, index) => {
                 const { image_cover, teacher, slug, type, id } = el;
                 const img = `${baseUrl}${image_cover}`;
@@ -110,6 +119,7 @@ const Categories = () => {
           </SectionAnimationWrapper>
         </div>
       </section>
+
       {/* libyan curriculum courses list */}
       <section className={css.section}>
         <div className={css.container}>
@@ -125,7 +135,16 @@ const Categories = () => {
           </SectionAnimationWrapper>
 
           <SectionAnimationWrapper>
-            <Slider {...carouselsSettings.categoriesPageSettings}>
+            <Slider
+              {...carouselsSettings.categoriesPageSettings}
+              {...{
+                initialSlide: carouselsSettings.getRandomInt(
+                  libyanCourses.length
+                ),
+                rtl: direction === "rtl" ? true : false,
+                ...carouselsSettings.categoriesPageSettings,
+              }}
+            >
               {libyanCourses.map((el, index) => {
                 const { image_cover, teacher, slug, type, id } = el;
                 const img = `${baseUrl}${image_cover}`;
@@ -165,7 +184,16 @@ const Categories = () => {
           </SectionAnimationWrapper>
 
           <SectionAnimationWrapper>
-            <Slider {...carouselsSettings.categoriesPageSettings}>
+            <Slider
+              {...carouselsSettings.categoriesPageSettings}
+              {...{
+                initialSlide: carouselsSettings.getRandomInt(
+                  formativeCourses.length
+                ),
+                rtl: direction === "rtl" ? true : false,
+                ...carouselsSettings.categoriesPageSettings,
+              }}
+            >
               {formativeCourses.map((el, index) => {
                 const { image_cover, teacher, slug, type, id } = el;
                 const img = `${baseUrl}${image_cover}`;

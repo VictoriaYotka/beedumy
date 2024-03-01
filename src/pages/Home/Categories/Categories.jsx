@@ -5,8 +5,10 @@ import css from "./Categories.module.scss";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 import { carouselsSettings } from "../../../utils";
 
-const Categories = () => {
+const Categories = ({ direction }) => {
   const { t } = useTranslation();
+
+  const count = 6;
 
   return (
     <SectionAnimationWrapper>
@@ -18,7 +20,13 @@ const Categories = () => {
           </h2>
 
           <div className={css.carousel_wrapper}>
-            <Slider {...carouselsSettings.categoriesSectionSettings}>
+            <Slider
+              {...{
+                initialSlide: carouselsSettings.getRandomInt(count),
+                rtl: direction === "rtl" ? true : false,
+                ...carouselsSettings.categoriesSectionSettings,
+              }}
+            >
               <div className={css.item}>
                 <Link to="/categories/media">
                   <div className={css.color_1}>

@@ -1,5 +1,4 @@
 import { lazy } from "react";
-import { Link } from "react-router-dom";
 import css from "./Home.module.scss";
 import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
@@ -15,6 +14,7 @@ import {
   coursesSelector,
   newsSelector,
   teachersSelector,
+  testimonialsSelector,
 } from "../../redux/selectors/contentSelectors";
 import { homePage } from "../../redux/operations/contentOperations";
 import { baseUrl } from "../../constants";
@@ -31,13 +31,14 @@ const ArticleCard = lazy(() => import("./ArticleCard/ArticleCard"));
 const Partners = lazy(() => import("./Partners/Partners"));
 const Subscription = lazy(() => import("./Subscription/Subscription"));
 
-const Home = () => {
+const Home = ({ direction }) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
 
   const courses = useSelector(coursesSelector);
   const teachers = useSelector(teachersSelector);
   const news = useSelector(newsSelector);
+  const testimonials = useSelector(testimonialsSelector);
 
   useEffect(() => {
     dispatch(homePage());
@@ -47,7 +48,7 @@ const Home = () => {
     <>
       <Hero />
 
-      <Categories />
+      <Categories direction={direction} />
 
       <RequestedCoursesHeader />
 
@@ -58,6 +59,7 @@ const Home = () => {
             <Slider
               {...{
                 initialSlide: carouselsSettings.getRandomInt(courses.length),
+                rtl: direction === "rtl" ? true : false,
                 ...carouselsSettings.requestedCoursesSectionSettings,
               }}
             >
@@ -97,6 +99,7 @@ const Home = () => {
             <Slider
               {...{
                 initialSlide: carouselsSettings.getRandomInt(teachers.length),
+                rtl: direction === "rtl" ? true : false,
                 ...carouselsSettings.teachersSectionSettings,
               }}
             >
@@ -133,7 +136,15 @@ const Home = () => {
             </h2>
           </SectionAnimationWrapper>
           <SectionAnimationWrapper>
-            <Slider {...carouselsSettings.feedbackSectionSettings}>
+            <Slider
+              {...{
+                initialSlide: carouselsSettings.getRandomInt(
+                  testimonials.length
+                ),
+                rtl: direction === "rtl" ? true : false,
+                ...carouselsSettings.feedbackSectionSettings,
+              }}
+            >
               <FeedbackCard
                 content="التمارين التفاعلية Vraiment حاجة مزيانة برشا نقصتلي برشا تعب وجهد"
                 name="Student name"
@@ -176,7 +187,13 @@ const Home = () => {
           </SectionAnimationWrapper>
           <div className={css.article_list_wrapper}>
             <SectionAnimationWrapper>
-              <Slider {...carouselsSettings.articleSectionSettings}>
+              <Slider
+                {...{
+                  initialSlide: carouselsSettings.getRandomInt(news.length),
+                  rtl: direction === "rtl" ? true : false,
+                  ...carouselsSettings.articleSectionSettings,
+                }}
+              >
                 <ArticleCard
                   date="06 أوت"
                   name="كُتب بواسطة آدم . 12 تعليق"

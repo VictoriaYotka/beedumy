@@ -1,4 +1,7 @@
 function getRandomInt(max) {
+  if (max <= 0 || typeof max !== "number") {
+    return 1;
+  }
   return Math.floor(Math.random() * max) + 1;
 }
 
@@ -9,7 +12,6 @@ const common = {
   slidesToScroll: 1,
   swipe: true,
   pauseOnHover: true,
-  // initialSlide: 1,
 };
 
 // homepage

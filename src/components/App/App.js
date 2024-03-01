@@ -1,4 +1,4 @@
-import { lazy, useEffect } from "react";
+import { lazy, useEffect, useState } from "react";
 import { Route, Routes } from "react-router";
 import SharedLayout from "../../pages/SharedLayout/SharedLayout";
 import { useTranslation } from "react-i18next";
@@ -33,6 +33,30 @@ const Gallery = lazy(() => import("../../pages/Gallery/Gallery"));
 function App() {
   const { i18n } = useTranslation();
 
+  const [direction, setDirection] = useState(document.documentElement.dir);
+
+  useEffect(() => {
+    const observer = new MutationObserver((mutationsList) => {
+      mutationsList.forEach((mutation) => {
+        if (
+          mutation.type === "attributes" &&
+          mutation.attributeName === "dir"
+        ) {
+          setDirection(document.documentElement.dir);
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["dir"],
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   useEffect(() => {
     const dir = i18n.dir();
     document.documentElement.dir = dir;
@@ -45,7 +69,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<SharedLayout />}>
-          <Route index element={<Home />} />
+          <Route index element={<Home direction={direction} />} />
           <Route
             path="register"
             element={
@@ -70,7 +94,10 @@ function App() {
               </PublicRoute>
             }
           />
-          <Route path="categories" element={<Categories />} />
+          <Route
+            path="categories"
+            element={<Categories direction={direction} />}
+          />
           <Route path="categories/:curricula" element={<Curricula />} />
           <Route path="courses/:courseId" element={<SingleCourse />} />
           <Route path="courses/:courseId/buy" element={<BuyCourse />} />
