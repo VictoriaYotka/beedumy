@@ -9,7 +9,7 @@ import {
   SubmissionInfo,
 } from "./SingleCourseDetailsInfo";
 
-const SingleCourseDetails = () => {
+const SingleCourseDetails = ({ handleAddSingleCourseCommentFormSubmit }) => {
   const { t } = useTranslation();
 
   const [info, setInfo] = useState("submission");
@@ -18,7 +18,8 @@ const SingleCourseDetails = () => {
     setInfo(selectedInfo);
   };
 
-  const transitions = useConditionalSpring.useConditionalListsTransition(info);
+  const transitions =
+    useConditionalSpring.useConditionalSingleCourseDetailsTransition(info);
 
   return (
     <div className={css.wrapper}>
@@ -76,7 +77,15 @@ const SingleCourseDetails = () => {
             return <ExamsInfo style={style} key="exams" />;
 
           case "rating":
-            return <RatingInfo style={style} key="rating" />;
+            return (
+              <RatingInfo
+                style={style}
+                key="rating"
+                handleAddSingleCourseCommentFormSubmit={
+                  handleAddSingleCourseCommentFormSubmit
+                }
+              />
+            );
 
           default:
             return null;

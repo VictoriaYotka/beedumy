@@ -5,7 +5,10 @@ import hero_image_sm from "../../../assets/images/home/hero/image_sm.webp";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 import CommentCard from "../CommentCard/CommentCard";
 
-const SingleNewsComment = ({ comments_quantity = "3" }) => {
+const SingleNewsComment = ({
+  comments_quantity = "3",
+  handleAddSingleNewsCommentFormSubmit,
+}) => {
   const { t } = useTranslation();
 
   return (
@@ -46,7 +49,7 @@ const SingleNewsComment = ({ comments_quantity = "3" }) => {
           <h3 className={css.header}>
             {t("news.single_news_comments_add_header")}
           </h3>
-          <form>
+          <form onSubmit={handleAddSingleNewsCommentFormSubmit}>
             <div className={css.input_group}>
               <input
                 type="email"
@@ -54,6 +57,7 @@ const SingleNewsComment = ({ comments_quantity = "3" }) => {
                 id="single_news_comment_email"
                 placeholder={t("news.single_news_comments_email")}
                 className={css.input}
+                required
               />
               <input
                 type="text"
@@ -61,6 +65,7 @@ const SingleNewsComment = ({ comments_quantity = "3" }) => {
                 id="single_news_comment_name"
                 placeholder={t("news.single_news_comments_name")}
                 className={css.input}
+                required
               />
             </div>
             <textarea
@@ -70,6 +75,7 @@ const SingleNewsComment = ({ comments_quantity = "3" }) => {
               rows="8"
               placeholder={t("news.single_news_comments_comment")}
               className={css.textarea}
+              required
             ></textarea>
             <button type="submit" className={css.form_button}>
               {t("news.single_news_comments_submit")}

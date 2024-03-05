@@ -349,9 +349,19 @@ const HighList = ({ style, toggleSubList, activeSubList }) => {
           if (active.includes("second_year")) {
             switch (location.pathname) {
               case "/categories/tunisian":
-                return <HighSecondYearTunisianSubList style={style} />;
+                return (
+                  <HighSecondYearTunisianSubList
+                    style={style}
+                    key="high_second_year_tunisian"
+                  />
+                );
               case "/categories/libyan":
-                return <HighSecondYearLibyanSubList style={style} />;
+                return (
+                  <HighSecondYearLibyanSubList
+                    style={style}
+                    key="high_second_year_libyan"
+                  />
+                );
               default:
                 return null;
             }
@@ -379,9 +389,19 @@ const HighList = ({ style, toggleSubList, activeSubList }) => {
           if (active.includes("third_year")) {
             switch (location.pathname) {
               case "/categories/tunisian":
-                return <HighThirdYearTunisianSubList style={style} />;
+                return (
+                  <HighThirdYearTunisianSubList
+                    style={style}
+                    key="high_third_year_tunisian"
+                  />
+                );
               case "/categories/libyan":
-                return <HighThirdYearLibyanSubList style={style} />;
+                return (
+                  <HighThirdYearLibyanSubList
+                    style={style}
+                    key="high_third_year_libyan"
+                  />
+                );
               default:
                 return null;
             }

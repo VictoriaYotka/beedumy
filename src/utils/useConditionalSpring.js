@@ -1,4 +1,4 @@
-import { useTransition, easings, config } from "@react-spring/web";
+import { useTransition, easings } from "@react-spring/web";
 
 const useSectionStyles = (inView) => {
   return {
@@ -139,22 +139,39 @@ const useButtonStyles = {
   },
 };
 
+const useConditionalSingleCourseDetailsTransition = (condition) => {
+  return useTransition(condition, {
+    from: {
+      opacity: 0,
+      transform: "translateY(-20px)",
+    },
+    enter: {
+      opacity: 1,
+      transform: "translateY(0)",
+    },
+    leave: {
+      opacity: 0,
+    },
+    config: {
+      duration: 400,
+    },
+    exitBeforeEnter: true,
+  });
+};
+
 const useConditionalListsTransition = (condition) => {
   return useTransition(condition, {
     from: {
       opacity: 0,
       transform: "translateY(-20px)",
-      height: 0,
     },
     enter: {
       opacity: 1,
-      transform: "translateY(0)",
-      height: "auto",
+      transform: "translateY(0px)",
     },
     leave: {
-      transform: "translateY(-24px)",
       opacity: 0,
-      height: 0,
+      transform: "translateY(-20px)",
     },
     config: {
       duration: 400,
@@ -171,7 +188,7 @@ const useConditionalSubListsTransition = (condition) => {
     },
     enter: {
       opacity: 1,
-      transform: "translateY(0)",
+      transform: "translateY(0px)",
       height: "auto",
     },
     leave: {
@@ -179,12 +196,9 @@ const useConditionalSubListsTransition = (condition) => {
       transform: "translateY(-20px)",
       height: 0,
     },
-    update: { height: "auto" },
     config: {
-      // easing: easings.easeInOutBack,
       duration: 50,
     },
-    // config: condition ? { ...config.gentle, duration: 0 } : { duration: 650 },
   });
 };
 
@@ -210,6 +224,7 @@ const useConditionalSpring = {
   useTriangleRoseStyles,
   useTriangleGreenStyles,
   useButtonStyles,
+  useConditionalSingleCourseDetailsTransition,
   useConditionalListsTransition,
   useConditionalSubListsTransition,
   useConditionalModalsTransition,

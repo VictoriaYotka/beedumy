@@ -101,7 +101,7 @@ const CoursesFilterInCourses = ({ curricula }) => {
               {transition((style, item) => {
                 switch (item) {
                   case "primary":
-                    return <PrimaryList style={style} />;
+                    return <PrimaryList style={style} key="primary" />;
                   default:
                     return null;
                 }
@@ -132,9 +132,16 @@ const CoursesFilterInCourses = ({ curricula }) => {
                   case "middle":
                     switch (location.pathname) {
                       case "/categories/tunisian":
-                        return <MiddleTunisianList style={style} />;
+                        return (
+                          <MiddleTunisianList
+                            style={style}
+                            key="middle_tunisian"
+                          />
+                        );
                       case "/categories/libyan":
-                        return <MiddleLibyanList style={style} />;
+                        return (
+                          <MiddleLibyanList style={style} key="middle_libyan" />
+                        );
                       default:
                         return null;
                     }
@@ -171,6 +178,7 @@ const CoursesFilterInCourses = ({ curricula }) => {
                         style={style}
                         toggleSubList={toggleSubList}
                         activeSubList={activeSubList}
+                        key="high"
                       />
                     );
                   default:
@@ -202,7 +210,7 @@ const CoursesFilterInCourses = ({ curricula }) => {
                 {transition((style, item) => {
                   switch (item) {
                     case "bachelor":
-                      return <BachelorList style={style} />;
+                      return <BachelorList style={style} key="bachelor" />;
                     default:
                       return null;
                   }

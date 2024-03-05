@@ -28,6 +28,23 @@ const SingleNews = () => {
     };
   });
 
+  const handleAddSingleNewsCommentFormSubmit = (e) => {
+    e.preventDefault();
+
+    const name = e.target.elements.single_news_comment_name.value;
+    const email = e.target.elements.single_news_comment_email.value;
+    const comment = e.target.elements.single_news_comment_comment.value;
+
+    const data = {
+      name,
+      email,
+      comment,
+    };
+    console.log(data);
+
+    e.target.reset();
+  };
+
   const NewsLink = () => (
     <Link to="/news" className={css.link}>
       {t("news.header")}
@@ -44,7 +61,11 @@ const SingleNews = () => {
         <div className={css.container}>
           <div>
             <SingleNewsCard />
-            <SingleNewsComment />
+            <SingleNewsComment
+              handleAddSingleNewsCommentFormSubmit={
+                handleAddSingleNewsCommentFormSubmit
+              }
+            />
           </div>
           <div>
             {isMediumScreen && <SingleNewsSearch />}

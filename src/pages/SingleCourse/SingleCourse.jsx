@@ -64,6 +64,22 @@ const SingleCourse = () => {
     };
   }, [isOpenAdditionalInfo, closeAdditionalInfo]);
 
+  const handleAddSingleCourseCommentFormSubmit = (e) => {
+    e.preventDefault();
+    const name = e.target.elements.single_course_comment_name.value;
+    const email = e.target.elements.single_course_comment_email.value;
+    const comment = e.target.elements.single_course_comment_comment.value;
+
+    const data = {
+      name,
+      email,
+      comment,
+    };
+    console.log(data);
+
+    e.target.reset();
+  };
+
   const transitions =
     useConditionalSpring.useConditionalModalsTransition(isOpenAdditionalInfo);
 
@@ -127,7 +143,11 @@ const SingleCourse = () => {
                 })}
               </>
             )}
-            <SingleCourseDetails />
+            <SingleCourseDetails
+              handleAddSingleCourseCommentFormSubmit={
+                handleAddSingleCourseCommentFormSubmit
+              }
+            />
           </div>
 
           {isMediumScreen && (

@@ -197,7 +197,13 @@ const ExamsInfo = ({ style }) => {
   );
 };
 
-const RatingInfo = ({ style, votes = 3, rating = "4.6", comments = "02" }) => {
+const RatingInfo = ({
+  style,
+  votes = 3,
+  rating = "4.6",
+  comments = "02",
+  handleAddSingleCourseCommentFormSubmit,
+}) => {
   const { t } = useTranslation();
 
   return (
@@ -284,7 +290,7 @@ const RatingInfo = ({ style, votes = 3, rating = "4.6", comments = "02" }) => {
             </p>
             <div>Stars</div>
           </div>
-          <form>
+          <form onSubmit={handleAddSingleCourseCommentFormSubmit}>
             <input
               type="text"
               name="single_course_comment_name"
@@ -293,6 +299,7 @@ const RatingInfo = ({ style, votes = 3, rating = "4.6", comments = "02" }) => {
                 "courses.single_course_details_rating_add_comment_name_placeholder"
               )}
               className={css.input}
+              required
             />
             <input
               type="email"
@@ -302,6 +309,7 @@ const RatingInfo = ({ style, votes = 3, rating = "4.6", comments = "02" }) => {
                 "courses.single_course_details_rating_add_comment_email_placeholder"
               )}
               className={css.input}
+              required
             />
 
             <textarea
@@ -313,6 +321,7 @@ const RatingInfo = ({ style, votes = 3, rating = "4.6", comments = "02" }) => {
                 "courses.single_course_details_rating_add_comment_textarea_placeholder"
               )}
               className={css.textarea}
+              required
             ></textarea>
             <button type="submit" className={css.form_button}>
               {t("courses.single_course_details_rating_add_comment_button")}
