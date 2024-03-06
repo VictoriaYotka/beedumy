@@ -29,7 +29,7 @@ const Curricula = () => {
 
   return (
     <>
-      <CoursesFilterInCourses curricula={t(curricula)} />;
+      <CoursesFilterInCourses curricula={t(curricula)} />
       <section className={css.section}>
         <div className={css.container}>
           <ul className={css.list}>
@@ -37,17 +37,19 @@ const Curricula = () => {
               const { image_cover, teacher, slug, type, id } = el;
               const img = `${baseUrl}${image_cover}`;
               return (
-                <CourseCardInCategories
-                  key={index}
-                  notion={type}
-                  img={img}
-                  imgAlt={replaceHyphensWithSpaces(slug)}
-                  preheader={teacher.full_name}
-                  header={replaceHyphensWithSpaces(slug)}
-                  rating="stars"
-                  descr="Some description"
-                  id={id}
-                />
+                <li className={css.item}>
+                  <CourseCardInCategories
+                    key={index}
+                    notion={type}
+                    img={img}
+                    imgAlt={replaceHyphensWithSpaces(slug)}
+                    preheader={teacher.full_name}
+                    header={replaceHyphensWithSpaces(slug)}
+                    rating="stars"
+                    descr="Some description"
+                    id={id}
+                  />
+                </li>
               );
             })}
           </ul>

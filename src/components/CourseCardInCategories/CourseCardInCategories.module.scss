@@ -23,6 +23,10 @@
     .descr {
       color: $darkFontColor;
     }
+
+    .notion {
+      background-color: $purpleBgButtonColor;
+    }
   }
 }
 
@@ -39,6 +43,7 @@
 
 .image {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   margin: auto;
   border-radius: 16px;
@@ -67,6 +72,7 @@
     right: 16px;
     left: unset;
   }
+  z-index: 2;
 
   padding: 8px 16px;
   color: $whiteColor;
@@ -74,6 +80,8 @@
   background-color: $fioletBgButtonColor;
   border-radius: 24px;
   text-transform: capitalize;
+
+  transition: $transition;
 }
 
 .info_thumb {

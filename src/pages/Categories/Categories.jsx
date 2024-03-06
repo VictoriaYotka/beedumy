@@ -89,7 +89,6 @@ const Categories = ({ direction }) => {
 
           <SectionAnimationWrapper>
             <Slider
-              {...carouselsSettings.categoriesPageSettings}
               {...{
                 initialSlide: carouselsSettings.getRandomInt(
                   tunisianCourses.length
@@ -136,7 +135,6 @@ const Categories = ({ direction }) => {
 
           <SectionAnimationWrapper>
             <Slider
-              {...carouselsSettings.categoriesPageSettings}
               {...{
                 initialSlide: carouselsSettings.getRandomInt(
                   libyanCourses.length
@@ -185,7 +183,6 @@ const Categories = ({ direction }) => {
 
           <SectionAnimationWrapper>
             <Slider
-              {...carouselsSettings.categoriesPageSettings}
               {...{
                 initialSlide: carouselsSettings.getRandomInt(
                   formativeCourses.length
