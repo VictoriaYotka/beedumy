@@ -44,6 +44,16 @@ const Home = ({ direction }) => {
     dispatch(homePage());
   }, [dispatch]);
 
+  const handleSubscriptionFormSubmit = (e) => {
+    e.preventDefault();
+
+    const email = e.target.elements.subscription_email.value;
+
+    console.log(email);
+
+    e.target.reset();
+  };
+
   return (
     <>
       <Hero />
@@ -225,7 +235,9 @@ const Home = ({ direction }) => {
 
       <Partners />
 
-      <Subscription />
+      <Subscription
+        handleSubscriptionFormSubmit={handleSubscriptionFormSubmit}
+      />
     </>
   );
 };

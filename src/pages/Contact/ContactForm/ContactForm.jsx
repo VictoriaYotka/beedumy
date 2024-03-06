@@ -2,14 +2,14 @@ import css from "./ContactForm.module.scss";
 import { useTranslation } from "react-i18next";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
-const ContactForm = () => {
+const ContactForm = ({ handleContactFormSubmit }) => {
   const { t } = useTranslation();
 
   return (
     <SectionAnimationWrapper>
       <div className={css.container}>
         <h2 className={css.heading}>{t("contact.contact_form_header")}</h2>
-        <form className={css.form}>
+        <form className={css.form} onSubmit={handleContactFormSubmit}>
           <div className={css.wrapper}>
             <input
               type="text"

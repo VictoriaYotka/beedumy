@@ -2,7 +2,7 @@ import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper
 import css from "./Subscription.module.scss";
 import { useTranslation } from "react-i18next";
 
-const Subscription = () => {
+const Subscription = ({ handleSubscriptionFormSubmit }) => {
   const { t } = useTranslation();
 
   return (
@@ -15,10 +15,12 @@ const Subscription = () => {
             </div>
             <h2 className={css.heading}>{t("home.subscription_header")}</h2>
           </div>
-          <form className={css.form}>
+          <form className={css.form} onSubmit={handleSubscriptionFormSubmit}>
             <input
               className={css.input}
               type="email"
+              name="subscription_email"
+              id="subscription_email"
               placeholder={t("home.subscription_input_placeholder")}
               required
             />

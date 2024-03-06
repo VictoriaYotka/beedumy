@@ -3,14 +3,14 @@ import { useTranslation } from "react-i18next";
 import TriangleBackground from "../../../components/Layout/TriangleBackground/TriangleBackground";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 
-const BecomeTeacherForm = () => {
+const BecomeTeacherForm = ({ handleBecomeTeacherFormSubmit }) => {
   const { t } = useTranslation();
 
   return (
     <TriangleBackground>
       <SectionAnimationWrapper>
         <div className={css.container}>
-          <form className={css.form}>
+          <form className={css.form} onSubmit={handleBecomeTeacherFormSubmit}>
             <div className={css.input_wrapper}>
               <label className={css.label} htmlFor="become_teacher_name">
                 {t("becometeacher.name_label")}
