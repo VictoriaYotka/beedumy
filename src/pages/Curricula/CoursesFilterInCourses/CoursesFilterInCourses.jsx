@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
 import css from "./CoursesFilterInCourses.module.scss";
-import icons from "../../assets/images/icons/icons.svg";
+import icons from "../../../assets/images/icons/icons.svg";
 import { useTranslation } from "react-i18next";
 import {
   BachelorList,
@@ -10,7 +10,7 @@ import {
   MiddleTunisianList,
   PrimaryList,
 } from "./CoursesFilterSubLists";
-import { useConditionalSpring } from "../../utils";
+import { useConditionalSpring } from "../../../utils";
 
 const CoursesFilterInCourses = ({ curricula }) => {
   const { t } = useTranslation();

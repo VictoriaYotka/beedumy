@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import css from "./CourseCardInCategories.module.scss";
+import css from "./CourseCard.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
 import { useTranslation } from "react-i18next";
 
-const CourseCardInCategories = ({
+const CourseCard = ({
   notion,
   img,
   imgAlt,
@@ -17,7 +17,6 @@ const CourseCardInCategories = ({
   const navigate = useNavigate();
 
   const handleButtonClick = (e) => {
-    console.log(e.target);
     navigate(`/courses/${id}`);
   };
 
@@ -55,4 +54,4 @@ const CourseCardInCategories = ({
   );
 };
 
-export default CourseCardInCategories;
+export default CourseCard;

@@ -19,9 +19,7 @@ import {
 import { homePage } from "../../redux/operations/contentOperations";
 import { baseUrl } from "../../constants";
 
-const CourseCardInCategories = lazy(() =>
-  import("../../components/CourseCardInCategories/CourseCardInCategories")
-);
+const CourseCard = lazy(() => import("../../components/CourseCard/CourseCard"));
 const TeacherCard = lazy(() =>
   import("../../components/TeacherCard/TeacherCard")
 );
@@ -77,7 +75,7 @@ const Home = ({ direction }) => {
                 const { image_cover, teacher, slug, type, id } = el;
                 const img = `${baseUrl}${image_cover}`;
                 return (
-                  <CourseCardInCategories
+                  <CourseCard
                     key={index}
                     notion={type}
                     img={img}

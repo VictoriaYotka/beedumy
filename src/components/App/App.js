@@ -14,21 +14,22 @@ const SingleCourse = lazy(() =>
 );
 const Curricula = lazy(() => import("../../pages/Curricula/Curricula"));
 const BuyCourse = lazy(() => import("../../pages/BuyCourse/BuyCourse"));
-const Faq = lazy(() => import("../../pages/Faq/Faq"));
 const Home = lazy(() => import("../../pages/Home/Home"));
 const NotFound = lazy(() => import("../../pages/Not found/NotFound"));
-const SingleTeacher = lazy(() =>
-  import("../../pages/SingleTeacher/SingleTeacher")
-);
-const Teachers = lazy(() => import("../../pages/Teachers/Teachers"));
 const News = lazy(() => import("../../pages/News/News"));
 const SingleNews = lazy(() => import("../../pages/SingleNews/SingleNews"));
-const BecomeTeacher = lazy(() =>
-  import("../../pages/BecomeTeacher/BecomeTeacher")
-);
 const Contact = lazy(() => import("../../pages/Contact/Contact"));
-const About = lazy(() => import("../../pages/About/About"));
-const Gallery = lazy(() => import("../../pages/Gallery/Gallery"));
+
+// const About = lazy(() => import("../../pages/About/About"));
+// const BecomeTeacher = lazy(() =>
+//   import("../../pages/BecomeTeacher/BecomeTeacher")
+// );
+// const Gallery = lazy(() => import("../../pages/Gallery/Gallery"));
+// const Faq = lazy(() => import("../../pages/Faq/Faq"));
+// const Teachers = lazy(() => import("../../pages/Teachers/Teachers"));
+// const SingleTeacher = lazy(() =>
+//   import("../../pages/SingleTeacher/SingleTeacher")
+// );
 
 function App() {
   const { i18n } = useTranslation();
@@ -104,13 +105,13 @@ function App() {
 
           <Route path="news" element={<News />} />
           <Route path="news/:newsId" element={<SingleNews />} />
-          <Route path="teachers" element={<Teachers />} />
-          <Route path="teachers/:teacherId" element={<SingleTeacher />} />
-          <Route path="becometeacher" element={<BecomeTeacher />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="about" element={<About />} />
-          <Route path="gallery" element={<Gallery />} />
-          <Route path="faq" element={<Faq />} />
+          {/* <Route path="teachers" element={<Teachers />} /> */}
+          {/* <Route path="teachers/:teacherId" element={<SingleTeacher />} /> */}
+          {/* <Route path="becometeacher" element={<BecomeTeacher />} /> */}
+          {/* <Route path="about" element={<About />} /> */}
+          {/* <Route path="gallery" element={<Gallery />} /> */}
+          {/* <Route path="faq" element={<Faq />} /> */}
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

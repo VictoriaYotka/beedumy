@@ -12,11 +12,11 @@ const NavList = ({ isLargeScreen }) => {
           {t("sharedLayout.content")}
         </NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink to="/about" className={css.nav_link}>
           {t("sharedLayout.about_us")}
         </NavLink>
-      </li>
+      </li> */}
     </ul>
   );
 };

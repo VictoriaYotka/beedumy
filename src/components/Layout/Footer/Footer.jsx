@@ -63,7 +63,10 @@ const Footer = () => {
                 {showMore && (
                   <>
                     <div>
-                      <Link to="/gallery" className={css.gallery_heading}>
+                      <Link
+                        // to="/gallery"
+                        className={css.gallery_heading}
+                      >
                         {t("sharedLayout.gallery_heading")}
                       </Link>
                       <ul className={css.gallery_list}>

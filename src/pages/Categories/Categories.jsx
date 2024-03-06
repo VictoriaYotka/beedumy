@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import StartLearningTrip from "./StartLearningTrip/StartLearningTrip";
 import FAQ from "./FAQ/FAQ";
-import CourseCardInCategories from "../../components/CourseCardInCategories/CourseCardInCategories";
+import CourseCard from "../../components/CourseCard/CourseCard";
 import SectionAnimationWrapper from "../../components/SectionAnimationWrapper/SectionAnimationWrapper";
 import { Link } from "react-router-dom";
 import { carouselsSettings, replaceHyphensWithSpaces } from "../../utils";
@@ -101,7 +101,7 @@ const Categories = ({ direction }) => {
                 const { image_cover, teacher, slug, type, id } = el;
                 const img = `${baseUrl}${image_cover}`;
                 return (
-                  <CourseCardInCategories
+                  <CourseCard
                     key={index}
                     notion={type}
                     img={img}
@@ -147,7 +147,7 @@ const Categories = ({ direction }) => {
                 const { image_cover, teacher, slug, type, id } = el;
                 const img = `${baseUrl}${image_cover}`;
                 return (
-                  <CourseCardInCategories
+                  <CourseCard
                     key={index}
                     notion={type}
                     img={img}
@@ -195,7 +195,7 @@ const Categories = ({ direction }) => {
                 const { image_cover, teacher, slug, type, id } = el;
                 const img = `${baseUrl}${image_cover}`;
                 return (
-                  <CourseCardInCategories
+                  <CourseCard
                     key={index}
                     notion={type}
                     img={img}

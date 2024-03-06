@@ -1,8 +1,8 @@
 import css from "./Curricula.module.scss";
 import { useTranslation } from "react-i18next";
-import CoursesFilterInCourses from "../../components/CoursesFilterInCourses/CoursesFilterInCourses";
+import CoursesFilterInCourses from "./CoursesFilterInCourses/CoursesFilterInCourses";
 import { useParams } from "react-router-dom";
-import CourseCardInCategories from "../../components/CourseCardInCategories/CourseCardInCategories";
+import CourseCard from "../../components/CourseCard/CourseCard";
 import { useDispatch, useSelector } from "react-redux";
 import { coursesSelector } from "../../redux/selectors/contentSelectors";
 import { replaceHyphensWithSpaces } from "../../utils";
@@ -37,9 +37,8 @@ const Curricula = () => {
               const { image_cover, teacher, slug, type, id } = el;
               const img = `${baseUrl}${image_cover}`;
               return (
-                <li className={css.item}>
-                  <CourseCardInCategories
-                    key={index}
+                <li className={css.item} key={index}>
+                  <CourseCard
                     notion={type}
                     img={img}
                     imgAlt={replaceHyphensWithSpaces(slug)}

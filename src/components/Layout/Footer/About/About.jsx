@@ -14,7 +14,10 @@ const About = () => {
       <NavLink to="/contact" className={css.follow_more_button}>
         {t("sharedLayout.connect")}
       </NavLink>
-      <NavLink to="/about" className={css.connect_button}>
+      <NavLink
+        // to="/about"
+        className={css.connect_button}
+      >
         {t("sharedLayout.learn_more")}
       </NavLink>
     </div>

@@ -1,10 +1,10 @@
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import css from "./CoursesFilterInCourses.module.scss";
-import icons from "../../assets/images/icons/icons.svg";
+import icons from "../../../assets/images/icons/icons.svg";
 import { useTranslation } from "react-i18next";
 import { animated } from "@react-spring/web";
-import { useConditionalSpring } from "../../utils";
+import { useConditionalSpring } from "../../../utils";
 
 const PrimaryList = ({ style }) => {
   const { t } = useTranslation();
