@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkbirsaplatform=self.webpackChunkbirsaplatform||[]).push([[145],{2145:(a,s,r)=>{r.r(s),r.d(s,{default:()=>l});r(2791);var e=r(184);const l=()=>(0,e.jsx)("div",{children:"Faq"})}}]);
-//# sourceMappingURL=145.31c745fd.chunk.js.map

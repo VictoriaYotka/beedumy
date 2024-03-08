@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/342.86ca7147.chunk.js","mappings":"gKAEA,MAIA,EAJgBA,KACPC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,W","sources":["pages/Gallery/Gallery.jsx"],"sourcesContent":["import React from \"react\";\r\n\r\nconst Gallery = () => {\r\n  return <div>Gallery</div>;\r\n};\r\n\r\nexport default Gallery;\r\n"],"names":["Gallery","_jsx","children"],"sourceRoot":""}
