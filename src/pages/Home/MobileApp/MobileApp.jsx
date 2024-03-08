@@ -15,7 +15,7 @@ const MobileApp = () => {
               <iframe
                 className={css.video}
                 title="mobile app video demonstration"
-                src="https://www.youtube.com/embed/JfJYHfrOGgQ"
+                src="https://www.youtube.com/embed/YKhOLExLIpU?si=hkEaxJCup-QoAUnR"
                 loading="lazy"
                 allow="autoplay; encrypted-media"
                 allowFullScreen

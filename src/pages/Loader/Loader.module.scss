@@ -1,0 +1,30 @@
+@import "../../scss";
+
+.section {
+  @extend .section;
+}
+
+.container {
+  @extend .container;
+  height: 35vh;
+  display: flex;
+}
+
+.loader {
+  margin: auto;
+  border: 8px solid $lightGreyBgColor;
+  border-top: 8px solid $accentColor;
+  border-radius: 50%;
+  width: 68px;
+  height: 68px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
