@@ -44,7 +44,7 @@ const Curricula = () => {
                     imgAlt={replaceHyphensWithSpaces(slug)}
                     preheader={teacher.full_name}
                     header={replaceHyphensWithSpaces(slug)}
-                    rating="stars"
+                    rating="4"
                     descr="Some description"
                     id={id}
                   />

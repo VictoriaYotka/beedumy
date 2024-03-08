@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import css from "./CourseCard.module.scss";
 import icons from "../../assets/images/icons/icons.svg";
 import { useTranslation } from "react-i18next";
+import { Rating } from "@smastrom/react-rating";
 
 const CourseCard = ({
   notion,
@@ -37,7 +38,9 @@ const CourseCard = ({
         <h3 className={css.header}>{header}</h3>
         <div className={css.wrapper}>
           <p className={css.descr}>{descr}</p>
-          <div className={css.rating}>{rating}</div>
+          <div className={css.rating}>
+            <Rating style={{ maxWidth: 100 }} value={rating} readOnly />
+          </div>
         </div>
         <button
           onClick={handleButtonClick}

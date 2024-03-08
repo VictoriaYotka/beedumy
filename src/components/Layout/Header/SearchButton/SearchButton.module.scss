@@ -23,6 +23,11 @@
     left: unset;
     transform: translateY(0);
   }
+
+  &:hover,
+  &:focus {
+    scale: 110%;
+  }
 }
 
 .active {
@@ -38,6 +43,11 @@
 
   & .search_button::before {
     left: 0;
+  }
+
+  &:hover,
+  &:focus {
+    scale: 100%;
   }
 }
 
@@ -70,6 +80,10 @@
     transform: translateY(-50%);
   }
 
+  & i {
+    transition: $transition;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -84,6 +98,9 @@
 
   &:hover,
   &:focus {
+    & i {
+      scale: 120%;
+    }
     &:before {
       left: 0;
     }

@@ -2,8 +2,15 @@ import css from "./SingleCourseCard.module.scss";
 import icons from "../../../assets/images/icons/icons.svg";
 import { Link } from "react-router-dom";
 import SectionAnimationWrapper from "../../../components/SectionAnimationWrapper/SectionAnimationWrapper";
+import { Rating } from "@smastrom/react-rating";
 
-const SingleCourseCard = ({ curriculum, admin, admin_image, title }) => {
+const SingleCourseCard = ({
+  curriculum,
+  admin,
+  admin_image,
+  title,
+  rating,
+}) => {
   return (
     <SectionAnimationWrapper>
       <div className={css.card}>
@@ -29,7 +36,10 @@ const SingleCourseCard = ({ curriculum, admin, admin_image, title }) => {
             </div>
 
             <h2 className={css.title}>{title}</h2>
-            <div className={css.stars}> Stars</div>
+            <div className={css.rating}>
+              {" "}
+              <Rating style={{ maxWidth: 100 }} value={rating} readOnly />
+            </div>
           </div>
           <p className={css.curriculum}>{curriculum}</p>
         </div>

@@ -98,6 +98,7 @@ const SingleCourse = () => {
               admin="Name Surname"
               admin_image={triangle_green_little_sm}
               title="Course title"
+              rating="4"
             />
             {!isMediumScreen && (
               <>
