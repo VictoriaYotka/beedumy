@@ -1,8 +1,8 @@
 {
-  "name": "birsaplatform",
+  "name": "beedumy",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://VictoriaYotka.github.io/birsaplatform/",
+  "homepage": "https://victoriayotka.github.io/beedumy/",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@react-spring/web": "^9.7.3",

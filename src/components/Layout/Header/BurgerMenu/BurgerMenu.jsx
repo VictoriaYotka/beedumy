@@ -6,8 +6,13 @@ import SearchButton from "../SearchButton/SearchButton";
 import SignList from "../SignList/SignList";
 import NavListBurger from "../NavListBurger/NavListBurger";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+import { animated } from "@react-spring/web";
+import { useConditionalSpring } from "../../../../utils";
 
 const BurgerMenu = ({ toggleMenu, isOpenBurgerMenu }) => {
+  const transitions =
+    useConditionalSpring.useConditionalBurgerMenuTransition(isOpenBurgerMenu);
+
   return (
     <>
       <div onClick={toggleMenu} id="burger_menu">
@@ -20,26 +25,34 @@ const BurgerMenu = ({ toggleMenu, isOpenBurgerMenu }) => {
         </svg>
       </div>
 
-      {isOpenBurgerMenu && (
-        <div className={css.burger_content}>
-          <div className={css.topper_wrapper}>
-            <SearchButton />
-            <LanguageSwitcher />
-          </div>
+      {transitions((style, isTrue) => {
+        switch (isTrue) {
+          case true:
+            return (
+              <animated.div className={css.burger_content} style={style}>
+                <div className={css.topper_wrapper}>
+                  <SearchButton />
+                  <LanguageSwitcher />
+                </div>
 
-          <nav className={css.nav}>
-            <NavListBurger />
-          </nav>
-          <SignList />
+                <nav className={css.nav}>
+                  <NavListBurger />
+                </nav>
+                <SignList />
 
-          <div className={css.bottom_wrapper}>
-            <ul className={css.socials_list}>
-              <SocialsList />
-            </ul>
-            <ContactsList />
-          </div>
-        </div>
-      )}
+                <div className={css.bottom_wrapper}>
+                  <ul className={css.socials_list}>
+                    <SocialsList />
+                  </ul>
+                  <ContactsList />
+                </div>
+              </animated.div>
+            );
+
+          default:
+            return null;
+        }
+      })}
     </>
   );
 };

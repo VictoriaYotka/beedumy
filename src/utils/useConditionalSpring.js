@@ -139,6 +139,27 @@ const useButtonStyles = {
   },
 };
 
+const useConditionalBurgerMenuTransition = (condition) => {
+  return useTransition(condition, {
+    from: {
+      opacity: 0.9,
+      transform: "translateY(-100%)",
+    },
+    enter: {
+      opacity: 1,
+      transform: "translateY(0px)",
+    },
+    leave: {
+      opacity: 0.9,
+      transform: "translateY(-70%)",
+    },
+    config: {
+      duration: 500,
+      easing: easings.easeInQuart,
+    },
+  });
+};
+
 const useConditionalSingleCourseDetailsTransition = (condition) => {
   return useTransition(condition, {
     from: {
@@ -224,6 +245,7 @@ const useConditionalSpring = {
   useTriangleRoseStyles,
   useTriangleGreenStyles,
   useButtonStyles,
+  useConditionalBurgerMenuTransition,
   useConditionalSingleCourseDetailsTransition,
   useConditionalListsTransition,
   useConditionalSubListsTransition,
