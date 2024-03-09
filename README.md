@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# Beedumy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Beedumy is a comprehensive platform offering a diverse range of courses across various fields. From academic subjects to professional skills and hobbies, our website provides learners with access to high-quality educational content tailored to their interests and needs.
 
-## Available Scripts
+With a user-friendly interface and intuitive navigation, students can easily browse through our extensive collection of courses and enroll in their desired programs with just a few clicks. Whether you're looking to enhance your career prospects, explore new interests, or deepen your knowledge in a particular subject, our platform offers something for everyone.
 
-In the project directory, you can run:
+### Link
 
-### `npm start`
+Start using on
+[live page](https://victoriayotka.github.io/beedumy/)
+generated with github-pages environment. Link is also available in this repo's
+about section (at the top).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Content:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [About](#about)
+- [Technologies](#technologies)
+- [Features](#features)
+- [Setup](#setup)
+- [License](#lisence)
 
-### `npm test`
+<a name="about"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### [About](#about)
 
-### `npm run build`
+Welcome to Beedumy, your premier destination for online learning! Beedumy is a commercial project, result of my 2-months internship at Institut Poincare De Carthage (Tunisia). Beedumy is designed to offer users a comprehensive and immersive educational experience. While still in development and awaiting integration with backend powered by Laravel, I am excited to share our vision and progress with you.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Key Highlights:
+- Enhanced UX with React: Beedumy leverages the power of React to deliver a smooth and interactive user experience. React's component-based architecture enables us to build dynamic and responsive interfaces, providing users with intuitive navigation and seamless interactions throughout their learning journey.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Adaptive/Responsive Layout: Beedumy is designed with your convenience in mind. Our adaptive and responsive layout ensures that you can access the platform from any device, whether it's a desktop computer, tablet, or smartphone. Enjoy a seamless learning experience anytime, anywhere.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Multi-Language Support: Beedumy is committed to inclusivity and accessibility. Our platform features multi-language support powered by i18n, allowing users from around the world to access content in their preferred language. Stay tuned as we finalize the interpreter functionality to seamlessly translate JSON files for a truly global learning experience.
 
-### `npm run eject`
+- RTL Support for Arabic Language: At Beedumy, we understand the importance of catering to diverse linguistic preferences. Our platform offers RTL (Right-to-Left) support specifically tailored for Arabic language users. With RTL functionality, Arabic-speaking learners can enjoy a more natural and intuitive reading experience, ensuring optimal comprehension and engagement.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Continuous Development: Currently, our app is undergoing development, with plans to integrate it seamlessly with a robust backend system built on Laravel.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Test Backend Fetches: As part of our development process, we have implemented test backend fetches to simulate the functionality and features that will be available once the full backend infrastructure is in place.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Commitment to Quality: We are committed to delivering a high-quality user experience, with features designed to enhance learning outcomes and foster engagement among our users.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+Join us on this exciting journey as we work towards launching Beedumy and revolutionizing online learning for the better!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<a name="technologies"></a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### [Technologies](#technologies)
 
-### Code Splitting
+- HTML;
+- SCSS;
+- JS;
+- React (React Hooks);
+- React Router DOM;
+- Redux Toolkit (createSlice);
+- Redux Thunk;
+- Axios;
+- React i18next;
+- React Slick;
+- React Spring;
+- React Rating.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- <a name="features"></a>
 
-### Analyzing the Bundle Size
+### [Features](#features)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Comprehensive Course Catalog: Beedumy provides a diverse range of courses spanning various subjects, disciplines, and skill levels, offering users a wide array of learning opportunities.
 
-### Making a Progressive Web App
+2. User Profiles and Progress Tracking: Users can create personalized profiles on Beedumy, enabling them to track their progress across courses and monitor their learning achievements.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Interactive Learning Experience: Beedumy offers an interactive and engaging learning experience, incorporating features such as quizzes, assignments, and multimedia content to enhance user engagement.
 
-### Advanced Configuration
+4. News and Comments: Users can read news articles related to their areas of interest and engage with the community by commenting and sharing their opinions on the latest developments and trends.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+5. Course Reviews and Ratings: Beedumy allows users to provide feedback and ratings for courses they have completed, helping prospective learners make informed decisions about their course selections.
 
-### Deployment
+6. Favoriting Courses: Registered users have the option to add courses to their favorites list, enabling them to easily access and bookmark courses of interest for future reference and exploration.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+7. Responsive Design and Cross-Platform Compatibility: With its responsive design, Beedumy ensures seamless access and optimal viewing experience across devices and screen sizes, providing users with flexibility and convenience in their learning journey.
 
-### `npm run build` fails to minify
+8. Search and Discovery: Beedumy features robust search and discovery capabilities, enabling users to easily find and explore courses based on keywords, topics, instructors, and other criteria, facilitating efficient navigation of the platform's extensive course catalog.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+9. Language Localization: The platform supports multiple languages and localization features, allowing users to access content in their preferred language, enhancing accessibility and inclusivity for a diverse user base.
+
+10. Secure Payment Processing: Beedumy ensures secure and reliable payment processing for purchasing courses or premium features, offering users peace of mind and convenience in their transactions.
+
+
+<a name="usage"></a>
+
+
+### [Setup](#setup)
+
+- download or clone the repository;
+- run `npm install`;
+- run `npm start`;
+- open your browser and go to http://localhost:3000.
+
+<a name="lisence"></a>
+
+### [License](#lisence)
+
+[MIT](https://choosealicense.com/licenses/mit/)
