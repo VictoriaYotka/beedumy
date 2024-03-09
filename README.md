@@ -60,7 +60,8 @@ Join us on this exciting journey as we work towards launching Beedumy and revolu
 - React Spring;
 - React Rating.
 
-- <a name="features"></a>
+
+<a name="features"></a>
 
 ### [Features](#features)
 
@@ -99,4 +100,4 @@ Join us on this exciting journey as we work towards launching Beedumy and revolu
 
 ### [License](#lisence)
 
-[MIT](https://choosealicense.com/licenses/mit/)
+This project is licensed under the[MIT](https://choosealicense.com/licenses/mit/) lisence.
