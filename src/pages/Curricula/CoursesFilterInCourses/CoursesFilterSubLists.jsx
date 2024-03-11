@@ -12,7 +12,10 @@ const PrimaryList = ({ style }) => {
   return (
     <animated.ul data-sublist="sublist" className={css.sub_list} style={style}>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.primary.first_year"
+        >
           <span>{t("courses_filter.primary.first_year")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -20,7 +23,10 @@ const PrimaryList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.primary.second_year"
+        >
           <span>{t("courses_filter.primary.second_year")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -28,7 +34,10 @@ const PrimaryList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.primary.third_year"
+        >
           <span>{t("courses_filter.primary.third_year")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -36,7 +45,10 @@ const PrimaryList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.primary.fourth_year"
+        >
           <span>{t("courses_filter.primary.fourth_year")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -44,7 +56,10 @@ const PrimaryList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.primary.fifth_year"
+        >
           <span>{t("courses_filter.primary.fifth_year")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -52,7 +67,10 @@ const PrimaryList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.primary.sixth_year"
+        >
           <span>{t("courses_filter.primary.sixth_year")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -69,7 +87,10 @@ const MiddleTunisianList = ({ style }) => {
   return (
     <animated.ul data-sublist="sublist" className={css.sub_list} style={style}>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.middle_tunisian.seventh_year_essential"
+        >
           <span>
             {t("courses_filter.middle_tunisian.seventh_year_essential")}
           </span>
@@ -79,7 +100,10 @@ const MiddleTunisianList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.middle_tunisian.eighth_year_essential"
+        >
           <span>
             {t("courses_filter.middle_tunisian.eighth_year_essential")}
           </span>
@@ -89,7 +113,10 @@ const MiddleTunisianList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.middle_tunisian.ninth_year_essential"
+        >
           <span>
             {t("courses_filter.middle_tunisian.ninth_year_essential")}
           </span>
@@ -108,7 +135,10 @@ const MiddleLibyanList = ({ style }) => {
   return (
     <animated.ul data-sublist="sublist" className={css.sub_list} style={style}>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.middle_libyan.first_year_preparatory"
+        >
           <span>
             {t("courses_filter.middle_libyan.first_year_preparatory")}
           </span>
@@ -118,7 +148,10 @@ const MiddleLibyanList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.middle_libyan.second_year_preparatory"
+        >
           <span>
             {t("courses_filter.middle_libyan.second_year_preparatory")}
           </span>
@@ -128,7 +161,10 @@ const MiddleLibyanList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.middle_libyan.third_year_preparatory"
+        >
           <span>
             {t("courses_filter.middle_libyan.third_year_preparatory")}
           </span>
@@ -147,7 +183,10 @@ const HighSecondYearTunisianSubList = ({ style }) => {
   return (
     <animated.ul className={css.sub_sub_list} style={style}>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.high_tunisian.second_year_etiquette"
+        >
           <span>{t("courses_filter.high_tunisian.second_year_etiquette")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -155,7 +194,10 @@ const HighSecondYearTunisianSubList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.high_tunisian.second_year_informational"
+        >
           <span>
             {t("courses_filter.high_tunisian.second_year_informational")}
           </span>
@@ -165,7 +207,10 @@ const HighSecondYearTunisianSubList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.high_tunisian.second_year_experimental_science"
+        >
           <span>
             {t("courses_filter.high_tunisian.second_year_experimental_science")}
           </span>
@@ -175,7 +220,10 @@ const HighSecondYearTunisianSubList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.high_tunisian.second_year_economics"
+        >
           <span>{t("courses_filter.high_tunisian.second_year_economics")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -192,7 +240,10 @@ const HighSecondYearLibyanSubList = ({ style }) => {
   return (
     <animated.ul className={css.sub_sub_list} style={style}>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.high_libyan.second_year_scientific"
+        >
           <span>{t("courses_filter.high_libyan.second_year_scientific")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -200,7 +251,10 @@ const HighSecondYearLibyanSubList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.high_libyan.second_year_literary"
+        >
           <span>{t("courses_filter.high_libyan.second_year_literary")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -217,7 +271,10 @@ const HighThirdYearTunisianSubList = ({ style }) => {
   return (
     <animated.ul className={css.sub_sub_list} style={style}>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.high_tunisian.third_year_etiquette"
+        >
           <span>{t("courses_filter.high_tunisian.third_year_etiquette")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -225,7 +282,10 @@ const HighThirdYearTunisianSubList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.high_tunisian.third_year_sports"
+        >
           <span>{t("courses_filter.high_tunisian.third_year_sports")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -233,7 +293,10 @@ const HighThirdYearTunisianSubList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.high_tunisian.third_year_experimental_science"
+        >
           <span>
             {t("courses_filter.high_tunisian.third_year_experimental_science")}
           </span>
@@ -243,7 +306,10 @@ const HighThirdYearTunisianSubList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.high_tunisian.third_year_economics"
+        >
           <span>{t("courses_filter.high_tunisian.third_year_economics")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -251,7 +317,10 @@ const HighThirdYearTunisianSubList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.high_tunisian.third_year_informational"
+        >
           <span>
             {t("courses_filter.high_tunisian.third_year_informational")}
           </span>
@@ -261,7 +330,10 @@ const HighThirdYearTunisianSubList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.high_tunisian.third_year_mathematics"
+        >
           <span>
             {t("courses_filter.high_tunisian.third_year_mathematics")}
           </span>
@@ -271,7 +343,10 @@ const HighThirdYearTunisianSubList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.high_tunisian.third_year_technical"
+        >
           <span>{t("courses_filter.high_tunisian.third_year_technical")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -288,7 +363,10 @@ const HighThirdYearLibyanSubList = ({ style }) => {
   return (
     <animated.ul className={css.sub_sub_list} style={style}>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.high_libyan.third_year_scientific"
+        >
           <span>{t("courses_filter.high_libyan.third_year_scientific")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -296,7 +374,10 @@ const HighThirdYearLibyanSubList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.high_libyan.third_year_literary"
+        >
           <span>{t("courses_filter.high_libyan.third_year_literary")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -322,7 +403,10 @@ const HighList = ({ style, toggleSubList, activeSubList }) => {
   return (
     <animated.ul data-sublist="sublist" className={css.sub_list} style={style}>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.high.first_year"
+        >
           <span>{t("courses_filter.high.first_year")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -419,7 +503,10 @@ const BachelorList = ({ style }) => {
   return (
     <animated.ul data-sublist="sublist" className={css.sub_list} style={style}>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.bachelor_tunisian.arts"
+        >
           <span>{t("courses_filter.bachelor_tunisian.arts")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -427,7 +514,10 @@ const BachelorList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.bachelor_tunisian.technical"
+        >
           <span>{t("courses_filter.bachelor_tunisian.technical")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -435,7 +525,10 @@ const BachelorList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.bachelor_tunisian.mathematics"
+        >
           <span>{t("courses_filter.bachelor_tunisian.mathematics")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -443,7 +536,10 @@ const BachelorList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.bachelor_tunisian.experimental_science"
+        >
           <span>
             {t("courses_filter.bachelor_tunisian.experimental_science")}
           </span>
@@ -453,7 +549,10 @@ const BachelorList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.bachelor_tunisian.media"
+        >
           <span>{t("courses_filter.bachelor_tunisian.media")}</span>
           <svg className={css.sub_icon}>
             <use href={icons + "#chevron-down"}></use>
@@ -461,7 +560,10 @@ const BachelorList = ({ style }) => {
         </p>
       </li>
       <li className={css.sub_item}>
-        <p className={css.sub_item_heading}>
+        <p
+          className={css.sub_item_heading}
+          data-value="courses_filter.bachelor_tunisian.economics_management"
+        >
           <span>
             {t("courses_filter.bachelor_tunisian.economics_management")}
           </span>

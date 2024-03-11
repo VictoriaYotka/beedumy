@@ -12,7 +12,7 @@ import {
 } from "./CoursesFilterSubLists";
 import { useConditionalSpring } from "../../../utils";
 
-const CoursesFilterInCourses = ({ curricula }) => {
+const CoursesFilterInCourses = ({ curricula, handleSetFilter }) => {
   const { t } = useTranslation();
   const location = useLocation();
 
@@ -68,8 +68,19 @@ const CoursesFilterInCourses = ({ curricula }) => {
     };
   }, [activeList, closeList]);
 
+  const handleChooseFilter = (e) => {
+    if (e.target.closest("[data-value]")) {
+      const text = e.target.closest("[data-value]").innerText;
+      const filter = e.target.closest("[data-value]").dataset.value;
+      console.log(filter);
+
+      handleSetFilter(filter, text);
+      closeList();
+    }
+  };
+
   const transition =
-    useConditionalSpring.useConditionalListsTransition(activeList);
+    useConditionalSpring.useConditionalModalsTransition(activeList);
 
   return (
     <section className={css.section}>
@@ -78,7 +89,7 @@ const CoursesFilterInCourses = ({ curricula }) => {
 
         {(location.pathname === "/categories/tunisian" ||
           location.pathname === "/categories/libyan") && (
-          <ul id="level_list" className={css.list}>
+          <ul id="level_list" className={css.list} onClick={handleChooseFilter}>
             {/* primary */}
             <li className={css.item}>
               <h4

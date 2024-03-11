@@ -9,6 +9,31 @@
   text-align: center;
 }
 
+.filtername_container {
+  @extend .flex_aligncenter;
+  gap: 4px;
+  margin-bottom: 16px;
+  font-weight: $boldFont;
+}
+
+.close_button {
+  padding: 4px;
+}
+
+.close_icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  stroke: $blueHoverColor;
+
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    scale: 120%;
+  }
+}
+
 .list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
