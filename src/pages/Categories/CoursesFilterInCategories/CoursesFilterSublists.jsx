@@ -17,7 +17,7 @@ const RatedList = ({
   style,
   handleOptionSelect,
   handleOptionClear,
-  selectedOption,
+  filters,
 }) => {
   const { t } = useTranslation();
 
@@ -25,19 +25,23 @@ const RatedList = ({
     <animated.ul
       className={css.subcategories_list}
       style={style}
-      onClick={(e) => handleOptionSelect("rated_list", e)}
+      onClick={(e) => handleOptionSelect("rated", e)}
     >
       <li className={css.subcategories_item}>
         <p className={css.subcategories_inner}>
           <span
             data-option="top_selling"
-            className={selectedOption === "top_selling" ? css.active : ""}
+            className={
+              filters?.rated?.includes("top_selling") ? css.active : ""
+            }
           >
             {t("categories.search_classification_rated_top_selling")}
           </span>
 
-          {selectedOption === "top_selling" && (
-            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          {filters?.rated?.includes("top_selling") && (
+            <CloseButton
+              onClick={() => handleOptionClear("rated", "top_selling")}
+            />
           )}
         </p>
       </li>
@@ -45,13 +49,17 @@ const RatedList = ({
         <p className={css.subcategories_inner}>
           <span
             data-option="highest_rating"
-            className={selectedOption === "highest_rating" ? css.active : ""}
+            className={
+              filters?.rated?.includes("highest_rating") ? css.active : ""
+            }
           >
             {t("categories.search_classification_rated_highest_rating")}
           </span>
 
-          {selectedOption === "highest_rating" && (
-            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          {filters?.rated?.includes("highest_rating") && (
+            <CloseButton
+              onClick={() => handleOptionClear("rated", "highest_rating")}
+            />
           )}
         </p>
       </li>
@@ -63,7 +71,7 @@ const CurriculaList = ({
   style,
   handleOptionSelect,
   handleOptionClear,
-  selectedOption,
+  filters,
 }) => {
   const { t } = useTranslation();
 
@@ -71,18 +79,22 @@ const CurriculaList = ({
     <animated.ul
       className={css.subcategories_list}
       style={style}
-      onClick={(e) => handleOptionSelect("curricula_list", e)}
+      onClick={(e) => handleOptionSelect("curricula", e)}
     >
       <li className={css.subcategories_item}>
         <p className={css.subcategories_inner}>
           <span
             data-option="tunisian"
-            className={selectedOption === "tunisian" ? css.active : ""}
+            className={
+              filters?.curricula?.includes("tunisian") ? css.active : ""
+            }
           >
             {t("categories.search_classification_curricula_tunisian")}
           </span>
-          {selectedOption === "tunisian" && (
-            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          {filters?.curricula?.includes("tunisian") && (
+            <CloseButton
+              onClick={() => handleOptionClear("curricula", "tunisian")}
+            />
           )}{" "}
         </p>
       </li>
@@ -90,13 +102,15 @@ const CurriculaList = ({
         <p className={css.subcategories_inner}>
           <span
             data-option="libyan"
-            className={selectedOption === "libyan" ? css.active : ""}
+            className={filters?.curricula?.includes("libyan") ? css.active : ""}
           >
             {t("categories.search_classification_curricula_libyan")}
           </span>
 
-          {selectedOption === "libyan" && (
-            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          {filters?.curricula?.includes("libyan") && (
+            <CloseButton
+              onClick={() => handleOptionClear("curricula", "libyan")}
+            />
           )}
         </p>
       </li>
@@ -104,13 +118,17 @@ const CurriculaList = ({
         <p className={css.subcategories_inner}>
           <span
             data-option="formative"
-            className={selectedOption === "formative" ? css.active : ""}
+            className={
+              filters?.curricula?.includes("formative") ? css.active : ""
+            }
           >
             {t("categories.search_classification_curricula_formative")}
           </span>
 
-          {selectedOption === "formative" && (
-            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          {filters?.curricula?.includes("formative") && (
+            <CloseButton
+              onClick={() => handleOptionClear("curricula", "formative")}
+            />
           )}
         </p>
       </li>
@@ -122,7 +140,7 @@ const TypeList = ({
   style,
   handleOptionSelect,
   handleOptionClear,
-  selectedOption,
+  filters,
 }) => {
   const { t } = useTranslation();
 
@@ -130,19 +148,21 @@ const TypeList = ({
     <animated.ul
       className={css.subcategories_list}
       style={style}
-      onClick={(e) => handleOptionSelect("type_list", e)}
+      onClick={(e) => handleOptionSelect("type", e)}
     >
       <li className={css.subcategories_item}>
         <p className={css.subcategories_inner}>
           <span
             data-option="available"
-            className={selectedOption === "available" ? css.active : ""}
+            className={filters?.type?.includes("available") ? css.active : ""}
           >
             {t("categories.search_classification_content_type_available")}
           </span>
 
-          {selectedOption === "available" && (
-            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          {filters?.type?.includes("available") && (
+            <CloseButton
+              onClick={() => handleOptionClear("type", "available")}
+            />
           )}
         </p>
       </li>
@@ -150,13 +170,15 @@ const TypeList = ({
         <p className={css.subcategories_inner}>
           <span
             data-option="expected"
-            className={selectedOption === "expected" ? css.active : ""}
+            className={filters?.type?.includes("expected") ? css.active : ""}
           >
             {t("categories.search_classification_content_type_expected")}
           </span>
 
-          {selectedOption === "expected" && (
-            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          {filters?.type?.includes("expected") && (
+            <CloseButton
+              onClick={() => handleOptionClear("type", "expected")}
+            />
           )}
         </p>
       </li>
@@ -168,7 +190,7 @@ const DateList = ({
   style,
   handleOptionSelect,
   handleOptionClear,
-  selectedOption,
+  filters,
 }) => {
   const { t } = useTranslation();
 
@@ -176,19 +198,19 @@ const DateList = ({
     <animated.ul
       className={css.subcategories_list}
       style={style}
-      onClick={(e) => handleOptionSelect("date_list", e)}
+      onClick={(e) => handleOptionSelect("date", e)}
     >
       <li className={css.subcategories_item}>
         <p className={css.subcategories_inner}>
           <span
             data-option="hour"
-            className={selectedOption === "hour" ? css.active : ""}
+            className={filters?.date?.includes("hour") ? css.active : ""}
           >
             {t("categories.search_classification_publishing_date_hour")}
           </span>
 
-          {selectedOption === "hour" && (
-            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          {filters?.date?.includes("hour") && (
+            <CloseButton onClick={() => handleOptionClear("date", "hour")} />
           )}
         </p>
       </li>
@@ -196,13 +218,13 @@ const DateList = ({
         <p className={css.subcategories_inner}>
           <span
             data-option="day"
-            className={selectedOption === "day" ? css.active : ""}
+            className={filters?.date?.includes("day") ? css.active : ""}
           >
             {t("categories.search_classification_publishing_date_day")}
           </span>
 
-          {selectedOption === "day" && (
-            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          {filters?.date?.includes("day") && (
+            <CloseButton onClick={() => handleOptionClear("date", "day")} />
           )}
         </p>
       </li>
@@ -210,13 +232,13 @@ const DateList = ({
         <p className={css.subcategories_inner}>
           <span
             data-option="week"
-            className={selectedOption === "week" ? css.active : ""}
+            className={filters?.date?.includes("week") ? css.active : ""}
           >
             {t("categories.search_classification_publishing_date_week")}
           </span>
 
-          {selectedOption === "week" && (
-            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          {filters?.date?.includes("week") && (
+            <CloseButton onClick={() => handleOptionClear("date", "week")} />
           )}
         </p>
       </li>
@@ -224,13 +246,13 @@ const DateList = ({
         <p className={css.subcategories_inner}>
           <span
             data-option="month"
-            className={selectedOption === "month" ? css.active : ""}
+            className={filters?.date?.includes("month") ? css.active : ""}
           >
             {t("categories.search_classification_publishing_date_month")}
           </span>
 
-          {selectedOption === "month" && (
-            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          {filters?.date?.includes("month") && (
+            <CloseButton onClick={() => handleOptionClear("date", "month")} />
           )}
         </p>
       </li>
@@ -238,13 +260,13 @@ const DateList = ({
         <p className={css.subcategories_inner}>
           <span
             data-option="year"
-            className={selectedOption === "year" ? css.active : ""}
+            className={filters?.date?.includes("year") ? css.active : ""}
           >
             {t("categories.search_classification_publishing_date_year")}
           </span>
 
-          {selectedOption === "year" && (
-            <CloseButton onClick={() => handleOptionClear("rated_list")} />
+          {filters?.date?.includes("year") && (
+            <CloseButton onClick={() => handleOptionClear("date", "year")} />
           )}
         </p>
       </li>

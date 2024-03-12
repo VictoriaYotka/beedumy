@@ -22,7 +22,47 @@ const Categories = ({ direction }) => {
   const [allCourses, setAllCourses] =
     useState(useSelector(coursesSelector)) || [];
 
+  const [tunisianCourses, setTunisianCourses] = useState(allCourses);
+  const [libyanCourses, setLibyanCourses] = useState(allCourses);
+  const [formativeCourses, setFormativeCourses] = useState(allCourses);
+
   const [inputValue, setInputValue] = useState("");
+
+  const [filters, setFilters] = useState({
+    rated: [],
+    curricula: [],
+    type: [],
+    date: [],
+  });
+
+  const handleOptionSelect = (category, e) => {
+    if (e.target.closest("[data-option]")) {
+      const option = e.target.closest("[data-option]").dataset.option;
+
+      setFilters((prevFilters) => {
+        if (prevFilters[category]) {
+          return {
+            ...prevFilters,
+            [category]: [...prevFilters[category], option],
+          };
+        } else {
+          return {
+            ...prevFilters,
+            [category]: [option],
+          };
+        }
+      });
+    }
+  };
+
+  const handleOptionClear = (category, optionToRemove) => {
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      [category]: prevFilters[category].filter(
+        (option) => option !== optionToRemove
+      ),
+    }));
+  };
 
   useEffect(() => {
     if (allCourses.length === 0) {
@@ -31,11 +71,6 @@ const Categories = ({ direction }) => {
         .then(({ webinar }) => setAllCourses(webinar));
     }
   }, [allCourses, dispatch, setAllCourses]);
-
-  // ADD FILTER!!!
-  const tunisianCourses = allCourses;
-  const libyanCourses = allCourses;
-  const formativeCourses = allCourses;
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -72,7 +107,12 @@ const Categories = ({ direction }) => {
           </form>
         </div>
       </section>
-      <CoursesFilterInCategories />
+      <CoursesFilterInCategories
+        handleOptionSelect={handleOptionSelect}
+        handleOptionClear={handleOptionClear}
+        filters={filters}
+      />
+
       {/* tunisian curriculum courses list */}
       <section className={css.section}>
         <div className={css.container}>
